@@ -1,0 +1,36 @@
+\documentclass
+[
+bibliography=totoc, %für Literaturverzeichnis
+captions=tableheading
+]
+{scrartcl}
+
+\usepackage{scrhack} %??
+
+\usepackage[aux]{rerunfilecheck}
+\usepackage{polyglossia}
+\setmainlanguage{german}
+\usepackage{amsmath} %unverzichtbare Mathe-Befehle
+\usepackage{amssymb} %viele Mathe-Symbole
+\usepackage{fontspec}
+\usepackage[style=alphabetic]{biblatex}
+%\addbibresource{name der Datei mit .bib} %für Literaturverzeichnis
+\usepackage{mathtools} %Erweiterungen für amsmath
+\usepackage{unicode-math}
+%Noch mehr Pakete
+\setmathfont{Latin Modern Math}
+\usepackage[math-style=ISO, bold-style=ISO, sans-style=italic, nabla=upright, partial=upright]{unicode-math}
+%sobald man die Pakete untereinander schreibt, so verfärbt sich der Befehl blau...
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+\usepackage[section, below]{placeins}
+
+
+\usepackage[unicode]{hyperref}
+\usepackage{bookmark}
+%Einstellungen hier, z.b. Fonts
+
+\newcommand{\be}{\begin{equation}} %Kurzbefehl für \begin{equation}
+\newcommand{\ee}{\end{equation}} %Kurzbefehl für \end{equation}
+%Befehle eingefügt um Zeichen zu sparen
