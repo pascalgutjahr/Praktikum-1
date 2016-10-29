@@ -18,7 +18,7 @@ plt.grid()
 plt.xlim(0, 2001)
 plt.xlabel(r'$t \,/\, \mathrm{s}$')
 plt.ylabel(r'$T \,/\,^{\circ} \mathrm{C}$')
-plt.title(r"Messing", **csfont)
+plt.title(r"Messing (dynmaisch, $\Delta t = 2 \mathrm{s}$)", **csfont)
 plt.legend(loc='best')
 
 plt.subplot(2, 1, 2)
@@ -29,7 +29,7 @@ plt.xlim(0, 2001)
 plt.ylim(20, 70)
 plt.xlabel(r'$t \,/\, \mathrm{s}$')
 plt.ylabel(r'$T \,/\,^{\circ} \mathrm{C}$')
-plt.title(r"Aluminium", **csfont)
+plt.title(r"Aluminium (dynamisch, $\Delta t = 2 \mathrm{s}$)", **csfont)
 plt.legend(loc='best')
 
 

@@ -1,7 +1,7 @@
-all: build/stat.py
+all: build/statisch.py
 
-build/stat.py | build
-python --output-directory=build stat.py
+build/statisch.py | build
+python --output-directory=build statisch.py
 
 build:
 	mkdir -p build

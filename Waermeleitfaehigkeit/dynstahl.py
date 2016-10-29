@@ -18,7 +18,7 @@ plt.grid()
 plt.xlim(0, 2277)
 plt.xlabel(r'$t \,/\, \mathrm{s}$')
 plt.ylabel(r'$T \,/\,^{\circ} \mathrm{C}$')
-plt.title(r"Edelstahl", **csfont)
+plt.title(r"Edelstahl (dynamisch, $\Delta t = 2 \mathrm{s}$)", **csfont)
 plt.legend(loc='best')
 
 # plt.subplot(2, 1, 2)

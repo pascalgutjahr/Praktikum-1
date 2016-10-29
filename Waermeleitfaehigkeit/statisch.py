@@ -18,7 +18,7 @@ plt.grid()
 plt.xlim(0, 3600)
 plt.xlabel(r'$t \,/\, \mathrm{s}$')
 plt.ylabel(r'$T \,/\,^{\circ} \mathrm{C}$')
-plt.title(r"Messing", **csfont)
+plt.title(r"Messing (statisch, $\Delta t = 5 \mathrm{s}$)", **csfont)
 plt.legend(loc='best')
 
 plt.subplot(2, 1, 2)
@@ -29,7 +29,7 @@ plt.xlim(0, 3600)
 plt.ylim(20, 70)
 plt.xlabel(r'$t \,/\, \mathrm{s}$')
 plt.ylabel(r'$T \,/\,^{\circ} \mathrm{C}$')
-plt.title(r"Messing", **csfont)
+plt.title(r"Messing (statisch, $\Delta t = 5 \mathrm{s}$)", **csfont)
 plt.legend(loc='best')
 
 # wenn man 4 Graphiken zeichnen möchte: (x, y, z): x = Anzahl der Zeilen, y = Anzahl der Spalten, z = der jeweilige Platz
