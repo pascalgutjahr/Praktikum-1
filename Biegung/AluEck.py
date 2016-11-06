@@ -60,5 +60,5 @@ plt.title(r'Aluminium, beidseitige Einspannung')
 plt.legend(loc='best')
 
 plt.tight_layout
-plt.savefig('alu_eckig2.pdf')
+plt.savefig('FitAluEck.pdf')
 plt.show()
