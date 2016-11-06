@@ -23,7 +23,7 @@ errors = np.sqrt(np.diag(covariance))
 print('m =', params[0], '±', errors[0])
 print('n =', params[1], '±', errors[1])
 
-s_plot = np.linspace(20, 45)
+s_plot = np.linspace(25, 45)
 
 plt.plot(s, a, 'rx', label="example data")
 plt.plot(s_plot, f(s_plot, *params), 'b-', label='linearer Ausgleich', linewidth=3)
