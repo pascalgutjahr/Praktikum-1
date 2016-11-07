@@ -29,6 +29,6 @@ plt.plot(s_plot, f(s_plot, *params), 'b-', label='linearer Ausgleich', linewidth
 plt.xlabel('Strecke/cm')
 plt.ylabel('Auslenkung/mm')
 plt.legend(loc="best")
-plt.tight_layout
+plt.tight_layout()
 plt.savefig('FitMessEck.pdf')
 plt.show()

@@ -21,6 +21,6 @@ plt.ylabel(r'$a \,/\, \mathrm{mm}$')
 plt.title(r'Messing eckig, einseitige Einspannung')
 plt.legend(loc='upper left')
 
-plt.tight_layout
+plt.tight_layout()
 plt.savefig('messing_eckig1.pdf')
 plt.show()

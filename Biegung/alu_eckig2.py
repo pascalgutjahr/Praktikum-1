@@ -30,6 +30,6 @@ plt.ylabel(r'$a \,/\, \mathrm{mm}$')
 plt.title(r'Aluminium, beidseitige Einspannung')
 plt.legend(loc='best')
 
-plt.tight_layout
+plt.tight_layout()
 plt.savefig('alu_eckig2.pdf')
 plt.show()

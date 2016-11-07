@@ -19,6 +19,6 @@ plt.ylabel(r'$a \,/\, \mathrm{mm}$')
 plt.title(r'Aluminium rund, einseitige Einspannung')
 plt.legend(loc='best')
 
-plt.tight_layout
+plt.tight_layout()
 plt.savefig('alu_rund1.pdf')
 plt.show()

@@ -9,12 +9,13 @@ plt.rcParams['font.size'] = 13
 plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
-s,a = np.genfromtxt('alu_rund1.txt', unpack=True)
+s, a = np.genfromtxt('alu_rund1.txt', unpack=True)
+
 
 def f(s, m, n):
     return m * s + n
-    #m = 0.107415584417 ± 0.00239018301449
-    #n = -2.04478354984 ± 0.0848991748478
+# m = 0.107415584417 ± 0.00239018301449
+# n = -2.04478354984 ± 0.0848991748478
 
 params, covariance = curve_fit(f, s, a)
 
@@ -30,6 +31,6 @@ plt.plot(s_plot, f(s_plot, *params), 'b-', label='linearer Ausgleich', linewidth
 plt.xlabel('Strecke/cm')
 plt.ylabel('Auslenkung/mm')
 plt.legend(loc="best")
-plt.tight_layout
+plt.tight_layout()
 plt.savefig('FitAluRd.pdf')
 plt.show()
