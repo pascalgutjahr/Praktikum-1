@@ -30,6 +30,12 @@ E_3 = (0.1209 * 9.81) / (2 * 7.187e-10 * M)
 print('E_3=', E_3)
 # E_2= 20009646156
 
+# Angaben in cm
+#  2.92291667  3.13889333  3.36069     3.58810667  3.82094333  4.059
+#  4.30207667  4.54997333  4.80249     5.05942667  5.32058333  5.58576
+#  5.85475667  6.12737333  6.40341     6.68266667  6.96494333  7.25004
+#  7.53775667  7.82789333  8.12025
+
 params, covariance = curve_fit(f, dia, a)
 
 errors = np.sqrt(np.diag(covariance))
@@ -44,7 +50,7 @@ plt.title(r'Aluminium, einseitige Einspannung')
 plt.plot(dia, a, 'rx', label="Aluminium Rund")
 plt.plot(s_plot, f(s_plot, *params), 'b-', label='linearer Ausgleich', linewidth=3)
 plt.xlim(min(dia)-0.0001, max(dia)+0.0001)
-plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{cm}$')
+plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{cm}^3p$')
 plt.ylabel(r'$D(x) \,/\, \mathrm{mm}$')
 plt.grid()
 plt.legend(loc="best")

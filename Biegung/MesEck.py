@@ -30,7 +30,13 @@ E_2 = (0.4603 * 9.81) / (2 * 8.97e-10 * M)
 print('E_2=', E_2)
 # E_2= 30779547759
 
-
+#  diese Angaben sind in cm
+#  1.12275     1.26890667  1.42284333  1.58436     1.75325667  1.92933333
+#  2.11239     2.30222667  2.49864333  2.70144     2.91041667  3.12537333
+#  3.34611     3.57242667  3.80412333  4.041       4.28285667  4.52949333
+#  4.78071     5.03630667  5.29608333  5.55984     5.82737667  6.09849333
+#  6.37299     6.65066667  6.93132333  7.21476     7.50077667  7.78917333
+#  8.07975
 
 params, covariance = curve_fit(f, dia, a)
 
@@ -46,7 +52,7 @@ plt.title(r'Messing, einseitige Einspannung')
 plt.plot(dia, a, 'rx', label="Messing eckig")
 plt.plot(s_plot, f(s_plot, *params), 'b-', label='linearer Ausgleich', linewidth=3)
 plt.xlim(min(dia)-0.01, max(dia)+0.01)
-plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{cm}$')
+plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{cm}^3$')
 plt.ylabel(r'$D(x) \,/\, \mathrm{mm}$')
 plt.grid()
 
