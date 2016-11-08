@@ -9,16 +9,18 @@ plt.rcParams['font.size'] = 13
 plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
-s,a = np.genfromtxt('messing_eckig1.txt', unpack=True)
+s, a = np.genfromtxt('messing_eckig1.txt', unpack=True)
 s *= 1e-2
-a *= 1e-3
+# a *= 1e-3
 
 dia = 0.549 * (s)**2 - (s)**3 / 3
+dia *= 1e+2
 
 
 def f(dia, m, n):
     return m * dia + n
 
+# Alle Angaben hier sind in den Basiseinheiten, also Metern, notiert
 # m = 0.0817758955818 ± 0.000392863483717
 # n = 8.60868605435e-05 ± 1.85997173663e-05
 
@@ -36,15 +38,16 @@ errors = np.sqrt(np.diag(covariance))
 
 print('m =', params[0], '±', errors[0])
 print('n =', params[1], '±', errors[1])
+print('dia=', dia)
 
 s_plot = np.linspace(min(dia), max(dia))
 
 plt.title(r'Messing, einseitige Einspannung')
 plt.plot(dia, a, 'rx', label="Messing eckig")
 plt.plot(s_plot, f(s_plot, *params), 'b-', label='linearer Ausgleich', linewidth=3)
-plt.xlim(min(dia)-0.0001, max(dia)+0.0001)
-plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{m}$')
-plt.ylabel(r'$D(x) \,/\, \mathrm{m}$')
+plt.xlim(min(dia)-0.01, max(dia)+0.01)
+plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{cm}$')
+plt.ylabel(r'$D(x) \,/\, \mathrm{mm}$')
 plt.grid()
 
 plt.legend(loc="best")

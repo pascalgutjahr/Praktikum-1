@@ -11,18 +11,19 @@ csfont = {'fontname': 'Times New Roman'}
 
 s1, a1, s2, a2 = np.genfromtxt('alu_eckig2.txt', unpack=True)
 s1 *= 1e-2
-a1 *= 1e-3
+# a1 *= 1e-3
 s2 *= 1e-2
-a2 *= 1e-3
+# a2 *= 1e-3
 
 plt.subplot(2, 1, 1)
 dia = 0.562 * (s1)**2 - (s1)**3 / 3  # Umrechnung auf andere Achsenskalierung
-# dia *= 1e3
+dia *= 1e+2
 
 
 def f1(dia, m1, n1):
     return m1 * dia + n1
 
+# Alle Angaben hier sind in den Basiseinheiten, also Metern, notiert
 # m1 = -0.00513043396083 ± 0.000565678977921 -> positiv, da x-Achse von groß nach klein verläuft
 # n1 = 0.000787607986555 ± 4.07550300448e-05
 
@@ -46,18 +47,18 @@ plt.plot(dia, a1, 'rx', label='Aluminium eckig (von links)')
 plt.plot(s1_plot, f1(s1_plot, *params), 'b-', label='linearer Fit', linewidth=3)
 
 plt.grid()
-plt.xlim(max(dia)+0.0001, min(dia))
+plt.xlim(max(dia)+0.01, min(dia)+0.01)
 # plt.xticks(np.arange(min(s1_plot), max(s1_plot), 0.005), rotation=45, rotation_mode='anchor', ha='right', va='top')  # Schritte auf x-Achse
 # plt.ylim(0, 1)
-plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{m}$')
-plt.ylabel(r'$D(x) \,/\, \mathrm{m}$')
+plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{cm}$')
+plt.ylabel(r'$D(x) \,/\, \mathrm{mm}$')
 plt.title(r'Aluminium, beidseitige Einspannung')
 plt.legend(loc='best')
 
 
 plt.subplot(2, 1, 2)
 dia2 = 0.562 * (s2)**2 - (s2)**3 / 3  # Umrechnung auf andere Achsenskalierung
-# dia2 *= 1e3
+dia2 *= 1e2
 
 def f2(dia2, m2, n2):
     return m2 * dia2 + n2
@@ -88,11 +89,11 @@ plt.plot(dia2, a2, 'kx', label='Aluminium eckig (von rechts)')
 plt.plot(s2_plot, f2(s2_plot, *params), 'b-', label='linearer Fit', linewidth=3)
 
 plt.grid()
-plt.xlim(min(dia2)-0.0001, max(dia2))
+plt.xlim(min(dia2)-0.01, max(dia2)+0.01)
 # plt.xticks(np.arange(min(s2_plot), max(s2_plot), 0.005), rotation=45, rotation_mode='anchor', ha='right', va='top')
 # plt.ylim(0, 1)
-plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{m}$')
-plt.ylabel(r'$D(x) \,/\, \mathrm{m}$')
+plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{cm}$')
+plt.ylabel(r'$D(x) \,/\, \mathrm{mm}$')
 plt.title(r'Aluminium, beidseitige Einspannung')
 plt.legend(loc='best')
 
