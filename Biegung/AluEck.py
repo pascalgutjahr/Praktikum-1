@@ -47,9 +47,9 @@ plt.plot(s1_plot, f1(s1_plot, *params), 'b-', label='linearer Fit', linewidth=3)
 
 plt.grid()
 plt.xlim(max(dia)+0.0001, min(dia))
-plt.xticks(np.arange(min(s1_plot), max(s1_plot), 0.005), rotation=45, rotation_mode='anchor', ha='right', va='top')  # Schritte auf x-Achse
+# plt.xticks(np.arange(min(s1_plot), max(s1_plot), 0.005), rotation=45, rotation_mode='anchor', ha='right', va='top')  # Schritte auf x-Achse
 # plt.ylim(0, 1)
-plt.xlabel(r'$x \,/\, \mathrm{m}$')
+plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{m}$')
 plt.ylabel(r'$D(x) \,/\, \mathrm{m}$')
 plt.title(r'Aluminium, beidseitige Einspannung')
 plt.legend(loc='best')
@@ -64,6 +64,12 @@ def f2(dia2, m2, n2):
 
 # m2 = 0.0238651386 ± 0.00172018402974
 # n2 = 6.95841784392e-05 ± 2.65805427609e-05
+
+M = (0.00513043396083 + 0.0238651386) / 2
+
+E_1 = (0.1671 * 9.81) / (48 * 8.63e-10 * M)
+print('E_1=', E_1)
+# E_1= 2729554253
 
 params, covariance = curve_fit(f2, dia2, a2)
 
@@ -83,9 +89,9 @@ plt.plot(s2_plot, f2(s2_plot, *params), 'b-', label='linearer Fit', linewidth=3)
 
 plt.grid()
 plt.xlim(min(dia2)-0.0001, max(dia2))
-plt.xticks(np.arange(min(s2_plot), max(s2_plot), 0.005), rotation=45, rotation_mode='anchor', ha='right', va='top')
+# plt.xticks(np.arange(min(s2_plot), max(s2_plot), 0.005), rotation=45, rotation_mode='anchor', ha='right', va='top')
 # plt.ylim(0, 1)
-plt.xlabel(r'$x \,/\, \mathrm{m}$')
+plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{m}$')
 plt.ylabel(r'$D(x) \,/\, \mathrm{m}$')
 plt.title(r'Aluminium, beidseitige Einspannung')
 plt.legend(loc='best')

@@ -10,26 +10,38 @@ plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
 s, a = np.genfromtxt('alu_rund1.txt', unpack=True)
+s *= 1e-2
+a *= 1e-3
 
+dia = 0.551 * (s)**2 - (s)**3 / 3
 
-def f(s, m, n):
-    return m * s + n
-# m = 0.107415584417 ± 0.00239018301449
-# n = -2.04478354984 ± 0.0848991748478
+def f(dia, m, n):
+    return m * dia + n
+# m = 0.0412361640697 ± 0.000572220500801
+# n = -0.000509633620822 ± 3.21670069891e-05
 
-params, covariance = curve_fit(f, s, a)
+M = 0.0412361640697
+
+E_3 = (0.1209 * 9.81) / (2 * 7.187e-10 * M)
+print('E_3=', E_3)
+# E_2= 20009646156
+
+params, covariance = curve_fit(f, dia, a)
 
 errors = np.sqrt(np.diag(covariance))
 
 print('m =', params[0], '±', errors[0])
 print('n =', params[1], '±', errors[1])
 
-s_plot = np.linspace(25, 45)
+s_plot = np.linspace(min(dia), max(dia))
 
-plt.plot(s, a, 'rx', label="example data")
+plt.title(r'Aluminium, einseitige Einspannung')
+plt.plot(dia, a, 'rx', label="Aluminium Rund")
 plt.plot(s_plot, f(s_plot, *params), 'b-', label='linearer Ausgleich', linewidth=3)
-plt.xlabel('Strecke/cm')
-plt.ylabel('Auslenkung/mm')
+plt.xlim(min(dia)-0.0001, max(dia)+0.0001)
+plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{m}$')
+plt.ylabel(r'$D(x) \,/\, \mathrm{m}$')
+plt.grid()
 plt.legend(loc="best")
 plt.tight_layout()
 plt.savefig('FitAluRd.pdf')
