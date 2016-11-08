@@ -16,7 +16,8 @@ s2 *= 1e-2
 # a2 *= 1e-3
 
 plt.subplot(2, 1, 1)
-dia = 0.562 * (s1)**2 - (s1)**3 / 3  # Umrechnung auf andere Achsenskalierung
+# Umrechnung auf andere Achsenskalierung
+dia = 3 * 0.562**2 * (s1) - (4 * (s1)**3)
 dia *= 1e+2
 
 
@@ -24,8 +25,8 @@ def f1(dia, m1, n1):
     return m1 * dia + n1
 
 # Alle Angaben hier sind in den Basiseinheiten, also Metern, notiert
-# m1 = -0.00513043396083 ± 0.000565678977921 -> positiv, da x-Achse von groß nach klein verläuft
-# n1 = 0.000787607986555 ± 4.07550300448e-05
+# m1 = 0.00126175282492 ± 0.000214805557831
+# n1 = 0.000293692095235 ± 2.54720640488e-05
 
 params, covariance = curve_fit(f1, dia, a1)
 
@@ -36,41 +37,44 @@ print('m1 =', params[0], '±', errors[0])
 print('n1 =', params[1], '±', errors[1])
 print('dia =', dia)
 
-#  0.09571987  0.0926208   0.08953813  0.08647387  0.08343     0.08040853
-#  0.07741147  0.0744408   0.07149853  0.06858667  0.0657072   0.06286213
-#  0.06005347  0.0572832   0.05455333  0.05186587  0.0492228   0.04662613
+# -0.00630532  0.01244736  0.03004804  0.04652072  0.0618894   0.07617808
+#  0.08941076  0.10161144  0.11280412  0.1230128   0.13226148  0.14057416
+#  0.14797484  0.15448752  0.1601362   0.16494488  0.16893756  0.17213824
 
-s1_plot = np.linspace(min(dia), max(dia))
+s1_plot = np.linspace(min(dia)-0.05, max(dia)+0.05)
 # spacing = 1
 
 plt.plot(dia, a1, 'rx', label='Aluminium eckig (von links)')
 plt.plot(s1_plot, f1(s1_plot, *params), 'b-', label='linearer Fit', linewidth=3)
 
 plt.grid()
-plt.xlim(max(dia)+0.01, min(dia)+0.01)
+plt.xlim(min(dia)-0.05, max(dia)+0.05)
 # plt.xticks(np.arange(min(s1_plot), max(s1_plot), 0.005), rotation=45, rotation_mode='anchor', ha='right', va='top')  # Schritte auf x-Achse
 # plt.ylim(0, 1)
-plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{cm}$')
+plt.xlabel(r'$(3L^2x - 4x^3) \,/\, \mathrm{cm}$')
 plt.ylabel(r'$D(x) \,/\, \mathrm{mm}$')
 plt.title(r'Aluminium, beidseitige Einspannung')
 plt.legend(loc='best')
 
 
 plt.subplot(2, 1, 2)
-dia2 = 0.562 * (s2)**2 - (s2)**3 / 3  # Umrechnung auf andere Achsenskalierung
+# Umrechnung auf andere Achsenskalierung
+dia2 = 3 * 0.562**2 * (s2) - (4 * (s2)**3)
 dia2 *= 1e2
+
 
 def f2(dia2, m2, n2):
     return m2 * dia2 + n2
 
-# m2 = 0.0238651386 ± 0.00172018402974
-# n2 = 6.95841784392e-05 ± 2.65805427609e-05
+# Alle Angaben hier sind in den Basiseinheiten, also Metern, notiert
+# m2 = 0.00496407560258 ± 0.000730818491117
+# n2 = -0.000241932809024 ± 9.59644334768e-05
 
-M = (0.00513043396083 + 0.0238651386) / 2
+M = (0.00126175282492 + 0.00496407560258) / 2
 
 E_1 = (0.1671 * 9.81) / (48 * 8.63e-10 * M)
 print('E_1=', E_1)
-# E_1= 2729554253
+# E_1= 12712362593
 
 params, covariance = curve_fit(f2, dia2, a2)
 
@@ -80,19 +84,19 @@ print('m2 =', params[0], '±', errors[0])
 print('n2 =', params[1], '±', errors[1])
 print('dia2=', dia2)
 
-#  0.00263947  0.00342613  0.0043092   0.00528667  0.00635653  0.0075168
-#  0.00876547  0.01010053  0.01152     0.01302187  0.01460413  0.0162648
-#  0.01800187  0.01981333  0.0216972   0.02365147  0.02567413  0.0277632
+# 0.06495524  0.07375456  0.08236188  0.0907532   0.09890452  0.10679184
+# 0.11439116  0.12167848  0.1286298   0.13522112  0.14142844  0.14722776
+# 0.15259508  0.1575064   0.16193772  0.16586504  0.16926436  0.17211168
 
-s2_plot = np.linspace(min(dia2), max(dia2))
+s2_plot = np.linspace(min(dia2)-0.05, max(dia2)+0.05)
 plt.plot(dia2, a2, 'kx', label='Aluminium eckig (von rechts)')
 plt.plot(s2_plot, f2(s2_plot, *params), 'b-', label='linearer Fit', linewidth=3)
 
 plt.grid()
-plt.xlim(min(dia2)-0.01, max(dia2)+0.01)
+plt.xlim(min(dia2)-0.05, max(dia2)+0.05)
 # plt.xticks(np.arange(min(s2_plot), max(s2_plot), 0.005), rotation=45, rotation_mode='anchor', ha='right', va='top')
 # plt.ylim(0, 1)
-plt.xlabel(r'$(Lx^2 - \frac{x^3}{3}) \,/\, \mathrm{cm}$')
+plt.xlabel(r'$(3L^2x - 4x^3) \,/\, \mathrm{cm}$')
 plt.ylabel(r'$D(x) \,/\, \mathrm{mm}$')
 plt.title(r'Aluminium, beidseitige Einspannung')
 plt.legend(loc='best')
