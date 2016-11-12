@@ -1,4 +1,7 @@
-\documentclass{scrartcl}
+\documentclass[captions=tableheading,
+  bibliography=totoc,
+  titlepage=firstiscover
+  ]{scrartcl}
 \usepackage{scrhack}
 
 \usepackage[aux]{rerunfilecheck}
@@ -27,6 +30,10 @@
 ]{siunitx}
 
 \usepackage{booktabs}
+\usepackage{float}
+\floatplacement{figure}{htbp}
+\floatplacement{table}{htbp}
+
 
 \usepackage[unicode]{hyperref}
 \usepackage{bookmark}
