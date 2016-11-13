@@ -11,6 +11,8 @@ csfont = {'fontname': 'Times New Roman'}
 
 T, p = np.genfromtxt('data1.txt', unpack=True, skip_header=2)
 x = np.log(p)
+
+
 def f(x, m, n):
     return m * x + n
 
@@ -23,11 +25,12 @@ print('n =', params[1], '+-', errors[1])
 
 x_plot = np.linspace(min(T)-1, max(T)+1)
 
-plt.plot(T,x, 'rx', label='bis 1bar')
-plt.plot(x_plot, f(x_plot, *params),'b-', label='linearer Fit')
-#plt.xlim(min(x)-1, max(x)+1)
+plt.plot(T, x, 'rx', label='bis 1bar')
+plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
+# plt.xlim(min(x)-1, max(x)+1)
 plt.xlabel('Temperatur')
 plt.ylabel('log(p)')
 plt.grid()
 plt.tight_layout()
+plt.savefig('fit1.pdf')
 plt.show()
