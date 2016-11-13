@@ -29,6 +29,18 @@
   per-mode=symbol-or-fraction,
 ]{siunitx}
 
+\usepackage[section, below]{placeins}
+\usepackage[
+  labelfont=bf,        % Tabelle x: Abbildung y: ist jetzt fett
+  font=small,          % Schrift etwas kleiner als Dokument
+  width=0.9\textwidth, % maximale Breite einer Caption schmaler
+  format=plain,
+  indention=1em, % Abbildung sticht links etwas hervor
+]{caption}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{subcaption}
+
 \usepackage{booktabs}
 \usepackage{float}
 \floatplacement{figure}{htbp}
