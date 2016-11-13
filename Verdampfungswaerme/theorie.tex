@@ -17,6 +17,7 @@ der Druck bei gegebener Temperatur durch die Dampfdruckkurve festgelegt ist.
 Diese Kurve ist im wesentlichen von Verdampfungswärme $L$ abhängig. Sie beschreibt
 die Energiemenge, die zur Umwandlung von einem Mol Flüssigkeit in Dampf benötigt wird,
 bei gleicher Temperatur. Diese Größe ist temperaturabhängig.
+
 Bei diesem Verdampfungsprozess erhöht sich die kinetische Energie der Teilchen,
 welche nach der Maxwellschen Geschwindigkeitsverteilung bestimmt werden kann. Ist
 ihre Energie groß genug, um die Van-der-Waals Kräfte zu überwinden, so können die
@@ -38,6 +39,7 @@ zwischen Verdampfung und Kondensation betrachtet.
 \begin{figure}
   \centering
   \includegraphics[height=4cm]{Kreisprozess.jpeg}
+  \caption{reversibler Kreiprozess für Verdampfung und Kondensation}
   \label{fig:kreis}
 \end{figure}
 
@@ -75,3 +77,10 @@ folgende Näherungen angenommen werden:
   \item $V_D$ gehorcht der idealen Gasgleichung (\ref{eq:ideal}) \\
   \item $L$ ist druck- und temperaturunabhängig \\
 \end{itemize}
+
+Daraus folgt dann
+
+\begin{align}
+  \ln{(p)} = -\frac{L}{RT} + \ln{(p_0)}  \ & bzw. \  % hier hätte ich gerne einen größeren Abstand
+  P = p_0 \exp{\biggr(-\frac{L}{RT} \biggl)} .
+\end{align}
