@@ -13,14 +13,14 @@ T, p = np.genfromtxt('data1.txt', unpack=True, skip_header=2)
 #p*=1e+5
 p_0 = 995
 #p_0*= 1e+5
-T-=273.15
+T+=273.15
 T*=1e-3
 x = np.log(p/p_0)
 
 def f(T, m, n):
     return m * T + n
-#m = -1.58785109712 +- 0.0232138041919
-#n = -9.0289297077 +- 0.118666383813
+#m = -5.04399630475 +- 0.00587071914953
+#n = 13.5372000649 +- 0.016855849829
 params, covariance = curve_fit(f, 1/T, x)
 
 errors = np.sqrt(np.diag(covariance))
