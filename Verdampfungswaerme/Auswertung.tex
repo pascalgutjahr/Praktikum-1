@@ -1,5 +1,4 @@
 \subsection{p < 1 bar}
-<<<<<<< HEAD
 Um die Verdampfungswärme L zu berechnen, wird die Formel
 \begin{equation*}
   \ln \bigl(\frac{p}{p_0}\bigr)=-\frac{L}{R} \cdot \frac{1}{T}
@@ -10,7 +9,7 @@ verwendet. Hierbei ist $p_0$ der Umgebungsdruch und beträgt
   p_0=995\cdot 10^2 \si{\pascal}.
 \end{equation*}
 Die in Tabelle\ref{tab:data1} gemessenen Werte für den Druck werden logarithmiert und in eien
-Diagramm gegen den Kehrwert der absoluten Temperatur aufgetragen \\
+Diagramm gegen den Kehrwert der absoluten Temperatur aufgetragen. \\
  \input{Table1.tex}
 \begin{figure}
   \centering
@@ -22,16 +21,36 @@ Diagramm gegen den Kehrwert der absoluten Temperatur aufgetragen \\
 Die Parameter der linearen Regression werden mit Python 3.5.2 berechnet und
 lauten:
 \begin{align*}
-  a=(-5,044 \pm 0,006) \cdot 10^3 \si{\kelvin}
+  a =& (-5,044 \pm 0,006) \cdot 10^3 \si{\kelvin} \\
+  b =& (13,537 \pm 0,169)
 \end{align*}
-=======
-Die gemessenen Werte für Drücke unter 1 bar sind in Tabelle 1 zu sehen.
-\input{Table1.tex}
-\\
-Die abgelesenen Drücke werden weiter logarithmiert und in einem Diagramm gegen
-die absolute reziproke Temperatur aufgetragen. \\
-% \input{fit1.pdf} \\
->>>>>>> c993d95d0c42eae2c26e5710db227e839707d41a
+unter Verwendung von Formel \eqref{eq:4} und der allgemeinen Geradengleichung
+lässt sich L mit
+\begin{equation}
+  a=-\frac{L}{R} \iff L = -a \cdot R
+\end{equation}
+darstellen. Der dazugehörige Fehler wird über die Gaußsche Fehlerfortpflanzung
+\begin{equation}
+  \Delta f = \sqrt{\sum_{i=1}^{N} \bigl(\frac{\partial f}{\partial x_i}\bigr)^2 \cdot
+  (\Delta x_i)^2}
+  \label{eqn:gauss}
+\end{equation} %würde ich lieber in der Theorie/früher erwähnt haben!
+berechnet und liefert:
+\begin{equation*}
+  L=(41,938 \pm 0,050)\cdot 10^3 \frac{\si{\joule}}{\si{\mol}}.
+\end{equation*}
+\newpage
+Weiter soll die äußere Verdampfungswärme $L_a$, also die Energie, welche
+benötigt wird um das Volumen der Flüssigkeit auf das Volumen des Gases
+zu bringen. Hierbei wird eine Volumenarbeit $W=pV$ geleistet.
+Über gleichsetzen der idealen Gasgleichung \eqref{eq:ideal} mit der
+Volumenarbeit, lässt sich $L_a$ für eine Temperatur von $T=373 \si{\kelvin}$
+berechnen:
+\begin{align*}
+  L_a =& W =pV=RT \\
+      =& 3,101 \cdot 10^3 \si{\joule \per \mol}
+\end{align*}
+
 \newpage
 Hier kann man dann mit Tabelle 2 weiter machen:
 \input{Table2.tex} \\
