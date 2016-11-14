@@ -4,8 +4,8 @@ from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from scipy.optimize import curve_fit
-plt.rcParams['figure.figsize'] = (10 , 5)
-plt.rcParams['font.size'] = 13
+plt.rcParams['figure.figsize'] = (15 , 10)
+plt.rcParams['font.size'] = 20
 plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
@@ -39,5 +39,5 @@ plt.title('Messungen bis 1 bar')
 plt.grid()
 plt.legend()
 plt.tight_layout()
-plt.savefig('fit1.pdf')
+plt.savefig('fit1.jpg')
 plt.show()

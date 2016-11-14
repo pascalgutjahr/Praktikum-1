@@ -13,26 +13,29 @@ T, p = np.genfromtxt('data2.txt', unpack=True, skip_header=2)
 T+=273.15
 
 
-# def f(p, m, n):
-    # return m * p**2
-
-# params, covariance = curve_fit(f, p, T)
-
-# errors = np.sqrt(np.diag(covariance))
-
-# print('m =', params[0], '±', errors[0])#
-# print('n =', params[1], '±', errors[1])
+def f(T, a, b, c, d):
+    return a*T**3 + b * T ** 2 + c * T + d
 
 
-# x_plot = np.linspace(min(T), max(T)+0.05)
+params, covariance = curve_fit(f, T, p)
 
-plt.plot(T, p, 'k-', label='blaah')
-#plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit', linewidth=2)
+errors = np.sqrt(np.diag(covariance))
+
+print('a=', params[0], '+-', errors[0])
+print('b=', params[1], '+-', errors[1])
+print('c=', params[2], '+-', errors[2])
+print('d=', params[3], '+-', errors[3])
+
+
+x_plot = np.linspace(min(T), max(T))
+
+plt.plot(T, p, 'rx', label='blaah')
+plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit', linewidth=1)
 
 plt.grid()
 plt.title(r'fehlt noch')
 plt.legend(loc='best')
 plt.xlabel(r'$T$')
 plt.tight_layout()
-plt.savefig('15.pdf')
+plt.savefig('pol15.pdf')
 plt.show()
