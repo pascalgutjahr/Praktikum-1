@@ -15,7 +15,8 @@ c = 4262.7 #+- 560
 d = -557950 #+- 75600
 R = 8.31446
 T = np.linspace(373.15, 433.15)
-X=(((R*T)/2*(a*T**3+b*T**2+c*T+d)) - np.sqrt((R*T)/(2*(a*T**3+b*T**2+c*T+d))**2-a/(a*T**3+b*T**2+c*T+d))) * T*(3*a*T**2 + 2*b*T + c)
+A = 0.9
+X=(((R*T)/2*(a*T**3+b*T**2+c*T+d)) - np.sqrt((R*T)/(2*(a*T**3+b*T**2+c*T+d))**2-A/(a*T**3+b*T**2+c*T+d))) * T*(3*a*T**2 + 2*b*T + c)
 
 plt.xlabel(r'$T \,/\,\mathrm{K}$')
 plt.ylabel(r'$L\,/\, \mathrm{J/mol}$')
