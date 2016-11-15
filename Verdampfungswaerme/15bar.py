@@ -14,14 +14,6 @@ T += 273.15
 
 
 def f(T, a, b, c, d):
-<<<<<<< HEAD
-    return a*T**3 + b * T ** 2 + c * T + d
-
-
-params, covariance = curve_fit(f, T, p)
-
-errors = np.sqrt(np.diag(covariance))
-=======
     return a * T**3 + b * T**2 + c * T + d
 
 params, covariance = curve_fit(f, T, p)
@@ -32,25 +24,12 @@ print('a =', params[0], '±', errors[0])
 print('b =', params[1], '±', errors[1])
 print('c =', params[2], '±', errors[2])
 print('d =', params[3], '±', errors[3])
->>>>>>> c993d95d0c42eae2c26e5710db227e839707d41a
 
-print('a=', params[0], '+-', errors[0])
-print('b=', params[1], '+-', errors[1])
-print('c=', params[2], '+-', errors[2])
-print('d=', params[3], '+-', errors[3])
-
-<<<<<<< HEAD
 
 x_plot = np.linspace(min(T), max(T))
 
 plt.plot(T, p, 'rx', label='blaah')
 plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit', linewidth=1)
-=======
-x_plot = np.linspace(min(T), max(T))
-
-plt.plot(T, p, 'rx', label='blaah')
-plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit', linewidth=2)
->>>>>>> c993d95d0c42eae2c26e5710db227e839707d41a
 
 plt.grid()
 plt.title(r'fehlt noch')

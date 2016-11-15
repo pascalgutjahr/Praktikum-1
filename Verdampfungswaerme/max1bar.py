@@ -4,13 +4,9 @@ from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from scipy.optimize import curve_fit
-<<<<<<< HEAD
-plt.rcParams['figure.figsize'] = (15 , 10)
+
+plt.rcParams['figure.figsize'] = (15, 10)
 plt.rcParams['font.size'] = 20
-=======
-plt.rcParams['figure.figsize'] = (10, 5)
-plt.rcParams['font.size'] = 13
->>>>>>> c993d95d0c42eae2c26e5710db227e839707d41a
 plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
