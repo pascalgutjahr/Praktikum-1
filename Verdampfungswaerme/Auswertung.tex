@@ -107,7 +107,12 @@ mit den Parametern:
 \end{align*}
 
 \input{Table2.tex}
-% \input{15bar.jpg}
+\begin{figure}[H] % ein großes H steht dafür, dass das Objekt auf jeden Fall den Platz hält
+  \centering
+  \includegraphics[height=8cm]{15bar.jpg}
+  \caption{Ausgleichspolynom 3. Grades}
+  \label{fig:15}
+\end{figure}
 
 Werden nun (\ref{eq:pt}) und (\ref{eq:dp}) in (\ref{eq:8}) eingesetzt, so erhält man
 L in Abhängigkeit von T:
@@ -116,5 +121,11 @@ L in Abhängigkeit von T:
   -\frac{A}{aT^3+bT^2+cT+d}}\; \right] \\
   \;\cdot T \; (3aT^2+2bT+c)
 \end{align*}
-% \input{Lminus.jpg}
-% \input{Lplus.jpg}
+Die Lösung mit der negativen Wurzel ergibt hier im Sachzusammenhang jedoch kein Sinn,
+da es keine negative Verdampfungswärme gibt. Somit bleibt nur noch eine Lösung übrig:
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=5.5cm]{Lplus.jpg}
+  \caption{Der Wurzelterm wird addiert}
+  \label{fig:plus}
+\end{figure}
