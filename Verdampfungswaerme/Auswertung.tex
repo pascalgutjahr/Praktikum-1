@@ -8,16 +8,15 @@ verwendet. Hierbei ist $p_0$ der Umgebungsdruck und beträgt
 \begin{equation*}
   p_0=995\cdot 10^2 \si{\pascal}.
 \end{equation*}
-Die in Tabelle\ref{tab:data1} gemessenen Werte, für den Druck, werden logarithmiert und in einem
-Diagramm gegen den Kehrwert der absoluten Temperatur aufgetragen. \\
- \input{Table1.tex}
-\begin{figure}
+Die in Tabelle\ref{tab:data1} gemessenen Werte für den Druck werden logarithmiert und in einem
+Diagramm gegen den Kehrwert der absoluten Temperatur aufgetragen.
+\input{Table1.tex}
+\begin{figure}[H]
   \centering
   \includegraphics[height=9cm , width=13.5cm]{fit1.jpg}
   \caption{fit1}
   \label{fig:fit1}
   \end{figure}
-  \\
 Die Parameter der linearen Regression werden mit Python 3.5.2 berechnet und
 lauten:
 \begin{align*}
@@ -39,7 +38,7 @@ Somit ergibt sich:
 \begin{equation*}
   L=(41,94 \pm 0,05)\cdot 10^3 \frac{\si{\joule}}{\si{\mol}}.
 \end{equation*}
-\newpage
+% \newpage
 Weiter soll die äußere Verdampfungswärme $L_a$, also die Energie, welche
 benötigt wird um das Volumen der Flüssigkeit auf das Volumen des Gases
 zu bringen, berechnet werden. Hierbei wird eine Volumenarbeit $W=pV$ geleistet.
