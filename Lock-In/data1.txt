@@ -1,5 +1,5 @@
 Phase       Spannung
-Grad        Volt *10^3
+Grad        mV *10^3
 
   0         -5
  15          5
@@ -12,4 +12,4 @@ Grad        Volt *10^3
 180         5
 210         -25
 225         -53
-255          -80 
+255          -80
