@@ -20,6 +20,7 @@ Ein Lock-In-Verstärker besteht in der Regel aus folgenden Bauteilen:
 \end{itemize}
 Die Signale der einzelnen Komponenten können über das verwendete
 Speicher-Oszilloskop seperat betrachtet und vermessen werden.
+\newpage
 In einem ersten Schritt wird die Schaltung aus der Abbildung \ref{fig:schalt}
 aufgebaut.
 \begin{figure}[h]
@@ -30,3 +31,28 @@ aufgebaut.
 \end{figure}
 \\
 Hierbei wird nach jedem Bauteil überprüft, welche Signalformen ausgegeben werden.
+Für den ersten Teil des Versuchs wird der Noise-Generator zunächst gebrückt.
+Das Eingangssignal $U_{sig}$ wird nun auf eine Frequenz von $1\si{\kilo\hertz}$
+und eine Spannung von $10\si{\milli\volt}$ eingestellt. Dieses Signal wird dann
+auf den Verstärker gegeben und am Ausgang mit einem sinusförmigen Signal gleicher
+Frequenz gemischt. Mit diesem Aufbau werden Ausgangssignale für 5 verschiedene
+Phasen skizziert.
+Nachdem die Ausgangssignale gemessen wurden, wird der Tiefpass hinzugeschaltet
+und die Abhängigkeit des Ausgangsstroms zur Phasenverschiebung gemessen.
+% klingt noch ziemlich komisch
+Nun werden die Messungen mit Rausch-Generator wiederholt.
+\\
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{Bilder/LEDSchaltung.jpeg}
+  \caption{Schaltung mit Leuchtdiode}
+  \label{fig:led}
+\end{figure}
+\\
+Im zweiten Teil des Experiments wird die Schaltung wie in Abbildung \ref{fig:led}
+aufgebaut. Die Frequenz der LED liegt hierbei zwischen $50 \si{\hertz}$ und
+$500 \si{\hertz}$. Die Photodiode (PD) misst hierbei das aussgesendete Licht.
+Es soll nun die Lichtintensität der LED in Abhängigkeit des Abstands
+zwischen LED und PD gemessen werden. Zudem soll überprüft werden bis zu welchem
+Abstand $r_{max}$ das Licht der LED nachgewiesen werden kann.
+\newpage
