@@ -19,13 +19,50 @@ Der nachgeschaltete Tiefpass-Filter integriert das Mischsignal $(U_{sig}\times U
 mit einer Zeitkonstanten $\tau = RC \gg 1/\omega_0$.
 Rauschbeiträge, die nicht mit der Modulationsspannung synchronisiert sind, werden
 hierbei herausgemittelt. Somit erhält man eine zur Eingangsspannung proportionale
-Ausgangsspannung $U_{out} \propto U_0 \cos{\Phi}$.
-Je größer die Zeitkonstante $\Tau =RC$ gewählt wird, desto kleiner kann die
+Ausgangsspannung $U_{out} \propto U_0 \cos(\Phi)$.
+Je größer die Zeitkonstante $\tau =RC$ gewählt wird, desto kleiner kann die
 Bandbreite $\Delta v=1/(\pi RC)$.
 Der Gütefaktor der bei Lock-In-Verstärkern erreicht wird liegt bei Q=100000
-\cite{303}. \\
-\begin{figure}[p]
+\cite{303}.
+\newpage
+\begin{figure}[h]
+  \centering
   \includegraphics{Bilder/Spannung.jpeg}
   \caption{Spannungsverläufe}
   \label{fig:spannung}
 \end{figure}
+In Abbildung \ref{fig:spannung} werden die Signalverläufe der Signalspannung
+\begin{equation}
+  U_{sig}=U_0\sin(\omega t)
+\end{equation}
+betrachtet, die durch die Rechteckspannung $U_{ref}$ moduliert wird.
+Die Referenzspannung wird durch eine Fourier-Reihe mit der Form
+\begin{equation}
+  U_{ref}=\frac{4}{\pi}\biggl(\sin(\omega t)+\frac{1}{3}\sin(3\omega t)
+  +\frac{1}{5}\sin(5\omega t)\dots\biggr)
+\end{equation}
+beschrieben. Das Produkt beider Frequenzen ergibt dann:
+\begin{equation}
+  U_{sig}\times U_{ref} =\frac{2}{\pi}U_0\biggl(1-\frac{2}{3}\cos(w\omega t)
+  -\frac{2}{15}\cos(4\omega t)-\frac{2}{35}\cos(6\omega t)+\dots\biggr).
+\end{equation}
+Diese Formel enthält alle geraden Oberwellen der Grundfrequenz \omega.
+Wenn beide Frequenzen sinus-förmig sind erhält man für das Produkt der beiden
+Spannungen:
+\begin{equation}
+  U_{sig}\times U_{ref}=\frac{4}{\pi}U_0 \cdot \sin^2(\omega t)
+\end{equation}
+Damit die Oberwellen unterdrückt werden und eine zur Signalspannung proportionale
+Gleichspannung entsteht, muss der Tiefpassfilter entsprechend eingestellt werden.
+Die Gleichspannung lässt sich dann über
+\begin{equation}
+  U_{out}=\frac{2}{\pi}U_0
+\end{equation}
+beschreiben.
+Sind Signal- und Referenzspannung mit $\Phi$ phasenverschoben erhält man für
+die Ausgangsspannung mit
+\begin{equation}
+  U_{out}=\frac{2}{\pi}U_0\sin(\Phi)
+\end{equation}
+wieder eine zur Signalspannung probortionale Gleichspannung. Da die Ausgangsspannung
+nun von der Phasendifferenz abhängig ist, ist diese maximal bei $\Phi=0$.
