@@ -25,6 +25,8 @@ plt.subplot(2, 1 ,2)
 phi, U = np.genfromtxt('Rausch.txt', unpack=True, skip_header=2)
 
 plt.plot(phi, U, 'k.', label='Rausch')
+plt.ylabel(r'$U \,/\ 10^{-3} mV $')
+plt.xlabel(r'${\phi}$')
 plt.legend()
 plt.grid()
 
