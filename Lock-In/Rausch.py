@@ -30,4 +30,5 @@ plt.xlabel(r'${\phi}$')
 plt.legend()
 plt.grid()
 
+plt.savefig('Bilder/subplot.jpeg')
 plt.show()
