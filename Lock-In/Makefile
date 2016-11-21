@@ -5,6 +5,7 @@ build/lockin.pdf: lockin.tex | build
 	biber --output-directory=build lockin.bcf
 	lualatex --output-directory=build lockin.tex
 
+
 build:
 	mkdir -p build
 

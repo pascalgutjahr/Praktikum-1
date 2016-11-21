@@ -1,6 +1,6 @@
 import numpy as np
-import uncertainties.unumpy as unp
-from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
+# import uncertainties.unumpy as unp
+# from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from scipy.optimize import curve_fit
@@ -11,24 +11,46 @@ csfont = {'fontname': 'Times New Roman'}
 
 plt.subplot(2, 1, 1)
 
-phi, U = np.genfromtxt('data1.txt', unpack=True, skip_header=2)
+phi, U, U_out = np.genfromtxt('data1.txt', unpack=True, skip_header=3)
+U *= 1e-3
+U_out = 2 / np.pi * U * np.cos(phi)
+print(U_out)
 
-plt.plot(phi, U, 'k.', label='Ohne Rausch')
 
-plt.ylabel(r'$U \,/\ 10^{-3} mV $')
-plt.xlabel(r'${\phi}$')
+# def f(U, A, phi):
+#    return A * np.cos(phi)
+
+# params, covariance = curve_fit(f, np.cos(phi), U)
+
+# errors = np.sqrt(np.diag(covariance))
+
+# print('A =', params[0], '+-', errors[0])
+# print('n =', params[1], '+-', errors[1])
+
+# x_plot = np.linspace(min(np.cos(phi)), max(np.cos(phi)))
+
+plt.plot(np.cos(phi), U_out, 'k.', label='Ohne Rausch')
+# plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
+
+
+# plt.ylabel(r'$U \,/\ 10^{-3} mV $')
+# plt.xlabel(r'${\cos{(\phi)}}$')
 plt.legend()
 
 plt.grid()
-plt.subplot(2, 1 ,2)
+plt.subplot(2, 1, 2)
 
-phi, U = np.genfromtxt('Rausch.txt', unpack=True, skip_header=2)
+phi2, U2, U2_out = np.genfromtxt('Rausch.txt', unpack=True, skip_header=2)
 
-plt.plot(phi, U, 'k.', label='Rausch')
-plt.ylabel(r'$U \,/\ 10^{-3} mV $')
-plt.xlabel(r'${\phi}$')
+U2 *= 1e-4
+U2_out = 2 / np.pi * U2 * np.cos(phi2)
+print(U2_out)
+
+
+plt.plot(np.cos(phi2), U2_out, 'k.', label='Rausch')
+# plt.ylabel(r'$U \,/\ 10^{-3} mV $')
+# plt.xlabel(r'$\cos{{(\phi)}}$')
 plt.legend()
 plt.grid()
-
-plt.savefig('Bilder/subplot.jpeg')
 plt.show()
+plt.savefig('Bilder/subplot.jpg')
