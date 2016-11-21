@@ -46,5 +46,5 @@ plt.grid()
 
 
 plt.tight_layout()
-plt.savefig("photo1.pdf")
+plt.savefig("Bilder/photo1.pdf")
 plt.show()

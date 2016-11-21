@@ -48,4 +48,4 @@ plt.grid()
 
 
 plt.tight_layout()
-plt.savefig("Plot_Photodiode.pdf")
+plt.savefig("Bilder/Plot_Photodiode.pdf")

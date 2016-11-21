@@ -49,4 +49,4 @@ plt.grid()
 
 
 plt.tight_layout()
-plt.savefig("photo.pdf")
+plt.savefig("Bilder/photo.pdf")
