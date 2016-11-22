@@ -6,7 +6,7 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
 \begin{table}[!h]
   \centering
   \begin{subtable}{0.3\textwidth}
-    \begin{tabular}{SS}
+    \begin{tabular}{S[table-format=4.0]S}
       \toprule
       {$\varphi$} &
       {$U_\text{SS} \,/\, \si{\volt}$} \\
@@ -20,30 +20,32 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
       \bottomrule
     \end{tabular}
     \caption{ohne Tiefpass}
+    \label{tab:a}
   \end{subtable}
   \quad
   \begin{subtable}{0.3\textwidth}
-    \begin{tabular}{SSS}
+    \begin{tabular}{S[table-format=4.0]SS}
       \toprule
       {$\varphi$} &
-      {$U_\text{max} \,/\, \si{\volt}$} &
-      {$U_\text{out} \,/\, \si{\volt}$} \\
+      {$U_\text{max} \,/\, \si{\volt}\cdot10^{-3}$} &
+      {$U_\text{out} \,/\, \si{\volt}\cdot10^{-3}$} \\
       \midrule
-      0 \si{\degree}    &    -5     &     -3.18 \\
-     15 \si{\degree}    &     5     &     -2.42 \\
-     30 \si{\degree}    &    25     &      2.45 \\
-     45  \si{\degree}   &    45     &     15.00 \\
-     90 \si{\degree}    &    80     &    -22.80 \\
-    120 \si{\degree}    &    78     &     40.40 \\
-    135 \si{\degree}    &    65     &    -41.20 \\
-    165 \si{\degree}    &    20     &     -0.84 \\
-    180 \si{\degree}    &    5      &      1.90 \\
-    210 \si{\degree}    &    -25    &     14.10 \\
-    225 \si{\degree}    &    -53    &    -12.40 \\
-    255 \si{\degree}    &    -80    &     44.00 \\
+      0\si{\degree}    &    -5     &     -3.18 \\
+     15\si{\degree}    &     5     &      3.07 \\
+     30\si{\degree}    &    25     &     13.78 \\
+     45\si{\degree}    &    45     &     20.27 \\
+     90\si{\degree}    &    80     &      0.00 \\
+    120\si{\degree}    &    78     &     24.83 \\
+    135\si{\degree}    &    65     &    -29.26 \\
+    165\si{\degree}    &    20     &    -12.30 \\
+    180\si{\degree}    &    5      &     -3.18 \\
+    210\si{\degree}    &    -25    &     13.78 \\
+    225\si{\degree}    &    -53    &     23.86 \\
+    255\si{\degree}    &    -80    &     13.18 \\
     \bottomrule
     \end{tabular}
     \caption{mit Tiefpass}
+    \label{tab:b}
   \end{subtable}
   \caption{Messwerte ohne Rauschen}
   \quad
@@ -54,12 +56,12 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
 \begin{table}[!h]
   \centering
 \begin{subtable}{0.3\textwidth}
-  \begin{tabular}{SS}
+  \begin{tabular}{S[table-format=4.0]S}
     \toprule
     {$\varphi$} &
     {$U_\text{SS} \,/\, \si{\milli\volt}$} \\
     \midrule
-    0\si{\degree} & 88.0  \\
+    0\si{\degree}   & 88.0  \\
     120\si{\degree} & 56.8  \\
     165\si{\degree} & 92.0  \\
     240\si{\degree} & 67.2  \\
@@ -68,31 +70,32 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
     \bottomrule
   \end{tabular}
   \caption{ohne Tiefpass}
+  \label{tab:c}
 \end{subtable}
 \quad
 \begin{subtable}{0.3\textwidth}
-  \begin{tabular}{SSS}
+  \begin{tabular}{S[table-format=4.0]SS}
     \toprule
     {$\varphi$} &
-    {$U_\text{max} \,/\, \si{\volt}$} &
-    {$U_\text{out} \,/\, \si{\volt}$} \\
+    {$U_\text{max} \,/\, \si{\volt}\cdot10^{-4}$} &
+    {$U_\text{out} \,/\, \si{\volt}\cdot10^{-4}$} \\
     \midrule
-    0  \si{\degree}  &   -5   &   -3.18  \\
-   15  \si{\degree}  &    5   &   -2.42  \\
-   30  \si{\degree}  &   25   &    2.45  \\
-   45  \si{\degree}  &   45   &   15.00  \\
-   90  \si{\degree}  &   80   &   -22.8  \\
-  120  \si{\degree}  &   78   &   40.40  \\
-  135  \si{\degree}  &   65   &   -41.2  \\
-  165  \si{\degree}  &   20   &   -0.84  \\
-  180  \si{\degree}  &   5    &    1.90  \\
-  210  \si{\degree}  &   -25  &   14.10  \\
-  225  \si{\degree}  &   -53  &  -12.40  \\
-  255  \si{\degree}  &   -80  &   44.00  \\
+    0   \si{\degree}  &    0     &      0.00 \\
+   15   \si{\degree}  &    5     &      3.07 \\
+   30   \si{\degree}  &    16    &      8.82 \\
+   45   \si{\degree}  &    35    &     15.76 \\
+   90   \si{\degree}  &    50    &      0.00 \\
+  120   \si{\degree}  &    46    &    -14.64 \\
+  135   \si{\degree}  &    38    &    -17.11 \\
+  165   \si{\degree}  &    10    &     -6.15 \\
+  180   \si{\degree}  &    1     &     -0.64 \\
+  210   \si{\degree}  &    -20   &     11.03 \\
+  225   \si{\degree}  &    -35   &     15.76 \\
+  255   \si{\degree}  &    -50   &      8.24 \\
     \bottomrule
   \end{tabular}
   \caption{mit Tiefpass}
-  \label{tab:mRmT}
+  \label{tab:d}
 \end{subtable}
 \caption{Messwerte mit Rauschen, Signal Attenuator = 1,
         Noise Amplitude = 1$\times 10^{-3}$.}
@@ -100,119 +103,156 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
 \hfill
 \end{table}
 
-% Die Werte für $U_\text{out}$ werden mit Gleichung \eqref{eqn:Uout} berechnet, $\Delta\varphi$ beschreibt dabei die Phasendifferenz zwischen
-% Reference- und Oscillatorsignal. $U_\text{SS}$ und $U_\text{max}$ werden am \emph{Low-Pass-Filter Output} abgelesen und
-% verstärkungsbereinigt.
+Die Werte für $U_{out}$ lassen sich mit Hilfe der Formel \eqref{eqn:out} berechnen.\\
+
 \begin{figure}[!h]
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/15.jpg}
-\label{fig:1}
 \caption{$\varphi = 15\si{\degree}$}
+\label{fig:1}
 \end{minipage}
 \hspace{10pt}
 \vspace{5pt}
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/45.jpg}
-\label{fig:2}
 \caption{$\varphi = 45\si{\degree}$}
+\label{fig:2}
 \end{minipage}
 \hspace{10pt}
 \vspace{5pt}
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/105.jpg}
-\label{fig:3}
 \caption{$\varphi = 105\si{\degree}$}
+\label{fig:3}
 \end{minipage}
 \hspace{10pt}
 \vspace{5pt}
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/165.jpg}
-\label{fig:4}
 \caption{$\varphi = 165\si{\degree}$}
+\label{fig:4}
 \end{minipage}
 \hspace{12pt}
 \vspace{5pt}
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/225.jpg}
-\label{fig:5}
 \caption{$\varphi = 225\si{\degree}$}
+\label{fig:5}
 \end{minipage}
 \hspace{12pt}
 \vspace{5pt}
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/330.jpg}
-\label{fig:6}
 \caption{$\varphi = 330\si{\degree}$}
+\label{fig:6}
 \end{minipage}
 \hspace{12pt}
 \vspace{5pt}
 \end{figure}
 
-% \begin{itemize}
-%   \item Abbildung \ref{fig:1}: Annäherung des Signals durch eine Fourierreihe.
-%   \item Abbildung \ref{fig:2}: Übergang durch Phasenänderung um 45\si{\degree}.
-%   \item Abbildung \ref{fig:3}: Weitere Phasenänderung um 45\si{\degree}, symmetrisch zur x-Achse.
-%   \item Abbildung \ref{fig:4}: Fast vollständige Umkehrung, ingesamt um 135\si{\degree} gedreht.
-%   \item Abbildung \ref{fig:5}: Komplette Drehung um 180\si{\degree}, gespiegelt an der $x$-Achse zum Ausgangssignal.
-% \end{itemize}
+In den Abbildungen \eqref{fig:1} bis \eqref{fig:6} sind die Spannungskurven für unterschiedliche Phasen
+zu sehen. Hierbei wurde weder der Tiefpassfilter noch der Rausch-Generator eingeschaltet. \\
+Die Spannungswerte sind in (\ref{tab:a}) zu finden. \\
 
-Oben zu sehen sind die Aufzeichnungen des Oszilloskopes ohne den Tiefpassfilter.
 \newpage
 
 \begin{figure}[!h]
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/Rausch0.jpg}
-\label{fig:}
-\caption*{$\varphi = 0\si{\degree}$}
+\caption{$\varphi = 0\si{\degree}$}
+\label{fig:7}
 \end{minipage}
 \hspace{10pt}
 \vspace{5pt}
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/Rausch120.jpg}
+\caption{$\varphi = 45\si{\degree}$}
 \label{fig:8}
-\caption*{$\varphi = 45\si{\degree}$}
 \end{minipage}
 \hspace{10pt}
 \vspace{5pt}
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/Rausch165.jpg}
+\caption{$\varphi = 90\si{\degree}$}
 \label{fig:9}
-\caption*{$\varphi = 90\si{\degree}$}
 \end{minipage}
 \hspace{10pt}
 \vspace{5pt}
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/Rausch240.jpg}
+\caption{$\varphi = 135\si{\degree}$}
 \label{fig:10}
-\caption*{$\varphi = 135\si{\degree}$}
 \end{minipage}
 \hspace{12pt}
 \vspace{5pt}
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/Rausch270.jpg}
+\caption{$\varphi = 180\si{\degree}$}
 \label{fig:11}
-\caption*{$\varphi = 180\si{\degree}$}
 \end{minipage}
 \hspace{12pt}
 \vspace{5pt}
 \begin{minipage}[t]{0.3\textwidth}
 \includegraphics[width=\textwidth]{Bilder/Rausch315.jpg}
+\caption{$\varphi = 180\si{\degree}$}
 \label{fig:12}
-\caption*{$\varphi = 180\si{\degree}$}
 \end{minipage}
 \hspace{12pt}
 \vspace{5pt}
 \end{figure}
 
-% Für die Messwerte mit Rauschen und ohne Tiefpassfilter folgt die analoge Beschreibung der Grafiken. Anzumerken ist hier,
-% dass sich die Graphen gespiegelt zur $x$-Achse verhalten. \\
-%
-% Im nächsten Auswertungsteil geht es um die Abhängigkeit der Ausgangsspannung zur Phasenverschiebung.
-% Dazu wird zunächst das nicht verrauschte Signal verwendet. Die Messdaten zu der Versuchsreihe sind Tabelle \ref{tab:oRmT}
-% zu entnehmen. Die Phasendifferenz wird für eine bessere Darstellung gegen die Ausgangsspannung U$_\text{out}$ geplottet.
-% \begin{figure}[!h]
-%   \centering
-%   \includegraphics[width=1.0\textwidth]{Plots/Plot_Messung_oR.pdf}
-%   \caption{Ausgangsspannung U$_\text{out}$ in Abhängigkeit von der Phasendifferenz $\Delta\varphi$.}
-%   \label{fig:Uout}
-% \end{figure}
+In den Abbildungen \eqref{fig:7}) bis \eqref{fig:12} sind die Spannungskurven mit
+eingeschaltetem Rausch-Generator zu sehen. Der Tiefpassfilter ist weiterhin ausgeschaltet. \\
+Die Spannungswerte sind in (\ref{tab:c}) zu finden. \\
+
+\newpage
+
+Im zweiten Teil der Auswertung wird die Abhängigkeit der Ausgangsspannung zur Phasenverschiebung
+betrachtet. Hier wird sowohl mit, als auch ohne Rausch-Generator gemessen. Zur besseren
+Darstellung wird $\varphi$ gegen $U_{out}$ geplottet. Diese Werte sind in Tabelle (\ref{tab:b}) einzusehen.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{Bilder/phi.pdf}
+  \caption{U$_{out}$ in Abhängigkeit von $\varphi$.}
+  \label{fig:Uout}
+\end{figure}
+
+Die Funktionen in Grafik (\ref{fig:Uout}) lassen einen cosinusförmigen Verlauf erkennen. \\
+
+\newpage
+
+
+Im letzten Teil der Auswertung wurde untersucht, bei welcher maximalen Entfernung $r$
+eine Photodiode keinen Lichtimpuls einer LED mehr aufnimmt. Dabei wird die eingehende Spannung $U$
+gegen den Abstand $r$ geplottet.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{Bilder/Plot_Photodiode.pdf}
+  \caption{U in Abhängigkeit von r}
+  \label{fig:led}
+\end{figure}
+
+In Grafik (\ref{fig:led}) ist zu erkennen, dass die Spannung exponentiell zum Abstand
+abnimmt. Daraus folgt:
+
+\begin{equation*}
+  U \propto \frac{1}{r^2}
+\end{equation*}
+\\
+Nun wird die Ausgangsspannung gegen $1/r^2$ geplottet, damit ein linearer Fit mit ipython durchgeführt
+werden kann.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\textwidth]{Bilder/photo.pdf}
+\caption{Lineare Regression}
+\label{fig:lin}
+\end{figure}
+
+Die Parameter der Ausgleichgeraden in Grafik (\ref{fig:lin}) lauten:
+
+\begin{align*}
+    a &= 194 ± 9.00 \; \si{\milli\volt\per\square\centi\meter} \\
+    b &= -0.14 ± 0.03 \; \si{\milli\volt}
+\end{align*}

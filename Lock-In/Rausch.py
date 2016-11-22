@@ -12,9 +12,9 @@ csfont = {'fontname': 'Times New Roman'}
 plt.subplot(2, 1, 1)
 
 phi, U, U_out = np.genfromtxt('data1.txt', unpack=True, skip_header=3)
-U *= 1e-3
-U_out = 2 / np.pi * U * np.cos(phi)
-print(U_out)
+# U *= 1e-3
+# U_out = 2 / np.pi * U * np.cos(phi)
+# print(U_out)
 
 
 # def f(U, A, phi):
@@ -29,28 +29,28 @@ print(U_out)
 
 # x_plot = np.linspace(min(np.cos(phi)), max(np.cos(phi)))
 
-plt.plot(np.cos(phi), U_out, 'k.', label='Ohne Rausch')
+plt.plot(np.cos(phi), U_out, 'k.', label='Ohne Rauschen')
 # plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
 
 
-# plt.ylabel(r'$U \,/\ 10^{-3} mV $')
-# plt.xlabel(r'${\cos{(\phi)}}$')
+plt.ylabel(r'$U_{out} \; \cdot 10^{-3}\,/\, V$')
+plt.xlabel(r'$\cos{{(\phi)}}$')
 plt.legend()
 
 plt.grid()
 plt.subplot(2, 1, 2)
 
-phi2, U2, U2_out = np.genfromtxt('Rausch.txt', unpack=True, skip_header=2)
+phi2, U2, U2_out, U3_out = np.genfromtxt('Rausch.txt', unpack=True, skip_header=2)
 
-U2 *= 1e-4
-U2_out = 2 / np.pi * U2 * np.cos(phi2)
-print(U2_out)
+# U2 *= 1e-4
+# U2_out = 2 / np.pi * U2 * np.cos(phi2)
+# print(U2_out)
 
 
-plt.plot(np.cos(phi2), U2_out, 'k.', label='Rausch')
-# plt.ylabel(r'$U \,/\ 10^{-3} mV $')
-# plt.xlabel(r'$\cos{{(\phi)}}$')
+plt.plot(np.cos(phi2), U3_out, 'k.', label='mit Rauschen')
+plt.ylabel(r'$U_{out} \, \cdot 10^{-4} \,/\, V$')
+plt.xlabel(r'$\cos{{(\phi)}}$')
 plt.legend()
 plt.grid()
+plt.savefig('Bilder/phi.pdf')
 plt.show()
-plt.savefig('Bilder/subplot.pdf')

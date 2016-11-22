@@ -25,6 +25,9 @@ r_2 = 1 / r**2
 def f(a, r_2, b):
     return a * r_2 + b
 
+# a= 193.930573545 +- 8.72115792775 mv/cm^2
+# b= -0.142346920466 +- 0.0283526158466 mv/cm^2
+
 params, covariance = curve_fit(f, r_2, U)
 errors = np.sqrt(np.diag(covariance))
 
