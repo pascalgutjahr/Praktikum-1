@@ -12,14 +12,14 @@ Abbildung \ref{fig:schema} zeigt den schematischen Aufbau eines Lock-In-Verstär
 Das verrauschte Nutzssignal $U_{sig}$ wird zuerst durch einen Bandpass-Filter
 von Rauschanteilen mit hoher beziehungsweise niedriger Frequenz befreit, bevor
 es in einem Mischer mit dem Referenzsignal $U_{ref}$ mit der Frequenz $\omega_0$
-multipliziert wird. Die Phasenlage $\Phi$ von $U_{ref}$ lässt sich mit dem
+multipliziert wird. Die Phasenlage $\varphi$ von $U_{ref}$ lässt sich mit dem
 Phasenschieber variieren und kann so mit der Signalspannung synchronisiert werden,
-sodass $\Delta\Phi =0$.
+sodass $\Delta\varphi =0$.
 Der nachgeschaltete Tiefpass-Filter integriert das Mischsignal $(U_{sig}\times U_{ref})$
 mit einer Zeitkonstanten $\tau = RC \gg 1/\omega_0$.
 Rauschbeiträge, die nicht mit der Modulationsspannung synchronisiert sind, werden
 hierbei herausgemittelt. Somit erhält man eine zur Eingangsspannung proportionale
-Ausgangsspannung $U_{out} \propto U_0 \cos(\Phi)$.
+Ausgangsspannung $U_{out} \propto U_0 \cos(\varphi)$.
 
 Je größer die Zeitkonstante $\tau =RC$ gewählt wird, desto kleiner kann die
 Bandbreite $\Delta v=1/(\pi RC)$ gewählt werden.
@@ -60,10 +60,10 @@ Die Gleichspannung lässt sich dann über
   U_{out}=\frac{2}{\pi}U_0
 \end{equation}
 beschreiben.
-Sind Signal- und Referenzspannung mit $\Phi$ phasenverschoben erhält man für
+Sind Signal- und Referenzspannung mit $\varphi$ phasenverschoben erhält man für
 die Ausgangsspannung mit
 \begin{equation}
-  U_{out}=\frac{2}{\pi}U_0\cos(\Phi) \label{eqn:out}
+  U_{out}=\frac{2}{\pi}U_0\cos(\varphi) \label{eqn:out}
 \end{equation}
 wieder eine zur Signalspannung probortionale Gleichspannung. Da die Ausgangsspannung
-nun von der Phasendifferenz abhängig ist, ist diese maximal bei $\Phi=0$.
+nun von der Phasendifferenz abhängig ist, ist diese maximal bei $\varphi=0$.
