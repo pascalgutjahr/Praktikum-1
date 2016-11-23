@@ -1,6 +1,6 @@
 Da bei vielen elektrischen und physikalischen Systemen das Rauschen zunimmt, wenn
 die Frequenz $\omega$ gegen 0 strebt \cite{enet}, wird ein Lock-in-Verstärker
-verwendet, um das Signal zu verstärken. Mit dieser Technik können dann auch
+verwendet, um ein Signal zu verstärken. Mit dieser Technik können dann auch
 Signale mit niedrigen Frequenzen detektiert werden. Um dies zu erreichen, wird die
 zu messende Frequenz mit einer Referenzfrequenz $\omega_0$ moduliert. \\
 \begin{figure}[h]
@@ -21,9 +21,10 @@ Rauschbeiträge, die nicht mit der Modulationsspannung synchronisiert sind, werd
 hierbei herausgemittelt. Somit erhält man eine zur Eingangsspannung proportionale
 Ausgangsspannung $U_{out} \propto U_0 \cos(\varphi)$.
 
-Je größer die Zeitkonstante $\tau =RC$ gewählt wird, desto kleiner kann die
+Je größer die Zeitkonstante $\tau =RC$ dabei gewählt wird, desto kleiner kann die
 Bandbreite $\Delta v=1/(\pi RC)$ gewählt werden.
-Der Gütefaktor der bei Lock-In-Verstärkern erreicht wird liegt bei Q=100000
+Der Gütefaktor, also der Energieverlust eines schwingenden Systems,
+der bei Lock-In-Verstärkern erreicht wird liegt bei Q=100000
 \cite{303}.
 \newpage
 \begin{figure}[h]
@@ -44,12 +45,12 @@ Die Referenzspannung wird durch eine Fourier-Reihe mit der Form
 \end{equation}
 beschrieben. Das Produkt beider Frequenzen ergibt dann:
 \begin{equation}
-  U_{sig}\times U_{ref} =\frac{2}{\pi}U_0\biggl(1-\frac{2}{3}\cos(w\omega t)
+  U_{sig}\times U_{ref} =\frac{2}{\pi}U_0\biggl(1-\frac{2}{3}\cos(\omega t)
   -\frac{2}{15}\cos(4\omega t)-\frac{2}{35}\cos(6\omega t)+\dots\biggr).
 \end{equation}
 Diese Formel enthält alle geraden Oberwellen der Grundfrequenz \omega.
-Wenn beide Frequenzen sinus-förmig sind erhält man für das Produkt der beiden
-die Formel
+Sind beide Frequenzen sinus-förmig erhält man für das Produkt der beiden
+die Formel:
 \begin{equation}
   U_{sig}\times U_{ref}=\frac{4}{\pi}U_0 \cdot \sin^2(\omega t).
 \end{equation}
