@@ -22,7 +22,11 @@ r = dr + R
 
 
 def f(r, a, b, c):
-    return a+b/(r+c)**2
+    return a + b/(r+c)**2
+
+# a= -0.0271172990579 +- 0.00493203668317
+# b= 69.2408025162 +- 2.42624318655
+# c= -4.22456714135 +- 0.104653712933
 
 params, covariance = curve_fit(f, r, U)
 errors = np.sqrt(np.diag(covariance))
