@@ -9,7 +9,7 @@ zu messende Frequenz mit einer Referenzfrequenz $\omega_0$ moduliert. \\
   \label{fig:schema}
 \end{figure} \\
 Abbildung \ref{fig:schema} zeigt den schematischen Aufbau eines Lock-In-Verstärkers.
-Das verrauschte Nutzssignal $U_{sig}$ wird zuerst durch einen Bandpass-Filter
+Das verrauschte Nutzsignal $U_{sig}$ wird zuerst durch einen Bandpass-Filter
 von Rauschanteilen mit hoher beziehungsweise niedriger Frequenz befreit, bevor
 es in einem Mischer mit dem Referenzsignal $U_{ref}$ mit der Frequenz $\omega_0$
 multipliziert wird. Die Phasenlage $\varphi$ von $U_{ref}$ lässt sich mit dem
@@ -18,13 +18,13 @@ sodass $\Delta\varphi =0$.
 Der nachgeschaltete Tiefpass-Filter integriert das Mischsignal $(U_{sig}\times U_{ref})$
 mit einer Zeitkonstanten $\tau = RC \gg 1/\omega_0$.
 Rauschbeiträge, die nicht mit der Modulationsspannung synchronisiert sind, werden
-hierbei herausgemittelt. Somit erhält man eine zur Eingangsspannung proportionale
+hierbei herausgemittelt. Daraus ergibt sich eine zur Eingangsspannung proportionale
 Ausgangsspannung $U_{out} \propto U_0 \cos(\varphi)$.
 
 Je größer die Zeitkonstante $\tau =RC$ dabei gewählt wird, desto kleiner kann die
 Bandbreite $\Delta v=1/(\pi RC)$ gewählt werden.
 Der Gütefaktor, also der Energieverlust eines schwingenden Systems,
-der bei Lock-In-Verstärkern erreicht wird liegt bei Q=100000
+der bei Lock-In-Verstärkern erreicht wird, liegt bei Q=100000
 \cite{303}.
 \newpage
 \begin{figure}[h]
@@ -49,7 +49,7 @@ beschrieben. Das Produkt beider Frequenzen ergibt dann:
   -\frac{2}{15}\cos(4\omega t)-\frac{2}{35}\cos(6\omega t)+\dots\biggr).
 \end{equation}
 Diese Formel enthält alle geraden Oberwellen der Grundfrequenz \omega.
-Sind beide Frequenzen sinus-förmig erhält man für das Produkt der beiden
+Sind beide Frequenzen sinus-förmig, erhält man für das Produkt der beiden
 die Formel:
 \begin{equation}
   U_{sig}\times U_{ref}=\frac{4}{\pi}U_0 \cdot \sin^2(\omega t).
@@ -66,5 +66,5 @@ die Ausgangsspannung mit
 \begin{equation}
   U_{out}=\frac{2}{\pi}U_0\cos(\varphi) \label{eqn:out}
 \end{equation}
-wieder eine zur Signalspannung probortionale Gleichspannung. Da die Ausgangsspannung
+wieder eine zur Signalspannung proportionale Gleichspannung. Da die Ausgangsspannung
 nun von der Phasendifferenz abhängig ist, ist diese maximal bei $\varphi=0$.
