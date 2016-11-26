@@ -1,20 +1,20 @@
-\subsection{p < 1 bar}
+\subsection{Dampfdruckkurve im Niederdruckbereich}
 Um die Verdampfungswärme L zu berechnen, wird die Formel
 \begin{equation*}
-  \ln \bigl(\frac{p}{p_0}\bigr)=-\frac{\symup{L}}{\symup{R}} \cdot \frac{1}{\symup{T}}
+  \ln \biggl(\frac{p}{p_0}\biggr)=-\frac{\symup{L}}{\symup{R}} \cdot \frac{1}{\symup{T}}
   %schon verwendet?
 \end{equation*}
 verwendet. Hierbei ist $p_0$ der Umgebungsdruck und beträgt
 \begin{equation*}
-  p_0=995\cdot 10^2 \si{\pascal}.
+  p_0=995\cdot 10^2 \,\si{\pascal}.
 \end{equation*}
-Die in Tabelle\ref{tab:data1} gemessenen Werte für den Druck werden logarithmiert und in einem
+Die in Tabelle \ref{tab:data1} gemessenen Werte für den Druck werden logarithmiert und in einem
 Diagramm gegen den Kehrwert der absoluten Temperatur aufgetragen.
 \input{Table1.tex}
 \begin{figure}[H]
   \centering
-  \includegraphics[height=9cm , width=13.5cm]{fit1.jpg}
-  \caption{fit1}
+  \includegraphics[height=9cm , width=13.5cm]{fit1.pdf}
+  \caption{linearer Fit der Messwerte bis 1 bar}
   \label{fig:fit1}
   \end{figure}
 Die Parameter der linearen Regression werden mit Python 3.5.2 berechnet und
@@ -23,7 +23,7 @@ lauten:
   a =& (-5,044 \pm 0,006) \cdot 10^3 \si{\kelvin} \\
   b =& (13,54 \pm 0,02)
 \end{align*}
-Unter Verwendung von Formel \eqref{eq:4} und der allgemeinen Geradengleichung
+Unter Verwendung von Formel \eqref{eq:4} und der Geradengleichung
 lässt sich L mit
 \begin{equation}
   a=-\frac{L}{\symup{R}} \iff L = -a \cdot \symup{R}
@@ -31,9 +31,10 @@ lässt sich L mit
 darstellen. Der dazugehörige Fehler wird über die Gaußsche Fehlerfortpflanzung
 berechnet und liefert:
 \begin{equation}
-  \Delta f = \sqrt{-\symup{R}^2 \cdot \Delta a^2}.
+  \Delta L = \sqrt{(\symup{R} \cdot \Delta a)^2}.
+  \label{eqn:fehler}
 \end{equation}
-Wobei R die allgemeine Gaskontante und $\Delta a$ der Fehler von $a$ ist.
+Hierbei ist R die allgemeine Gaskontante und $\Delta a$ der Fehler von $a$.
 Somit ergibt sich:
 \begin{equation*}
   L=(41,94 \pm 0,05)\cdot 10^3 \frac{\si{\joule}}{\si{\mol}}.
@@ -42,8 +43,8 @@ Somit ergibt sich:
 Weiter soll die äußere Verdampfungswärme $L_a$, also die Energie, welche
 benötigt wird um das Volumen der Flüssigkeit auf das Volumen des Gases
 zu bringen, berechnet werden. Hierbei wird eine Volumenarbeit $W=pV$ geleistet.
-Über gleichsetzen der idealen Gasgleichung \eqref{eq:ideal} mit der
-Volumenarbeit, lässt sich $L_a$ für eine Temperatur von $T=373 \si{\kelvin}$
+Über Gleichsetzen der idealen Gasgleichung \eqref{eq:ideal} mit der
+Volumenarbeit lässt sich $L_a$ für eine Temperatur von $T=373 \si{\kelvin}$
 berechnen:
 \begin{align*}
   L_a =& W =pV=RT \\
@@ -55,31 +56,33 @@ Anziehungskräfte zu überwinden. Diese ist
   L_i=&L-L_a \\
   =& (38,84 \pm 0,05)\cdot 10^3 \si{\joule\per\mol}.
 \end{align*}
- Die innere Energie pro Molekül erhält man durch die Division mit der Avogadrokonstanten
- $\symup{N_A}=6,022 \cdot 10^{23} \frac{1}{\si{\mol}}$.
- Dieses Ergebnis wird der Anschaulichkeit halber in Elektronenvolt angegeben
- ($1\si{\electronvolt}=1,602\cdot 10{{-19}}\si{\joule})$.
- Der Fehler wird erneut über die Gaußsche Fehlerfortpflanzung berechnet:
- \begin{equation*}
-   \Delta f=\sqrt{\frac{1}{\symup N_A^2}\cdot 0,050^2}.
- \end{equation*}
- Somit:
- \begin{align*}
-   L_i =&(4,03\cdot 10^{-4} \pm 1\cdot 10^{-6})\ \si{\electronvolt} \\
-   L_i =&(0,403 \pm 0,001) \ \si{\milli\electronvolt}
- \end{align*}
-\subsection{p > 1 bar}
-Um die Verdampfungswärme, bei höheren Drücken, in Abhängigkeit der Temperatur zu
-ermitteln, benötigen wir die Clausis-Clapeyronsche Gleichung (\ref{eq:clausius}).
-Diese wird nach der Verdampfungswärme L umgeformt:
+Der Fehler wird mit der Gaußschen Fehlerfortpflanzung aus Formel \eqref{eqn:fehler}
+berechnet.
+Die innere Energie pro Molekül erhält man durch die Division mit der Avogadrokonstanten
+$\symup{N_A}=6,022 \cdot 10^{23} \frac{1}{\si{\mol}}$.
+Dieses Ergebnis wird der Anschaulichkeit halber in Elektronenvolt angegeben
+($1\si{\electronvolt}=1,602\cdot 10^{-19}\,\si{\joule})$.
+Der Fehler wird erneut über die Gaußsche Fehlerfortpflanzung berechnet:
+\begin{equation*}
+   \Delta L_i=\sqrt{\frac{1}{\symup N_A^2}\cdot \sigma^2}.
+\end{equation*}
+Somit:
+\begin{align*}
+   L_{i,m} =&(4,03\cdot 10^{-4} \pm 1\cdot 10^{-6})\ \si{\electronvolt} \\
+   L_{i,m} =&(0,403 \pm 0,001) \ \si{\milli\electronvolt}
+\end{align*}
+\subsection{Dampfdruckkurve im Hochdruckbereich}
+Um die Verdampfungswärme bei höheren Drücken in Abhängigkeit der Temperatur zu
+ermitteln, wird die Clausis-Clapeyronsche Gleichung (\ref{eq:clausius}) verwendet.
+Diese wird nach der Verdampfungswärme $L$ umgeformt:
 \begin{equation}
   L = (V_D - V_F) \;T\; \frac{dp}{dT} \label{eq:8}
 \end{equation}
 $V_F$ kann hierbei weiterhin vernachlässigt werden, $V_D$ kann nun jedoch nicht mehr
 mit der allgemeinen Gaslgeichung (\ref{eq:ideal}) bestimmt werden.
-Eine Gute Näherung ist durch die Gleichung
+Eine gute Näherung ist durch die Gleichung
 \begin{align}
-  \biggr(p + \frac{A}{V^2}\biggl) \; V = RT \qquad mit \qquad A = 0,9 \frac{\si{\joule \meter^3}}
+  \biggr(p + \frac{A}{V^2}\biggl) \; V = RT \qquad \text{mit} \qquad A = 0,9 \,\frac{\si{\joule \meter^3}}
   {\si{\mol^2}}
 \end{align}
 gegeben.
@@ -95,7 +98,7 @@ Anschließend wird dieser Term in (\ref{eq:8}) eingesetzt:
 Für die Lösung von $\frac{dp}{dT}$ wird ein Ausgleichpolynom 3. Grades verwendet,
 \begin{align}
   p(T) &= a \cdot T^3 + b \cdot T^2 + c \cdot T + d  \label{eq:pt}\\
-  \frac{dp}{dT} &= 3a \cdot T^2 + 2b \cdot T +    \label{eq:dp}
+  \frac{dp}{dT} &= 3a \cdot T^2 + 2b \cdot T +  c  \label{eq:dp}
 \end{align}
 mit den Parametern:
 \begin{align*}
@@ -113,15 +116,15 @@ mit den Parametern:
   \label{fig:15}
 \end{figure}
 
-Werden nun (\ref{eq:pt}) und (\ref{eq:dp}) in (\ref{eq:8}) eingesetzt, so erhält man
-L in Abhängigkeit von T:
+Werden nun (\ref{eq:pt}) und (\ref{eq:dp}) in (\ref{eq:8}) eingesetzt, lässt sich
+$L$ in Abhängigkeit von T berechnen:
 \begin{align*}
   L(T) = \left[\frac{RT}{2 (aT^3+bT^2+cT+d)} \; \pm \sqrt{\biggl(\frac{RT}{2(aT^3+bT^2+cT+d)}\biggr)^2
   -\frac{A}{aT^3+bT^2+cT+d}}\; \right] \\
   \;\cdot T \; (3aT^2+2bT+c)
 \end{align*}
-Die Lösung mit der negativen Wurzel ergibt hier im Sachzusammenhang jedoch kein Sinn,
-da es keine negative Verdampfungswärme gibt. Somit bleibt nur noch eine Lösung übrig:
+Die Lösung mit der negativen Wurzel ergibt hier im Sachzusammenhang jedoch keinen Sinn,
+da es keine negative Verdampfungswärme gibt. Somit bleibt nur die positve Lösung übrig:
 \begin{figure}[H]
   \centering
   \includegraphics[height=9cm, width=13cm]{Lplus.jpg}
