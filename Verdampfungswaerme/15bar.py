@@ -11,7 +11,7 @@ csfont = {'fontname': 'Times New Roman'}
 
 T, p = np.genfromtxt('data2.txt', unpack=True, skip_header=2)
 T += 273.15
-
+p *= 1e+5
 
 def f(T, a, b, c, d):
     return a * T**3 + b * T**2 + c * T + d
@@ -38,5 +38,5 @@ plt.xlim(min(T), max(T))
 plt.grid()
 plt.legend(loc='best')
 plt.tight_layout()
-plt.savefig('15bar.jpg')
+plt.savefig('15bar.pdf')
 plt.show()

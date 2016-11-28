@@ -11,13 +11,18 @@ csfont = {'fontname': 'Times New Roman'}
 
 x = np.linspace(373, 480)
 # x = T ( Tmeperatur)
-a = 0.00924
-b = -10.86
-c = 4262.7
-d = -557950
+# a = 0.00924
+# b = -10.86
+# c = 4262.7
+# d = -557950
 R = 8.31446
 A = 0.9
 # L = (((R*T)/(2*(a*T**3+b*T**2+c*T+d))) + np.sqrt((R*T)/(2*(a*T**3+b*T**2+c*T+d))**2-A/(a*T**3+b*T**2+c*T+d))) * T*(3*a*T**2 + 2*b*T + c)
+
+a = 7.84610208665
+b = -9194.8892383
+c = 3597746.90807
+d = -469763969.078
 
 L = x * ((R * x)/2 + np.sqrt(((R * x)/2)**2 - A * (a * x**3 + b * x**2 + c * x + d))) * (3 * a * x**2 + 2 * b * x + c)/(a * x**3 + b * x**2 + c * x + d)
 plt.xlabel(r'$T \,/\,\mathrm{K}$')
@@ -27,5 +32,5 @@ plt.xlim(min(x), max(x))
 plt.grid()
 plt.tight_layout()
 plt.legend(loc='upper left')
-plt.savefig('Lplus.jpg')
+plt.savefig('Lplus.pdf')
 plt.show()

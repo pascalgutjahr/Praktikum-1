@@ -1,5 +1,5 @@
 \subsection{Dampfdruckkurve im Niederdruckbereich}
-Um die Verdampfungswärme L zu berechnen, wird die Formel
+Um die Verdampfungswärme $L$ zu berechnen, wird die Formel
 \begin{equation*}
   \ln \biggl(\frac{p}{p_0}\biggr)=-\frac{\symup{L}}{\symup{R}} \cdot \frac{1}{\symup{T}}
   %schon verwendet?
@@ -20,11 +20,11 @@ Diagramm gegen den Kehrwert der absoluten Temperatur aufgetragen.
 Die Parameter der linearen Regression werden mit Python 3.5.2 berechnet und
 lauten:
 \begin{align*}
-  a =& (-5,044 \pm 0,006) \cdot 10^3 \si{\kelvin} \\
+  a =& (-5,044 \pm 0,006) \cdot 10^3 \; \si{\kelvin} \\
   b =& (13,54 \pm 0,02)
 \end{align*}
 Unter Verwendung von Formel \eqref{eq:4} und der Geradengleichung
-lässt sich L mit
+lässt sich $L$ mit
 \begin{equation}
   a=-\frac{L}{\symup{R}} \iff L = -a \cdot \symup{R}
 \end{equation}
@@ -61,10 +61,10 @@ berechnet.
 Die innere Energie pro Molekül erhält man durch die Division mit der Avogadrokonstanten
 $\symup{N_A}=6,022 \cdot 10^{23} \frac{1}{\si{\mol}}$.
 Dieses Ergebnis wird der Anschaulichkeit halber in Elektronenvolt angegeben
-($1\si{\electronvolt}=1,602\cdot 10^{-19}\,\si{\joule})$.
+($1\si{\electronvolt}=1,602\cdot 10^{-19}\, \si{\joule})$.
 Der Fehler wird erneut über die Gaußsche Fehlerfortpflanzung berechnet:
 \begin{equation*}
-   \Delta L_i=\sqrt{\frac{1}{\symup N_A^2}\cdot \sigma^2}.
+   \Delta L_i=\sqrt{\frac{1}{\symup N_A^2}\cdot \sigma_{i}^2}.
 \end{equation*}
 Somit:
 \begin{align*}
@@ -102,32 +102,34 @@ Für die Lösung von $\frac{dp}{dT}$ wird ein Ausgleichpolynom 3. Grades verwend
 \end{align}
 mit den Parametern:
 \begin{align*}
-  a &= (0,009 \pm 0,001) \; \si{\frac{\pascal}{\kelvin^3}} \\
-  b &= (-11 \pm 1) \; \si{\frac{\pascal}{\kelvin^2}} \\
-  c &= (4,3 \pm 0,6) \; \cdot 10^3 \; \si{\frac{\pascal}{\kelvin}} \\
-  d &= (-5,6 \pm 0,8)\; \cdot 10^5 \; \si{\pascal}
+  a &= (7,8 \pm 0,8) \; \si{\frac{\pascal}{\kelvin^3}} \\
+  b &= (-9,2 \pm 9,0) \; \cdot 10^3 \; \si{\frac{\pascal}{\kelvin^2}} \\
+  c &= (3,6 \pm 0,4) \; \cdot 10^6 \; \si{\frac{\pascal}{\kelvin}} \\
+  d &= (-4,7 \pm 0,8)\; \cdot 10^8 \; \si{\pascal}
 \end{align*}
 
 \input{Table2.tex}
 \begin{figure}[H] % ein großes H steht dafür, dass das Objekt auf jeden Fall den Platz hält
   \centering
-  \includegraphics[height=9cm, width=13cm]{15bar.jpg}
+  \includegraphics[height=9cm, width=13cm]{15bar.pdf}
   \caption{Ausgleichspolynom 3. Grades}
   \label{fig:15}
 \end{figure}
 
 Werden nun (\ref{eq:pt}) und (\ref{eq:dp}) in (\ref{eq:8}) eingesetzt, lässt sich
-$L$ in Abhängigkeit von T berechnen:
+$L$ in Abhängigkeit von $T$ berechnen:
 \begin{align*}
   L(T) = \left[\frac{RT}{2 (aT^3+bT^2+cT+d)} \; \pm \sqrt{\biggl(\frac{RT}{2(aT^3+bT^2+cT+d)}\biggr)^2
   -\frac{A}{aT^3+bT^2+cT+d}}\; \right] \\
   \;\cdot T \; (3aT^2+2bT+c)
 \end{align*}
 Die Lösung mit der negativen Wurzel ergibt hier im Sachzusammenhang jedoch keinen Sinn,
-da es keine negative Verdampfungswärme gibt. Somit bleibt nur die positve Lösung übrig:
+da es keine negative Verdampfungswärme gibt. Somit bleibt nur die positve Lösung übrig.
 \begin{figure}[H]
   \centering
-  \includegraphics[height=9cm, width=13cm]{Lplus.jpg}
-  \caption{Der Wurzelterm wird addiert}
+  \includegraphics[height=9cm, width=13cm]{Lplus.pdf}
+  \caption{Temperaturabhängigkeit der Verdampfungswärme im Hochdruckbereich}
   \label{fig:plus}
 \end{figure}
+Abbildung (\ref{fig:plus}) zeigt, dass die Verdampfungswärme $L$ bei steigender
+Temperatur $T$ abnimmt.
