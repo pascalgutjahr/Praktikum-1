@@ -13,26 +13,26 @@ R, U, I = np.genfromtxt('data2.txt', unpack=True , skip_header=2)
 
 I /=1000   # in Ampere
 
-def f(U, m, n):
-    return m * U + n
+def f(I, m, n):
+    return m * I + n
 
-params, covariance = curve_fit(f, U, I)
+params, covariance = curve_fit(f, I, U)
 
 errors = np.sqrt(np.diag(covariance))
 
 print('m =', params[0], '+-', errors[0])
 print('n =', params[1], '+-', errors[1])
 
-# m = 0.0626722441168 +- 0.001489792226
-# n = -0.0571161417906 +- 0.00395286541757
+# m = 15.7865377557 +- 0.375264383097
+# n = 0.929385148384 +- 0.0415200261762
 
-x_plot = np.linspace(min(U), max(U))
+x_plot = np.linspace(min(I), max(I))
 
 plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
-plt.plot(U,I, 'rx', label='Messwerte')
-plt.xlabel(r'$U \,\mathrm{V}$')
-plt.ylabel(r'$I \,\mathrm{A}$')
-plt.title('Messungen Gegenspannung')
+plt.plot(I,U, 'rx', label='Messwerte')
+plt.ylabel(r'$U \,\mathrm{V}$')
+plt.xlabel(r'$I \,\mathrm{A}$')
+# plt.title('Messungen Gegenspannung')
 plt.grid()
 plt.legend()
 plt.tight_layout()
