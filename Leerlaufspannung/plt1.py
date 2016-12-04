@@ -14,25 +14,25 @@ R, U, I = np.genfromtxt('data1.txt', unpack=True , skip_header=2)
 U /=1000   # in Volt
 I /=1000   # in Ampere
 
-def f(U, m, n):
-    return m * U + n
+def f(I, m, n):
+    return m * I + n
 
-params, covariance = curve_fit(f, U, I)
+params, covariance = curve_fit(f, I, U)
 
 errors = np.sqrt(np.diag(covariance))
 
 print('m =', params[0], '+-', errors[0])
 print('n =', params[1], '+-', errors[1])
 
-# m = -0.0612211228191 +- 0.0010219132743
-# n = 0.0796268668608 +- 0.000932763635657
+# m = -16.2482145285 +- 0.271217927185
+# n = 1.2982843604 +- 0.00920696365139
 
-x_plot = np.linspace(min(U), max(U))
+x_plot = np.linspace(min(I), max(I))
 
 plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
-plt.plot(U,I, 'rx', label='Messwerte')
-plt.xlabel(r'$U_k /\/ \,\mathrm{V}$')
-plt.ylabel(r'$I /\/ \,\mathrm{A}$')
+plt.plot(I,U, 'rx', label='Messwerte')
+plt.ylabel(r'$U_k /\/ \,\mathrm{V}$')
+plt.xlabel(r'$I /\/ \,\mathrm{A}$')
 # plt.title('Messungen')
 plt.grid()
 plt.legend()
