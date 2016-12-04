@@ -6,7 +6,8 @@ $R_\symup{V}$ des Voltmeters betragen:
 \end{align*}
 Tabelle \ref{tab:U_k} zeigt die aufgenommenen Werte für die Messung von
 $U_\symup{k}$ nach Abbildung \ref{fig:schlt1}. Der Wert für den Widerstand wird
-hierbei in Schritten von $2,5\symup{\si\ohm}$ hochreguliert.
+hierbei in Schritten von $2,5\symup{\si\ohm}$ hochreguliert. Der Innenwiderstand
+des Amperemeters liegt bei $0,1 \symup{\si{\mega\ohm}}$.
 \begin{table}[H]
   \centering
   \begin{tabular}{c c c c}
@@ -30,7 +31,7 @@ hierbei in Schritten von $2,5\symup{\si\ohm}$ hochreguliert.
   \caption{Klemmspannung der Monozelle in Abhängigkeit von $I$}
   \label{tab:U_k}
 \end{table}
-Mit diesen Werten lässt sich der Plot \ref{fig:mono} zeichnen.
+Mit diesen Werten lässt sich der Graph aus Abbildung \ref{fig:mono} zeichnen.
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{bilder/mono.pdf}
@@ -40,8 +41,8 @@ Mit diesen Werten lässt sich der Plot \ref{fig:mono} zeichnen.
 \\
 Die Werte für $a$ und $b$ lauten dann:
 \begin{align*}
-  -a &= R_\symup{i} = (0,061 \pm 0,001) \symup{\si{\milli\ohm}} \\ %milli richtig?
-   b &= U_\symup{0} = (0,080 \pm 0,001) \symup{\si{\milli\volt}}
+  -a &= R_\symup{i} = (16,3 \pm 0,3) \symup{\si{\ohm}} \\ %milli richtig?
+   b &= U_\symup{0} = (1,30 \pm 0,01) \symup{\si{\milli\volt}}
 \end{align*}
 \newpage
 Die Messwerte für das Schaltbild aus Abbildung \ref{fig:schlt2} werden in
@@ -50,8 +51,8 @@ Tabelle \ref{tab:ggn} gezeigt.
   \centering
   \begin{tabular}{c c c c}
     \toprule
-    $U_\symup{k/\si{\milli}}$ & $I/\symup{\si{\milli\ampere}}$  &
-    $U_\symup{k/\si{\milli}}$ & $I/\symup{\si{\milli\ampere}}$  \\
+    $U_\symup{k/\si{\volt}}$ & $I/\symup{\si{\milli\ampere}}$  &
+    $U_\symup{k/\si{\volt}}$ & $I/\symup{\si{\milli\ampere}}$  \\
     \midrule
     3,7  &  180  &  2,4  &  90  \\
     3,7  &  170  &  2,3  &  90  \\
@@ -69,3 +70,18 @@ Tabelle \ref{tab:ggn} gezeigt.
   \caption{Messwerte mit Gegenspannung}
   \label{tab:ggn}
 \end{table}
+Aus diesen Werten folgt der Graph in Abbildung \ref{fig:ggn}.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/gegen.pdf}
+  \caption{Messwerte der Monozolle mit Gegenspannung}
+  \label{fig:ggn}
+\end{figure}
+\\
+Die von Python berechneten Werte lauten dann:
+\begin{align*}
+   a &= R_\symup{i} = (15,8 \pm 0,4) \symup{\si{\ohm}} \\ %EInheit richtig?
+   b &= U_\symup{0} = (0,93 \pm 0,04) \symup{\si{\milli\volt}}
+\end{align*}
+Da sich durch die angelegte Gegenspannung die Stromrichtung umkehrt ändert sich
+das Vorzeichen der Steigung.
