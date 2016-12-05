@@ -1,17 +1,17 @@
 Die Leerlaufspannung $U_{\text{0}}$ bezeichnet die Spannung, die ohne
 fließenden Strom $I$ an der Spannungsquelle gemessen werden kann.
 Sobald ein endlicher Strom fließt, sinkt die Spannung $U_{\text{k}}$ auf einen
-Wert unterhalb $U_{\text{0}}$ ab. $U_{\text{K}}$ bezeichnet hierbei die
+Wert unterhalb $U_{\text{0}}$ ab. $U_{\text{k}}$ bezeichnet hierbei die
 Klemmenspannung und fällt über der Spannungsquelle ab.
 Dieser Spannungsabfall lässt sich durch den Innenwiderstand der Spannungsquelle
 erklären.
 
-Gemäß dem Zweiten Kirchhoffschen Gesetz
+Gemäß des zweiten Kirchhoffschen Gesetzes
 \begin{equation}
   \sum_\symup{n} \symup{U}_{0_\symup{n}} = \symup{\sum_m R_m I_m}
   \label{eqn:kirch}
 \end{equation}
-ist die Summer aller Leerlaufspannungen gleich der Summe aller
+ist die Summe aller Leerlaufspannungen gleich der Summe aller
 Spannungsabfälle an den Widerständen $\symup{R_m}$ der Masche.
 Unter Berücksichtigung von
 \begin{equation}
@@ -20,7 +20,9 @@ Unter Berücksichtigung von
 und Formel (\ref{eqn:kirch}) gilt für Abbildung (\ref{fig:real})
 \begin{equation}
   U_\symup{0}=I \cdot R_\symup{i} + I \cdot R_\symup{a}
+  \qquad
   \text{bzw.}
+  \qquad
   U_\symup{k}=I \cdot R_\symup{i} = U_\symup{0} - I \cdot R_\symup{a}
   \label{eqn:U0k}
 \end{equation}
@@ -55,14 +57,14 @@ beliebig hohe Leistung entnommen werden kann. Für die Leistung gilt die Formel
 \begin{equation}
   N=I^2R_\symup{a}
 \end{equation}
-als Funktion von $R_\symup{a})$. Diese Funktion erreicht ihr Maximum, wenn
+als Funktion von $R_\symup{a}$. Diese Funktion erreicht ihr Maximum, wenn
 \begin{equation*}
   R_\symup{a} = R_\symup{i}
 \end{equation*}
 gilt. Dieser Zustand wird als Leistungsanpassung bezeichnet.
 Da die Messungen nicht exakt durchgeführt werden können, werden auftretende
 Fehler mit der Gaußschen Fehlerfortpflanzung berechnet.
-Eventuelle Ausgleichsgeraden werden über
+Ausgleichsgeraden werden über
 \begin{equation}
   y = a \cdot x + b
 \end{equation}
