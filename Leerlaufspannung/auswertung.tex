@@ -12,8 +12,8 @@ des Amperemeters liegt bei $0,1\,\symup{\si{\mega\ohm}}$.
   \centering
   \begin{tabular}{c c c c}
     \toprule
-    $U_{\symup{k}/\symup{\si{\milli\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  &
-    $U_{\symup{k}/\symup{\si{\milli\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  \\
+    $U_{\symup{k}}/\symup{\si{\milli\volt}}$ & $I/\symup{\si{\milli\ampere}}$  &
+    $U_{\symup{k}}/\symup{\si{\milli\volt}}$ & $I/\symup{\si{\milli\ampere}}$  \\
     \midrule
       70  &  74  &   990  &  18  \\
      100  &  72  &  1020  &  16  \\
@@ -42,7 +42,7 @@ Mit diesen Werten lässt sich der Graph aus Abbildung \ref{fig:mono} zeichnen.
 Die Werte für $a$ und $b$ lauten dann:
 \begin{align*}
   -a &= R_\symup{i} = (16,3 \pm 0,3)\, \symup{\si{\ohm}} \\
-   b &= U_\symup{0} = (1,30 \pm 0,01)\, \symup{\si{\milli\volt}}
+   b &= U_\symup{0} = (1,30 \pm 0,01)\, \symup{\si{\volt}}
 \end{align*}
 \newpage
 Die Messwerte für das Schaltbild aus Abbildung \ref{fig:schlt2} werden in
@@ -51,8 +51,8 @@ Tabelle \ref{tab:ggn} gezeigt.
   \centering
   \begin{tabular}{c c c c}
     \toprule
-    $U_{\symup{k}/\symup{\si{\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  &
-    $U_{\symup{k}/\symup{\si{\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  \\
+    $U_{\symup{k}}/\symup{\si{\volt}}$ & $I/\symup{\si{\milli\ampere}}$  &
+    $U_{\symup{k}}/\symup{\si{\volt}}$ & $I/\symup{\si{\milli\ampere}}$  \\
     \midrule
     3,7  &  180  &  2,4  &  90  \\
     3,7  &  170  &  2,3  &  90  \\
@@ -81,7 +81,7 @@ Aus diesen Werten folgt der Graph in Abbildung \ref{fig:ggn}.
 Die von Python berechneten Werte lauten dann:
 \begin{align*}
    a &= R_\symup{i} = (15,8 \pm 0,4)\, \symup{\si{\ohm}} \\ %EInheit richtig?
-   b &= U_\symup{0} = (0,93 \pm 0,04)\,\symup{\si{\milli\volt}}
+   b &= U_\symup{0} = (0,93 \pm 0,04)\,\symup{\si{\volt}}
 \end{align*}
 Da sich durch die angelegte Gegenspannung die Stromrichtung umkehrt, ändert sich
 das Vorzeichen der Steigung.
@@ -92,8 +92,8 @@ das Vorzeichen der Steigung.
   \centering
   \begin{tabular}{c c c c}
     \toprule
-    $U_{\symup{k}/\symup{\si{\milli\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  &
-    $U_{\symup{k}/\symup{\si{\milli\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  \\
+    $U_{\symup{k}}/\symup{\si{\milli\volt}}$ & $I/\symup{\si{\milli\ampere}}$  &
+    $U_{\symup{k}}/\symup{\si{\milli\volt}}$ & $I/\symup{\si{\milli\ampere}}$  \\
     \midrule
      96   &  2.61  &  177  &  1.20  \\
      96   &  2.61  &  183  &  1.14  \\
@@ -124,7 +124,7 @@ Mit den Messwerten aus Tabelle \ref{tab:recht} ergibt sich:
 Die von Python berechneten Werte lauten:
 \begin{align*}
    -a &= R_\symup{i} = (58,1 \pm 0,5)\, \symup{\si{\ohm}} \\ %EInheit richtig?
-   b &= U_\symup{0} = (0,2473 \pm 0,0008)\,\symup{\si{\milli\volt}}
+   b &= U_\symup{0} = (0,2473 \pm 0,0008)\,\symup{\si{\volt}}
 \end{align*}
 
 
@@ -133,8 +133,8 @@ Die von Python berechneten Werte lauten:
   \centering
   \begin{tabular}{c c c c}
     \toprule
-    $U_{\symup{k}/\symup{\si{\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  &
-    $U_{\symup{k}/\symup{\si{\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  \\
+    $U_{\symup{k}}/\symup{\si{\volt}}$ & $I/\symup{\si{\milli\ampere}}$  &
+    $U_{\symup{k}}/\symup{\si{\volt}}$ & $I/\symup{\si{\milli\ampere}}$  \\
     \midrule
     0.54   &  1.74  &  1.62  &  0.30  \\
     0.60   &  1.65  &  1.62  &  0.27  \\
@@ -165,7 +165,7 @@ Mit den Werten aus Tabelle \ref{tab:sin} folgt:
 Die von Python berechneten Werte lauten dann:
 \begin{align*}
    -a &= R_\symup{i} = (740 \pm 6)\, \symup{\si{\ohm}} \\
-   b &= U_\symup{0} = (1,821 \pm 0,004)\,\symup{\si{\milli\volt}}
+   b &= U_\symup{0} = (1,821 \pm 0,004)\,\symup{\si{\volt}}
 \end{align*}
 
 Da der Innenwiderstand eines Voltmeters nicht unendlich groß ist, muss der systematische
@@ -178,8 +178,8 @@ $U_\symup{k}$ ist die Leerlaufspannung der Monozelle, $R_\symup{a}$ ist gleich d
 Innenwiderstand des Voltmeters, also $R_\symup{V}$.
 Für den Fehler folgt:
 \begin{align*}
-  \Delta U_\symup{0} &= U_\symup{0} - U_\symup{k} = 2.6 \cdot 10^-6 \,\si{\ohm} \\
-  \frac{\Delta U_\symup{0}}{U_\symup{k}} &= 1.6 \cdot 10^-6 \, \symup{\%}
+  \Delta U_\symup{0} &= U_\symup{0} - U_\symup{k} = 2.6 \cdot 10^{-6} \,\si{\ohm} \\
+  \frac{\Delta U_\symup{0}}{U_\symup{k}} &= 1.6 \cdot 10^{-6} \, \symup{\%}
 \end{align*}
 Dieser Fehler ist vernachlässigbar klein.
 
