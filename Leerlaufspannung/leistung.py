@@ -16,7 +16,7 @@ N = I**2 * R
 R_i=16.2482145285
 U0=1.2982843604
 N2=(U0**2/(R_i + R)**2) *(R)
-X=U/I
+# X=U/I
 
 plt.plot(R, N, 'rx',label = 'Monozellenmessung', linewidth = 1)
 plt.plot(R, N2, 'b-', label='Theoriekurve', linewidth=1)
