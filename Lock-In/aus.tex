@@ -1,29 +1,30 @@
-Im ersten Aufgabenteil wird eine Referenzspannung von $U_\text{ref}=6.56 \si{\volt}$
-eingestellt. Die Frequenz wird hierbei manuell reguliert und die Spannungsamplituden
+Im ersten Aufgabenteil wird eine Referenzspannung von $U_\text{ref}=6.56 \;\si{\volt}$
+und eine Signalspannung von $U_\text{sig}=13.5 \;\si{\volt}$ angelegt.
+Die Frequenz wird hierbei manuell reguliert und die Spannungsamplituden
 $U_\text{SS}$ werden peak-to-peak gemessen.
 
 
 \begin{table}[!h]
   \centering
-  \begin{subtable}{0.3\textwidth}
-    \begin{tabular}{S[table-format=4.0]S}
-      \toprule
-      {$\varphi$} &
-      {$U_\text{SS} \,/\, \si{\volt}$} \\
-      \midrule
-      15\si{\degree} & 0.82  \\
-      45\si{\degree} & 0.81 \\
-      105\si{\degree} & 0.46  \\
-      165\si{\degree} & 0.88 \\
-      225\si{\degree} & 0.82  \\
-      330\si{\degree}  & 0.83  \\
-      \bottomrule
-    \end{tabular}
-    \caption{ohne Tiefpass}
-    \label{tab:a}
-  \end{subtable}
-  \quad
-  \begin{subtable}{0.3\textwidth}
+  % \begin{subtable}{0.3\textwidth}
+  %   \begin{tabular}{S[table-format=4.0]S}
+  %     \toprule
+  %     {$\varphi$} &
+  %     {$U_\text{SS} \,/\, \si{\volt}$} \\
+  %     \midrule
+  %     15\si{\degree} & 0.82  \\
+  %     45\si{\degree} & 0.81 \\
+  %     105\si{\degree} & 0.46  \\
+  %     165\si{\degree} & 0.88 \\
+  %     225\si{\degree} & 0.82  \\
+  %     330\si{\degree}  & 0.83  \\
+  %     \bottomrule
+  %   \end{tabular}
+  %   \caption{ohne Tiefpass}
+  %   \label{tab:a}
+  % \end{subtable}
+  % \quad
+  % \begin{subtable}{0.3\textwidth}
     \begin{tabular}{S[table-format=4.0]SS}
       \toprule
       {$\varphi$} &
@@ -44,10 +45,10 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
     255\si{\degree}    &    -80    &     13.18 \\
     \bottomrule
     \end{tabular}
-    \caption{mit Tiefpass}
+    % \caption{mit Tiefpass}
     \label{tab:b}
-  \end{subtable}
-  \caption{Messwerte ohne Rauschen}
+  % \end{subtable}
+  \caption{Messwerte ohne Rauschen, mit Tiefpass}
   \quad
   \hfill
 \end{table}
@@ -55,25 +56,25 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
 
 \begin{table}[!h]
   \centering
-\begin{subtable}{0.3\textwidth}
-  \begin{tabular}{S[table-format=4.0]S}
-    \toprule
-    {$\varphi$} &
-    {$U_\text{SS} \,/\, \si{\milli\volt}$} \\
-    \midrule
-    0\si{\degree}   & 88.0  \\
-    120\si{\degree} & 56.8  \\
-    165\si{\degree} & 92.0  \\
-    240\si{\degree} & 67.2  \\
-    270\si{\degree} & 48.8  \\
-    315\si{\degree} & 70.4  \\
-    \bottomrule
-  \end{tabular}
-  \caption{ohne Tiefpass}
-  \label{tab:c}
-\end{subtable}
-\quad
-\begin{subtable}{0.3\textwidth}
+% \begin{subtable}{0.3\textwidth}
+%   \begin{tabular}{S[table-format=4.0]S}
+%     \toprule
+%     {$\varphi$} &
+%     {$U_\text{SS} \,/\, \si{\milli\volt}$} \\
+%     \midrule
+%     0\si{\degree}   & 88.0  \\
+%     120\si{\degree} & 56.8  \\
+%     165\si{\degree} & 92.0  \\
+%     240\si{\degree} & 67.2  \\
+%     270\si{\degree} & 48.8  \\
+%     315\si{\degree} & 70.4  \\
+%     \bottomrule
+%   \end{tabular}
+%   \caption{ohne Tiefpass}
+%   \label{tab:c}
+% \end{subtable}
+% \quad
+% \begin{subtable}{0.3\textwidth}
   \begin{tabular}{S[table-format=4.0]SS}
     \toprule
     {$\varphi$} &
@@ -94,16 +95,17 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
   255   \si{\degree}  &    -50   &      8.24 \\
     \bottomrule
   \end{tabular}
-  \caption{mit Tiefpass}
+  % \caption{mit Tiefpass}
   \label{tab:d}
-\end{subtable}
+% \end{subtable}
 \caption{Messwerte mit Rauschen, Signal Attenuator = 1,
-        Noise Amplitude = 1$\times 10^{-3}$.}
+        Noise Amplitude = 1$\times 10^{-3}$, mit Tiefpass}
 \quad
 \hfill
 \end{table}
 
-Die Werte für $U_{out}$ lassen sich mit Hilfe der Formel \eqref{eqn:out} berechnen.\\
+Die Werte für $U_\text{out}$ lassen sich mit Hilfe der Formel \eqref{eqn:out} berechnen.\\
+\newpage
 
 \begin{figure}[!h]
 \begin{minipage}[t]{0.3\textwidth}
@@ -150,9 +152,15 @@ Die Werte für $U_{out}$ lassen sich mit Hilfe der Formel \eqref{eqn:out} berech
 \vspace{5pt}
 \end{figure}
 
-In den Abbildungen \eqref{fig:1} bis \eqref{fig:6} sind die Spannungskurven für unterschiedliche Phasen
-zu sehen. Hierbei wurde weder der Tiefpassfilter noch der Rausch-Generator eingeschaltet. \\
-Die Spannungswerte sind in (\ref{tab:a}) zu finden. \\
+In den Abbildungen \ref{fig:1} bis \ref{fig:6} sind die Spannungskurven für unterschiedliche Phasen
+zu sehen. Hierbei wird weder der Tiefpassfilter noch der Rausch-Generator eingeschaltet. \\
+Abbildung \ref{fig:1} zeigt eine sehr steile negative Flanke und spitze Extrema. Abbildung \ref{fig:2}
+zeigt auch sehr steile negative Flanken, jedoch sind die Hochpunkte abgerundet. In Abbildung \ref{fig:3}
+sieht der Verlauf ungefähr wie der Betrag der Sinus-Kurve aus. In Abbildung \ref{fig:4}
+ist die positive Flanke sehr steil, die Hochpunkte sind abgerundet und die Tiefpunkte spitz.
+Der Graph in Abbildung \ref{fig:5} hat sehr spitze Hochpunkte und eine sehr steile positive Flanke.
+Der Graph in der letzten Abbildung \ref{fig:6} sieht aus wie der Graph aus Abbildung \ref{fig:5}, nur
+das er an der y-Achse gespiegelt ist.
 
 \newpage
 
@@ -203,18 +211,17 @@ Die Spannungswerte sind in (\ref{tab:a}) zu finden. \\
 
 In den Abbildungen \eqref{fig:7} bis \eqref{fig:12} sind die Spannungskurven mit
 eingeschaltetem Rausch-Generator zu sehen. Der Tiefpassfilter ist weiterhin ausgeschaltet. \\
-Die Spannungswerte sind in (\ref{tab:c}) zu finden. \\
 
 \newpage
 
 Im zweiten Teil der Auswertung wird die Abhängigkeit der Ausgangsspannung zur Phasenverschiebung
 betrachtet. Hier wird sowohl mit, als auch ohne Rausch-Generator gemessen. Zur besseren
-Darstellung wird $\varphi$ gegen $U_{out}$ geplottet. Diese Werte sind in Tabelle (\ref{tab:b}) einzusehen.
+Darstellung wird $\varphi$ gegen $U_\text{out}$ geplottet. Diese Werte sind in Tabelle (\ref{tab:b}) einzusehen.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1.0\textwidth]{Bilder/phi.pdf}
-  \caption{U$_{out}$ in Abhängigkeit von $\varphi$.}
+  \caption{U$_\text{out}$ in Abhängigkeit von $\varphi$.}
   \label{fig:Uout}
 \end{figure}
 
@@ -223,7 +230,7 @@ Die Funktionen in Grafik (\ref{fig:Uout}) lassen einen cosinusförmigen Verlauf 
 \newpage
 
 
-Im letzten Teil der Auswertung wurde untersucht, bei welcher maximalen Entfernung $r$
+Im letzten Teil der Auswertung wird untersucht, bei welcher maximalen Entfernung $r$
 eine Photodiode keinen Lichtimpuls einer LED mehr aufnimmt. Dabei wird die eingehende Spannung $U$
 gegen den Abstand $r$ geplottet.
 \begin{figure}[H]
@@ -239,15 +246,15 @@ abnimmt. Daraus folgt:
 \begin{equation*}
   U \propto \frac{1}{r^2}
 \end{equation*}
-Der Graph wurde mit
+Der Graph wird mit
 \begin{equation}
 U = A + \frac{b}{(r+C)^2} \notag
 \end{equation}
 gefittet.
-Dabei ergaben sich die Parameter:
+Dabei ergeben sich die Parameter:
 \begin{align*}
   a &= (-0.027 ± 0.005) \; \si{\milli\volt} \\
-  b &= (69 ± 2)    \;   \si{\milli\volt \cdot\square\centi\meter}        \\
+  b &= (69 ± 2)    \;   \si{\milli\volt\cdot\centi\square\meter}        \\
   c &= (-4.2 ± 0.1) \; \si{\centi\meter}
 \end{align*}
 \\

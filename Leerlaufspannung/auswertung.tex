@@ -51,8 +51,8 @@ Tabelle \ref{tab:ggn} gezeigt.
   \centering
   \begin{tabular}{c c c c}
     \toprule
-    $U_{\symup{k}/\symup{\si{\milli\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  &
-    $U_{\symup{k}/\symup{\si{\milli\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  \\
+    $U_{\symup{k}/\symup{\si{\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  &
+    $U_{\symup{k}/\symup{\si{\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  \\
     \midrule
     3,7  &  180  &  2,4  &  90  \\
     3,7  &  170  &  2,3  &  90  \\
@@ -85,3 +85,81 @@ Die von Python berechneten Werte lauten dann:
 \end{align*}
 Da sich durch die angelegte Gegenspannung die Stromrichtung umkehrt, ändert sich
 das Vorzeichen der Steigung.
+
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c c}
+    \toprule
+    $U_{\symup{k}/\symup{\si{\milli\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  &
+    $U_{\symup{k}/\symup{\si{\milli\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  \\
+    \midrule
+     96   &  2.61  &  177  &  1.20  \\
+     96   &  2.61  &  183  &  1.14  \\
+    114   &  2.31  &  186  &  1.08  \\
+    129   &  2.04  &  189  &  1.02  \\
+    138   &  1.89  &  192  &  0.99  \\
+    147   &  1.71  &  192  &  0.93  \\
+    153   &  1.59  &  195  &  0.90  \\
+    159   &  1.50  &  198  &  0.87  \\
+    165   &  1.41  &  198  &  0.84  \\
+    168   &  1.32  &  198  &  0.84  \\
+    174   &  1.26  &  \hrulefill  & \hrulefill  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Rechteckspannung}
+  \label{tab:recht}
+\end{table}
+Mit den Messwerten aus Tabelle \ref{tab:recht} ergibt sich:
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/recht.pdf}
+  \caption{Messwerte der Rechteckspannung}
+  \label{fig:re}
+\end{figure}
+\\
+Die von Python berechneten Werte lauten:
+\begin{align*}
+   -a &= R_\symup{i} = (58,1 \pm 0,5)\, \symup{\si{\ohm}} \\ %EInheit richtig?
+   b &= U_\symup{0} = (0,2473 \pm 0,0008)\,\symup{\si{\milli\volt}}
+\end{align*}
+
+
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c c}
+    \toprule
+    $U_{\symup{k}/\symup{\si{\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  &
+    $U_{\symup{k}/\symup{\si{\volt}}}$ & $I/\symup{\si{\milli\ampere}}$  \\
+    \midrule
+    0.54   &  1.74  &  1.62  &  0.30  \\
+    0.60   &  1.65  &  1.62  &  0.27  \\
+    0.93   &  1.20  &  1.65  &  0.24  \\
+    1.11   &  0.93  &  1.65  &  0.21  \\
+    1.23   &  0.81  &  1.65  &  0.21  \\
+    1.32   &  0.66  &  1.68  &  0.21  \\
+    1.38   &  0.57  &  1.68  &  0.18  \\
+    1.47   &  0.48  &  1.68  &  0.18  \\
+    1.53   &  0.42  &  1.68  &  0.18  \\
+    1.56   &  0.36  &  1.71  &  0.15  \\
+    1.59   &  0.33  &  \hrulefill  & \hrulefill  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Sinusspannung}
+  \label{tab:sin}
+\end{table}
+Mit den Werten aus Tabelle \ref{tab:sin} folgt:
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/sinus.pdf}
+  \caption{Messwerte der Sinusspannung}
+  \label{fig:si}
+\end{figure}
+\\
+Die von Python berechneten Werte lauten dann:
+\begin{align*}
+   -a &= R_\symup{i} = (740 \pm 6)\, \symup{\si{\ohm}} \\ %EInheit richtig?
+   b &= U_\symup{0} = (1,821 \pm 0,004)\,\symup{\si{\milli\volt}}
+\end{align*}
