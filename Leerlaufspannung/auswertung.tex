@@ -111,6 +111,8 @@ das Vorzeichen der Steigung.
   \caption{Rechteckspannung}
   \label{tab:recht}
 \end{table}
+Die Frequenz $f$ beträgt $50\,\si{\hertz}$, die Range $1 \,\si{\volt}$,
+der Innenwiderstand $100\,\si{\ohm}$ und die Amplitude steht auf $0,5 \, max$.
 Mit den Messwerten aus Tabelle \ref{tab:recht} ergibt sich:
 \begin{figure}[h]
   \centering
@@ -150,6 +152,8 @@ Die von Python berechneten Werte lauten:
   \caption{Sinusspannung}
   \label{tab:sin}
 \end{table}
+Die Frequenz $f$ beträgt $1\,\si{\kilo\hertz}$, die Range $1\,\si{\volt}$, der
+Innenwiderstand $100\,\si{\ohm}$ und die Amplitude ist maximal.
 Mit den Werten aus Tabelle \ref{tab:sin} folgt:
 \begin{figure}[h]
   \centering
@@ -160,6 +164,38 @@ Mit den Werten aus Tabelle \ref{tab:sin} folgt:
 \\
 Die von Python berechneten Werte lauten dann:
 \begin{align*}
-   -a &= R_\symup{i} = (740 \pm 6)\, \symup{\si{\ohm}} \\ %EInheit richtig?
+   -a &= R_\symup{i} = (740 \pm 6)\, \symup{\si{\ohm}} \\
    b &= U_\symup{0} = (1,821 \pm 0,004)\,\symup{\si{\milli\volt}}
 \end{align*}
+
+Da der Innenwiderstand eines Voltmeters nicht unendlich groß ist, muss der systematische
+Fehler bei der direkten Leerlaufspannung betrachtet werden. Dazu wird Gleichung
+\eqref{eqn:U0k} umgeformt:
+\begin{equation}
+  U_\symup{0} = U_\symup{k} + U_\symup{k} \frac{R_\symup{i}}{R_\symup{a}}
+\end{equation}
+$U_\symup{k}$ ist die Leerlaufspannung der Monozelle, $R_\symup{a}$ ist gleich dem
+Innenwiderstand des Voltmeters, also $R_\symup{V}$.
+Für den Fehler folgt:
+\begin{align*}
+  \Delta U_\symup{0} &= U_\symup{0} - U_\symup{k} = 2.6 \cdot 10^-6 \,\si{\ohm} \\
+  \frac{\Delta U_\symup{0}}{U_\symup{k}} &= 1.6 \cdot 10^-6 \, \symup{\%}
+\end{align*}
+Diese Fehler ist vernachlässigbar klein.
+
+Wird das Voltmeter hinter das Amperemeter, also an Punkt $H$, geschaltet, so wird
+nicht nur noch der Spannungsabfall der Spannungsquelle gemessen, sondern zusätzlich
+noch der Spannungsabfall des Amperemeters, da auch dieses einen geringen Innenwiderstand
+trägt.
+
+Im letzten Teil der Auswertung werden die Messdaten aus der ersten Messung für die Monozelle
+mit der Leistungskurve überprüft. Dafür wird $U_\text{k} \cdot I$ gegen $R_\text{a} = \frac{U_\text{k}}{I}$
+geplottet. Die Theoriekurve lautet:
+\begin{equation}
+  N = I^2 R_\text{a} = \frac{U_\text{0}^2}{(R_\text{i}+ R_\text{a})^2} R_\text{a}
+\end{equation}
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{build/}
+\end{figure}[!h]
