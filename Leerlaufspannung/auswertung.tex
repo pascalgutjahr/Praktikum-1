@@ -85,9 +85,11 @@ Die von Python berechneten Werte lauten dann:
 \end{align*}
 Da sich durch die angelegte Gegenspannung die Stromrichtung umkehrt, ändert sich
 das Vorzeichen der Steigung.
+\newpage
 
-
-
+Für die angelegte Recheckspannung beträgt die Frequenz $f$ $50\,\si{\hertz}$,
+die Range $1 \,\si{\volt}$, der Innenwiderstand $100\,\si{\ohm}$ und die Amplitude
+steht auf $0,5 \, max$.
 \begin{table}[H]
   \centering
   \begin{tabular}{c c c c}
@@ -111,8 +113,6 @@ das Vorzeichen der Steigung.
   \caption{Rechteckspannung}
   \label{tab:recht}
 \end{table}
-Die Frequenz $f$ beträgt $50\,\si{\hertz}$, die Range $1 \,\si{\volt}$,
-der Innenwiderstand $100\,\si{\ohm}$ und die Amplitude steht auf $0,5 \, max$.
 Mit den Messwerten aus Tabelle \ref{tab:recht} ergibt sich:
 \begin{figure}[h]
   \centering
@@ -126,9 +126,10 @@ Die von Python berechneten Werte lauten:
    -a &= R_\symup{i} = (58,1 \pm 0,5)\, \symup{\si{\ohm}} \\ %EInheit richtig?
    b &= U_\symup{0} = (0,2473 \pm 0,0008)\,\symup{\si{\volt}}
 \end{align*}
+\newpage
 
-
-
+Bei der angelegten Sinusspannung beträgt die Frequenz $f$ $1\,\si{\kilo\hertz}$,
+die Range $1\,\si{\volt}$, der Innenwiderstand $100\,\si{\ohm}$ und die Amplitude ist maximal.
 \begin{table}[H]
   \centering
   \begin{tabular}{c c c c}
@@ -152,8 +153,6 @@ Die von Python berechneten Werte lauten:
   \caption{Sinusspannung}
   \label{tab:sin}
 \end{table}
-Die Frequenz $f$ beträgt $1\,\si{\kilo\hertz}$, die Range $1\,\si{\volt}$, der
-Innenwiderstand $100\,\si{\ohm}$ und die Amplitude ist maximal.
 Mit den Werten aus Tabelle \ref{tab:sin} folgt:
 \begin{figure}[h]
   \centering
@@ -198,6 +197,6 @@ geplottet. Die Theoriekurve lautet:
 \begin{figure}[!h]
   \centering
   \includegraphics[width=0.8\textwidth]{bilder/leistung.pdf}
-  \caption{Vergleich Leistungskurve mit Messwerten der Monozelle}
+  \caption{Vergleich der Leistungskurve mit Messwerten der Monozelle}
   \label{fig:leistung}
 \end{figure}

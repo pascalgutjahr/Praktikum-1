@@ -9,10 +9,10 @@ plt.rcParams['font.size'] = 13
 plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
-R, U, I = np.genfromtxt('recht.txt', unpack=True , skip_header=2)
+R, U, I = np.genfromtxt('recht.txt', unpack=True, skip_header=2)
 
 U /=1000   # in Volt
-I /=1000   # in Ampere
+# I /=1000   # in Ampere
 
 def f(I, m, n):
     return m * I + n
@@ -30,9 +30,10 @@ print('n =', params[1], '+-', errors[1])
 x_plot = np.linspace(min(I), max(I))
 
 plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
-plt.plot(I,U, 'rx', label='Messwerte')
-plt.ylabel(r'$U /\/ \,\mathrm{V}$')
-plt.xlabel(r'$I /\/ \,\mathrm{A}$')
+plt.plot(I, U, 'rx', label='Messwerte')
+plt.ylabel(r'$U \,/\,\mathrm{V}$')
+plt.xlabel(r'$I \,/\,\mathrm{mA}$')
+plt.xlim(min(I), max(I))
 # plt.title('Messungen REchteckspannung')
 plt.grid()
 plt.legend()
