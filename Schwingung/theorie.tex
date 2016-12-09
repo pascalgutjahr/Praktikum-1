@@ -36,7 +36,55 @@ was zu der Differentialgleichung
 \begin{equation}
   I(t) + \frac{R}{L}I(t) + \frac{1}{LC}I(t) = 0 .
 \end{equation}
-Mit dem entsprechendem Ansatz ergibt sich für die Gleichung
+Mit dem entsprechendem Ansatz ergibt sich für die Gleichung die Lösung
 \begin{equation}
-  I(t)=\exp{-2\pi\mu t}(A_1\exp{i2\pi\nu t} + A_2\exp{-2i\pi\nu t})
+  I(t)=\exp{-2\pi\mu t}(A_1\exp{i2\pi\nu t} + A_2\exp{-2i\pi\nu t}).
+  \label{eqn:dgl}
 \end{equation}
+Die Parameter $\mu$ und $\nu$ sind dabei definiert als:
+\begin{align*}
+  \mu &\coloneqq\frac{R}{4\pi L} \\
+  \nu &\coloneqq\frac{1}{2\pi}\sqrt{\frac{1}{LC}-\frac{R^2}{4\L^2}}
+\end{align*}
+Für $\nu$ muss aufgrund der Wurzel eine Fallunterscheidung gemacht werden, da
+$\nu$ sowohl reel, als auch rein imaginär sein kann.
+Für den reelen Fall muss
+\begin{equation*}
+  \frac{1}{LC} > \frac{R^2}{4L^2}
+\end{equation*}
+gelten. Unter diesen Voraussetzungen lässt sich Formel (\ref{eqn:dgl}) mit der
+Eulerschen Formel zu
+\begin{equation}
+  I(t)=A_\su{0}\exp{-2\pi\mu t}\cos(2\pi\nu t+\mu)
+\end{equation}
+umschreiben. Hier entsteht eine gedämpfte Schwingung, welche bei $t\rightarrow\inf$
+gegen Null strebt. Die Abklingdauer dieser Schwingung wird dann durch
+\begin{equation}
+  T_\su{ex}\coloneqq\frac{1}{2\pi\mu}
+\end{equation}
+definiert.
+
+für den Fall dass $\nu$ imaginär ist, also der Fall
+\begin{equation*}
+  \frac{1}{LC} < \frac{R^2}{4L^2}
+\end{equation*}
+eintritt, lässt sich Formel (\ref{eqn:dgl}) zu
+\begin{equation}
+  I(t)\propto\exp{-(2\pi\mu -\su{i}2\pi\nu)t}
+\end{equation}
+umschreiben.
+Da sich i und $\nu$ zu einem insgesamt reelen Exponenten verrechnen lassen, fällt
+die Amplitude des Stroms exponentiell ab. Die Amplitude hat dabei, je nach
+Anfangsbedinungen, einen oder keinen Extremwert. Am schnellsten fällt die
+Amplitude, wenn der Spezialfall
+\begin{equation*}
+  \frac{1}{LC} = \frac{R^2}{4L^2}
+\end{equation*}
+eintritt. Dieser Fall wird aperiodischer Grenzfall genannt und ist in der
+Abbildung \ref{fig:agf} als gestrichelte Linie dargestellt.
+\begin{figure}[h]
+  \centering
+  \includegraphics{Bilder/aperiod.JPG}
+  \caption{Zeitverlauf des Stroms mit aperiodischer Dämpfung\cite{354}}
+  \label{fig:agf}
+\end{figure}
