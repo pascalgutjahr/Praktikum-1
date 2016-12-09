@@ -9,11 +9,11 @@ plt.rcParams['font.size'] = 13
 plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
-t, U = np.genfromtxt('tables/amp.txt', unpack=True, skip_header=2)
+t, U = np.genfromtxt('tables/phase.txt', unpack=True, skip_header=2)
 
 plt.plot(t,U, 'rx', label='Messwerte')
 plt.xlim(min(t), max(t))
 plt.ylim(min(U), max(U))
-plt.grid()
-plt.tight_layout()
+#plt.grid()
+#plt.tight_layout()
 plt.show()
