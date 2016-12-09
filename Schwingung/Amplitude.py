@@ -9,11 +9,11 @@ plt.rcParams['font.size'] = 13
 plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
-t, V = np.genfromtxt('tables/amp.txt', unpack=True, skip_header=2)
+t, U = np.genfromtxt('tables/amp.txt', unpack=True, skip_header=2)
 
-plt.plot(t,V, 'rx', label='Messwerte')
+plt.plot(t,U, 'rx', label='Messwerte')
 plt.xlim(min(t), max(t))
-plt.ylim(min(V), max(V))
-# plt.grid()
-# plt.tight_layout()
+plt.ylim(min(U), max(U))
+plt.grid()
+plt.tight_layout()
 plt.show()
