@@ -1,5 +1,5 @@
 t        U
-mikros        V
+mikros   V
  10      6,2
  20      5,9
  30      5,4
