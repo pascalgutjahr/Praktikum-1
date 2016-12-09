@@ -45,10 +45,10 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
     255\si{\degree}    &    -80    &     13.18 \\
     \bottomrule
     \end{tabular}
+    \caption{Messwerte ohne Rauschen, mit Tiefpass}
     % \caption{mit Tiefpass}
     \label{tab:b}
   % \end{subtable}
-  \caption{Messwerte ohne Rauschen, mit Tiefpass}
   \quad
   \hfill
 \end{table}
@@ -95,11 +95,11 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
   255   \si{\degree}  &    -50   &      8.24 \\
     \bottomrule
   \end{tabular}
+  \caption{Messwerte mit Rauschen, Signal Attenuator = 1,
+          Noise Amplitude = 1$\times 10^{-3}$, mit Tiefpass}
   % \caption{mit Tiefpass}
   \label{tab:d}
 % \end{subtable}
-\caption{Messwerte mit Rauschen, Signal Attenuator = 1,
-        Noise Amplitude = 1$\times 10^{-3}$, mit Tiefpass}
 \quad
 \hfill
 \end{table}
@@ -157,8 +157,8 @@ zu sehen. Hierbei wird weder der Tiefpassfilter noch der Rausch-Generator einges
 Abbildung \ref{fig:1} zeigt eine sehr steile negative Flanke und spitze Extrema. Abbildung \ref{fig:2}
 zeigt auch sehr steile negative Flanken, jedoch sind die Hochpunkte abgerundet. In Abbildung \ref{fig:3}
 sieht der Verlauf ungefähr wie der Betrag der Sinus-Kurve aus. In Abbildung \ref{fig:4}
-ist die positive Flanke sehr steil, die Hochpunkte sind abgerundet und die Tiefpunkte spitz.
-Der Graph in Abbildung \ref{fig:5} hat sehr spitze Hochpunkte und eine sehr steile positive Flanke.
+ist die negative Flanke sehr steil, die Hochpunkte sind abgerundet und die Tiefpunkte spitz.
+Der Graph in Abbildung \ref{fig:5} hat sehr spitze Hochpunkte und eine sehr steile negative Flanke.
 Der Graph in der letzten Abbildung \ref{fig:6} sieht aus wie der Graph aus Abbildung \ref{fig:5}, nur
 das er an der y-Achse gespiegelt ist.
 
@@ -209,14 +209,14 @@ das er an der y-Achse gespiegelt ist.
 \vspace{5pt}
 \end{figure}
 
-In den Abbildungen \eqref{fig:7} bis \eqref{fig:12} sind die Spannungskurven mit
+In den Abbildungen \ref{fig:7} bis \ref{fig:12} sind die Spannungskurven mit
 eingeschaltetem Rausch-Generator zu sehen. Der Tiefpassfilter ist weiterhin ausgeschaltet. \\
 
 \newpage
 
 Im zweiten Teil der Auswertung wird die Abhängigkeit der Ausgangsspannung zur Phasenverschiebung
 betrachtet. Hier wird sowohl mit, als auch ohne Rausch-Generator gemessen. Zur besseren
-Darstellung wird $\varphi$ gegen $U_\text{out}$ geplottet. Diese Werte sind in Tabelle (\ref{tab:b}) einzusehen.
+Darstellung wird $\varphi$ gegen $U_\text{out}$ geplottet. Diese Werte sind in Tabelle \ref{tab:b} einzusehen.
 
 \begin{figure}[H]
   \centering
@@ -225,14 +225,41 @@ Darstellung wird $\varphi$ gegen $U_\text{out}$ geplottet. Diese Werte sind in T
   \label{fig:Uout}
 \end{figure}
 
-Die Funktionen in Grafik (\ref{fig:Uout}) lassen einen cosinusförmigen Verlauf erkennen. \\
+Die Funktionen in Grafik \ref{fig:Uout} lassen einen cosinusförmigen Verlauf erkennen. \\
 
 \newpage
 
 
 Im letzten Teil der Auswertung wird untersucht, bei welcher maximalen Entfernung $r$
 eine Photodiode keinen Lichtimpuls einer LED mehr aufnimmt. Dabei wird die eingehende Spannung $U$
-gegen den Abstand $r$ geplottet.
+gegen den Abstand $r$ mit den Messdaten aus Tabelle \ref{tab:licht} geplottet.
+Zu Beginn wird eine Dunkelmessung durchgeführt, welche einen Wert von $U = 0.06 \,\mV$
+ergibt. Dieser Wert wird bei den aufgenommenen Spannungswerten im Folgenden direkt
+abgezogen.
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{cccc}
+      \toprule
+      {$r \,/ \cm$} & {$U \, / \mV$} & {$r \,/\cm$} & {$U \,/ \mV$} \\
+      \midrule
+       0  &  2.100   &   22  &  0.125 \\
+       2  &  1.200   &   24  &  0.125 \\
+       4  &  0.775   &   26  &  0.100 \\
+       6  &  0.525   &   28  &  0.100 \\
+       8  &  0.375   &   30  &  0.100 \\
+      10  &  0.300   &   32  &  0.100 \\
+      12  &  0.250   &   34  &  0.075 \\
+      14  &  0.200   &   36  &  0.075 \\
+      16  &  0.150   &   38  &  0.075 \\
+      18  &  0.150   &   40  &  0.075 \\
+      20  &  0.125   &  \hrulefill     &  \hrulefill      \\
+      \bottomrule
+    \end{tabular}
+    \caption{Messwerte des Abstands der LED/PD Messung}
+    \label{tab:licht}
+\end{table}
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{Bilder/Plot_Photodiode.pdf}
@@ -240,7 +267,7 @@ gegen den Abstand $r$ geplottet.
   \label{fig:led}
 \end{figure}
 
-In Grafik (\ref{fig:led}) ist zu erkennen, dass die Spannung exponentiell zum Abstand
+In Grafik \ref{fig:led} ist zu erkennen, dass die Spannung exponentiell zum Abstand
 abnimmt. Daraus folgt:
 
 \begin{equation*}
@@ -268,7 +295,7 @@ werden kann.
 \label{fig:lin}
 \end{figure}
 
-Die Parameter der Ausgleichgeraden in Grafik (\ref{fig:lin}) lauten:
+Die Parameter der Ausgleichgeraden in Grafik \ref{fig:lin} lauten:
 
 \begin{align*}
     a &= (194 ± 9) \; \si{\milli\volt\per\square\centi\meter} \\

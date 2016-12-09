@@ -1,4 +1,4 @@
-Phase       Spannung    U_out
+Phase       U_max        U_out
 Grad        V * 10^-3   V * 10^-3
 
   0         -5          -3.18
