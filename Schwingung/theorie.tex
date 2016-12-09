@@ -38,7 +38,7 @@ was zu der Differentialgleichung
 \end{equation}
 Mit dem entsprechendem Ansatz ergibt sich für die Gleichung die Lösung
 \begin{equation}
-  I(t)=\exp{-2\pi\mu t}(A_1\exp{i2\pi\nu t} + A_2\exp{-2i\pi\nu t}).
+  I(t)=\su{e}^{-2\pi\mu t}(A_1\su{e}^{i2\pi\nu t} + A_2\su{e}^{-2i\pi\nu t}).
   \label{eqn:dgl}
 \end{equation}
 Die Parameter $\mu$ und $\nu$ sind dabei definiert als:
@@ -55,7 +55,7 @@ Für den reelen Fall muss
 gelten. Unter diesen Voraussetzungen lässt sich Formel (\ref{eqn:dgl}) mit der
 Eulerschen Formel zu
 \begin{equation}
-  I(t)=A_\su{0}\exp{-2\pi\mu t}\cos(2\pi\nu t+\mu)
+  I(t)=A_\su{0}\su{e}^{-2\pi\mu t}\cos(2\pi\nu t+\mu)
 \end{equation}
 umschreiben. Hier entsteht eine gedämpfte Schwingung, welche bei $t\rightarrow\inf$
 gegen Null strebt. Die Abklingdauer dieser Schwingung wird dann durch
@@ -70,7 +70,7 @@ für den Fall dass $\nu$ imaginär ist, also der Fall
 \end{equation*}
 eintritt, lässt sich Formel (\ref{eqn:dgl}) zu
 \begin{equation}
-  I(t)\propto\exp{-(2\pi\mu -\su{i}2\pi\nu)t}
+  I(t)\propto\su{e}^{-(2\pi\mu -\su{i}2\pi\nu)t}
 \end{equation}
 umschreiben.
 Da sich i und $\nu$ zu einem insgesamt reelen Exponenten verrechnen lassen, fällt
@@ -88,3 +88,63 @@ Abbildung \ref{fig:agf} als gestrichelte Linie dargestellt.
   \caption{Zeitverlauf des Stroms mit aperiodischer Dämpfung\cite{354}}
   \label{fig:agf}
 \end{figure}
+\\
+Abblidung (\ref{fig:angeregt}) zeigt einen $RCL$-Schwingkreis, welcher von
+außen angeregt wird. Die Anregung erfolgt hier durch eine Wechselstromquelle.
+\begin{figure}[h]
+  \centering
+  \includegraphics{Bilder/angeregt.JPG}
+  \caption{Schaltbild eines angeregten$RCL$-Schwingkreises}
+  \label{fig:angeregt}
+\end{figure}
+Nach einer kurzen Einschwingzeit nimmt der Schwingkreis die Frequenz der
+Wechselstromquelle an. Die zu Beginn aufgestellte Differentialgleichung aus
+Formel (\ref{eqn:dgl}) wird nun inhomogen und lautet:
+\begin{equation}
+  LCU_\su{C}(t) + RCU_\su{c}(t) + U_\su{c}(t) =U_0\su{e}^{\su{i}\omega t}.
+  \label{eqn:inh}
+\end{equation}
+Die Lösung für die Spannung in Abhängigkeit der Zeit berechnet sich dann mit:
+\begin{equation}
+  U(t)=\frac{U_0(1-LC\omega^2-\su{i}\omega RC)}{(1-LC\omega^2)^2+\omega^2 R^2 C^2}.
+\end{equation}
+Für die Phasenverschiebung zur Erregerspannung ergibt sich durch den Vergleich
+von Imaginär- und Realteil ergibt sich: %Umformulieren um ':' zu vermeiden!!
+\begin{equation}
+  \varphi(w)=\arctan\biggr(\frac{\su{Im}(U)}{\su{Re}(U)}\biggl)
+  =\arctan\biggr(\frac{-\omega RC}{1-LC\omega^2}\biggl)
+\end{equation}
+Für die Frequenzen $\omega_1$ und $\omega_2$ gilt bei einer Phasenverschiebung
+von $\frac{\pi}{4}$ beziehungsweise $\frac{3\pi}{4}$
+\begin{equation}
+  \omega_\su{1,2}=\pm\frac{R}{2L}+\sqrt{\frac{R^2}{4L^2}+\frac{1}{LC}}.
+\end{equation}
+
+Die Spannung kann zusätzlich mit
+\begin{equation}
+  U_\su{C}(\omega)=\frac{U_0}{\sqrt{(1-LC\omega^2)^2+\omega^2R^rC^2}}
+\end{equation}
+in Abhängigkeit von der Frequenz $\omega$ angegeben werden.
+Hierbei zeigt sich, dass die Spannungsamplitude für sehr hohe Frequenzen gegen
+Null strebt, während sie für kleine Frequenzen gegen $U_0$ strebt.
+Die Resonanzfrequenz
+\begin{equation}
+  \omega_\su{res}=\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}}
+\end{equation}
+beschreibt den Zustand, bei dem $U_\su{C}$ einen Maximalwert erreicht der auch
+größer als $U_\su{0}$ sein kann.
+Von schwacher Dämpfung wird gesprochen, wenn
+\begin{equation}
+  \frac{R^2}{2L^2} \ll \frac{1}{LC}
+\end{equation}
+gilt. In diesem Zustand gilt $\omega_\su{res}\approx\omega_0$, wobei $\omega_0$
+die Kreisfrequenz der ungedämpften Schwingung ist und den Wert
+\begin{equation}
+  \omega_0 =\sqrt{\frac{1}{LC}}
+\end{equation}
+annimmt. Das Maximum der Kondensatorspannung ist dann um den Faktor
+\begin{equation}
+  q=\frac{1}{\omega_0RC}
+\end{equation}
+größer als die Erregerspannung. Der Faktor $q$ wird als Güte des Schwingkreises
+bezeichnet.
