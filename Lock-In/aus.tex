@@ -1,7 +1,9 @@
 Im ersten Aufgabenteil wird eine Referenzspannung von $U_\text{ref}=6.56 \;\si{\volt}$
 und eine Signalspannung von $U_\text{sig}=13.5 \;\si{\volt}$ angelegt.
 Die Frequenz wird hierbei manuell reguliert und die Spannungsamplituden
-$U_\text{SS}$ werden peak-to-peak gemessen.
+$U_\text{SS}$ werden peak-to-peak gemessen. Für die Messwerte in Tabelle \ref{tab:b}
+wird ein Gain von 100 verwendet, für die Werte in Tabelle \ref{tab:d} wird ein Gain
+von 1000 verwendet. Die Folgenden Werte sind bereits von diesen Verstärkungen bereinigt.
 
 
 \begin{table}[!h]
@@ -27,22 +29,22 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
   % \begin{subtable}{0.3\textwidth}
     \begin{tabular}{S[table-format=4.0]SS}
       \toprule
-      {$\varphi$} &
+      {$\Delta\varphi$} &
       {$U_\text{max} \,/\, \si{\volt}\cdot10^{-3}$} &
       {$U_\text{out} \,/\, \si{\volt}\cdot10^{-3}$} \\
       \midrule
-      0\si{\degree}    &    -5     &     -3.18 \\
-     15\si{\degree}    &     5     &      3.07 \\
-     30\si{\degree}    &    25     &     13.78 \\
-     45\si{\degree}    &    45     &     20.27 \\
-     90\si{\degree}    &    80     &      0.00 \\
-    120\si{\degree}    &    78     &     24.83 \\
-    135\si{\degree}    &    65     &    -29.26 \\
-    165\si{\degree}    &    20     &    -12.30 \\
-    180\si{\degree}    &    5      &     -3.18 \\
-    210\si{\degree}    &    -25    &     13.78 \\
-    225\si{\degree}    &    -53    &     23.86 \\
-    255\si{\degree}    &    -80    &     13.18 \\
+    -105\si{\degree}    &    -5     &     -3.18 \\
+     -90\si{\degree}    &     5     &      3.07 \\
+     -75\si{\degree}    &    25     &     13.78 \\
+     -60\si{\degree}    &    45     &     20.27 \\
+     -15\si{\degree}    &    80     &      0.00 \\
+      15\si{\degree}    &    78     &     24.83 \\
+      30\si{\degree}    &    65     &    -29.26 \\
+      60\si{\degree}    &    20     &    -12.30 \\
+      75\si{\degree}    &    5      &     -3.18 \\
+     105\si{\degree}    &    -25    &     13.78 \\
+     120\si{\degree}    &    -53    &     23.86 \\
+     150\si{\degree}    &    -80    &     13.18 \\
     \bottomrule
     \end{tabular}
     \caption{Messwerte ohne Rauschen, mit Tiefpass}
@@ -77,22 +79,22 @@ $U_\text{SS}$ werden peak-to-peak gemessen.
 % \begin{subtable}{0.3\textwidth}
   \begin{tabular}{S[table-format=4.0]SS}
     \toprule
-    {$\varphi$} &
+    {$\Delta\varphi$} &
     {$U_\text{max} \,/\, \si{\volt}\cdot10^{-4}$} &
     {$U_\text{out} \,/\, \si{\volt}\cdot10^{-4}$} \\
     \midrule
-    0   \si{\degree}  &    0     &      0.00 \\
-   15   \si{\degree}  &    5     &      3.07 \\
-   30   \si{\degree}  &    16    &      8.82 \\
-   45   \si{\degree}  &    35    &     15.76 \\
-   90   \si{\degree}  &    50    &      0.00 \\
-  120   \si{\degree}  &    46    &    -14.64 \\
-  135   \si{\degree}  &    38    &    -17.11 \\
-  165   \si{\degree}  &    10    &     -6.15 \\
-  180   \si{\degree}  &    1     &     -0.64 \\
-  210   \si{\degree}  &    -20   &     11.03 \\
-  225   \si{\degree}  &    -35   &     15.76 \\
-  255   \si{\degree}  &    -50   &      8.24 \\
+  -105  \si{\degree}  &    0     &      0.00 \\
+   -90  \si{\degree}  &    5     &      3.07 \\
+   -75  \si{\degree}  &    16    &      8.82 \\
+   -60  \si{\degree}  &    35    &     15.76 \\
+   -15  \si{\degree}  &    50    &      0.00 \\
+    15  \si{\degree}  &    46    &    -14.64 \\
+    30  \si{\degree}  &    38    &    -17.11 \\
+    60  \si{\degree}  &    10    &     -6.15 \\
+    75  \si{\degree}  &    1     &     -0.64 \\
+   105  \si{\degree}  &    -20   &     11.03 \\
+   120  \si{\degree}  &    -35   &     15.76 \\
+   150  \si{\degree}  &    -50   &      8.24 \\
     \bottomrule
   \end{tabular}
   \caption{Messwerte mit Rauschen, Signal Attenuator = 1,
@@ -154,8 +156,8 @@ Die Werte für $U_\text{out}$ lassen sich mit Hilfe der Formel \eqref{eqn:out} b
 
 In den Abbildungen \ref{fig:1} bis \ref{fig:6} sind die Spannungskurven für unterschiedliche Phasen
 zu sehen. Hierbei wird weder der Tiefpassfilter noch der Rausch-Generator eingeschaltet. \\
-Abbildung \ref{fig:1} zeigt eine sehr steile negative Flanke und spitze Extrema. Abbildung \ref{fig:2}
-zeigt auch sehr steile negative Flanken, jedoch sind die Hochpunkte abgerundet. In Abbildung \ref{fig:3}
+Abbildung \ref{fig:1} zeigt eine sehr steile positive Flanke und spitze Extrema. Abbildung \ref{fig:2}
+zeigt auch sehr steile positive Flanken, jedoch sind die Hochpunkte abgerundet. In Abbildung \ref{fig:3}
 sieht der Verlauf ungefähr wie der Betrag der Sinus-Kurve aus. In Abbildung \ref{fig:4}
 ist die negative Flanke sehr steil, die Hochpunkte sind abgerundet und die Tiefpunkte spitz.
 Der Graph in Abbildung \ref{fig:5} hat sehr spitze Hochpunkte und eine sehr steile negative Flanke.
@@ -216,16 +218,25 @@ eingeschaltetem Rausch-Generator zu sehen. Der Tiefpassfilter ist weiterhin ausg
 
 Im zweiten Teil der Auswertung wird die Abhängigkeit der Ausgangsspannung zur Phasenverschiebung
 betrachtet. Hier wird sowohl mit, als auch ohne Rausch-Generator gemessen. Zur besseren
-Darstellung wird $\varphi$ gegen $U_\text{out}$ geplottet. Diese Werte sind in Tabelle \ref{tab:b} einzusehen.
+Darstellung wird $\cos{(\Delta\varphi)}$ gegen die gemessenen Werte $U_\text{max}$
+geplottet. Diese Werte sind in Tabelle \ref{tab:b} einzusehen.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1.0\textwidth]{Bilder/phi.pdf}
-  \caption{U$_\text{out}$ in Abhängigkeit von $\varphi$.}
-  \label{fig:Uout}
+  \caption{$U_\text{max}$ in Abhängigkeit von $\cos{(\Delta\varphi)}$.}
+  \label{fig:Umax}
 \end{figure}
-
-Die Funktionen in Grafik \ref{fig:Uout} lassen einen cosinusförmigen Verlauf erkennen. \\
+Mit Python ergibt sich für den ersten Graphen
+\begin{align*}
+  a &= (82 ± 5) \mV   \\
+  b &= (-3 ± 3) \mV
+\end{align*}
+und für den zweiten Graphen
+\begin{align*}
+  a &= (51 ± 5) \,\cdot 10^{-1} \, \mV      \\
+  b &= (-2 ± 3) \,\cdot 10^{-1} \, \mV
+\end{align*}.
 
 \newpage
 
@@ -235,7 +246,9 @@ eine Photodiode keinen Lichtimpuls einer LED mehr aufnimmt. Dabei wird die einge
 gegen den Abstand $r$ mit den Messdaten aus Tabelle \ref{tab:licht} geplottet.
 Zu Beginn wird eine Dunkelmessung durchgeführt, welche einen Wert von $U = 0.06 \,\mV$
 ergibt. Dieser Wert wird bei den aufgenommenen Spannungswerten im Folgenden direkt
-abgezogen.
+abgezogen. Zudem werden die Werte mit einer Low-Pass Verstärkung von 50, einem
+Pre-Amplifier von 2 und einer Lock-In Verstärkung von 2 aufgenommen. Im Folgenden
+sind die Messwerte jedoch schon von diesen Verstärkungen bereinigt.
 
 \begin{table}[H]
   \centering

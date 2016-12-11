@@ -1,3 +1,4 @@
+\subsection{Theorie des Lock-In-Verstärkers}
 Da bei vielen elektrischen und physikalischen Systemen das Rauschen zunimmt, wenn
 die Frequenz $\omega$ gegen 0 strebt \cite{enet}, wird ein Lock-in-Verstärker
 verwendet, um ein Signal zu verstärken. Mit dieser Technik können dann auch
@@ -49,11 +50,11 @@ beschrieben. Das Produkt beider Frequenzen ergibt dann:
   -\frac{2}{15}\cos(4\omega t)-\frac{2}{35}\cos(6\omega t)+\dots\biggr).
 \end{equation}
 Diese Formel enthält alle geraden Oberwellen der Grundfrequenz \omega.
-Sind beide Frequenzen sinus-förmig, folgt für das Produkt der beiden
-die Formel:
-\begin{equation}
-  U_\text{sig}\times U_\text{ref}=\frac{4}{\pi}U_0 \cdot \sin^2(\omega t).
-\end{equation}
+% Sind beide Frequenzen sinus-förmig, folgt für das Produkt der beiden
+% die Formel:
+% \begin{equation}
+%   U_\text{sig}\times U_\text{ref}=\frac{4}{\pi}U_0 \cdot \sin^2(\omega t).
+% \end{equation}
 Damit die Oberwellen unterdrückt werden, und eine zur Signalspannung proportionale
 Gleichspannung entsteht, muss der Tiefpassfilter entsprechend eingestellt werden.
 Die Gleichspannung lässt sich dann über
@@ -68,3 +69,9 @@ die Ausgangsspannung mit
 \end{equation}
 wieder eine zur Signalspannung proportionale Gleichspannung. Da die Ausgangsspannung
 nun von der Phasendifferenz abhängig ist, ist diese maximal bei $\varphi=0$.
+
+\subsection{Theorie der Lichtintensitätsmessung}
+Die hier verwendete LED wird als punktförmige Lichtquelle angenommen und strahlt
+das Licht in Form von Kugelwellen ab - im homogenen, isotropen Medium. Dadurch verteilt
+sich die Energiedichte auf immer größer werdende Flächen, wodurch sie mit $1/r^2$ abnimmt.
+Dies wird als quadratisches Energie-Abstandsgesetz bezeichnet \cite{chemie}.
