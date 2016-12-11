@@ -3,7 +3,7 @@ aufgebaut.
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{Bilder/dmpfschalt.JPG}
-  \caption{Schaltung für gedämpfte Schwingung}
+  \caption{Schaltung für gedämpfte Schwingung\cite{354}}
   \label{fig:schlt1}
 \end{figure} \\
 Mit Hilfe dieses Aufbaus soll der Abfall der Amplitude eines gedämpften
@@ -27,7 +27,7 @@ Zur Messung des Widerstands $R_\su{ap}$ wird die Schaltung aus Abbildung
 \begin{figure}[h]
   \centering
   \includegraphics[width=\textwidth]{Bilder/RapSchalt.JPG}
-  \caption{Schaltung zur Bestimmung von $R_\su{ap}$}
+  \caption{Schaltung zur Bestimmung von $R_\su{ap}$\cite{354}}
   \label{fig:rapschlt}
 \end{figure}
 \newpage
@@ -45,3 +45,34 @@ Abbildung (\ref{fig:aperid}) zu sehen ist.
 Diesen Zustand bezeichnet man auch als Schwingfall. Der Widerstand soll nun
 wieder erhöht werden, bis das Überschwingen gerade verschwindet. Der eingestellte
 Widerstand wird als $R_\su{ap}$ notiert.
+\newpage
+Als nächstes wird die Frequenzabhängigkeit der Kondensatorspannung untersucht.
+Hierfür wird die Schaltung aus Abbildung (\ref{fig:phaseschlt}) aufgebaut.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=\textwidth]{Bilder/Phaseschalt.JPG}
+  \caption{RCL-Schwingkreis zur Untersuchung der Kondensatorspannung\cite{354}}
+  \label{fig:phaseschlt}
+\end{figure}
+Zunächst wird die Erregerspannung $U$ gemessen und notiert. Die Frequenz $\nu$
+wird nun von $(15-50)\kHz$ in $5\kHz$ Schritten variiert und die dazugehörigen
+Werte für die Spannung notiert. Ziel hierbei ist es, die Frequenz für die
+Maximalspannung herauszufinden. Die Frequenz, bei der die Spannung maximal wird,
+wird auch als Resonanzfrequenz $U_\su{res}$ bezeichnet. Für eine genauere
+Auswertung wird der Bereich $\pm 5\kHz$ um das Spannungsmaximum erneut mit $1\kHz$
+Schritten gemessen.
+Abschliessend soll die Phasenverschiebung $\Delta\varphi$ zwischen
+Kondensator- und Erregerspannung in Abhängigkeit der Frequenz
+bestimmt werden. Es wird weiterhin der Aufbau aus Abbildung
+(\ref{fig:phaseschlt}) verwendet. Beide Spannungsverläufe werden übereinander
+angezeigt, sodass sich ein Bild wie in Abbildung (\ref{fig:dphi}) ergibt. Die
+Frequenz wird nun wie zuvor von $(15-50)\kHz$ variiert. Der zeitliche Abstand
+der Hochpunkte wird mit der Cursorfunktion des Oszilloskops gemessen. Die
+Periodendauer kann hierbei über die Frequenz berechnet werden und muss nicht
+explizit gemessen werden.
+\begin{figure}
+  \centering
+  \includegraphics[angle=90]{Bilder/dphi.JPG}
+  \caption{Darstellung der Phasenverschiebung am Oszilloskop}
+  \label{fig:dphi}
+\end{figure}
