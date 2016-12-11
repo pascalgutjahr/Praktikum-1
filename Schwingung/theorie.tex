@@ -1,5 +1,5 @@
 Ein RC-Schwingkreis besteht in der Regel aus einem Kondensator mit der
-Kapazität $C$ und diner Spule, die eine Induktivität $L$ liefert.
+Kapazität $C$ und einer Spule, die eine Induktivität $L$ liefert.
 Diese beiden Bauteile dienen hier als Energiespeicher.
 In einem idealen Schwingkreis wird eine einmal eingespeicherte Energie
 immer zwischen beiden genannten Elementen ausgetauscht.
@@ -29,12 +29,12 @@ Um eine Differentialgleichung der 2. Ordnung zu erhalten, wird die Spannung
 durch den Strom $I$ ausgedrückt. Somit erhält man:
 \begin{align*}
   U_\su{R}(t) &= RI(t) \\
-  U_\su{C}(t) &= \frac{Q(t)}{C} \text{mit} I = Q \\
+  U_\su{C}(t) &= \frac{Q(t)}{C} \hfill\text{mit}\hfill I = Q \\
   U_\su{L}(t) &= LI ,
 \end{align*}
 was zu der Differentialgleichung
 \begin{equation}
-  I(t) + \frac{R}{L}I(t) + \frac{1}{LC}I(t) = 0 .
+  I(t) + \frac{R}{L}I(t) + \frac{1}{LC} I(t) = 0 .
 \end{equation}
 Mit dem entsprechendem Ansatz ergibt sich für die Gleichung die Lösung
 \begin{equation}
@@ -57,14 +57,15 @@ Eulerschen Formel zu
 \begin{equation}
   I(t)=A_\su{0}\su{e}^{-2\pi\mu t}\cos(2\pi\nu t+\mu)
 \end{equation}
-umschreiben. Hier entsteht eine gedämpfte Schwingung, welche bei $t\rightarrow\inf$
+umschreiben. Hier entsteht eine gedämpfte Schwingung, welche bei
+$t\rightarrow\infty$
 gegen Null strebt. Die Abklingdauer dieser Schwingung wird dann durch
 \begin{equation}
   T_\su{ex}\coloneqq\frac{1}{2\pi\mu}
 \end{equation}
 definiert.
 
-für den Fall dass $\nu$ imaginär ist, also der Fall
+Für den Fall dass $\nu$ imaginär ist, also der Fall
 \begin{equation*}
   \frac{1}{LC} < \frac{R^2}{4L^2}
 \end{equation*}
@@ -75,7 +76,7 @@ eintritt, lässt sich Formel (\ref{eqn:dgl}) zu
 umschreiben.
 Da sich i und $\nu$ zu einem insgesamt reelen Exponenten verrechnen lassen, fällt
 die Amplitude des Stroms exponentiell ab. Die Amplitude hat dabei, je nach
-Anfangsbedinungen, einen oder keinen Extremwert. Am schnellsten fällt die
+Anfangsbedingungen, einen oder keinen Extremwert. Am schnellsten fällt die
 Amplitude, wenn der Spezialfall
 \begin{equation*}
   \frac{1}{LC} = \frac{R^2}{4L^2}
@@ -89,7 +90,7 @@ Abbildung \ref{fig:agf} als gestrichelte Linie dargestellt.
   \label{fig:agf}
 \end{figure}
 \\
-Abblidung (\ref{fig:angeregt}) zeigt einen $RCL$-Schwingkreis, welcher von
+Abbildung (\ref{fig:angeregt}) zeigt einen $RCL$-Schwingkreis, welcher von
 außen angeregt wird. Die Anregung erfolgt hier durch eine Wechselstromquelle.
 \begin{figure}[h]
   \centering
@@ -109,7 +110,7 @@ Die Lösung für die Spannung in Abhängigkeit der Zeit berechnet sich dann mit:
   U(t)=\frac{U_0(1-LC\omega^2-\su{i}\omega RC)}{(1-LC\omega^2)^2+\omega^2 R^2 C^2}.
 \end{equation}
 Für die Phasenverschiebung zur Erregerspannung ergibt sich durch den Vergleich
-von Imaginär- und Realteil ergibt sich: %Umformulieren um ':' zu vermeiden!!
+von Imaginär- und Realteil sich: %Umformulieren um ':' zu vermeiden!!
 \begin{equation}
   \varphi(w)=\arctan\biggr(\frac{\su{Im}(U)}{\su{Re}(U)}\biggl)
   =\arctan\biggr(\frac{-\omega RC}{1-LC\omega^2}\biggl)
