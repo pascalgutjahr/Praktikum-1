@@ -11,7 +11,7 @@ csfont = {'fontname': 'Times New Roman'}
 
 plt.subplot(2, 1, 1)
 
-phi, Delta_phi, U_max, U_out = np.genfromtxt('data1.txt', unpack=True, skip_header=3)
+phi, Delta_phi, U_max = np.genfromtxt('data1.txt', unpack=True, skip_header=3)
 # in Bogenmaß umrechnen:
 Delta_phi_B = Delta_phi * 2 * np.pi / 360
 x = np.cos(Delta_phi_B)
@@ -26,6 +26,7 @@ errors = np.sqrt(np.diag(covariance))
 
 print('a =', params[0], '±', errors[0])
 print('b =', params[1], '±', errors[1])
+# print('x = ', covariance)
 
 x_plot = np.linspace(min(x), max(x))
 
@@ -40,7 +41,7 @@ plt.grid()
 
 plt.subplot(2, 1, 2)
 
-phi2, Delta_phi2, U2_max, U2_out = np.genfromtxt('Rausch.txt', unpack=True, skip_header=2)
+phi2, Delta_phi2, U2_max = np.genfromtxt('Rausch.txt', unpack=True, skip_header=2)
 Delta_phi2_B = Delta_phi2 * 2 * np.pi / 360
 x2 = np.cos(Delta_phi2_B)
 
