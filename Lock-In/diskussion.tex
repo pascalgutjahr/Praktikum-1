@@ -1,15 +1,21 @@
+Zu Beginn ergibt sich die Schwierigkeit  $U = 10 \mV$ einzustellen, da die Skala zum
+einen nicht für so kleine Spannungen ausgelegt ist und zum anderen schwankt die
+Spannung ab einem Wert von ca. $12 \mV$ so stark, dass genaues Ablesen nicht mehr möglich ist.
+
 Im ersten Versuchsteil ist auffällig, dass die Spannungsverläufe leicht variieren,
-wenn die Phase verändert wird. Unter Berücksichtigung der Messungenauigkeiten des Oszillators
-bleibt die Frquenz gleich, jedoch ändern sich die peak-to-peak gemessenen Spannungsamplituden.
-Die Messwerte ohne Rausch-Generator variieren dabei weniger stark, als die Werte
-mit Rausch-Generator.
+wenn die Phase verändert wird. Dies darf jedoch nicht sein, da die Amplitude nicht von
+der Phasendifferenz zwischen Signal- und Referenzspannung abhängen darf. Möglicherweise
+wurde das Bauteil falsch verkabelt. Unter Berücksichtigung der Messungenauigkeiten des Oszilloskops
+bleibt die Frequenz gleich.
 
-Im zweiten Teil des Versuchs lassen die Spannungskurven einen cosinusförmigen Verlauf erkennen.
-Die Graphen mit und ohne Rauschgenerator ähneln sich hierbei sehr stark, was vermuten lässt,
-dass die Messung nicht exakt durchgeführt wurde, da der Rausch-Generator ansonsten keine Veränderung an
-den Spannungsverläufen vornehmen würde.
+Im zweiten Teil der Auswertung ist zu erkennen, dass beide Graphen die zu erwartende
+Ausgleichsgerade ergeben, wenn $U_\text{max}$ gegen $\cos{(\Delta\varphi)}$ geplottet wird.
+Aus dem Vergleich der beiden Graphen lässt sich schließen, dass der Rauschgenerator
+dafür sorgt, dass die gemessenen $U_\text{max}$ Werte geringer ausfallen.
 
-Bei der Lichtmessung mit der Photodiode ergibt sich, dass die Spannung $U$
-proportional zum Abstand $1/r^2$ abfällt. Hier muss jedoch berücksichtigt werden, dass
-die Photodiode nicht nur Lichtimpulse von der LED empfängt, sondern auch von der
-Umgebung, da der Versuch nicht in einem abgedunkelten Raum durchgeführt wird. 
+Bei der Lichtmessung mit der Photodiode ergibt sich, wie laut Theorie bereits erwartet,
+dass die Spannung $U$ proportional zum Abstand $1/r^2$ abfällt. Hier muss jedoch
+berücksichtigt werden, dass die Photodiode nicht nur Lichtimpulse von der LED
+empfängt, sondern auch von der Umgebung, da der Versuch nicht in einem
+abgedunkelten Raum durchgeführt wird, sondern direkt am Fenster.  Dies ruft somit
+ein Rauschen hervor.
