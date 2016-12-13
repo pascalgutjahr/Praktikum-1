@@ -1,0 +1,52 @@
+Wärme fließt grundsätzlich vom wärmeren Medium zum kälteren Medium - laut dem
+zweiten Hauptsatz der Thermodynamik. Für die Umkehrung dieses Prozesses muss
+Energie von außen zugeführt werden, z.B. durch eine Wärmepumpe, welche mechanische
+Arbeit in das System steckt. Es gilt:
+\begin{equation}
+  Q_\su{1} = Q_\su{2} + A
+\end{equation}
+mit $Q_\su{1}$ als wärmere Wärmemenge, $Q_\su{2}$ als kältere Wärmemenge und $A$ als
+aufzuwendende Arbeit.
+\subsection{Merkmale der Wärmepumpe}
+Eine Wärmepumpe besitzt im Wesentlichen drei entscheidende Faktoren: die Güteziffer,
+den Massendurchsatz und den Wirkunsgrad.
+\subsubsection{Güteziffer}
+Die Güteziffer $\nu$ bezeichnet das Verhältnis zwischen der Arbeit $A$, welche aufzuwenden
+ist, um die Wärme vom kälteren zum wärmeren Reservoir zu transportieren, und der
+transportierten Wärmemenge $Q_\su{trans}$. Unter idealen Voraussetzungen gilt
+\begin{equation}
+      \nu_\su{ideal} = \frac{Q_\su{trans}}{A} = \frac{T_\su{1}}{T_\su{1}-T_\su{2}}.
+\end{equation}
+Hierfür muss die Wärmeübertragung jedoch reversibel sein. Für die Realität folgt
+somit
+\begin{equation}
+  \nu_\su{real} < \frac{T_\su{1}}{T_\su{1}-T_\su{2}}.
+\end{equation}
+Je geringer die Temperaturunterschiede zwischen den Reservoiren sind, desto höher ist
+die Güteziffer und desto weniger Arbeit muss die Pumpe verrichten.
+
+Wird der Differenzenquotient durch die Differentialquotienten $\frac{dT_\su{1}}{dt}$
+und $\frac{dQ_\su{1}}{dt}$ ersetzt, so folgt:
+\begin{equation}
+  \frac{dQ_\su{1}}{dt}= (m_\su{1}c_\su{w}+m_\su{k}c_\su{k})\frac{dT_\su{1}}{dt}
+\end{equation}
+$m_\su{1}c_\su{w}$ beschreibt die Wärmekapazität des Wassers im ersten Reservoir und
+$m_\su{k}c_\su{k}$ die Wärmekapazität der Kupferschlange und des Eimers. Mit $N$
+als gemittelte Leisungsaufnahme des Kompressors ergibt sich damit für die Güteziffer
+$\nu$:
+\begin{equation}
+  \nu = (m_\su{1}c_\su{w}+m_\su{k}c_\su{k})\frac{dT_\su{1}}{dt} \cdot \frac{1}{N}
+\end{equation}
+\subsubsection{Massendurchsatz}
+Der Massendurchsatz berechnet sich aus dem Quotienten $\frac{dT_\su{2}}{dt}$ als
+\begin{equation}
+  \frac{dQ_\su{2}}{dt}= (m_\su{2}c_\su{w}+m_\su{k}c_\su{k})\frac{dT_\su{2}}{dt}.
+\end{equation}
+Der Wärmeentzug geschieht durch die Verdampfung des Transportmediums. Dabei wird die
+Verdampfungswärme $L$ pro Zeit- und Masseneinheit verbraucht. Aus diesem Zusammenhang folgt
+\begin{align}
+  \frac{dm}{dt} &= \frac{dQ_\su{2}}{dt} \cdot \frac{1}{L} \\
+      &= (m_\su{2}c_\su{w}+m_\su{k}c_\su{k})\frac{dT_\su{2}}{dt} \cdot \frac{1}{L}.
+\end{align}
+\subsubsection{Wirkungsgrad}
+\subsection{Schematischer Aufbau der Wärmepumpe}
