@@ -14,6 +14,8 @@ U0 = 6.7
 U = Uc/U0
 
 plt.plot(v, U, 'rx', label="Messwerte")
+plt.xlabel(r'$f \,/\, kHz$')
+plt.ylabel(r'$U_c \,/\, U_0$')
 plt.xscale('log')
 plt.grid()
 plt.tight_layout()

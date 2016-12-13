@@ -15,7 +15,7 @@ zu sehen.
 \begin{figure}[H]
   \centering
   \includegraphics{Bilder/RCL.JPG}
-  \caption{Schematischer Aufbau eines $RCL$-Kreises\cite{354}}
+  \caption{Schematischer Aufbau eines $RCL$-Kreises\,\cite{354}}
   \label{fig:rcl}
 \end{figure}
 Die Werte von $U_\su{R}, U_\su{C}$ und $U_\su{L}$ bezeichnen hierbei die Spannung
@@ -29,7 +29,7 @@ Um eine Differentialgleichung der 2. Ordnung zu erhalten, wird die Spannung
 durch den Strom $I$ ausgedrückt. Somit erhält man:
 \begin{align*}
   U_\su{R}(t) &= RI(t) \\
-  U_\su{C}(t) &= \frac{Q(t)}{C} \hfill\text{mit}\hfill I = Q \\
+  U_\su{C}(t) &= \frac{Q(t)}{C} \qquad \text{mit} \qquad I = Q \\
   U_\su{L}(t) &= LI ,
 \end{align*}
 was zu der Differentialgleichung
@@ -47,12 +47,12 @@ Die Parameter $\mu$ und $\nu$ sind dabei definiert als:
   \nu &\coloneqq\frac{1}{2\pi}\sqrt{\frac{1}{LC}-\frac{R^2}{4\L^2}}
 \end{align*}
 Für $\nu$ muss aufgrund der Wurzel eine Fallunterscheidung gemacht werden, da
-$\nu$ sowohl reel, als auch rein imaginär sein kann.
-Für den reelen Fall muss
+$\nu$ sowohl reell, als auch rein imaginär sein kann.
+Für den reellen Fall muss
 \begin{equation*}
   \frac{1}{LC} > \frac{R^2}{4L^2}
 \end{equation*}
-gelten. Unter diesen Voraussetzungen lässt sich Formel (\ref{eqn:dgl}) mit der
+gelten. Unter diesen Voraussetzungen lässt sich Formel \eqref{eqn:dgl} mit der
 Eulerschen Formel zu
 \begin{equation}
   I(t)=A_\su{0}\su{e}^{-2\pi\mu t}\cos(2\pi\nu t+\mu)
@@ -66,16 +66,16 @@ gegen Null strebt. Die Abklingdauer dieser Schwingung wird dann durch
 \end{equation}
 definiert.
 
-Für den Fall dass $\nu$ imaginär ist, also der Fall
+Für den Fall, dass $\nu$ imaginär ist, also
 \begin{equation*}
-  \frac{1}{LC} < \frac{R^2}{4L^2}
+  \frac{1}{LC} < \frac{R^2}{4L^2} ,
 \end{equation*}
-eintritt, lässt sich Formel (\ref{eqn:dgl}) zu
+lässt sich Formel \eqref{eqn:dgl} zu
 \begin{equation}
   I(t)\propto\su{e}^{-(2\pi\mu -\su{i}2\pi\nu)t}
 \end{equation}
 umschreiben.
-Da sich i und $\nu$ zu einem insgesamt reelen Exponenten verrechnen lassen, fällt
+Da sich i und $\nu$ zu einem insgesamt reellen Exponenten verrechnen lassen, fällt
 die Amplitude des Stroms exponentiell ab. Die Amplitude hat dabei, je nach
 Anfangsbedingungen, einen oder keinen Extremwert. Am schnellsten fällt die
 Amplitude, wenn der Spezialfall
@@ -87,21 +87,21 @@ Abbildung \ref{fig:agf} als gestrichelte Linie dargestellt.
 \begin{figure}[h]
   \centering
   \includegraphics{Bilder/aperiod.JPG}
-  \caption{Zeitverlauf des Stroms mit aperiodischer Dämpfung\cite{354}}
+  \caption{Zeitverlauf des Stroms mit aperiodischer Dämpfung\,\cite{354}}
   \label{fig:agf}
 \end{figure}
 \\
-Abbildung (\ref{fig:angeregt}) zeigt einen $RCL$-Schwingkreis, welcher von
-außen angeregt wird. Die Anregung erfolgt hier durch eine Wechselstromquelle.
+Abbildung \ref{fig:angeregt} zeigt einen $RCL$-Schwingkreis, welcher von
+außen angeregt wird. Die Anregung erfolgt hier durch eine Wechselspannung.
 \begin{figure}[h]
   \centering
   \includegraphics{Bilder/angeregt.JPG}
-  \caption{Schaltbild eines angeregten $RCL$-Schwingkreises\cite{354}}
+  \caption{Schaltbild eines angeregten $RCL$-Schwingkreises\,\cite{354}}
   \label{fig:angeregt}
 \end{figure}
 Nach einer kurzen Einschwingzeit nimmt der Schwingkreis die Frequenz der
 Wechselstromquelle an. Die zu Beginn aufgestellte Differentialgleichung aus
-Formel (\ref{eqn:dgl}) wird nun inhomogen und lautet:
+Formel \eqref{eqn:dgl} wird nun inhomogen und lautet:
 \begin{equation}
   LCU_\su{C}(t) + RCU_\su{c}(t) + U_\su{c}(t) =U_0\su{e}^{\su{i}\omega t}.
   \label{eqn:inh}
@@ -111,7 +111,7 @@ Die Lösung für die Spannung in Abhängigkeit der Zeit berechnet sich dann mit:
   U(t)=\frac{U_0(1-LC\omega^2-\su{i}\omega RC)}{(1-LC\omega^2)^2+\omega^2 R^2 C^2}.
 \end{equation}
 Für die Phasenverschiebung zur Erregerspannung ergibt sich durch den Vergleich
-von Imaginär- und Realteil sich: %Umformulieren um ':' zu vermeiden!!
+von Imaginär- und Realteil: %Umformulieren um ':' zu vermeiden!!
 \begin{equation}
   \varphi(w)=\arctan\biggr(\frac{\su{Im}(U)}{\su{Re}(U)}\biggl)
   =\arctan\biggr(\frac{-\omega RC}{1-LC\omega^2}\biggl)

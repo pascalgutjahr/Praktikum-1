@@ -9,11 +9,14 @@ plt.rcParams['font.size'] = 13
 plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
-t, U = np.genfromtxt('tables/phase.txt', unpack=True, skip_header=2)
+fre, t = np.genfromtxt('tables/phase.txt', unpack=True, skip_header=2)
 
-plt.plot(t,U, 'rx', label='Messwerte')
-plt.xlim(min(t), max(t))
-plt.ylim(min(U), max(U))
-#plt.grid()
-#plt.tight_layout()
+plt.plot(fre, t, 'rx', label='Messwerte')
+plt.xlim(min(fre), max(fre))
+plt.ylim(min(t), max(t)+5)
+plt.xlabel(r'$f \,/\, kHz$')
+plt.ylabel(r'$t \,/\, micro s$')
+plt.legend(loc='best')
+plt.grid()
+plt.tight_layout()
 plt.show()

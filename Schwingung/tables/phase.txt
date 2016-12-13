@@ -1,5 +1,5 @@
 f           Delta-Phi
-kHz         mikros
+kHz         mikrosec
 15          24
 20          24
 25          24
