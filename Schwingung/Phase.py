@@ -13,9 +13,10 @@ fre, t = np.genfromtxt('tables/phase.txt', unpack=True, skip_header=2)
 
 plt.plot(fre, t, 'rx', label='Messwerte')
 plt.xlim(min(fre), max(fre))
-plt.ylim(min(t), max(t)+5)
+plt.ylim(min(t)-5, max(t)+5)
 plt.xlabel(r'$f \,/\, kHz$')
 plt.ylabel(r'$t \,/\, \mathrm{\mu} s$')
+plt.xscale('log') #Funktioniert nicht!
 plt.legend(loc='best')
 plt.grid()
 plt.tight_layout()
