@@ -20,4 +20,5 @@ plt.xscale('log') #Funktioniert nicht!
 plt.legend(loc='best')
 plt.grid()
 plt.tight_layout()
+plt.savefig('Bilder/Phase.pdf')
 plt.show()
