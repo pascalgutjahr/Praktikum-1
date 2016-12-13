@@ -1,4 +1,4 @@
-Die gegebenen werte der einzelnen Elemente lauten:
+Die gegebenen Werte der einzelnen Elemente lauten:
 \begin{align*}
   L &= (16,8 \pm 0,1) \,\cdot 10^{-3}\Hen \\
   C &= (2,07 \pm 0,01) \,\cdot 10^{-9} \Far \\
@@ -15,4 +15,41 @@ Da $U(t)\propto I(t)$ gilt, ist die Form der Einhüllenden nach Formel
   A = A_0\su{e}^{-2\pi\mu t}
 \end{equation}
 gegeben.
-%Platzhalter
+%Platzhalter für Einhüllende
+
+Der gemessene Wert für den Widerstand $R_\su{ap}$ bei dem der aperiodische Fall
+eintritt, beträgt $2,3\cdot 10^3 \Ohm$. Der nach Formel \eqref{eqn:r_ap}
+berechnete Wert liegt jedoch bei $(5,700 \pm 0,003)\,\cdot 10^3\Ohm$. Somit ergibt
+sich eine Differenzvon $2,4\,\cdot10^3 \Ohm$. Diese Differenz kommt unter anderem durch die Widerstände der
+restlichen Bauteile zustande, welche in der Theorie nicht beachtet wurden.
+Eine weitere Erklärung für diese Diskrepanz liegt in der Ableseungenauigkeit
+des eingestellten Grenzwiderstandes.
+
+Die Daten zur Bestimmung der Resonanzüberhöhung $q$ und die Breite der
+Resonanzkurve $\nu_+ - \nu_-$ finden sich in Tabelle \ref{tab:Ucon} wieder.
+\input{tables/CSpannung.tex} Die Erregerspannung $U$ beträgt dabei $6,72 \Volt$.
+Das Verhältnis $\frac{U_\su{C}}{U}$ wird gegen $\nu$ in einem halblogarithmischen
+Diagramm aufgetragen.
+\begin{figure}[h]
+  \centering
+  \includegraphics{Bilder/UcUv.pdf}
+  \caption{Normierte Darstellung der normierten Kondensatorspannung}
+  \label{fig:UcUv}
+\end{figure}
+Der Maximalwert $q_\su{exp}$ wird aus dem oberen Graphen als Güte abgelesen. Der
+theoretische Wert für die Güte $q_\su{theo}$ wird nach Formel \eqref{eqn:guete} berechnet.
+Somit erhält man:
+\begin{align*}
+  q_\su{exp} &= 2,6 \\
+  q_\su{theo} &= 3,09 \pm 0,01
+\end{align*}
+Daraus ergibt sich eine relative Abweichung von etwa $15\,\si{\percent}$. Um
+die Breite der Resonanzfrequenz bestimmen zu können, wird der Frequenzbereich
+um das Maximum nun Linear wie in Abbildung \ref{fig:UcUv} im unteren Graphen
+zu sehen dargestellt. Die Breite der Resonanzkurve wird abgelesen und mit dem
+nach \eqref{eqn:breit} berechnetem Theoriewert verglichen.
+\begin{align*}
+  (\nu_+ - \nu_-)_\su{exp} &= 10\,\cdot10^3\Hz \\
+  (\nu_+ - \nu_-)_\su{theo}&= (76,9 \pm ???)\Hz
+\end{align*}
+Daraus ergibt sich eine relative Abweichung von ???.
