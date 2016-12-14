@@ -8,6 +8,13 @@ Die gegebenen Werte der einzelnen Elemente lauten:
 Tabelle \ref{tab:amp} zeig die Gemessene Spannungsamplitude in Abhängigkeit der Zeit bei
 einer gedämpften Schwingung.
 \input{tables/amp.tex}
+Hieraus ergibt sich dann das Bild, welches in \ref{fig:AMP} zu sehen ist
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Bilder/amp.pdf}
+  \caption{Einhüllende der gedämpften Schwingung}
+  \label{fig:AMP}
+\end{figure}
 \\
 Da $U(t)\propto I(t)$ gilt, ist die Form der Einhüllenden nach Formel
 (\ref{eqn:einh}) durch
@@ -15,8 +22,27 @@ Da $U(t)\propto I(t)$ gilt, ist die Form der Einhüllenden nach Formel
   A = A_0\su{e}^{-2\pi\mu t}
 \end{equation}
 gegeben.
+mit der Ausgleichsrechnung ergeben sich die Werte:
+\begin{align*}
+  A_0 &= (6,83 \pm 0,05)\Volt\\
+  \mu &= (1251,3 \pm 13,6)\,\frac{1}{\sek}.
+\end{align*}
+Die Werte für $T_\su{ex}$ und $R_\su{eff}$ ergeben sich nach Formel \eqref{eqn:reff}
+und \eqref{tex} und lauten:
+\begin{align*}
+  R_\su{eff} &= (263,8 \pm 3,2)\Ohm \\ % Wert erneut überprüfen
+  T_\su{ex}  &= (5,00 \pm 0,03)\,\cdot 10^-4\sek
+\end{align*}
+Der verbaute Widerstand $R_1$ weicht hier um $195,8\Ohm$ ab.
 %Platzhalter für Einhüllende
-
+Ab nun werden andere Elemente mit den Werten
+\begin{align*}
+  L &= (3,53 \pm 0,03) \,\cdot 10^{-3}\Hen \\
+  C &= (5,015 \pm 0,015) \,\cdot 10^{-9} \Far \\
+  R_1 &= (30,3 \pm 0,1) \Ohm \\
+  R_2 &= (271,6 \pm 0,3) \Ohm
+\end{align*}
+verwendet.
 Der gemessene Wert für den Widerstand $R_\su{ap}$ bei dem der aperiodische Fall
 eintritt, beträgt $2,3\cdot 10^3 \Ohm$. Der nach Formel \eqref{eqn:r_ap}
 berechnete Wert liegt jedoch bei $(5,700 \pm 0,003)\,\cdot 10^3\Ohm$. Somit ergibt
@@ -24,7 +50,6 @@ sich eine Differenzvon $2,4\,\cdot10^3 \Ohm$. Diese Differenz kommt unter andere
 restlichen Bauteile zustande, welche in der Theorie nicht beachtet wurden.
 Eine weitere Erklärung für diese Diskrepanz liegt in der Ableseungenauigkeit
 des eingestellten Grenzwiderstandes.
-\newpage
 Die Daten zur Bestimmung der Resonanzüberhöhung $q$ und die Breite der
 Resonanzkurve $\nu_+ - \nu_-$ finden sich in Tabelle \ref{tab:Ucon} wieder.
 \input{tables/CSpannung.tex}
@@ -52,10 +77,9 @@ zu sehen dargestellt. Die Breite der Resonanzkurve wird abgelesen und mit dem
 nach \eqref{eqn:breite} berechnetem Theoriewert verglichen.
 \begin{align*}
   (\nu_+ - \nu_-)_\su{exp} &= 10\,\cdot10^3\Hz \\
-  (\nu_+ - \nu_-)_\su{theo}&= (76,9 \pm ???)\Hz %Hier nochmal genau nachrechnen
+  (\nu_+ - \nu_-)_\su{theo}&= (12,2 \pm 0,1)\,\cdot 10^3\Hz %Hier nochmal genau nachrechnen
 \end{align*}
-Daraus ergibt sich eine relative Abweichung von ???.
-\newpage
+Daraus ergibt sich eine relative Abweichung von 18\si{\percent}.
 Um die Werte der Resonanzfrequenz $\nu_\su{res}$ berechnen zu können, werden
 die Daten aus Tabelle \ref{tab:phase} benötigt.
 \input{tables/phase.tex}
