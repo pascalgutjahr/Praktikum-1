@@ -42,10 +42,10 @@ Mit dem entsprechendem Ansatz ergibt sich für die Gleichung die Lösung
   \label{eqn:dgl}
 \end{equation}
 Die Parameter $\mu$ und $\nu$ sind dabei definiert als:
-\begin{align*}
+\begin{align}
   \mu &\coloneqq\frac{R}{4\pi L}\label{eqn:reff} \\
   \nu &\coloneqq\frac{1}{2\pi}\sqrt{\frac{1}{LC}-\frac{R^2}{4\L^2}}
-\end{align*}
+\end{align}
 Für $\nu$ muss aufgrund der Wurzel eine Fallunterscheidung gemacht werden, da
 $\nu$ sowohl reell, als auch rein imaginär sein kann.
 Für den reellen Fall muss
@@ -121,6 +121,7 @@ Für die Frequenzen $\omega_1$ und $\omega_2$ gilt bei einer Phasenverschiebung
 von $\frac{\pi}{4}$ beziehungsweise $\frac{3\pi}{4}$
 \begin{equation}
   \omega_\su{1,2}=\pm\frac{R}{2L}+\sqrt{\frac{R^2}{4L^2}+\frac{1}{LC}}.
+  \label{eqn:w12}
 \end{equation}
 
 Die Spannung kann zusätzlich mit
@@ -132,7 +133,7 @@ Hierbei zeigt sich, dass die Spannungsamplitude für sehr hohe Frequenzen gegen
 Null strebt, während sie für kleine Frequenzen gegen $U_0$ strebt.
 Die Resonanzfrequenz
 \begin{equation}
-  \omega_\su{res}=\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}}
+  \omega_\su{res}=\sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}} \label{eqn:wres}
 \end{equation}
 beschreibt den Zustand, bei dem $U_\su{C}$ einen Maximalwert erreicht der auch
 größer als $U_\su{0}$ sein kann.
