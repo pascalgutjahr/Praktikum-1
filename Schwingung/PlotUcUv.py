@@ -15,8 +15,8 @@ U0 = 6.7
 U = Uc/U0
 
 plt.plot(v, U, 'rx', label="Messwerte")
-plt.xlabel(r'$f \,/\, kHz$')
-plt.ylabel(r'$U_c \,/\, U_0$')
+plt.xlabel(r'$\mathrm{\nu} \,/\, \mathrm{kHz}$')
+plt.ylabel(r'$\mathrm{U_c} \,/\, \mathrm{U_0}$')
 plt.xscale('log')
 plt.legend(loc='best')
 plt.grid()
@@ -24,8 +24,8 @@ plt.grid()
 
 plt.subplot(2, 1, 2)
 plt.plot(v, U, 'kx', label="Messwerte")
-plt.xlabel(r'$f \,/\, kHz$')
-plt.ylabel(r'$U_c \,/\, U_0$')
+plt.xlabel(r'$\mathrm{\nu} \,/\, \mathrm{kHz}$')
+plt.ylabel(r'$\mathrm{U_c} \,/\, \mathrm{U_0}$')
 plt.legend(loc='best')
 plt.grid()
 plt.tight_layout()
