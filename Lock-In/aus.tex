@@ -1,10 +1,11 @@
 Im ersten Aufgabenteil wird eine Referenzspannung von $U_\text{ref}=6.56 \;\si{\volt}$
 und eine Signalspannung von $U_\text{sig}=13.5 \;\si{\volt}$ angelegt.
 Die Frequenz wird hierbei manuell reguliert und die Spannungsamplituden
-$U_\text{SS}$ werden peak-to-peak gemessen. Für die Messwerte in Tabelle \ref{tab:b}
+$U_\text{out}$ werden als $U_\su{max}$ gemessen. Für die Messwerte in Tabelle \ref{tab:b}
 wird ein Gain von 100 verwendet, für die Werte in Tabelle \ref{tab:d} wird ein Gain
 von 1000 verwendet. Die Folgenden Werte sind bereits von diesen Verstärkungen bereinigt.
-
+Die Phase $\Delta\varphi = 0$ ergibt sich bei $105 \,\si{\degree}$, da in Abbildung \ref{fig:3}
+nur Oberwellen vorhanden sind.
 
 \begin{table}[!h]
   \centering
@@ -30,21 +31,20 @@ von 1000 verwendet. Die Folgenden Werte sind bereits von diesen Verstärkungen b
     \begin{tabular}{S[table-format=4.0]SS}
       \toprule
       {$\Delta\varphi$} &
-      {$U_\text{max} \,/\, \si{\volt}\cdot10^{-3}$} &
-      {$U_\text{out} \,/\, \si{\volt}\cdot10^{-3}$} \\
+      {$U_\text{max} \,/\, \si{\volt}\cdot10^{-3}$} \\
       \midrule
-    -105\si{\degree}    &    -5     &     -3.18 \\
-     -90\si{\degree}    &     5     &      3.07 \\
-     -75\si{\degree}    &    25     &     13.78 \\
-     -60\si{\degree}    &    45     &     20.27 \\
-     -15\si{\degree}    &    80     &      0.00 \\
-      15\si{\degree}    &    78     &     24.83 \\
-      30\si{\degree}    &    65     &    -29.26 \\
-      60\si{\degree}    &    20     &    -12.30 \\
-      75\si{\degree}    &    5      &     -3.18 \\
-     105\si{\degree}    &    -25    &     13.78 \\
-     120\si{\degree}    &    -53    &     23.86 \\
-     150\si{\degree}    &    -80    &     13.18 \\
+    -105\si{\degree}    &    -5    \\
+     -90\si{\degree}    &     5    \\
+     -75\si{\degree}    &    25    \\
+     -60\si{\degree}    &    45    \\
+     -15\si{\degree}    &    80    \\
+      15\si{\degree}    &    78    \\
+      30\si{\degree}    &    65    \\
+      60\si{\degree}    &    20    \\
+      75\si{\degree}    &    5     \\
+     105\si{\degree}    &    -25   \\
+     120\si{\degree}    &    -53   \\
+     150\si{\degree}    &    -80   \\
     \bottomrule
     \end{tabular}
     \caption{Messwerte ohne Rauschen, mit Tiefpass}
@@ -80,21 +80,20 @@ von 1000 verwendet. Die Folgenden Werte sind bereits von diesen Verstärkungen b
   \begin{tabular}{S[table-format=4.0]SS}
     \toprule
     {$\Delta\varphi$} &
-    {$U_\text{max} \,/\, \si{\volt}\cdot10^{-4}$} &
-    {$U_\text{out} \,/\, \si{\volt}\cdot10^{-4}$} \\
+    {$U_\text{max} \,/\, \si{\volt}\cdot10^{-4}$} \\
     \midrule
-  -105  \si{\degree}  &    0     &      0.00 \\
-   -90  \si{\degree}  &    5     &      3.07 \\
-   -75  \si{\degree}  &    16    &      8.82 \\
-   -60  \si{\degree}  &    35    &     15.76 \\
-   -15  \si{\degree}  &    50    &      0.00 \\
-    15  \si{\degree}  &    46    &    -14.64 \\
-    30  \si{\degree}  &    38    &    -17.11 \\
-    60  \si{\degree}  &    10    &     -6.15 \\
-    75  \si{\degree}  &    1     &     -0.64 \\
-   105  \si{\degree}  &    -20   &     11.03 \\
-   120  \si{\degree}  &    -35   &     15.76 \\
-   150  \si{\degree}  &    -50   &      8.24 \\
+  -105  \si{\degree}  &    0    \\
+   -90  \si{\degree}  &    5    \\
+   -75  \si{\degree}  &    16   \\
+   -60  \si{\degree}  &    35   \\
+   -15  \si{\degree}  &    50   \\
+    15  \si{\degree}  &    46   \\
+    30  \si{\degree}  &    38   \\
+    60  \si{\degree}  &    10   \\
+    75  \si{\degree}  &    1    \\
+   105  \si{\degree}  &    -20  \\
+   120  \si{\degree}  &    -35  \\
+   150  \si{\degree}  &    -50  \\
     \bottomrule
   \end{tabular}
   \caption{Messwerte mit Rauschen, Signal Attenuator = 1,
@@ -106,7 +105,6 @@ von 1000 verwendet. Die Folgenden Werte sind bereits von diesen Verstärkungen b
 \hfill
 \end{table}
 
-Die Werte für $U_\text{out}$ lassen sich mit Hilfe der Formel \eqref{eqn:out} berechnen.\\
 \newpage
 
 \begin{figure}[!h]
@@ -157,8 +155,8 @@ Die Werte für $U_\text{out}$ lassen sich mit Hilfe der Formel \eqref{eqn:out} b
 In den Abbildungen \ref{fig:1} bis \ref{fig:6} sind die Spannungskurven für unterschiedliche Phasen
 zu sehen. Hierbei wird weder der Tiefpassfilter noch der Rausch-Generator eingeschaltet. \\
 Abbildung \ref{fig:1} zeigt eine sehr steile positive Flanke und spitze Extrema. Abbildung \ref{fig:2}
-zeigt auch sehr steile positive Flanken, jedoch sind die Hochpunkte abgerundet. In Abbildung \ref{fig:3}
-sieht der Verlauf ungefähr wie der Betrag der Sinus-Kurve aus. In Abbildung \ref{fig:4}
+zeigt auch eine sehr steile positive Flanken, jedoch sind die Hochpunkte abgerundet. In Abbildung \ref{fig:3}
+sieht der Verlauf wie der Betrag der Sinus-Kurve aus, hier existieren nur Oberwellen. In Abbildung \ref{fig:4}
 ist die negative Flanke sehr steil, die Hochpunkte sind abgerundet und die Tiefpunkte spitz.
 Der Graph in Abbildung \ref{fig:5} hat sehr spitze Hochpunkte und eine sehr steile negative Flanke.
 Der Graph in der letzten Abbildung \ref{fig:6} sieht aus wie der Graph aus Abbildung \ref{fig:5}, nur
@@ -275,7 +273,7 @@ sind die Messwerte jedoch schon von diesen Verstärkungen bereinigt.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{Bilder/Plot_Photodiode.pdf}
+  \includegraphics[width=13cm]{Bilder/Plot_Photodiode.pdf}
   \caption{U in Abhängigkeit von r}
   \label{fig:led}
 \end{figure}
