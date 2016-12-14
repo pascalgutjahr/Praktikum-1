@@ -16,7 +16,7 @@ plt.xlim(min(fre), max(fre))
 plt.ylim(min(t)-5, max(t)+5)
 plt.xlabel(r'$f \,/\, kHz$')
 plt.ylabel(r'$t \,/\, \mathrm{\mu} s$')
-plt.xscale('log') #Funktioniert nicht!
+ #plt.xscale('log') #Funktioniert nicht!
 plt.legend(loc='best')
 plt.grid()
 plt.tight_layout()
