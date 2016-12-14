@@ -13,8 +13,8 @@ t, U = np.genfromtxt('tables/amp.txt', unpack=True, skip_header=2)
 t = t * 10**-6
 def f(t, a, b):
     return a * np.exp(-2 *np.pi * b * t)
-# a Maximalamplitude
-# b Abklingdauer Tex
+# a Maximalamplitude = 6.82877476796 ± 0.0481889680373
+# b: \mu =  1251.3  839746 ± 13.6  989716218
 params, covariance = curve_fit(f, t, U)
 
 errors = np.sqrt(np.diag(covariance))
