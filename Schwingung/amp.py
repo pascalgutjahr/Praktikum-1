@@ -22,12 +22,12 @@ errors = np.sqrt(np.diag(covariance))
 print('a =', params[0], '±', errors[0])
 print('b =', params[1], '±', errors[1])
 
-plt.plot(t, f(t, *params), 'b-', label='linearer Fit')
+plt.plot(t, f(t, *params), 'b-', label='Ausgleichskurve')
 
 
 plt.plot(t, U, 'kx', label='Messwerte')
-plt.xlabel(r'$t \,/\, s$')
-plt.ylabel(r'$U \,/\, V$')
+plt.xlabel(r'$\mathrm{t} \,/\, \mathrm{s}$')
+plt.ylabel(r'$\mathrm{U} \,/\, \mathrm{V}$')
 plt.legend(loc='best')
 plt.grid()
 plt.savefig('Bilder/amp.pdf')

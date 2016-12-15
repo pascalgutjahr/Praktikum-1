@@ -9,16 +9,21 @@ plt.rcParams['font.size'] = 13
 plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
+# halblogarithmisch
 fre, t = np.genfromtxt('tables/phase.txt', unpack=True, skip_header=2)
 
-plt.plot(fre, t, 'rx', label='Messwerte')
-plt.xlim(min(fre), max(fre))
-plt.ylim(min(t)-5, max(t)+5)
-plt.xlabel(r'$f \,/\, kHz$')
-plt.ylabel(r'$t \,/\, \mathrm{\mu} s$')
- #plt.xscale('log') #Funktioniert nicht!
-plt.legend(loc='best')
+fre *= 1000
+t /= 1e6
+phirad = 2 * np.pi * fre * t
+
+
+plt.plot(fre/1000, phirad, 'rx', label='Messwerte')
+plt.yticks(np.arange(0, 5* np.pi/4, np.pi/4), ['$0$','$\mathrm{\pi}/4$','$\mathrm{\pi}/2$', '$3\mathrm{\pi}/4$','$\mathrm{\pi}$'])
+plt.xscale('log')
+plt.xlabel(r'$\mathrm{\nu} \,/\, \mathrm{kHz}$')
+plt.ylabel(r'$\mathrm{\varphi}$')
+plt.legend(loc='upper right')
 plt.grid()
 plt.tight_layout()
-plt.savefig('Bilder/Phase.pdf')
+plt.savefig('Bilder/phasehalblog.pdf')
 plt.show()
