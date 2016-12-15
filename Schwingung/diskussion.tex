@@ -1,16 +1,33 @@
-Die Differenz des berechneten $R_\su{ap}$ weicht um etwa $0,6\,\cdot10^3 \Ohm$
-vom gemessenen Widerstand ab. Diese Differenz kommt unter anderem durch die Widerstände
-der restlichen Bauteile zustande, welche in der Theorie nicht beachtet wurden.
-Eine weitere Erklärung für diese Diskrepanz liegt in der Ableseungenauigkeit
-des eingestellten Grenzwiderstandes.
-
-Für die Güte wurde relativ genau gemessen, da hier die relative Abweichung zum
-theoretischen Wert nur um $15\,\si{\percent}$ abweicht.
-Die Breite der Resonanzkurve wurde ebenfalls ziemlich genau gemessen, da hier
-nur eine Abweichung von $18\si{\percent}$ berechnet wird.
-Diese kleineren Fehler entstehen hauptächlich durch ungenaues Ablesen und das
-ungenaue Einstellen des Cursors am Oszilloskop.
-
-
-Der verbaute Widerstand $R_\su{1}$ weicht hier um $195,8\Ohm$ ab.
-(---> muss noch an die richtige Stelle)
+Anhand der vorliegenden Werte lässt sich feststellen, dass die gemessenen
+Werte gut mit den berechneten Werten übereinstimmen. Die Einzige Ausnahme hierbei
+betrifft den Effektivwiderstand $R_\su{eff}$. Der berechnete Widerstand weicht
+hierbei um $195,8\Ohm$ ab. Dies lässt sich zum einen durch den Generatorwiderstand
+erklären, aber auch durch die Widerstände der anderen Bauteile erklären, welche
+in der Theorie nicht beachtet wurden. Dies erklärt auch die Diskrepanz bei dem
+Widerstand, bei dem der aperiodische Fall eintritt. Hier liegt die Diskrepanz
+jedoch nur bei $0,6\,10^3\Ohm$.
+Tabelle \ref{tab:fehler} zeigt zusammengefasst die relativen Abweichungen der
+gemessenen Werten.
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c}
+    \toprule
+    Messung  & Theoretischer Wert & experimentellerwert & relative Abweichung \\
+     \midrule
+     Güte & 3,09 & 2,6 & $15\,\si{\percent}$ \\
+     Breite & $12,2\,\cdot 10^3\Hz$ & $10\,\cdot 10^3\Hz$ & $18\,\si{\percent}$ \\
+     $\nu_\su{res}$ & $36,82\kHz$ & $36\kHz$ & $2\,\si{\percent}$ \\
+     $\nu_1$ & $32,19\kHz$ & $29,9\kHz$ & $7\,\si{\percent}$ \\
+     $\nu_2$ & $44,4\kHz$ & $42,1\kHz$ & $5\,\si{\percent}$ \\
+     \bottomrule
+  \end{tabular}
+  \caption{Relative Abweichungen}
+  \label{tab:fehler}
+\end{table}
+Anhand dieser Werte lässt sich feststellen, dass diese Werte relativ genau gemessen
+wurden. Die bestehenden Abweichungen bestehen zum einen in den weiterhin nicht
+beachteten Widerständen des Kondensators und der Spule. Weitere Ungenauigkeiten
+kommen durch fehlerhaftes Ablesen und das ungenaue Einstellen des Cursors
+am Oszilloskop.
+Ein Fehler für $\nu_1, \nu_2 \text{und} \nu_\su{res}$ konnte nicht berechnet werden,
+Da der Wert unter der Wurzel ein negatives Vorzeichen erhalten hat.
