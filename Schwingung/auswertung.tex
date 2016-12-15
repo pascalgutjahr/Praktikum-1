@@ -37,8 +37,8 @@ und \eqref{eqn:tex} und lauten:
 
 Für die Weiteren Versuchsteile werden andere Elemente mit den Werten
 \begin{align*}
-  L &= (3,53 \pm 0,03) \,\cdot 10^{-3}\Hen \\
-  C &= (5,015 \pm 0,015) \,\cdot 10^{-9} \Far \\
+  L &= (3,53 \pm 0,03) \,\si{\milli\henry} \\
+  C &= (5,015 \pm 0,015) \,\si{\nano\farad} \\
   R_1 &= (30,3 \pm 0,1) \Ohm \\
   R_2 &= (271,6 \pm 0,3) \Ohm
 \end{align*}
@@ -79,7 +79,11 @@ die Daten aus Tabelle \ref{tab:phase} benötigt.
 \input{tables/phase.tex}
 Diese Daten werden außerdem dazu verwendet, um die Frequenzen $\nu_1$ und
 $\nu_2$ zu berechnen, an denen die Phase $\frac{\pi}{4}$ bzw.
-$\frac{3\pi}{4}$ beträgt. Die Phase $\varphi$ wird, wie in Abbildung \ref{fig:philog}
+$\frac{3\pi}{4}$ beträgt. Die Phase $\varphi$ wird durch
+\begin{equation}
+  \varphi_\su{rad} = 2\pi \cdot \nu \cdot \Delta t
+\end{equation}
+bestimmt, und wie in Abbildung \ref{fig:philog}
 zu sehen, gegen die Frequenz $\nu$ aufgetragen.
 \newpage
 \begin{figure}[!h]

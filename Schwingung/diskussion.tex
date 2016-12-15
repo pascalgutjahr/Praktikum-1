@@ -1,33 +1,36 @@
 Anhand der vorliegenden Werte lässt sich feststellen, dass die gemessenen
-Werte gut mit den berechneten Werten übereinstimmen. Die Einzige Ausnahme hierbei
+Werte gut mit den berechneten Werten übereinstimmen. Die einzige Ausnahme hierbei
 betrifft den Effektivwiderstand $R_\su{eff}$. Der berechnete Widerstand weicht
 hierbei um $195,8\Ohm$ ab. Dies lässt sich zum einen durch den Generatorwiderstand
-erklären, aber auch durch die Widerstände der anderen Bauteile erklären, welche
+erklären, aber auch durch die Widerstände der anderen Bauteile, welche
 in der Theorie nicht beachtet wurden. Dies erklärt auch die Diskrepanz bei dem
 Widerstand, bei dem der aperiodische Fall eintritt. Hier liegt die Diskrepanz
-jedoch nur bei $0,6\,10^3\Ohm$.
+jedoch nur bei $0,6\kOhm$.
 Tabelle \ref{tab:fehler} zeigt zusammengefasst die relativen Abweichungen der
-gemessenen Werten.
-\begin{table}
+gemessenen Werten - mit der Formel
+\begin{equation}
+  \Delta f = \frac{x_\su{theo}-x_\su{exp}}{x_\su{theo}}.
+\end{equation}
+\begin{table}[!h]
   \centering
   \begin{tabular}{c c c c}
     \toprule
-    Messung  & Theoretischer Wert & experimentellerwert & relative Abweichung \\
+    Messung  & Theoretischer Wert & experimenteller Wert & relative Abweichung \\
      \midrule
      Güte & 3,09 & 2,6 & $15\,\si{\percent}$ \\
-     Breite & $12,2\,\cdot 10^3\Hz$ & $10\,\cdot 10^3\Hz$ & $18\,\si{\percent}$ \\
+     Breite & $12,2\kHz$ & $10\kHz$ & $18\,\si{\percent}$ \\
      $\nu_\su{res}$ & $36,82\kHz$ & $36\kHz$ & $2\,\si{\percent}$ \\
-     $\nu_1$ & $32,19\kHz$ & $29,9\kHz$ & $7\,\si{\percent}$ \\
-     $\nu_2$ & $44,4\kHz$ & $42,1\kHz$ & $5\,\si{\percent}$ \\
+     $\nu_\su{1}$ & $32,19\kHz$ & $29,9\kHz$ & $7\,\si{\percent}$ \\
+     $\nu_\su{2}$ & $44,4\kHz$ & $42,1\kHz$ & $5\,\si{\percent}$ \\
      \bottomrule
   \end{tabular}
   \caption{Relative Abweichungen}
   \label{tab:fehler}
 \end{table}
-Anhand dieser Werte lässt sich feststellen, dass diese Werte relativ genau gemessen
-wurden. Die bestehenden Abweichungen bestehen zum einen in den weiterhin nicht
+
+\noindent Die bestehenden Abweichungen bestehen zum Teil aus den weiterhin nicht
 beachteten Widerständen des Kondensators und der Spule. Weitere Ungenauigkeiten
 kommen durch fehlerhaftes Ablesen und das ungenaue Einstellen des Cursors
-am Oszilloskop.
-Ein Fehler für $\nu_1, \nu_2 \text{und} \nu_\su{res}$ konnte nicht berechnet werden,
-Da der Wert unter der Wurzel ein negatives Vorzeichen erhalten hat.
+am Oszilloskop zustande.
+Ein Fehler für $\nu_1$, $\nu_2$ und $\nu_\su{res}$ konnte nicht berechnet werden,
+da der Wert unter der Wurzel ein negatives Vorzeichen erhalten hat.
