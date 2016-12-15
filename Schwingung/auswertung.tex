@@ -1,7 +1,7 @@
 Die gegebenen Werte der einzelnen Elemente lauten:
 \begin{align*}
-  L &= (16,8 \pm 0,1) \,\cdot 10^{-3}\Hen \\
-  C &= (2,07 \pm 0,01) \,\cdot 10^{-9} \Far \\
+  L &= (16,8 \pm 0,1) \,\si{\milli\henry} \\
+  C &= (2,07 \pm 0,01) \,\si{\nano\farad} \\
   R_1 &= (67,2 \pm 0,2) \Ohm \\
   R_2 &= (682 \pm 1) \Ohm
 \end{align*}
@@ -42,9 +42,9 @@ Für die Weiteren Versuchsteile werden andere Elemente mit den Werten
   R_2 &= (271,6 \pm 0,3) \Ohm
 \end{align*}
 verwendet.
-Der gemessene Wert für den Widerstand $R_\su{ap}$ bei dem der aperiodische Fall
-eintritt, beträgt $2,3\cdot 10^3 \Ohm$. Der nach Formel \eqref{eqn:r_ap}
-berechnete Wert liegt jedoch bei $(1,678 \pm 0,007)\,\cdot 10^3\Ohm$.
+Der gemessene Wert für den Widerstand $R_\su{ap}$, bei dem der aperiodische Fall
+eintritt, beträgt $2,3\,\si{\kilo\ohm}$. Der nach Formel \eqref{eqn:r_ap}
+berechnete Wert liegt jedoch bei $(1,678 \pm 0,007)\,\si{\kilo\ohm}$.
 Die Daten zur Bestimmung der Resonanzüberhöhung $q$ und die Breite der
 Resonanzkurve $\nu_+ - \nu_-$ finden sich in Tabelle \ref{tab:Ucon} wieder.
 \input{tables/CSpannung.tex}
@@ -55,10 +55,10 @@ Diagramm aufgetragen.
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.8\textwidth]{Bilder/UcUv.pdf}
-  \caption{Normierte Darstellung der normierten Kondensatorspannung}
+  \caption{Darstellung der normierten Kondensatorspannung}
   \label{fig:UcUv}
 \end{figure}
-Der Maximalwert $q_\su{exp}$ wird aus dem oberen Graphen als Güte abgelesen. Der
+Der Maximalwert $q_\su{exp}$ wird aus dem Graph \ref{fig:AMP} als Güte abgelesen. Der
 theoretische Wert für die Güte $q_\su{theo}$ wird nach Formel \eqref{eqn:guete} berechnet.
 Somit erhält man:
 \begin{align*}
@@ -66,28 +66,39 @@ Somit erhält man:
   q_\su{theo} &= 3,09 \pm 0,01
 \end{align*}
 Um die Breite der Resonanzfrequenz bestimmen zu können, wird der Frequenzbereich
-um das Maximum nun Linear wie in Abbildung \ref{fig:UcUv} im unteren Graphen
-zu sehen dargestellt. Die Breite der Resonanzkurve wird abgelesen und mit dem
-nach \eqref{eqn:breite} berechnetem Theoriewert verglichen.
+um das Maximum nun linear, wie in Abbildung \ref{fig:UcUv} im unteren Graphen
+zu sehen, dargestellt. Die Breite der Resonanzkurve wird abgelesen und mit dem
+nach \eqref{eqn:breite} berechneten Theoriewert verglichen.
 \begin{align*}
-  (\nu_+ - \nu_-)_\su{exp} &= 10\,\cdot10^3\Hz \\
-  (\nu_+ - \nu_-)_\su{theo}&= (12,2 \pm 0,1)\,\cdot 10^3\Hz %Hier nochmal genau nachrechnen
+  (\nu_+ - \nu_-)_\su{exp} &= 10\kHz \\
+  (\nu_+ - \nu_-)_\su{theo}&= (12,2 \pm 0,1)\kHz
 \end{align*}
 Um die Werte der Resonanzfrequenz $\nu_\su{res}$ berechnen zu können, werden
 die Daten aus Tabelle \ref{tab:phase} benötigt.
 \input{tables/phase.tex}
-Diese Daten werden außerdem dazu verwendet um die Frequenzen $\nu_1$ und
-$\nu_2$ zu berechnen, an denen die Phase $\frac{\pi}{4}\,\text{beziehungsweise}\,
-\frac{3\pi}{4}$ beträgt. Die Phase $\varphi$ wird wie in Abbildung \ref{fig:phse}
-zu sehen gegen die Frequenz $\nu$ aufgetragen.
-\begin{figure}[h]
+Diese Daten werden außerdem dazu verwendet, um die Frequenzen $\nu_1$ und
+$\nu_2$ zu berechnen, an denen die Phase $\frac{\pi}{4}$ bzw.
+$\frac{3\pi}{4}$ beträgt. Die Phase $\varphi$ wird, wie in Abbildung \ref{fig:philog}
+zu sehen, gegen die Frequenz $\nu$ aufgetragen.
+\newpage
+\begin{figure}[!h]
   \centering
-  \includegraphics[width=0.8\textwidth]{Bilder/Phase.pdf}
+  \includegraphics[width=0.7\textwidth]{Bilder/phasehalblog.pdf}
+  \caption{Halblogarithmische Darstellung der Phasenverschiebung zw. Erreger-
+  und Kondensatorspannung}
+  \label{fig:philog}
+\end{figure}
+Dazu wird der Bereich in Abbildung \ref{fig:phse} um die Resonanzfrequenz genauer
+betrachtet und linear dargestellt.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Bilder/phaselinear.pdf}
   \caption{Lineare Darstellung der Phasenverschiebung zwischen Erreger- und
   Kondensatorspannung}
   \label{fig:phse}
 \end{figure}
-Die Frequenz $\nu_\su{res}$ wird nach Formel \eqref{eqn:wres} berechnet
+Die Frequenz $\nu_\su{res}$ wird nach Formel \eqref{eqn:wres} berechnet,
 während $\nu_1$ und $\nu_2$ nach Formel \eqref{eqn:w12} berechnet werden.
 Die berechneten Werte werden erneut mit den experimentell beobachteten Werten
 Verglichen:
@@ -99,7 +110,8 @@ Verglichen:
   \nu_\su{2,exp} &= 42,1 \kHz \\
   \nu_\su{2,theo}&= 44,44\kHz
 \end{align*}
+
 Die Werte für $\nu_\su{1,exp}$ und $\nu_\su{2,exp}$ ergeben sich durch
 \begin{equation*}
-  \nu_\su{res,exp} \pm \frac{1}{2}(\nu_+ - \nu_-)_\su{theo}
+  \nu_\su{1, 2, exp} = \nu_\su{res,exp} \mp \frac{1}{2}(\nu_+ - \nu_-)_\su{theo}
 \end{equation*}
