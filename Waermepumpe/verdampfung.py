@@ -53,6 +53,5 @@ plt.plot(1/T2, y, 'rx', label='Verdampfungswärme')
 plt.xlabel(r'$\mathrm{T^{-1}}\,/\,\mathrm{K^{-1}}$')
 plt.ylabel(r'$\mathrm{\log\,(p_b\,/\,p_0)}$')
 plt.grid()
-
-
+plt.savefig('Bilder/verdampfung.pdf')
 plt.show()
