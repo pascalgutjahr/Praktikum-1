@@ -20,7 +20,8 @@ t1= 1/T1
 t2= 1/T2
 x = np.log(pb/p0)
 y = np.log(pa/p0)
-
+print('pa', pa)
+print('pb', pb)
 
 plt.subplot(2, 1, 1)
 def f1(t1, a, b, ):
