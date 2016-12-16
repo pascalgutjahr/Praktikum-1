@@ -15,9 +15,11 @@ t *= 60 # in Sekunden umgerechnet
 T1 = T1 + 273.15 # in Kelvin
 T2 = T2 + 273.15 # in Kelvin
 q=1.5
-x_plot=np.linspace(min(t), max(t))
+x_plot = np.linspace(min(t), max(t))
+
+
 def f(t, a, b, c):
-     return a*t**2+b*t+c
+    return a*t**2+b*t+c
 
 params, covariance = curve_fit(f, t, T1)
 errors = np.sqrt(np.diag(covariance))

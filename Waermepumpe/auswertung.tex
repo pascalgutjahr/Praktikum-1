@@ -1,12 +1,12 @@
 Tabelle \ref{tab:messwerte} zeigt die im Versuch gemessenen Werte.
-$T_1$ entspricht hierbei der Temperatur des wärmeren Reservoirs, während $T_2$
-die Temperatur des Kälteren. Der Druck $P_\su{a}$ wird dem warmen Reservoir
-zugeordnet und $p_\su{b}$ dem Kälteren.
+$T_\su{1}$ entspricht hierbei der Temperatur des wärmeren Reservoirs, während $T_\su{2}$
+die Temperatur des kälteren Reservoires beschreibt. Der Druck $P_\su{a}$ wird dem warmen Reservoir
+zugeordnet und $p_\su{b}$ dem kälteren.
 \begin{table}[h]
   \centering
   \begin{tabular}{c c c c c c}
     \toprule
-    t\,/$\sek$ &$T_\su{1}$\,/$\Kel$ & $T_\su{2}\,/\Kel$ & $p_\su{a}\,/\,\pas $ &
+    $t\,/\sek$ &$T_\su{1}$\,/$\Kel$ & $T_\su{2}\,/\Kel$ & $p_\su{a}\,/\,\pas $ &
     $p_\su{b}\,/ \pas$ & N\,/$\,\si{\watt}$  \\
     \midrule
        0   &   294.65   &   294.55   &   5100000    &     5250000   &      0 \\
@@ -43,11 +43,65 @@ Der Verlauf der Temperaturen $T_1$ und $T_2$ wird graphisch in Abbildung
   \label{fig:T1T2}
 \end{figure}
 \\
-Die die Ausgleichsrechnung ergibt sich über die Formel
+Die Ausgleichsrechnung ergibt sich über die Formel
 \begin{equation*}
-  T(t) = At^2+Bt+C
+  T(t) = At^2+Bt+C.
 \end{equation*}
-hieraus ergeben sich für $T_1$ die Parameter
+Hieraus ergeben sich für $T_1$ die Parameter
 \begin{align*}
-  A &= -3.3\cot10^{-7} \pm
+  A &= (-3.3 \pm 10) \cdot10^{-7}\,\si{\kelvin\per\square\second} \\
+  B &= (0.029 \pm 0.002) \,\si{\kelvin\per\second} \\
+  C &= (293.3 \pm 0.4) \Kel
 \end{align*}
+und für $T_2$
+\begin{align*}
+  A &= (2.9 \pm 3) \cdot 10^{-6} \,\si{\kelvin\per\square\second}\\
+  B &= (-0.027 \pm 0.003)  \,\si{\kelvin\per\second} \\
+  C &= (297.0 \pm 0.7) \Kel.
+\end{align*}
+
+\noindent Aus diesen Parametern wird der Differenzenquotient
+\begin{equation}
+  \frac{dT}{dt} = 2At+B
+\end{equation}
+für 4 Zeitpunkte bestimmt.
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{c c c c c}
+    \toprule
+    $t\,/\sek$ & $T_1 \,/\Kel$ & $\frac{dT_1}{dt}\,/\si{\milli\kelvin\per\second}$ &
+    $T_2\,/\Kel$ & $\frac{dT_2}{dt}\,/\si{\milli\kelvin\per\second}$ \\
+    \midrule
+    180 &  297.65 &  29\pm2 &  293.55 &  -26\pm3  \\
+    540 &  308.95 &  29\pm2 &  282.75 &  -24\pm4  \\
+    720 &  314.35 &  29\pm2 &  277.85 &  -23\pm5  \\
+    900 &  319.05 &  28\pm3 &  273.95 &  -22\pm6  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Differenzenquotienten zu $T_1$ und $T_2$}
+  \label{tab:diff}
+\end{table}
+\\
+Im Folgenden wird die Güteziffer $\nu$ der Wärmepumpe mit Formel \eqref{eqn:güte}
+ermittelt. Dabei wird nur $T_1$ betrachtet, da im Idealfall davon ausgegangen wird,
+dass $T_1$ und $T_2$ gleich sind (reversibler Kreisprozess).
+Die Wärmekapazität der Eimer und Kupferschlangen kann an der Apparatur abgelesen werden,
+sie beträgt $660\,\si{\joule\per\kelvin}$. In einem Eimer befinden sich
+$3\,\si{\kilo\gram}$ Wasser mit der Wärmekapazität
+$c_\su{w}= 4.183 \,\si{\kilo\joule\per\kilo\gram\kelvin}$\,\cite{chemie}.
+Für die Leistung $N$ wird der Mittelwert mit $\overline{N}=(190\pm50)\,\si{\watt}$ verwendet.
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{c c}
+    \toprule
+    $t\,/\sek$ & $\nu_\su{exp}$ \\
+    \midrule
+    180 &  2.01\pm18 \\
+    540 &  1.99\pm18 \\
+    720 &  1.98\pm18 \\
+    900 &  1.97\pm18 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Experimentelle Güteziffer}
+  \label{tab:expgüte}
+\end{table}
