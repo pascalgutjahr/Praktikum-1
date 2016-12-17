@@ -48,6 +48,7 @@ Verdampfungswärme $L$ pro Zeit- und Masseneinheit verbraucht. Aus diesem Zusamm
 \begin{align}
   \frac{dm}{dt} &= \frac{dQ_\su{2}}{dt} \cdot \frac{1}{L} \\
       &= (m_\su{2}c_\su{w}+m_\su{k}c_\su{k})\frac{dT_\su{2}}{dt} \cdot \frac{1}{L}.
+      \label{eqn:dm/dt}
 \end{align}
 \subsubsection{mechanische Kompressorleistung}
 Wird ein Gasvolumen $V_\su{a}$ auf $V_\su{b}$ verkleinert, so leistet ein Kompressor
@@ -66,6 +67,17 @@ Für die mechanische Kompressorleistung $N_\su{mech}$ erigbt sich damit:
   N_\su{mech}= \frac{1}{\kappa-1}\Biggl(p_\su{b}\sqrt[\kappa]{\frac{p_\su{a}}{p_\su{b}}}-p_\su{a}
   \Biggr)\frac{\Delta V_\su{a}}{\Delta t} = \frac{1}{\kappa-1}\Biggl(p_\su{b}\sqrt[\kappa]{\frac{p_\su{a}}{p_\su{b}}}-p_\su{a}
   \Biggr)\frac{1}{\rho}\frac{\Delta m}{\Delta t}
+  \label{eqn:Nmech}
 \end{equation}
-Die Dichte $\rho$ des Gases lässt sich über die ideale Gasgleichung bestimmen.
-$p_\su{a}$ beschreibt den dazugehörigen Druck.
+Die Dichte $\roh$ ist hierbei Abhängig von der Temperatur und berechnet sich
+nach der allgemeinen Gasgleichung mit
+\begin{equation}
+  \rho=\frac{\rho_0 T_0 P_\su{a}}{T_2 p_0}.
+\end{equation}
+Für die Dichte $\rho_0$ wird die Dichte des Gases in dem Geschlossenen Kreislauf
+benutzt. Der Wert $T_0$ entspricht der Temperatur, bei welcher $\rho_0$ gilt.
+Demnach gilt:
+\begin{align*}
+  \rho_0 &= 5.51\,\cdot10^{-3}\Dichte \\
+  \T_0 = 273.15\Kel
+\end{align*}
