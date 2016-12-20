@@ -14,8 +14,8 @@ mpl.rcParams.update({
 
 t, T1, T2, pa, pb, N = np.genfromtxt('tabelle.txt', unpack=True, skip_header = 3)
 t = t*60
-T1 = T1+273.5
-T2 = T2+273.5
+T1 = T1+273.15
+T2 = T2+273.15
 
 x_plot = np.linspace(min(t), max(t))
 
