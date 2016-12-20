@@ -16,8 +16,8 @@ T2 += 273.15
 pa *= 1e6
 pb *= 1e6
 p0 = 5.1e6
-t1 = 1/T1
-t2 = 1/T2
+t1 = 1/T1 * 1000
+t2 = 1/T2 * 1000
 x = np.log(pb/p0)
 y = np.log(pa/p0)
 print('pa', pa)
@@ -36,8 +36,8 @@ print('a1 =', params[0], '±', errors[0])
 print('b1 =', params[1], '±', errors[1])
 
 plt.plot(t1, f1(t1, *params), 'b-', label='Ausgleichskurve 1')
-plt.plot(1/T1, x, 'bx', label='Verdampfungswärme')
-plt.xlabel(r'$\mathrm{T^{-1}}\,/\,\mathrm{K^{-1}}$')
+plt.plot(t1, x, 'bx', label='Verdampfungswärme')
+plt.xlabel(r'$\mathrm{K}\,/\,\mathrm{T}\; \cdot 10^{-3}$')
 plt.ylabel(r'$\mathrm{\log\,(p_b\,/\,p_0)}$')
 plt.grid()
 
@@ -54,8 +54,8 @@ print('a2 =', params[0], '±', errors[0])
 print('b2 =', params[1], '±', errors[1])
 
 plt.plot(t2, f2(t2, *params), 'r-')
-plt.plot(1/T2, y, 'rx', label='Verdampfungswärme')
-plt.xlabel(r'$\mathrm{T^{-1}}\,/\,\mathrm{K^{-1}}$')
+plt.plot(t2, y, 'rx', label='Verdampfungswärme')
+plt.xlabel(r'$\mathrm{K}\,/\,\mathrm{T}\; \cdot 10^{-3}$')
 plt.ylabel(r'$\mathrm{\log\,(p_b\,/\,p_0)}$')
 plt.grid()
 plt.savefig('Bilder/verdampfung.pdf')
