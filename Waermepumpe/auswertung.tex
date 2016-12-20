@@ -9,25 +9,25 @@ zugeordnet und $p_\su{b}$ dem kälteren.
     $t\,/\sek$ &$T_\su{1}$\,/$\Kel$ & $T_\su{2}\,/\Kel$ & $p_\su{a}\,/\,\pas $ &
     $p_\su{b}\,/ \pas$ & N\,/$\,\si{\watt}$  \\
     \midrule
-       0   &   294.65   &   294.55   &   5100000    &     5250000   &      0 \\
-      60   &   295.55   &   294.55   &   2400000    &     6900000   &    165 \\
-     120   &   296.35   &   294.45   &   2600000    &     7000000   &    175 \\
-     180   &   297.65   &   293.55   &   2900000    &     7500000   &    185 \\
-     240   &   299.25   &   292.05   &   3000000    &     7750000   &    195 \\
-     300   &   301.15   &   290.25   &   3100000    &     8250000   &    200 \\
-     360   &   303.15   &   288.35   &   3200000    &     8500000   &    203 \\
-     420   &   305.15   &   286.55   &   3200000    &     9000000   &    205 \\
-     480   &   307.05   &   284.65   &   3200000    &     9500000   &    206 \\
-     540   &   308.95   &   282.75   &   3200000    &     9800000   &    208 \\
-     600   &   310.85   &   281.05   &   3200000    &    10250000   &    209 \\
-     660   &   312.55   &   279.45   &   3200000    &    10500000   &    211 \\
-     720   &   314.35   &   277.85   &   3200000    &    11000000   &    212 \\
-     780   &   316.05   &   276.25   &   3200000    &    11250000   &    212 \\
-     840   &   317.55   &   274.95   &   3200000    &    11750000   &    212 \\
-     900   &   319.05   &   273.95   &   3200000    &    12000000   &    213 \\
-     960   &   320.55   &   273.35   &   3200000    &    12500000   &    213 \\
-    1020   &   321.95   &   272.85   &   3200000    &    13000000   &    210 \\
-    1080   &   323.15   &   272.45   &   3200000    &    13250000   &    207 \\
+       0   &   294.65   &   294.55   &   510000    &     525000   &      0 \\
+      60   &   295.55   &   294.55   &   240000    &     690000   &    165 \\
+     120   &   296.35   &   294.45   &   260000    &     700000   &    175 \\
+     180   &   297.65   &   293.55   &   290000    &     750000   &    185 \\
+     240   &   299.25   &   292.05   &   300000    &     775000   &    195 \\
+     300   &   301.15   &   290.25   &   310000    &     825000   &    200 \\
+     360   &   303.15   &   288.35   &   320000    &     850000   &    203 \\
+     420   &   305.15   &   286.55   &   320000    &     900000   &    205 \\
+     480   &   307.05   &   284.65   &   320000    &     950000   &    206 \\
+     540   &   308.95   &   282.75   &   320000    &     980000   &    208 \\
+     600   &   310.85   &   281.05   &   320000    &    1025000   &    209 \\
+     660   &   312.55   &   279.45   &   320000    &    1050000   &    211 \\
+     720   &   314.35   &   277.85   &   320000    &    1100000   &    212 \\
+     780   &   316.05   &   276.25   &   320000    &    1125000   &    212 \\
+     840   &   317.55   &   274.95   &   320000    &    1175000   &    212 \\
+     900   &   319.05   &   273.95   &   320000    &    1200000   &    213 \\
+     960   &   320.55   &   273.35   &   320000    &    1250000   &    213 \\
+    1020   &   321.95   &   272.85   &   320000    &    1300000   &    210 \\
+    1080   &   323.15   &   272.45   &   320000    &    1325000   &    207 \\
     \bottomrule
   \end{tabular}
   \caption{Messwerte}
@@ -93,8 +93,8 @@ Für die Leistung $N$ wird der Mittelwert mit $\overline{N}=(190\pm50)\,\si{\wat
 Der Fehler der Güteziffer berechnet sich nach der Gauß'schen Fehlerfortpflanzung
 mit:
 \begin{equation*}
-\Delta\nu = \sqrt{\biggl(\frac{m_\su{w}c_\su{w}+m_\su{w}c_\su{w}}{N}\biggr)^2
-\cdot\sigma_\su{\frac{dT}{dt}}^2 + \biggl(\frac{m_\su{w}c_\su{w}+m_\su{w}c_\su{w}}{N^2}\biggr)^2
+\Delta\nu = \sqrt{\biggl(\frac{(m_\su{w}c_\su{w}+m_\su{w}c_\su{w})}{N}\biggr)^2
+\cdot\sigma_\su{\frac{dT}{dt}}^2 + \biggl(\frac{(m_\su{w}c_\su{w}+m_\su{w}c_\su{w})\frac{dT_1}{dt}}{N^2}\biggr)^2
 \cdot\sigma_\su{N}^2}
 \end{equation*}
 \begin{table}[!h]
@@ -129,6 +129,15 @@ berechnen. Für die vier verschiedenen Zeiten erhält man die in Tabelle
   \caption{Massendurchsatz zu verschiedenen Zeiten}
   \label{tab:dm/dt}
 \end{table}
+Auch hier wird der Fehler mittels der Fehlerfortpflanzung brechnet. Der Fehler
+lässt sich dann durch
+\begin{equation*}
+  \Delta\frac{dm}{dt}=\sqrt{\biggl(\frac{(m_\su{w}c_\su{w}+m_\su{w}c_\su{w})}{L}\biggr)^2
+  \cdot\sigma_\su{\frac{dm}{dt}}^2 + \biggl(\frac{(m_\su{w}c_\su{w}+m_\su{w}c_\su{w})\frac{dT_2}{dt}}{L^2}\biggr)^2
+  \cdot\sigma_\su{L}^2}
+\end{equation*}
+berechnen.
+
 Um die mechanische Leistung des Kompressors zu berechnen, wird Formel \eqref{eqn:Nmech}
 verwendet. Das darin enthaltene $\rho$ berechnet sich nach Formel \eqref{eqn:rho}.
 Für die verschiedenen Zeiten erhält man die in Tabelle \ref{tab:Nmech} aufgelisteten
