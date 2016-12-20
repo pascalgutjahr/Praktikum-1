@@ -149,12 +149,18 @@ Werte.
     \toprule
     $t\,/\sek$ & $N_\su{mech}\,/\si{\watt}$ \\
     \midrule
-    180 &  417757.2 \pm  8058.1  \\  %evtl verrechnet
-    540 &  341234.4 \pm 10609.1  \\
-    720 &  297056.2 \pm 13217.6  \\
-    960 &  296612.9 \pm 13197.8  \\
+    180 &  32.9 \pm 3.5  \\  %Werte sind eigentlich negativ, habe also den Betrag genommen
+    540 &  43.2 \pm 4.7  \\
+    720 &  48.0 \pm 6.3  \\
+    960 &  53.4 \pm 6.7  \\
     \bottomrule
   \end{tabular}
   \caption{Mechanische Leistung}
   \label{tab:Nmech}
 \end{table}
+Auch hier wird der Fehler mittels Fehlerfortpflanzung berechnet, sodass:
+\begin{equation*}
+  \Delta N = \sqrt{\biggl(\frac{1}{\kappa-1}\,p_\su{b}\sqrt[\kappa]{\frac{p_\su{a}}{p_\su{b}}}
+  \frac{1}{\rho}\biggr)^2\cdot\sigma_\frac{dm}{dt}}
+\end{equation*}
+gilt.
