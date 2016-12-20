@@ -6,7 +6,7 @@ import math
 x = Symbol('x')
 y = Symbol('y')
 z = Symbol('z')
-f = x + y + z
+f = 1/0.14*(z)*1/y*x
 DelX = f.diff(x)
 DelY = f.diff(y)
 DelZ = f.diff(z)
