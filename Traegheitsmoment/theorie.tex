@@ -1,3 +1,4 @@
+\subsection{Grundlagen}
 In der Dynamik von Rotationsbewegungen gibt es drei wichtige Größen:
 Das Drehmoment $M$, das Trägheitsmoment $I$ und die Winkelbeschleunigung $\dot
 \omega$.
@@ -24,7 +25,7 @@ Abstand der Drehachse zur Schwerpunktachse.
 
 Das Drehmoment $M$ lässt sich über
 \begin{equation}
-  \vec{M} = \vec{F} \times \vec{r}
+  \vec{M} = \vec{F} \times \vec{r} \label{eqn:M}
 \end{equation}
 ermitteln. Dabei wirkt die Kraft $\vec{F}$ an einem Punkt mit Abstand $\vec{r}$
 zur Drehachse.
@@ -42,3 +43,33 @@ bestimmen lässt.
 Für die statische Messmethode wird das Objekt um den Winkel $\varphi$ ausgelenkt
 und die Kraft $F$ wird senkrecht zum Bahnradius $r$ gemessen.
 Bei der dynamischen Messmethode wird auf die Schwingungsdauer $T$ zurückgegriffen.
+\subsection{Vorbereitung}
+Als Vorbereitung soll das Drehmoment $M$ einer Stange als Funktion des Abstandes $r$
+ermittelt werden. Die Kraft beträgt $F = 0.1 \,\si{\newton}$ und die Auslenkung
+$\varphi = 45 \,\si{\degree}$.
+Aus der vektoriellen Größe $M$ aus \eqref{eqn:M} ergibt sich für die skalare Größe
+\begin{equation}
+  M = F \cdot r \cdot \sin{(\varphi)}.
+\end{equation}
+Damit werden die Drehmomente für 10 Abstände im Bereich von $(5-25)\cm$ bestimmt:
+\begin{table}
+  \centering
+  \begin{tabular}{c c}
+    \toprule
+    $r\,/\cm$ & $M\,/\,\si{\newton\meter}\cdot 10^{-3}$ \\
+    \midrule
+    5     &  3.54   \\
+    7     &  4.95   \\
+    9     &  6.36   \\
+    11    &  7.78   \\
+    13    &  9.19   \\
+    15    & 10.61   \\
+    17    & 12.02    \\
+    19    & 13.44    \\
+    21    & 14.45    \\
+    23    & 16.26    \\
+    25    & 17.68    \\
+    \bottomrule
+    \end{tabular}
+    \caption{Drehmomente einer Stange}
+\end{table}
