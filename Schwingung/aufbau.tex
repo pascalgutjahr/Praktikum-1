@@ -19,7 +19,9 @@ Abbildung \ref{fig:dämpfung} zeigt das ausgegebene Bild des Oszilloskops,
   \label{fig:dämpfung}
 \end{figure}
 an welchem die Spannungsamplituden mit der zugehörigen Zeitdifferenz $\Delta t$
-abgelesen werden. Diese Messung ist relativ genau, da der dämpfende Einfluss
+abgelesen werden. Dazu wird ein Cursor auf die x-Achse gelegt und mit dem anderen Cursor
+werden die Hoch- und Tiefpunkte abgefahren. Diese Messung ist relativ genau, da
+der dämpfende Einfluss
 des Eingangswiderstands des Oszilloskops mit Hilfe des hochohmigen Tastkopfes
 ($R_\su{i}=10\,\si{\mega\ohm}$) vernachlässigbar klein gehalten werden.
 Zur Messung des Widerstands $R_\su{ap}$ wird die Schaltung aus Abbildung
@@ -68,7 +70,11 @@ angezeigt, sodass sich ein Bild wie in Abbildung \ref{fig:dphi} ergibt. Die
 Frequenz wird nun wie zuvor von $(15-50)\kHz$ variiert. Der zeitliche Abstand
 der Hochpunkte wird mit der Cursorfunktion des Oszilloskops gemessen. Die
 Periodendauer kann hierbei über die Frequenz berechnet werden und muss nicht
-explizit gemessen werden.
+explizit gemessen werden. Die Phasenverschiebung ergibt sich mittels
+\begin{equation}
+  \Delta\varphi_\su{rad} = 2\pi \cdot \nu \cdot \Delta t
+\end{equation}
+aus den gemessenen $\Delta t$ Werten.
 \begin{figure}
   \centering
   \includegraphics[angle=90]{Bilder/dphi.JPG}

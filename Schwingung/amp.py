@@ -10,9 +10,11 @@ plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
 t, U = np.genfromtxt('tables/amp.txt', unpack=True, skip_header=2)
-t = t * 10**-6
+t = t * 10**-3 # Umrechnung in milli Sek
+
+
 def f(t, a, b):
-    return a * np.exp(-2 *np.pi * b * t)
+    return a * np.exp(-2 * np.pi * b * t)
 # a Maximalamplitude = 6.82877476796 ± 0.0481889680373
 # b: \mu =  1251.3  839746 ± 13.6  989716218
 params, covariance = curve_fit(f, t, U)
@@ -26,7 +28,7 @@ plt.plot(t, f(t, *params), 'b-', label='Ausgleichskurve')
 
 
 plt.plot(t, U, 'kx', label='Messwerte')
-plt.xlabel(r'$\mathrm{t} \,/\, \mathrm{s}$')
+plt.xlabel(r'$\mathrm{t} \,/\, \mathrm{ms}$')
 plt.ylabel(r'$\mathrm{U} \,/\, \mathrm{V}$')
 plt.legend(loc='best')
 plt.grid()
