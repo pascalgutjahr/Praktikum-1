@@ -114,25 +114,43 @@ mit:
 \end{table}\\
 
 Der Massendurchsatz $\frac{dm}{dt}$ lässt sich nach Formel \eqref{eqn:dm/dt}
-berechnen. Für die vier verschiedenen Zeiten erhält man die in Tabelle
+berechnen. Die benötigte Verdampfungswärme lässt sich aus dem Graphen
+aus Abbildung \ref{fig:verdampfung} berechnen, da
+\begin{equation*}
+  L = -m\cdot \su{R}
+  \text{mit}\quad \su{R}= 8,314472 \si{\joule\per\mol\kelvin}
+  \text{und}\quad \su{m}= -2400 \pm 100
+\end{equation*}
+gilt. R ist dabei die Gaskonstante\cite{chem} und m die Steigung des Graphen.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Bilder/verdampfung.pdf}
+  \caption{Verdampfungswärme von T1}
+  \label{fig:verdampfung}
+\end{figure}
+ Für die vier verschiedenen Zeiten erhält man die in Tabelle
 \ref{tab:dm/dt} gelisteten Massendurchsätze.
-\newpage
 \begin{table}
   \centering
-  \begin{tabular}{c c}
+  \begin{tabular}{c c c}
     \toprule
-    $t\,/\sek$ & $\frac{dm}{dt}\,/\,\frac{\si{\mol}\cdot\Kel}{\sek}$ \\
+    $t\,/\sek$ & $\frac{dm}{dt}\,/\,\si{\mol\per\second}$ &$\frac{dm}{dt}\,/\,\si{\kilo\gram\per\second}$ \\
     \midrule
-    180  &  (-19.1 \pm 3)$\cdot\,10^{-3}$  \\
-    540  &  (-15.8 \pm 4)$\cdot\,10^{-3}$  \\
-    720  &  (-13.8 \pm 5)$\cdot\,10^{-3}$  \\
-    960  &  (-11.8 \pm 5)$\cdot\,10^{-3}$  \\
+    180  & (-19.1\pm 3)$\cdot\,10^{-3}$ &(-2.21 \pm 0.4)$\cdot\,10^{-3}$  \\
+    540  & (-15.8\pm 4)$\cdot\,10^{-3}$ &(-1.19 \pm 0.5)$\cdot\,10^{-3}$  \\
+    720  & (-13.8\pm 5)$\cdot\,10^{-3}$ &(-1.67 \pm 0.6)$\cdot\,10^{-3}$  \\
+    960  & (-11.8\pm 5)$\cdot\,10^{-3}$ &(-1.43 \pm 0.6)$\cdot\,10^{-3}$  \\
     \bottomrule
   \end{tabular}
   \caption{Massendurchsatz zu verschiedenen Zeiten}
   \label{tab:dm/dt}
 \end{table}
-Auch hier wird der Fehler mittels der Fehlerfortpflanzung brechnet. Der Fehler
+Um $\si{\mol}$ in $\kg$ umzurechnen benötigt man die Formel:
+\begin{equation}
+  m = n\cdot M
+  \text{mit}\quad M = 120.9\,\cdot 10^{-3} \si{\kilo\gram\per\mol}
+\end{equation}
+Auch hier wird der Fehler mittels der Fehlerfortpflanzung berechnet. Der Fehler
 lässt sich dann durch
 \begin{equation*}
   \Delta\frac{dm}{dt}=\sqrt{\biggl(\frac{(m_\su{w}c_\su{w}+m_\su{w}c_\su{w})}{L}\biggr)^2
@@ -151,10 +169,10 @@ Werte.
     \toprule
     $t\,/\sek$ & $N_\su{mech}\,/\si{\watt}$ \\
     \midrule
-    180 &  32.9 \pm 3.5  \\  %Werte sind eigentlich negativ, habe also den Betrag genommen
-    540 &  43.2 \pm 4.7  \\
-    720 &  48.0 \pm 6.3  \\
-    960 &  53.4 \pm 6.7  \\
+    180 &  38.27  \pm   7 \\  %Werte sind eigentlich negativ, habe also den Betrag genommen
+    540 &  22.23  \pm  10 \\
+    720 &  35.03  \pm  13 \\
+    960 &  32.25  \pm  14 \\
     \bottomrule
   \end{tabular}
   \caption{Mechanische Leistung}
@@ -163,7 +181,7 @@ Werte.
 
 Auch hier wird der Fehler mittels Fehlerfortpflanzung berechnet, sodass:
 \begin{equation*}
-  \Delta N = \sqrt{\biggl(\frac{1}{\kappa-1}\,p_\su{b}\sqrt[\kappa]{\frac{p_\su{a}}{p_\su{b}}}
-  \frac{1}{\rho}\biggr)^2\cdot\sigma_\frac{dm}{dt}}
+  \Delta N = \sqrt{\biggl(\frac{1}{\kappa-1}\,\biggl(p_\su{b}\sqrt[\kappa]{\frac{p_\su{a}}{p_\su{b}}-p_\su{a}\biggr)}
+  \frac{1}{\rho}\biggr)^2\cdot\sigma_\frac{dm}{dt}^2}
 \end{equation*}
 gilt.
