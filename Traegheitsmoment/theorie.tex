@@ -33,7 +33,7 @@ Ist das System Schwingungsfähig, so liegt ein Auslenkungswinkel $\varphi$ und e
 Periodendauer $T$ vor. Für eine harmonische Schwingung mit kleiner Auslenkung $\varphi$
 folgt
 \begin{equation}
-  T = 2\pi\sqrt{\frac{I}{D}}.
+  T = 2\pi\sqrt{\frac{I}{D}}. \label{eqn:T}
 \end{equation}
 $D$ ist dabei die Winkelrichtgröße, welche sich über
 \begin{equation}
@@ -41,8 +41,14 @@ $D$ ist dabei die Winkelrichtgröße, welche sich über
 \end{equation}
 bestimmen lässt.
 Für die statische Messmethode wird das Objekt um den Winkel $\varphi$ ausgelenkt
-und die Kraft $F$ wird senkrecht zum Bahnradius $r$ gemessen.
-Bei der dynamischen Messmethode wird auf die Schwingungsdauer $T$ zurückgegriffen.
+und die Kraft $F$ wird senkrecht zum Bahnradius $r$ gemessen. Für $\varphi = 0 \,\si{\degree}$
+gilt
+\begin{equation}
+  D = \frac{F \cdot r}{\varphi}. \label{eqn:D}
+\end{equation}
+Bei der dynamischen Messmethode wird auf die Schwingungsdauer $T$ und die Formel
+\eqref{eqn:T} zurückgegriffen.
+\newpage
 \subsection{Vorbereitung}
 Als Vorbereitung soll das Drehmoment $M$ einer Stange als Funktion des Abstandes $r$
 ermittelt werden. Die Kraft beträgt $F = 0.1 \,\si{\newton}$ und die Auslenkung
