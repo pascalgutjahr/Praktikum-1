@@ -1,12 +1,6 @@
-Oberwellennummer    U_eingestellt       Frequenz    U_gemessen
-  /                 Volt                kHz         mV
-  1                                                   
-  2                                                   
-  3                                                   
-  4                                                   
-  5                                                   
-  6                                                   
-  7                                                   
-  8                                                   
-  9                                                   
-  10                                                    
+Oberwellennummer      a_n
+  /                 Volt
+  1                  600
+  2                  150
+  3                   67
+  4                   48

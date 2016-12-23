@@ -9,13 +9,16 @@ plt.rcParams['font.size'] = 13
 plt.rcParams['lines.linewidth'] = 1
 csfont = {'fontname': 'Times New Roman'}
 
-n, U_ein, nu, U_mess = np.genfromtxt('dreieck.txt', unpack=True, skip_header=2)
+# U_mess = a_n
+n, a_n = np.genfromtxt('dreieck.txt', unpack=True, skip_header=2)
+x = np.log(n)
+y = np.log(a_n)
 
 
-def f(n, a, b):
-    return a * n + b
+def f(x, a, b):
+    return a * x + b
 
-params, covariance = curve_fit(f, n, U_ein)
+params, covariance = curve_fit(f, x, y)
 
 errors = np.sqrt(np.diag(covariance))
 
@@ -25,12 +28,12 @@ print('b =', params[1], '+-', errors[1])
 # a =
 # b =
 
-x_plot = np.linspace(min(n), max(n))
+x_plot = np.linspace(min(x), max(x))
 
 plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
-plt.plot(n, U_ein, 'rx', label='Messwerte')
-plt.ylabel(r'$\mathrm{U_n} \,/\, \mathrm{U_1}$')
-plt.xlabel(r'$\mathrm{Nummer der Oberwellen}$')
+plt.plot(x, y, 'rx', label='Messwerte')
+plt.ylabel(r'$\mathrm{log(a_n)}$')
+plt.xlabel(r'$\mathrm{log(n)}$')
 # plt.title('Messungen')
 plt.grid()
 plt.legend()
