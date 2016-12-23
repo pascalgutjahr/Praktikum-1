@@ -25,8 +25,9 @@ errors = np.sqrt(np.diag(covariance))
 print('a =', params[0], '+-', errors[0])
 print('b =', params[1], '+-', errors[1])
 
-# a =
-# b =
+# a = -0.997789576439 +- 0.0627097822206
+# b = -0.0566750389066 +- 0.0928034543961
+
 
 x_plot = np.linspace(min(x), max(x))
 
