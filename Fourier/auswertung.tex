@@ -1,26 +1,59 @@
 \subsection{Fourier-Analyse}
-\begin{figure}
+In der Fourier-Analyse werden drei lineare Ausgleichgeraden mit $y = ax + b$ aus den Messwerten
+aus Tabelle \ref{tab:anadrei}, \ref{tab:anarecht} und \ref{tab:anasaeg} bestimmt.
+Dafür wird Python 3.5.2 verwendet. Die Werte werden dabei logarithmisch aufgetragen,
+damit sie über
+\begin{align}
+  \log{a_\su{n}} &= \log{\frac{1}{n}} = -1\cdot \log{n} \\
+  \log{b_\su{n}} &= \log{\frac{1}{n^2}} = -2\cdot \log{n} \\ \label{eqn:fehler}
+\end{align}
+überprüft werden können. \\
+Für die Dreieckspannung ergibt sich:
+\input{anadreitab.tex}
+\begin{figure}[!h]
   \centering
   \includegraphics[width=0.7\textwidth]{bilder/dreieck.pdf}
   \caption{Ausgleichsgerade Dreieckspannung}
   \label{fig:fitdrei}
 \end{figure}
-
-\begin{figure}
+\par
+Dabei ergeben sich die Parameter
+\begin{align*}
+  a &= -3.0 ± 0.8 \\
+  b &= 0.9 ± 0.8.
+\end{align*}
+\newpage
+Bei der Rechteckspannung wird gemessen:
+\input{anarechttab.tex}
+\begin{figure}[!h]
   \centering
   \includegraphics[width=0.7\textwidth]{bilder/rechteck.pdf}
   \caption{Ausgleichsgerade Rechteckspannung}
   \label{fig:fitrecht}
 \end{figure}
-
-\begin{figure}
+\par
+Hier ergeben sich folgende Parameter:
+\begin{align*}
+  a &= -1.19 ± 0.09 \\
+  b &= 0.3 ± 0.1
+\end{align*}
+\newpage
+Für die Sägezahnspannung werden folgende Werte gemessen:
+\input{anasaegtab.tex}
+\begin{figure}[!h]
   \centering
   \includegraphics[width=0.7\textwidth]{bilder/saegezahn.pdf}
   \caption{Ausgleichsgerade Sägezahnspannung}
   \label{fig:fitsäge}
 \end{figure}
+\par
+Für diesen Fit ergeben sich die Parameter:
+\begin{align*}
+  a &= -1.00 ± 0.06 \\
+  b &= -0.06 ± 0.09
+\end{align*}
 
-
+\newpage
 \subsection{Fourier-Synthese}
 In den Abbildungen \ref{fig:drei}, \ref{fig:recht} und \ref{fig:säge} sind die synthetisierten
 Spannungskurven für die Dreick-, Rechteck- und Sägezahnspannung zu sehen.
@@ -28,7 +61,7 @@ Für die Dreieckspannung werden die Werte aus Tabelle \ref{tab:drei} verwendet.
 \input{dreiecktable.tex}
 \begin{figure}
   \centering
-  \includegraphics[width=0.6\textwidth]{bilder/dreieck.jpg}
+  \includegraphics[width=0.4\textwidth]{bilder/dreieck.jpg}
   \caption{Dreieckspannung}
   \label{fig:drei}
 \end{figure} \\
@@ -38,14 +71,16 @@ benutzt.
 \input{rechtsaegetable.tex}
 \begin{figure}
   \centering
-  \includegraphics[width=0.6\textwidth]{bilder/rechteck.jpg}
-  \caption{Rechteckspannung}
-  \label{fig:recht}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.6\textwidth]{bilder/saegezahn.jpg}
-  \caption{Sägezahnspannung}
-  \label{fig:säge}
+  \begin{subfigure}{0.8\textwidth}
+    \centering
+    \includegraphics[height=5cm]{bilder/rechteck.jpg}
+    \caption{Rechteckspannung}
+    \label{fig:recht}
+  \end{subfigure}
+  \begin{subfigure}{0.8\textwidth}
+    \centering
+    \includegraphics[height=5cm]{bilder/saegezahn.jpg}
+    \caption{Sägezahnspannung}
+    \label{fig:säge}
+  \end{subfigure}
 \end{figure}
