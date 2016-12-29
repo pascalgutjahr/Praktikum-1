@@ -6,28 +6,28 @@ zugeordnet und $p_\su{b}$ dem kälteren.
   \centering
   \begin{tabular}{c c c c c c}
     \toprule
-    $t\,/\sek$ &$T_\su{1}$\,/$\Kel$ & $T_\su{2}\,/\Kel$ & $p_\su{a}\,/\,\pas $ &
-    $p_\su{b}\,/ \pas$ & N\,/$\,\si{\watt}$  \\
+    $t\,/\sek$ &$T_\su{1}$\,/$\Kel$ & $T_\su{2}\,/\Kel$ & $p_\su{a}\cdot 10^5\,/\,\pas $ &
+    $p_\su{b}\cdot 10^5\,/ \pas$ & N\,/$\,\si{\watt}$  \\
     \midrule
-       0   &   294.65   &   294.55   &   510000    &     525000   &      0 \\
-      60   &   295.55   &   294.55   &   240000    &     690000   &    165 \\
-     120   &   296.35   &   294.45   &   260000    &     700000   &    175 \\
-     180   &   297.65   &   293.55   &   290000    &     750000   &    185 \\
-     240   &   299.25   &   292.05   &   300000    &     775000   &    195 \\
-     300   &   301.15   &   290.25   &   310000    &     825000   &    200 \\
-     360   &   303.15   &   288.35   &   320000    &     850000   &    203 \\
-     420   &   305.15   &   286.55   &   320000    &     900000   &    205 \\
-     480   &   307.05   &   284.65   &   320000    &     950000   &    206 \\
-     540   &   308.95   &   282.75   &   320000    &     980000   &    208 \\
-     600   &   310.85   &   281.05   &   320000    &    1025000   &    209 \\
-     660   &   312.55   &   279.45   &   320000    &    1050000   &    211 \\
-     720   &   314.35   &   277.85   &   320000    &    1100000   &    212 \\
-     780   &   316.05   &   276.25   &   320000    &    1125000   &    212 \\
-     840   &   317.55   &   274.95   &   320000    &    1175000   &    212 \\
-     900   &   319.05   &   273.95   &   320000    &    1200000   &    213 \\
-     960   &   320.55   &   273.35   &   320000    &    1250000   &    213 \\
-    1020   &   321.95   &   272.85   &   320000    &    1300000   &    210 \\
-    1080   &   323.15   &   272.45   &   320000    &    1325000   &    207 \\
+       0   &   294.65   &   294.55   &   5.1    &     5.25   &      0 \\
+      60   &   295.55   &   294.55   &   2.4    &     6.90   &    165 \\
+     120   &   296.35   &   294.45   &   2.6    &     7.00   &    175 \\
+     180   &   297.65   &   293.55   &   2.9    &     7.50   &    185 \\
+     240   &   299.25   &   292.05   &   3.0    &     7.75   &    195 \\
+     300   &   301.15   &   290.25   &   3.1    &     8.25   &    200 \\
+     360   &   303.15   &   288.35   &   3.2    &     8.50   &    203 \\
+     420   &   305.15   &   286.55   &   3.2    &     9.00   &    205 \\
+     480   &   307.05   &   284.65   &   3.2    &     9.50   &    206 \\
+     540   &   308.95   &   282.75   &   3.2    &     9.80   &    208 \\
+     600   &   310.85   &   281.05   &   3.2    &    10.25   &    209 \\
+     660   &   312.55   &   279.45   &   3.2    &    10.50   &    211 \\
+     720   &   314.35   &   277.85   &   3.2    &    11.00   &    212 \\
+     780   &   316.05   &   276.25   &   3.2    &    11.25   &    212 \\
+     840   &   317.55   &   274.95   &   3.2    &    11.75   &    212 \\
+     900   &   319.05   &   273.95   &   3.2    &    12.00   &    213 \\
+     960   &   320.55   &   273.35   &   3.2    &    12.50   &    213 \\
+    1020   &   321.95   &   272.85   &   3.2    &    13.00   &    210 \\
+    1080   &   323.15   &   272.45   &   3.2    &    13.25   &    207 \\
     \bottomrule
   \end{tabular}
   \caption{Messwerte}
@@ -49,13 +49,13 @@ Die Ausgleichsrechnung ergibt sich über die Formel
 \end{equation*}
 Hieraus ergeben sich für $T_1$ die Parameter
 \begin{align*}
-  A &= (-3 \pm 1) \cdot10^{-6}\,\si{\kelvin\per\square\second} \\
+  A &= (-3.0 \pm 1.0) \cdot10^{-6}\,\si{\kelvin\per\square\second} \\
   B &= (0.032 \pm 0.002) \,\si{\kelvin\per\second} \\
   C &= (292.5 \pm 0.4) \Kel
 \end{align*}
 und für $T_2$
 \begin{align*}
-  A &= (7.0 \pm 2) \cdot 10^{-6} \,\si{\kelvin\per\square\second}\\
+  A &= (7.0 \pm 2.0) \cdot 10^{-6} \,\si{\kelvin\per\square\second}\\
   B &= (-0.033 \pm 0.003)  \,\si{\kelvin\per\second} \\
   C &= (298.5 \pm 0.7) \Kel.
 \end{align*}
@@ -69,13 +69,13 @@ für 4 Zeitpunkte bestimmt.
   \centering
   \begin{tabular}{c c c c c}
     \toprule
-    $t\,/\sek$ & $T_1 \,/\Kel$ & $\frac{dT_1}{dt}\,/\si{\milli\kelvin\per\second}$ &
-    $T_2\,/\Kel$ & $\frac{dT_2}{dt}\,/\si{\milli\kelvin\per\second}$ \\
+    $t\,/\sek$ & $T_1 \,/\Kel$ & $\frac{dT_1}{dt}\cdot 10^{-3}\,/\,\frac{\si{\kelvin}}{\si{\second}}$ &
+    $T_2\,/\Kel$ & $\frac{dT_2}{dt}\cdot 10^{-3}\,/\,\frac{\si{\kelvin}}{\si{\second}}$ \\
     \midrule
-    180 &  297.65 &  31\pm2 &  293.55 &  -29\pm4  \\
-    540 &  308.95 &  29\pm3 &  282.75 &  -24\pm6  \\
-    720 &  314.35 &  28\pm4 &  277.85 &  -21\pm7  \\
-    900 &  319.05 &  27\pm4 &  273.95 &  -18\pm8  \\
+    180 &  297.65 &  31\pm2 &  293.55 &  -30\pm3  \\
+    540 &  308.95 &  29\pm2 &  282.75 &  -25\pm4  \\
+    720 &  314.35 &  28\pm2 &  277.85 &  -23\pm4  \\
+    900 &  319.05 &  27\pm3 &  273.95 &  -20\pm5  \\
     \bottomrule
   \end{tabular}
   \caption{Differenzenquotienten zu $T_1$ und $T_2$}
@@ -113,87 +113,74 @@ mit:
   \label{tab:expgüte}
 \end{table}\\
 
-Der Massendurchsatz $\frac{dm}{dt}$ lässt sich nach Formel \eqref{eqn:dm/dt}
+\noindent Der Massendurchsatz $\frac{dm}{dt}$ lässt sich nach Formel \eqref{eqn:dm/dt}
 berechnen. Die benötigte Verdampfungswärme lässt sich aus dem Graphen
 aus Abbildung \ref{fig:verdampfung} berechnen, da
 \begin{align*}
   L &= -m\cdot \su{R} \\
-  \text{mit}\quad \su{R}&= 8,314472 \si{\joule\per\mol\kelvin} \\
-  \text{und}\quad \su{m}&= -2400 \pm 100
+  \text{mit}\quad \su{R}&= 8,314472 \,\si{\joule\per\mol\kelvin} \\
+  \text{und}\quad \su{m}&= (-2.4 \pm 0.1)\,\cdot 10^3
 \end{align*}
-gilt. R ist dabei die Gaskonstante\cite{chem} und m die Steigung des Graphen.
+gilt. R ist dabei die Gaskonstante\,\cite{chem} und m die Steigung des Graphen.
+Hierbei wird $1\,/\,T$ gegen $\log{(p_\su{b}\,/\,p_0)}$ aufgetragen.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{Bilder/verdampfung.pdf}
-  \caption{Verdampfungswärme von T1}
+  \caption{Verdampfungswärme von $T_1$}
   \label{fig:verdampfung}
 \end{figure}
- Für die vier verschiedenen Zeiten erhält man die in Tabelle
+\noindent Für die vier verschiedenen Zeiten ergeben sich die in Tabelle
 \ref{tab:dm/dt} gelisteten Massendurchsätze.
-||||||| merged common ancestors
-berechnen. Für die vier verschiedenen Zeiten erhält man die in Tabelle
-\ref{tab:dm/dt} gelisteten Massendurchsätze
-=======
-berechnen. Die benötigte Verdampfungswärme lässt sich aus dem Graphen
-aus Abbildung \ref{fig:verdampfung} berechnen, da
-\begin{equation*}
-  L = -m\cdot \su{R}
-  \text{mit}\quad \su{R}= 8,314472 \si{\joule\per\mol\kelvin}
-  \text{und}\quad \su{m}= -2400 \pm 100
-\end{equation*}
-gilt. R ist dabei die Gaskonstante\cite{chem} und m die Steigung des Graphen.
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.8\textwidth]{Bilder/verdampfung.pdf}
-  \caption{Verdampfungswärme von T1}
-  \label{fig:verdampfung}
-\end{figure}
- Für die vier verschiedenen Zeiten erhält man die in Tabelle
-\ref{tab:dm/dt} gelisteten Massendurchsätze.
->>>>>>> waermepumpe beendet
 \begin{table}
   \centering
   \begin{tabular}{c c c}
     \toprule
     $t\,/\sek$ & $\frac{dm}{dt}\,/\,\si{\mol\per\second}$ &$\frac{dm}{dt}\,/\,\si{\kilo\gram\per\second}$ \\
     \midrule
-    180  & (-19.1\pm 3)$\cdot\,10^{-3}$ &(-2.21 \pm 0.4)$\cdot\,10^{-3}$  \\
-    540  & (-15.8\pm 4)$\cdot\,10^{-3}$ &(-1.19 \pm 0.5)$\cdot\,10^{-3}$  \\
-    720  & (-13.8\pm 5)$\cdot\,10^{-3}$ &(-1.67 \pm 0.6)$\cdot\,10^{-3}$  \\
-    960  & (-11.8\pm 5)$\cdot\,10^{-3}$ &(-1.43 \pm 0.6)$\cdot\,10^{-3}$  \\
+    180  & (19.9\pm 0.2)$\cdot\,10^{-3}$ &(2.34 \pm 0.02)$\cdot\,10^{-3}$  \\
+    540  & (16.5\pm 0.2)$\cdot\,10^{-3}$ &(1.98 \pm 0.02)$\cdot\,10^{-3}$  \\
+    720  & (15.2\pm 0.2)$\cdot\,10^{-3}$ &(1.82 \pm 0.02)$\cdot\,10^{-3}$  \\
+    960  & (13.2\pm 0.2)$\cdot\,10^{-3}$ &(1.58 \pm 0.02)$\cdot\,10^{-3}$  \\
     \bottomrule
   \end{tabular}
   \caption{Massendurchsatz zu verschiedenen Zeiten}
   \label{tab:dm/dt}
-\end{table}
-<<<<<<< a538bd44682f47dd7987536f3cb45b7fe4c21a21
-Um $\si{\mol}$ in $\kg$ umzurechnen benötigt man die Formel:
+\end{table} \\
+
+\noindent Um $\si{\mol}$ in $\kg$ umzurechnen wird folgende Formel benötigt:
 \begin{align*}
   m &= n\cdot M \\
   \text{mit}\quad M &= 120.9\,\cdot 10^{-3} \si{\kilo\gram\per\mol}
 \end{align*}
-Auch hier wird der Fehler mittels der Fehlerfortpflanzung berechnet. Der Fehler
-||||||| merged common ancestors
-Auch hier wird der Fehler mittels der Fehlerfortpflanzung brechnet. Der Fehler
-=======
-Um $\si{\mol}$ in $\kg$ umzurechnen benötigt man die Formel:
-\begin{equation}
-  m = n\cdot M
-  \text{mit}\quad M = 120.9\,\cdot 10^{-3} \si{\kilo\gram\per\mol}
-\end{equation}
-Auch hier wird der Fehler mittels der Fehlerfortpflanzung berechnet. Der Fehler
->>>>>>> waermepumpe beendet
+
+\noindent Auch hier wird der Fehler mittels der Fehlerfortpflanzung berechnet. Der Fehler
 lässt sich dann durch
 \begin{equation*}
   \Delta\frac{dm}{dt}=\sqrt{\biggl(\frac{(m_\su{w}c_\su{w}+m_\su{w}c_\su{w})}{L}\biggr)^2
-  \cdot\sigma_\su{\frac{dm}{dt}}^2 + \biggl(\frac{(m_\su{w}c_\su{w}+m_\su{w}c_\su{w})\frac{dT_2}{dt}}{L^2}\biggr)^2
+  \cdot\sigma_\su{\frac{dT_2}{dt}}^2 + \biggl(\frac{(m_\su{w}c_\su{w}+m_\su{w}c_\su{w})\frac{dT_2}{dt}}{L^2}\biggr)^2
   \cdot\sigma_\su{L}^2}
 \end{equation*}
 berechnen.
 
-Um die mechanische Leistung des Kompressors zu berechnen, wird Formel \eqref{eqn:Nmech}
+\noindent Um die mechanische Leistung des Kompressors zu berechnen, wird Formel \eqref{eqn:Nmech}
 verwendet. Das darin enthaltene $\rho$ berechnet sich nach Formel \eqref{eqn:rho}.
-Für die verschiedenen Zeiten erhält man die in Tabelle \ref{tab:Nmech} aufgelisteten
+\\
+\begin{table}[!h]
+  \centering
+  \begin{tabular}{c c}
+    \toprule
+    $t\,/\sek$ & $\rho\,/\,\Dichte$ \\
+    \midrule
+    180 &  14.87 \\
+    540 &  17.03 \\
+    720 &  17.33 \\
+    960 &  17.58 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Dichte}
+\end{table} \\
+\newpage
+\noindent Für die verschiedenen Zeiten ergeben sich die in Tabelle \ref{tab:Nmech} aufgelisteten
 Werte.
 \begin{table}[!h]
   \centering
@@ -201,19 +188,19 @@ Werte.
     \toprule
     $t\,/\sek$ & $N_\su{mech}\,/\si{\watt}$ \\
     \midrule
-    180 &  38.27  \pm   7 \\  %Werte sind eigentlich negativ, habe also den Betrag genommen
-    540 &  22.23  \pm  10 \\
-    720 &  35.03  \pm  13 \\
-    960 &  32.25  \pm  14 \\
+    180 &  40.4  \pm   0.3 \\
+    540 &  39.2  \pm   0.4 \\
+    720 &  39.3  \pm   0.4 \\
+    960 &  36.2  \pm   0.5 \\
     \bottomrule
   \end{tabular}
   \caption{Mechanische Leistung}
   \label{tab:Nmech}
 \end{table} \\
 
-Auch hier wird der Fehler mittels Fehlerfortpflanzung berechnet, sodass:
+\noindent Auch hier wird der Fehler mittels Fehlerfortpflanzung berechnet, sodass:
 \begin{equation*}
-  \Delta N = \sqrt{\biggl(\frac{1}{\kappa-1}\,\biggl(p_\su{b}\sqrt[\kappa]{\frac{p_\su{a}}{p_\su{b}}-p_\su{a}\biggr)}
+  \Delta N = \sqrt{\biggl(\frac{1}{\kappa-1}\,\biggl(p_\su{b}\sqrt[\kappa]{\frac{p_\su{a}}{p_\su{b}}}-p_\su{a}\biggr)
   \frac{1}{\rho}\biggr)^2\cdot\sigma_\frac{dm}{dt}^2}
 \end{equation*}
 gilt.

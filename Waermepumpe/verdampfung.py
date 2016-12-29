@@ -35,10 +35,11 @@ errors = np.sqrt(np.diag(covariance))
 print('a1 =', params[0], '±', errors[0])
 print('b1 =', params[1], '±', errors[1])
 
-plt.plot(t1, f1(t1, *params), 'b-', label='Ausgleichskurve 1')
+plt.plot(t1, f1(t1, *params), 'b-', label='Ausgleichskurve')
 plt.plot(t1, x, 'bx', label='Verdampfungswärme')
-plt.xlabel(r'$\mathrm{K}\,/\,\mathrm{T}\; \cdot 10^{-3}$')
+plt.xlabel(r'$\mathrm{1}\,/\,\mathrm{T}\;\;\cdot 10^{-3}/\; \mathrm{1}\,/\,\mathrm{K}$')
 plt.ylabel(r'$\mathrm{\log\,(p_b\,/\,p_0)}$')
+plt.legend()
 plt.grid()
 
 # plt.subplot(2, 1, 2)
