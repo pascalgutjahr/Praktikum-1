@@ -1,0 +1,77 @@
+\subsection{Klassische Methode}
+Der Zusammenhang zwischen der Wärmemenge Q und der Temperatur T wird durch die
+Molwärme C beschrieben. Wenn ein Mol eines Stoffes um eine Temperatur $dT$
+erhöt wird, nimmt er die Wärmemenge $dQ$ auf. Daraus ergibt sich der
+Zusammenhang
+\begin{equation}
+  C=ßfrac{dQ}{dT}
+  \label{eq:molwarm}
+\end{equation}
+Die Gleichheit von Wärmemenge und Energie tritt ein, wenn an dem Stoff keine
+Arbeit verrichtet wird.
+Bei der Erwärmung wird unterschieden, ob diese unter gleichbleibenden
+Druckverhältnissen (isobar) oder bei konstantem Volumen (isochor) stattfindet.
+Um unterscheiden zu können, welche Größe konstant gehalten wird, erhält die
+Gleichung \eqref{eq:molwarm} passende Indizes. Sodass
+\begin{equation}
+\begin{split}
+  C_\su{P}&=\biggl(\frac{dQ}{dT}\biggr)_\su{P} \\
+  C_\su{V}&=\biggl(\frac{dQ}{dT}\biggr)_\su{V}
+  \label{eq:index}
+\end{split}
+\end{equation}
+Der Unterschied der Molwärme bei einer isobaren Erwärmung und der Molwärme bei
+isochorer Erwärmung lässt sich mit
+\begin{equation}
+\begin{split}
+  c_\su{V}&= C_\su{P}-9\alpha^2\kappa V_0 T \\
+  &= c_\su{K}\,\cdot M - 9\alpha^2\kappa\frac{M}{\rho}T
+  \label{eq:molwarm2}
+\end{split}
+\end{equation}
+einfach berechnen. Hierbei wird betrachtet, dass sich die Molwärme über den
+Zusammenhang zwischen Wärmekapazität $c_\su{K}$ und molare Masse berechnet
+werden kann. Weiter sind $V_0$ das Molvolumen und $\alpha$ und $\kappa$
+Materialkonstanten, hinsichtlich der Volumenänderung.
+
+Die spezifische Wärmekapazität ist hierbei der Proportionalitätsfaktor der
+angibt, wie sich die Wärmemenge bei einer Temeraturänderung ändert:
+\begin{equation}
+  \Delta Q = mc_\su{K}\cdot\Delta T.
+\end{equation}
+
+Das Dulong-Petitsche-Gesetz besagt, dass die Molwärme unabhängig von der
+Stoffeigenschaft eines Körpers immer 3 mal größer als allgemeine
+Gaskonstante $R=8,314\,\si{\joule\per\mol\kelvin}$\cite{chemie} ist.
+Nach den Methoden der klassischen Mechanik lässt sich dieser Wert berechnen,
+indem die Energien betrachtet werden, die durch wärmebedingte Bewegung der Atome
+entstehen. Diese Atome führen harmonische Schwingungen aus, da sie feste Plätze
+im Festkörper besitzen. Wird die Energiebetrachtung für harmonische Oszillatoren
+durchgeführt, lässt sich feststellen, dass kinetische und potentielle Energie
+im zeitlichen Mittel gleich groß sind. Die Gesamtenergie eines Atoms ergibt sich
+dann aus
+\begin{equation}
+  E= E_\su{kin}+E_\su{pot} = 2\,\cdot\,E_\su{kin}.
+\end{equation}
+Verglichen mit dem Äquipartitionstheorem, ergibt sich für die Gesamtenergie
+$k_\su{B}T$. Wobei $k_\su{B}$ die Boltzmann-Konstante ist.
+Betrachtet man alle Atome und den Fakt, dass jedes Atom sich in 3 Raumrichtungen
+bewegen kann, ergibt sich nach Gleichung \eqref{eq:molwarm} die Formeln
+\begin{equation}
+  E=3RT\quad\text{bzw.}\quad C_\su{V}=3R
+\end{equation}
+\subsection{quantenmechanische Methode}
+Es ist auffällig, dass die Molwärme bei niedrigen Temperaturen nicht mehr den
+zuvor hergeleiteten Wert 3R annimmt. Die Erklärung folgt aus der Quantenmechanik
+. Ein Atom, welches mit einer Frequenz $\omega$ oszilliert, kann nur Energien von
+bestimmten Größen
+\begin{equation}
+  \Delta E = n\cdot\hbar\cdot\omega
+\end{equation}
+aufnehmen oder abgeben. Der Zusammenhang ergibt sich dann durch
+\begin{equation}
+  E=\frac{3N_\su{A}\hbar\omega}{\exp[\frac{\hbar\omega}{kT}]-1},
+\end{equation}
+mit $N_\su{A}$ als Avogadrokonstante. Im Fall $kT\gg\hbar\omega$ strebt die
+Energie erneut gegen $3R$. Für kleine Massen ist dies wegen $\omega\propto
+\frac{1}{\sqrt{m}}$ erst bei hohen Temperaturen erfüllt.
