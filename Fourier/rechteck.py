@@ -28,6 +28,10 @@ print('b =', params[1], '+-', errors[1])
 # a =-1.19204784746 +- 0.0898910034039
 # b = 0.326461420388 +- 0.123423011824
 
+# mit ungeraden Oberwellen:
+# a = -0.909247906044 +- 0.0770070259187
+# b = 0.409244475522 +- 0.144772240047
+
 x_plot = np.linspace(min(x), max(x))
 
 plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')

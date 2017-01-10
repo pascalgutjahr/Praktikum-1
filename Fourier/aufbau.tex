@@ -4,24 +4,10 @@ die jeweiligen Fourier-Koeffizienten berechnet. Bei den Funktionen handelt es
 sich um Rechteckspannung, Sägezahnspannung und Dreieckspannung. Zur Vereinfachung
 werden diese so parametrisiert, dass sie entweder gerade oder ungerade sind.
 Diese Vereinfachung führt dazu, dass bei geraden Funktionen $b_\su{n}=0$ und bei
-ungeraden Funktionen $a_\su{n}=0$ gür alle $n$ gilt.
-\subsection{Fourier-Analyse}
-Für die Fourier-Analyse von periodischen Schwingungen wird eine Schaltung wie in
-Abbildung \ref{fig:ana} verwendet.
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=0.8\textwidth]{bilder/analyse.jpg}
-  \caption{Schaltung zur Fourier-Analyse\cite{351}}
-  \label{fig:ana}
-\end{figure}
-Als Signalquelle dient hier ein durchstimmbarer Funktionsgenerator. Die
-Transformation wird direkt vom Oszilloskop durchgeführt.
-
-Damit genügend Peaks des Linienspektrums sichtbar werden, müssen ausreichend
-Perioden angezeigt werden. Die angezeigten Peaks werden nun mit einer
-Sinusspannung kalibriert und die Frequenz und die Amplitude werden notiert.
-Nebenmaxima die sich bilden können, werden nicht beachtet. Die Messung wird für
-alle genannten Funktionen durchgeführt.
+ungeraden Funktionen $a_\su{n}=0$ für alle $n$ gilt.
+\par
+Für die Rechteckspannung und die Sägezahnspannung ergeben sich damit die Zusammenhänge
+von $\sfrac{1}{n}$, für die Dreieckspannung ergibt sich $\sfrac{1}{n^2}$.
 \subsection{Fourier-Synthese}
 Für die Fourier-Synthese werden zunächst zwei Ausgänge des Oberwellengenerators
 an das Oszilloskop angeschlossen. Damit alle Ausgänge in Phase geschalten werden
@@ -53,3 +39,20 @@ zunächst die Amplituden mit dem Proportionalitätsfaktor X eingestellt werden.
 Auch hier werden, wie bei der Rechteckspannung, nur die ungeraden Oberwellen
 genutzt. Die Phase wird wieder so verschoben, dass die Dreieckspannung möglichst
 genau approximiert wird.
+\subsection{Fourier-Analyse}
+Für die Fourier-Analyse von periodischen Schwingungen wird eine Schaltung wie in
+Abbildung \ref{fig:ana} verwendet.
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/analyse.jpg}
+  \caption{Schaltung zur Fourier-Analyse\,\cite{351}}
+  \label{fig:ana}
+\end{figure}
+Als Signalquelle dient hier ein durchstimmbarer Funktionsgenerator. Die
+Transformation wird direkt vom Oszilloskop durchgeführt.
+
+Damit genügend Peaks des Linienspektrums sichtbar werden, müssen ausreichend
+Perioden angezeigt werden. Die angezeigten Peaks werden nun mit einer
+Sinusspannung kalibriert und die Frequenz und die Amplitude werden notiert.
+Nebenmaxima die sich bilden können, werden nicht beachtet. Die Messung wird für
+alle genannten Funktionen durchgeführt.

@@ -28,6 +28,10 @@ print('b =', params[1], '+-', errors[1])
 # a = -3.05176010498 +- 0.757153910717
 # b = 0.926241270667 +- 0.843097215991
 
+# wir müssen die ungeraden Wellen betrachten!!:
+# a = -2.17074020509 +- 0.627772184982
+# b = 0.978614522721 +- 0.989079010416
+
 
 x_plot = np.linspace(min(x), max(x))
 
