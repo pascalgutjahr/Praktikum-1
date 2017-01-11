@@ -22,8 +22,8 @@ phirad = 2 * np.pi * fre * t
 # w = fre * 2 * np.pi
 # R = 271.6
 # phi = np.arctan(-(w * R * C)/(1 - L * C * (w**2)))
-#
-#
+
+
 # plt.plot(fre/1000, phi, 'b-', label='Theoriekurve')
 plt.plot(fre/1000, phirad, 'rx', label='Messwerte')
 plt.plot((32.196, 32.196), (0.5, 2.5), 'g--', label='untere/obere Grenzfrequenz')

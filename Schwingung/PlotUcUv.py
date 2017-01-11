@@ -14,6 +14,14 @@ v, Uc = np.genfromtxt("tables/CSpannung.txt", unpack = True, skip_header=2)
 U0 = 6.7
 U = Uc/U0
 
+# Theoriekurve
+# L = 3.53 * (10**-3)
+# C = 5.015 * (10**-9)
+# w = v * 2 * np.pi
+# R = 271.6
+# U_theo = U0 / (np.sqrt((1 - L * C * (w**2)**2)+ (w**2) * (R**2) * (C**2)))
+# plt.plot(v, U_theo, 'b-', label='Theoriekurve')
+
 plt.plot(v, U, 'rx', label="Messwerte")
 plt.xlabel(r'$\mathrm{\nu} \,/\, \mathrm{kHz}$')
 plt.ylabel(r'$\mathrm{U_c} \,/\, \mathrm{U_0}$')

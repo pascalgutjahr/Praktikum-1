@@ -21,7 +21,7 @@ phirad = 2 * np.pi * fre * t
 # C = 5.015 * (10**-9)
 # w = fre * 2 * np.pi
 # R = 271.6
-# phi = np.arctan(-(w * R * C)/(1 - L * C * (w**2)))
+# phi = np.arctan(-(w * R * C)/(1 - (L * C * (w**2))))
 #
 #
 # plt.plot(fre/1000, phi, 'b-', label='Theoriekurve')
