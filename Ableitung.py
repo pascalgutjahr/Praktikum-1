@@ -6,7 +6,7 @@ import math
 x = Symbol('x')
 y = Symbol('y')
 z = Symbol('z')
-f = sin(x) + cos(y) + tan(z)
+f = (x**2 * y)/z
 DelX = f.diff(x)
 DelY = f.diff(y)
 DelZ = f.diff(z)
