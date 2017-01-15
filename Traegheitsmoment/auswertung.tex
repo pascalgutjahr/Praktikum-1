@@ -25,4 +25,45 @@ Der Wert für den Winkel wird noch mit der Formel
 \begin{equation*}
   \frac{\varphi}{360}\cdot2\pi
 \end{equation*}
-umgerechnet. 
+umgerechnet. Nachdem D für die verschiedenen Werte berechnet wurde, wird der
+Mittelwert berechnet und der Fehler bestimmt. Somit erhält man für die
+Winkelrichtgrße einen Wert von
+\begin{equation*}
+  D= (0.014 \pm 0.003) \,\si{\newton\meter}.
+\end{equation*}
+\begin{table}
+  \begin{tabular}{c c c}
+    \toprule \\
+    $\varphi$ & a & T \\
+    Grad & \cm & \sek \\
+    \midrule
+    50    &    8  &   2.96    \\
+    50    &   10  &   3.44    \\
+    50    &   12  &   3.77    \\
+    50    &   14  &   4.29    \\
+    50    &   16  &   4.77    \\
+    50    &   18  &   5.11    \\
+    50    &   20  &   5.55    \\
+    50    &   22  &   6.05    \\
+    50    &   24  &   6.71    \\
+    50    &   26  &   7.22    \\
+    50    &   28  &   7.71    \\
+  \end{tabular}
+  \caption{messwerte zur Bestimmung von $I_\su{D}$
+  \label{messI}
+\end{table}
+Anschließend wird das Eigenträgheitsmoment der Feder der Apparatur bestimmt,
+indem mit den Werten aus Tabelle \ref{messI} ein Graph erstellt wird, bei dem
+$T^2$ gegen $a^2$ aufgetragen wird. Abbildung \ref{fig:trag} zeigt diesen Graph.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/tragheit.pdf}
+  \caption{Graph zur Bestimmung des Eigenträgheitsmoment}
+  \label{fig:trag}
+\end{figure}
+Mit Hilfe der linearen Regression lässt sich das $I_\su{D}$ nun einfach bestimmen.
+Die mit Python 3.5.2 berechneten Werte lauten
+\begin{align*}
+  a &= (1.42 \pm 0.02)\,\cdot10^{-3} \\
+  b &= (6.0 \pm 0.8)\,\cdot10^{-3}
+\end{align*}
