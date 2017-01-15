@@ -1,11 +1,12 @@
 Um die Winkelrichtgröße nach Formel \eqref{eqn:D} berechnen zu können, werden
 die Daten aus Tabelle \ref{MessD} benötigt.
 \begin{table}[H]
+  \centering
   \begin{tabular}{c c c}
-    \toprule \\
+    \toprule
     $\varphi$ & F & r \\
     Grad & $\si{\milli\newton}$ & $\si{\meter}$ \\
-    \midrule \\
+    \midrule
     30  &    15   &   0.27  \\
     30  &    55   &   0.15  \\
     40  &    78   &   0.15  \\
@@ -32,8 +33,9 @@ Winkelrichtgrße einen Wert von
   D= (0.014 \pm 0.003) \,\si{\newton\meter}.
 \end{equation*}
 \begin{table}
+  \centering
   \begin{tabular}{c c c}
-    \toprule \\
+    \toprule
     $\varphi$ & a & T \\
     Grad & \cm & \sek \\
     \midrule
@@ -48,8 +50,9 @@ Winkelrichtgrße einen Wert von
     50    &   24  &   6.71    \\
     50    &   26  &   7.22    \\
     50    &   28  &   7.71    \\
+    \bottomrule
   \end{tabular}
-  \caption{messwerte zur Bestimmung von $I_\su{D}$
+  \caption{messwerte zur Bestimmung von $I_\su{D}$}
   \label{messI}
 \end{table}
 Anschließend wird das Eigenträgheitsmoment der Feder der Apparatur bestimmt,
@@ -65,5 +68,38 @@ Mit Hilfe der linearen Regression lässt sich das $I_\su{D}$ nun einfach bestimm
 Die mit Python 3.5.2 berechneten Werte lauten
 \begin{align*}
   a &= (1.42 \pm 0.02)\,\cdot10^{-3} \\
-  b &= (6.0 \pm 0.8)\,\cdot10^{-3}
+  b &= (6.0 \pm 0.8)\,\cdot10^{-3}.
 \end{align*}
+Der Parameter a ist hierbei der gesuchte Wert für die Eigenträgheit.
+Als nächstes werden die Trägheitsmomente von einem aufrechten und einem liegenden
+Zylinder gemessen und mit den theoretischen Werten verglichen. Die Abmessungen
+der beiden Zylinder sind mit einer Höhe von $3\cm$ und einem Durchmesser von $7.5\cm$
+gleich. Somit unterscheiden sie sich lediglich im Gewicht. Der Aufrechte Zylinder
+wiegt $1119.3\gr$ und das Gewicht des liegenden Zylinders liegt bei $1117.3\gr$.
+Um das Trägheitsmoment bestimmen zu können, werden beide Körper jeweils 5 Mal um
+50° ausgelenkt. Die gemittelten Periodenschwingdauern betragen
+\begin{align*}
+  T_\su{a} &= (0.97 \pm 0.02)\sek \\
+  T_\su{l} &= (0.82 \pm 0.04)\sek.
+\end{align*}
+Das Trägheitsmoment lässt sich nun mittels einer Umformung von Formel \eqref{eqn:T}
+berechnen. Die Formel für den Fehler ergibt sich aus der Gaußschen Fehlerfortpflanzung
+und lautet:
+\begin{equation*}
+  \Delta I = \sqrt{\biggl(\frac{2TD}{4\pi^2}\biggr)^2\cdot\sigma_\su{T}^2 +
+  \biggl(\frac{T^2}{4\pi^2}\biggr)^2\cdot\sigma_\su{D}^2}
+\end{equation*}
+Somit betragen die experimentell festgestellten Werte für die Trägheitsmomente
+der Zylinder
+\begin{align*}
+  T_\su{a} &= (3.4 \pm 0.8)\,\cdot10^{-4}\,\si{\kilo\gram\square\meter} \\
+  T_\su{l} &= (2.4 \pm 0.9)\,\cdot10^{-4}\,\si{\kilo\gram\square\meter}
+\end{align*}
+Die theoretischen Werte lassen sich mit Formel \eqref{eqn:ZylI} berechnen.
+Da der Durchmesser und die Höhe der Zylinder eindeutig bestimmt werden konnten,
+bleibt eine Fehlerrechnung aus.
+Die theoretischen Werte lauten:
+\begin{align}
+  T_\su{a} &= 7.9\,\cdot10^{-4}\,\si{\kilo\gram\square\meter} \\
+  T_\su{l} &= 4.8\,\cdot10^{-4}\,\si{\kilo\gram\square\meter}.
+\end{align}
