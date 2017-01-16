@@ -24,9 +24,9 @@ die Daten aus Tabelle \ref{MessD} benötigt.
 \end{table}
 Der Wert für den Winkel wird noch mit der Formel
 \begin{equation*}
-  \frac{\varphi}{360}\cdot2\pi
+  \varphi_\su{rad}\frac{\varphi}{360}\cdot2\pi
 \end{equation*}
-umgerechnet. Nachdem D für die verschiedenen Werte berechnet wurde, wird der
+umgerechnet. Nachdem $D$ für die verschiedenen Werte berechnet wurde, wird der
 Mittelwert berechnet und der Fehler bestimmt. Somit erhält man für die
 Winkelrichtgrße einen Wert von
 \begin{equation*}
@@ -52,7 +52,7 @@ Winkelrichtgrße einen Wert von
     50    &   28  &   7.71    \\
     \bottomrule
   \end{tabular}
-  \caption{messwerte zur Bestimmung von $I_\su{D}$}
+  \caption{Messwerte zur Bestimmung von $I_\su{D}$}
   \label{messI}
 \end{table}
 Anschließend wird das Eigenträgheitsmoment der Feder der Apparatur bestimmt,
@@ -61,7 +61,7 @@ $T^2$ gegen $a^2$ aufgetragen wird. Abbildung \ref{fig:trag} zeigt diesen Graph.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{bilder/tragheit.pdf}
-  \caption{Graph zur Bestimmung des Eigenträgheitsmoment}
+  \caption{Graph zur Bestimmung des Eigenträgheitsmoments}
   \label{fig:trag}
 \end{figure}
 Mit Hilfe der linearen Regression lässt sich das $I_\su{D}$ nun einfach bestimmen.
@@ -93,10 +93,10 @@ Somit betragen die experimentell festgestellten Werte für die Trägheitsmomente
 der Zylinder
 \begin{align*}
   T_\su{a} &= (3.4 \pm 0.8)\,\cdot10^{-4}\,\si{\kilo\gram\square\meter} \\
-  T_\su{l} &= (2.4 \pm 0.9)\,\cdot10^{-4}\,\si{\kilo\gram\square\meter}
+  T_\su{l} &= (2.4 \pm 0.9)\,\cdot10^{-4}\,\si{\kilo\gram\square\meter}.
 \end{align*}
 Die theoretischen Werte lassen sich mit Formel \eqref{eqn:ZylI} berechnen.
-Da der Durchmesser und die Höhe der Zylinder eindeutig bestimmt werden konnten,
+Da der Durchmesser und die Höhe der Zylinder eindeutig bestimmt werden können,
 bleibt eine Fehlerrechnung aus.
 Die theoretischen Werte lauten:
 \begin{align}
