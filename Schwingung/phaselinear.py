@@ -17,19 +17,32 @@ t /= 1e6
 phirad = 2 * np.pi * fre * t
 
 #Theoriekurve
-# L = 3.53 * (10**-3)
-# C = 5.015 * (10**-9)
-# w = fre * 2 * np.pi
-# R = 271.6
-# phi = np.arctan(-(w * R * C)/(1 - L * C * (w**2)))
+L = 3.53 * (10**-3)
+C = 5.015 * (10**-9)
+w = fre * 2 * np.pi
+R = 271.6
+# fre = np.linspace(np.log(15),np.log(20))
+phi = np.arctan((w * R * C)/(1 - (L * C * (w**2))))
+# bis zur Resonanz plotten
+
+#plt.plot(fre/1000, phi, 'b-', label='Theoriekurve')
+# plt.plot(fre/1000, -phi, 'b-', label='Theoriekurve')
+fre_theo = np.linspace(15000, 37500, 100)
+phi_theo = np.arctan((2*np.pi*fre_theo * R * C)/(1 - (L * C * ((2*np.pi*fre_theo)**2))))
+fre_theo2 = np.linspace(38000, 55000, 100)
+phi_theo2 = np.arctan((2*np.pi*fre_theo2 * R * C)/(1 - (L * C * ((2*np.pi*fre_theo2)**2))))+np.pi
 
 
-# plt.plot(fre/1000, phi, 'b-', label='Theoriekurve')
+plt.plot(fre_theo/1000, phi_theo, 'b-', label='Theoriekurve')
+plt.plot(fre_theo2/1000, phi_theo2, 'b-')
+
+
+
 plt.plot(fre/1000, phirad, 'rx', label='Messwerte')
 plt.plot((32.196, 32.196), (0.5, 2.5), 'g--', label='untere/obere Grenzfrequenz')
 plt.plot((44.442, 44.442), (0.5, 2.5), 'g--')
-plt.plot((36.822, 36.822), (0.5, 2.5), 'b--', label='Resonanzfrequenz')
-plt.xlim(30, 45)
+plt.plot((36.822, 36.822), (0.5, 2.5), 'k--', label='Resonanzfrequenz')
+# plt.xlim(30, 45)
 plt.yticks(np.arange(0, np.pi, np.pi/4), ['$0$','$\mathrm{\pi}/4$','$\mathrm{\pi}/2$', '$3\mathrm{\pi}/4$'])
 # plt.ylim(min(phirad)-5, max(phirad)+5)
 plt.xlabel(r'$\mathrm{\nu} \,/\, \mathrm{kHz}$')

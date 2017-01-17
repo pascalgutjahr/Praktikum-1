@@ -19,7 +19,8 @@ U = Uc/U0
 # C = 5.015 * (10**-9)
 # w = v * 2 * np.pi
 # R = 271.6
-# U_theo = U0 / (np.sqrt((1 - L * C * (w**2)**2)+ (w**2) * (R**2) * (C**2)))
+# # U_theo = U0 / (np.sqrt((1 - L * C * (w**2))**2 + (w**2) * (R**2) * (C**2)))
+# U_theo=U/(np.sqrt((1-L*C*w**2)**2+w**2*R**2*C**2))
 # plt.plot(v, U_theo, 'b-', label='Theoriekurve')
 
 plt.plot(v, U, 'rx', label="Messwerte")
@@ -31,14 +32,25 @@ plt.grid()
 
 
 plt.subplot(2, 1, 2)
+
+# Theoriekurve
+L = 3.53 * 10**(-3)
+C = 5.015 * 10**(-9)
+v1 = np.linspace(15, 55, 100)
+w = v1 * 2 * np.pi * 10**3
+R = 271.6
+# U_theo = U0 / (np.sqrt((1 - L * C * (w**2))**2 + (w**2) * (R**2) * (C**2)))
+U_theo=1/(np.sqrt((1-L*C*w**2)**2+w**2*R**2*C**2))
+plt.plot(v1, U_theo, 'b-', label='Theoriekurve')
+
 plt.plot(v, U, 'kx', label="Messwerte")
-plt.plot((32.196, 32.196), (1.5, 3.0), 'g--', label='Breite der Resonanzkurve')
-plt.plot((44.442, 44.442), (1.5, 3.0), 'g--')
-plt.xlim(28, 52)
-plt.ylim(1.3, 3.5)
+plt.plot((32.196, 32.196), (1.0, 3.5), 'g--', label='Breite der Resonanzkurve')
+plt.plot((44.442, 44.442), (1.0, 3.5), 'g--')
+# plt.xlim(28, 52)
+# plt.ylim(1.3, 3.5)
 plt.xlabel(r'$\mathrm{\nu} \,/\, \mathrm{kHz}$')
 plt.ylabel(r'$\mathrm{U_c} \,/\, \mathrm{U_0}$')
-plt.legend(loc='upper right')
+plt.legend(loc='upper left')
 plt.grid()
 plt.tight_layout()
 plt.savefig('Bilder/UcUv.pdf')
