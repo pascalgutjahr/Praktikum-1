@@ -1,0 +1,100 @@
+Zunächst wird eine Fadenlänge von $70\cm$ eingestellt. Um sicher zu gehen, dass
+beide Pendel die selbe Fadenlänge haben, wird die Schwingdauer beider Pendel
+einzeln gemessen. Hierfür werden 9 mal 5 Schwingungen gemessen und gemittelt.
+Der jeweilige Fehler der Messwerte ergibt sich über die Standardabweichung.
+
+Die Werte der Messung sind in Tabelle \ref{tab:70cm} zu sehen. Die Auslenkung
+aller Messungen betrug hierbei $5\cm$
+\begin{table}[H]
+  \centering
+  \begin{tabular}{c c c c c c c}
+    \toprule
+    links, einzeln & rechts, einzeln & gleichsinnig & gegensinnig &gekoppelt&
+    gekoppelt, einzeln \\
+    \midrule
+    $t_1\,/\sek$ & 7.84 & 7.98 & 8.18 & 6.36 & 7.92 & 7.98 \\
+    $t_2\,/\sek$ & 7.86 & 8.17 & 8.21 & 6.44 & 7.55 & 8.17 \\
+    $t_3\,/\sek$ & 8.12 & 8.18 & 8.07 & 6.44 & 7.75 & 8.18 \\
+    $t_4\,/\sek$ & 8.01 & 8.16 & 7.96 & 6.65 & 7.69 & 8.16 \\
+    $t_5\,/\sek$ & 7.82 & 8.21 & 8.03 & 6.58 & 8.23 & 8.21 \\
+    $t_6\,/\sek$ & 8.00 & 8.15 & 8.06 & 6.55 & 8.43 & 8.15 \\
+    $t_7\,/\sek$ & 7.75 & 8.22 & 8.15 & 6.56 & 8.04 & 8.22 \\
+    $t_8\,/\sek$ & 7.96 & 8.07 & 7.93 & 6.50 & 8.32 & 8.07 \\
+    $t_9\,/\sek$ & 8.06 & 8.07 & 8.06 & 6.73 & 8.03 & 8.17 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Schwingdauer für 5 Perioden bei einer Fadenlänge von $70\cm$}
+  \label{tab:70cm}
+\end{table}
+Um den Schwingungsdauer einer einzigen Perioden zu erhalten, werden die Werte
+in der Tabelle mit dem Faktor $\frac{1}{5}$ multipliziert und der Mittelwert
+berechnet. Somit erhält man
+\begin{equation*}
+T_\su{links}=(1.59\pm0.02)\sek
+T_\su{rechts}=(1.63\pm0.01)\sek
+% T_\su{koppel}=(7.9\pm0.3)\sek
+% T_\su{einzel, koppel}=(1.27\pm0.02)\sek
+\end{equation*}
+für die Schwingdauer der einzelnen Pendel. Nun werden die Pendel mit einer Feder
+verbunden und in eine gleichsinnige Schwingung versetzt. Die gemessenen Werte
+sind ebenfalls in Tabelle \ref{tab:70cm} zu sehen. Der experimentell bestimmte
+Wert beträgt
+\begin{equation*}
+  T_\su{+, exp}=(1.61\pm0.02)\sek.
+\end{equation*}
+Dieser wird mit dem theoretischen Wert, welcher sich nach Formel \eqref{eqn:T+}
+berechnen lässt verglichen. Der theoretische Wert für die gleichsinnige Schwinung
+liegt bei
+\begin{equation*}
+  T_\su{+, theo}=1.68\sek.
+\end{equation*}
+Zudem soll die Schwingungsfrequenz miteinander verglichen werden. Während sich
+der theoretische Wert nach Formel \eqref{eqn:w+}
+berechnen lässt, muss für den experimentellen Wert die Formel
+\begin{equation}
+  \su{\omega}=\frac{2\pi}{T_\su{+, exp}}
+  \label{eqn:wexp}
+\end{equation}
+angewendet werden. $K$ wird hierbei mit den experimentell ermittelten Werten nach
+Formel \eqref{eqn:K} berechnet. Der Fehler auf die Frequenz berehnet sich nach
+Gauß'scher Fehlerfortpflanzung mit der Formel
+\begin{equation}
+  \Delta\omega=\sqrt{\biggl(-\frac{2\pi}{T^2}\biggr)^2\cdot\sigma_\su{T}^2}.
+\end{equation}
+Die Werte die sich dann berechnen lassen liegen bei
+\begin{align*}
+  \omega_\su{+,theo} &= 3.74\Hz \\
+  \omega_\su{+,exp}  &= (3.90 \pm 0.08)\Hz
+\end{align*}
+Als nächstes werden die Pendel gegensinnig ausgelenkt. Die Werte für die
+Schwingungsdauer und -frequenz werden analog berechnet. Somit erhält man für die
+Schwingungsdauer
+\begin{align*}
+  T_\su{-, exp}=(1.31\pm0.02)\sek \\
+  T_\su{-, theo}=1.65\sek
+\end{align*}
+und für die Schwingungsfrequenz
+\begin{algin*}
+  \omega_\su{-, exp}  &= (4.80 \pm 0.04)\Hz \\
+  \omega_\su{-, theo} &= 3.82\Hz.
+\end{align*}
+
+Abschließend wird eine gekoppelte Schwingung erzeugt. Nun wird die
+Schwebungsdauer und die Schwebungsfrequenz ermittelt und verglichen. Um die
+Schwebungsdauer zu ermitteln, wird die Zeit eines Pendels von Ruhelage zu
+Ruhelage gemessen. Auch dieser Wert wird gemittelt, jedoch nicht faktorisiert.
+Der theoretische Wert wird mit Formel \eqref{eqn:Ts} berechnet. Somit ergeben
+sich die Werte
+\begin{align*}
+  T_\su{S, exp} =& (7.9\pm0.3)\sek \\
+  T_\su{S,theo} =& 83.16\sek
+  % 90\% Abweichung
+\end{align*}
+für die Schwebungsdauer und
+\begin{align*}
+  \omega_\su{S, exp} &= (0.79 \pm 0.03)\Hz \\
+  \omega_\su{S, theo}&= -0.08\Hz
+  % negative Frequenz???
+\end{align*}
+für die Schwebungsfrequenz.
+\newpage
