@@ -67,8 +67,8 @@ $T^2$ gegen $a^2$ aufgetragen wird. Abbildung \ref{fig:trag} zeigt diesen Graph.
 Mit Hilfe der linearen Regression lässt sich das $I_\su{D}$ nun einfach bestimmen.
 Die mit Python 3.5.2 berechneten Werte lauten
 \begin{align*}
-  a &= (1.42 \pm 0.02)\,\cdot10^{-3} \\
-  b &= (6.0 \pm 0.8)\,\cdot10^{-3}.
+  a &= (1.42 \pm 0.02)\,\cdot10^{-3} \,\si{\square\meter\per\square\second} \\
+  b &= (6.0 \pm 0.8)\,\cdot10^{-3} \,\si{\square\meter}.
 \end{align*}
 Der Parameter a ist hierbei der gesuchte Wert für die Eigenträgheit.
 Als nächstes werden die Trägheitsmomente von einem aufrechten und einem liegenden
@@ -77,11 +77,13 @@ der beiden Zylinder sind mit einer Höhe von $3\cm$ und einem Durchmesser von $7
 gleich. Somit unterscheiden sie sich lediglich im Gewicht. Der Aufrechte Zylinder
 wiegt $1119.3\gr$ und das Gewicht des liegenden Zylinders liegt bei $1117.3\gr$.
 Um das Trägheitsmoment bestimmen zu können, werden beide Körper jeweils 5 Mal um
-50° ausgelenkt. Die gemittelten Periodenschwingsdauern betragen
+50° ausgelenkt. Die gemittelten Periodenschwingsdauern ergeben sich aus Tabelle
+\ref{tab:ZeitZylinder} und betragen
 \begin{align*}
   T_\su{a} &= (0.97 \pm 0.02)\sek \\
   T_\su{l} &= (0.82 \pm 0.04)\sek.
 \end{align*}
+\input{tabelle1.tex}
 Das Trägheitsmoment lässt sich nun mittels einer Umformung von Formel \eqref{eqn:T}
 berechnen. Die Formel für den Fehler ergibt sich aus der Gaußschen Fehlerfortpflanzung
 und lautet:
@@ -92,8 +94,8 @@ und lautet:
 Somit betragen die experimentell festgestellten Werte für die Trägheitsmomente
 der Zylinder
 \begin{align*}
-  T_\su{a} &= (3.4 \pm 0.8)\,\cdot10^{-4}\,\si{\kilo\gram\square\meter} \\
-  T_\su{l} &= (2.4 \pm 0.9)\,\cdot10^{-4}\,\si{\kilo\gram\square\meter}.
+  I_\su{a} &= (3.4 \pm 0.8)\,\cdot10^{-4}\,\si{\kilo\gram\square\meter} \\
+  I_\su{l} &= (2.4 \pm 0.9)\,\cdot10^{-4}\,\si{\kilo\gram\square\meter}.
 \end{align*}
 Die theoretischen Werte lassen sich mit Formel \eqref{eqn:ZylI} berechnen.
 Da der Durchmesser und die Höhe der Zylinder eindeutig bestimmt werden können,
@@ -106,7 +108,8 @@ Die theoretischen Werte lauten:
 
 % Puppe
 \noindent Danach werden die Trägeheitsmomente zwei verschiedener Stellungen einer Puppe
-untersucht.
+untersucht. Die Maße der Puppe sind in Tabelle \ref{tab:MaßePuppe} zu finden.
+\input{tabelle3.tex}
 Bei der ersten Stellung der Puppe werden die Arme als Zylinder angenommen, die sich um
 ihre Querachse drehen und ihren Ansatz im Mittelpunkt der Drehachse haben. Somit werden
 ihre Trägheitsmomente mit dem Satz von Steiner um $\sfrac{l_\su{arm}}{2}$ verschoben.
@@ -128,7 +131,9 @@ verschoben. Die Stellungen sind in Abbildung \ref{fig:stellung} zu sehen.
   \caption{Die 2 Stellungen der Puppe}
   \label{fig:stellung}
 \end{figure}
-Die Maße der Zylinder ergeben sich aus den Mittelwerten der verschiedenen Messungen.
+
+\newpage
+\noindent Die Maße der Zylinder ergeben sich aus den Mittelwerten der verschiedenen Messungen.
 Der Werte sind in Tabelle \ref{tab:wertepuppe} einzusehen.
 \begin{table}
   \centering
@@ -158,6 +163,9 @@ Für das gesamte Volumen folgt $V = 0.28893 \cum$. Damit ergibt sich für die
 Dichte $ \rho = 557.57 \,\si{\gram\per\cubic\meter}$. Die Massen sind
 in Tabelle \ref{tab:wertepuppe} zu finden.
 
+Die Schwingungsdauern der Puppe sind in Tabelle \ref{tab:ZeitPuppe} einzusehen.
+\input{tabelle2.tex}
+
 Die Trägheitsmomente um die Symmetrieachse werden alle nach
 \begin{equation}
   I_\su{sym} = \frac{mr^2}{2}
@@ -179,3 +187,23 @@ und für Stellung 2 ergibt sich das Trägheitsmoment
   I_2 &= I_\su{Kopf} + I_\su{Rumpf} + 2 \cdot I_\su{Bein,quer,steiner} + 2 \cdot I_\su{Arm,quer,steiner} \\
   I_2 &= (4.64 ± 0.4) \cdot 10^{-4} \,\si{\kilo\gram\square\meter}.
 \end{align}
+
+Auch hier ergibt sich der Fehler durch die Gaußsche Fehlerfortpflanzung nach folgender Formel
+für das erste Trägheitsmoment
+\begin{equation}
+  % \begin{aligned}
+  \Delta I_1 = \sqrt{(m_\su{K}r_\su{K})^2 \cdot \sigma_\su{r_\su{K}}^2 + (m_\su{R}r_\su{R})^2 \cdot \sigma_\su{r_\su{R}}^2
+  (2m_\su{B}r_\su{B})^2 \cdot \sigma_\su{r_\su{B}}^2 + (m_\su{A}r_\su{A})^2 \cdot \sigma_\su{r_\su{A}}^2
+    + (\frac{1}{3}m_\su{A}l_\su{A})^2 \cdot \sigma_\su{l_\su{A}}^2
+  + (m_\su{A}l_\su{A})^2 \cdot \sigma_\su{l_\su{A}}^2}
+  % \end{aligned}
+\end{equation}
+bzw.
+\begin{align*}
+  \Delta I_2 &= \sqrt{(m_\su{K}r_\su{K})^2 \cdot \sigma_\su{r_\su{K}}^2 + (m_\su{R}r_\su{R})^2 \cdot \sigma_\su{r_\su{R}}^2
+  + (m_\su{B}r_\su{B})^2 \cdot \sigma_\su{r_\su{B}}^2 + (\frac{1}{3}m_\su{B}l_\su{B})^2 \cdot \sigma_\su{l_\su{B}}^2
+   + (m_\su{A}l_\su{A})^2 \cdot \sigma_\su{l_\su{A}}^2  + (m_\su{A}r_\su{A})^2 \cdot \sigma_\su{r_\su{A}}^2 +
+  (\frac{1}{3}m_\su{A}l_\su{A})^2 \cdot \sigma_\su{l_\su{A}}^2
+  + (m_\su{A}l_\su{A})^2 \cdot \sigma_\su{l_\su{A}}^2}  \\
+\end{align*}
+für das zweiten Trägheitsmoment.
