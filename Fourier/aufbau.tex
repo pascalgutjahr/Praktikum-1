@@ -1,12 +1,47 @@
 \subsection{Vorbereitung}
 Bevor der eigentliche Versuch beginnt, werden für drei periodische Funktionen
-die jeweiligen Fourier-Koeffizienten berechnet. Bei den Funktionen handelt es
+die jeweiligen Fourier-Koeffizienten berechnet.
+% Für periodische Funktionen besagt das Fouriersche Theorem, dass sie sich durch
+% sinus- und cosinus-Funktionen nach der Formel
+% \begin{equation}
+%   f(t)= \frac{a_0}{2} + \sum_{n=1}^\infty \Biggl(a_n \cdot \cos \biggl(\frac{2n\pi t}{T} \biggr) + b_n \cdot \sin \biggl(\frac{2n\pi t}{T}\biggr)\Biggr)
+% \end{equation}
+% darstellen lassen. Dazu muss die Reihe jedoch konvergieren, mit ganzzahligem $n$. Die Parameter $a_n$ und $b_n$
+% lassen sich dabei durch
+% \begin{align}
+%   a_n &= \frac{2}{T} \int_0^T f(t) \cdot \cos \biggl(\frac{2n\pi t}{T}\biggr) dt \\
+%   b_n &= \frac{2}{T} \int_0^T f(t) \cdot \sin \biggl(\frac{2n\pi t}{T}\biggr) dt
+% \end{align}
+% bestimmen.
+Bei den hier verwendeten Funktionen handelt es
 sich um Rechteckspannung, Sägezahnspannung und Dreieckspannung. Zur Vereinfachung
 werden diese so parametrisiert, dass sie entweder gerade oder ungerade sind.
 Diese Vereinfachung führt dazu, dass bei geraden Funktionen $b_\su{n}=0$ und bei
 ungeraden Funktionen $a_\su{n}=0$ für alle $n$ gilt.
 \par
-Für die Rechteckspannung und die Sägezahnspannung ergeben sich damit die Zusammenhänge
+\noindent Die Vorbereitung wird mit den Formeln \eqref{theorem} und \eqref{eq:analyse} durchgeführt.
+Für die Rechteckspannung ergibt sich
+\[f_\su{recht}(t)=\begin{cases}
+-1 & \text{für}\, -\pi<t<\pi\\
+0 & \text{für}\, t=-\pi,0,\pi\\
+1 &\text{für}\,  0<t<\pi \\
+\end{cases}\]
+Für gerade $n$ gilt $b_\su{n} = 0$ und für ungerade $n$ gilt $b_\su{n} = \frac{4}{n\pi}$.
+\par
+\noindent Bei der Sägezahnspannung folgt
+\[f_\su{saege}(t)=\begin{cases}
+t & \text{für}\,\, -\pi<t<\pi\\
+0 & \text{für}\,\, t=-\pi,\pi\\
+\end{cases}\]
+mit $b_\su{n} = -\frac{2}{n}(-1)^{n+1}$.
+\par
+\noindent Für die Dreieckspannung ergibt sich
+\begin{equation}
+  f_\su{dreieck}(t) = |t|
+\end{equation}
+mit $a_\su{n} = 0$ für ungerade $n$ und $a_\su{n} = -\frac{4}{n^2\pi}$ für gerade $n$.
+\par
+\noindent Für die Rechteckspannung und die Sägezahnspannung ergeben sich damit die Zusammenhänge
 von $\sfrac{1}{n}$, für die Dreieckspannung ergibt sich $\sfrac{1}{n^2}$.
 \subsection{Fourier-Synthese}
 Für die Fourier-Synthese werden zunächst zwei Ausgänge des Oberwellengenerators
