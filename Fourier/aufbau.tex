@@ -1,45 +1,56 @@
 \subsection{Vorbereitung}
 Bevor der eigentliche Versuch beginnt, werden für drei periodische Funktionen
 die jeweiligen Fourier-Koeffizienten berechnet.
-% Für periodische Funktionen besagt das Fouriersche Theorem, dass sie sich durch
-% sinus- und cosinus-Funktionen nach der Formel
-% \begin{equation}
-%   f(t)= \frac{a_0}{2} + \sum_{n=1}^\infty \Biggl(a_n \cdot \cos \biggl(\frac{2n\pi t}{T} \biggr) + b_n \cdot \sin \biggl(\frac{2n\pi t}{T}\biggr)\Biggr)
-% \end{equation}
-% darstellen lassen. Dazu muss die Reihe jedoch konvergieren, mit ganzzahligem $n$. Die Parameter $a_n$ und $b_n$
-% lassen sich dabei durch
-% \begin{align}
-%   a_n &= \frac{2}{T} \int_0^T f(t) \cdot \cos \biggl(\frac{2n\pi t}{T}\biggr) dt \\
-%   b_n &= \frac{2}{T} \int_0^T f(t) \cdot \sin \biggl(\frac{2n\pi t}{T}\biggr) dt
-% \end{align}
-% bestimmen.
-Bei den hier verwendeten Funktionen handelt es
-sich um Rechteckspannung, Sägezahnspannung und Dreieckspannung. Zur Vereinfachung
-werden diese so parametrisiert, dass sie entweder gerade oder ungerade sind.
-Diese Vereinfachung führt dazu, dass bei geraden Funktionen $b_\su{n}=0$ und bei
-ungeraden Funktionen $a_\su{n}=0$ für alle $n$ gilt.
-\par
-\noindent Die Vorbereitung wird mit den Formeln \eqref{theorem} und \eqref{eq:analyse} durchgeführt.
-Für die Rechteckspannung ergibt sich
-\[f_\su{recht}(t)=\begin{cases}
--1 & \text{für}\, -\pi<t<\pi\\
-0 & \text{für}\, t=-\pi,0,\pi\\
-1 &\text{für}\,  0<t<\pi \\
-\end{cases}\]
-Für gerade $n$ gilt $b_\su{n} = 0$ und für ungerade $n$ gilt $b_\su{n} = \frac{4}{n\pi}$.
-\par
-\noindent Bei der Sägezahnspannung folgt
-\[f_\su{saege}(t)=\begin{cases}
-t & \text{für}\,\, -\pi<t<\pi\\
-0 & \text{für}\,\, t=-\pi,\pi\\
-\end{cases}\]
-mit $b_\su{n} = -\frac{2}{n}(-1)^{n+1}$.
-\par
-\noindent Für die Dreieckspannung ergibt sich
+\subsubsection{Rechteckspannung}
+Um die Koeffizienten der Rechteck-Schwingung zu berechnen, wird diese zunächst
+als ungerade Funktion definiert, sodass $f(t)=-f(-t)$ gilt. Daraus wird direkt
+gefolgert, dass der Koeffizient $a_\su{n}=0$ ist.
+Die Rechteckschwingung wird über die Funktion
+% \begin{itemize}
+  % \item Rechteckspannung
+  \begin{align}
+  f(t)&=
+  \begin{cases}
+    1 & \, 0<t<\frac{\pi}{2} \\
+    -1& \, \frac{\pi}{2}<t<\pi \\
+  \end{cases}
+\end{align}
+% \end{itemize}
+definiert. Nach Formel \eqref{eq:analyse} berechnet sich der Koeffizient $b_\su{n}$
+wie folgt:
+\begin{align*}
+  b_\su{n} &= \frac{2}{\pi}\int^\pi_0{f(t)\sin{\left(\frac{2\pi n t}{\pi}\right)}\delta t} \\
+  &= \frac{2}{\pi}\left(\int_0^{\frac{\pi}{2}}{\sin{(2nt)}\delta t} -
+  \int_{\frac{pi}{2}}^\pi{\sin{(2nt)}\delta t}\right) \\
+  &= \frac{2}{\pi}\left(\left[-\cos{(2nt)}\frac{1}{2n}\right]_0^{\frac{\pi}{2}} +
+  \left[\cos{(2nt)}\frac{1}{2n}\right]_{\frac{\pi}{2}}^\pi\right) \\
+  &= \frac{2}{\pi}\left(\frac{1}{2n}+\cos{(2n\pi)}\frac{1}{2n}\right) \\
+  &= \frac{2}{\pi}\left(\frac{1}{n}\right) \\
+  &= \frac{2}{\pi n}.
+\end{align*}
+Da $\cos{(2\pi)}=0$ ist, ist der Cosinus auch für jedes ganzzahlige Vielfache von
+$2\pi$ 0.
+Zudem muss die Startbedingung $a_0$ berechnet werden. Dies geschieht mit der
+Formel
+\begin{equation*}
+  a_0 = \frac{1}{\pi}\int_{-\pi}^\pi{f(x)\delta x}.
+\end{equation*}
+Somit ist
+\begin{align*}
+  a_0 &= \frac{1}{\pi}\int_{-\pi}^\pi{f(x)\delta x} \\
+  &= \frac{2}{\pi}\int_0^{\pi}{f(x)\delta x} \\
+  &= \frac{2}{\pi}\int_0^{\frac{\pi}{2}}{1\delta x} -
+  \int^\pi_{\frac{\pi}{2}}{1\delta x} \\
+  &= \frac{2}{\pi}\left(\biggl[x\biggr]_0^{\frac{\pi}{2}} -
+  \biggl[x\biggr]_{\frac{\pi}{2}}^\pi\right) \\
+  &= -2
+\end{align*}
+Mit den berechneten Koeffizienten lautet die Fourier-Reihe für die Rechteckspannung
 \begin{equation}
-  f_\su{dreieck}(t) = |t|
+  f(t) = -1 + \sum_{n=1}^\infty{\frac{2}{n\pi}\sin{\left(n\frac{2\pi}{\su{T}}t\right)}}
 \end{equation}
-mit $a_\su{n} = 0$ für ungerade $n$ und $a_\su{n} = -\frac{4}{n^2\pi}$ für gerade $n$.
+\subsubsection{Sägezahnspannung}
+
 \par
 \noindent Für die Rechteckspannung und die Sägezahnspannung ergeben sich damit die Zusammenhänge
 von $\sfrac{1}{n}$, für die Dreieckspannung ergibt sich $\sfrac{1}{n^2}$.
