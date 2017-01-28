@@ -19,35 +19,35 @@ Die Rechteckschwingung wird über die Funktion
 definiert. Nach Formel \eqref{eq:analyse} berechnet sich der Koeffizient $b_\su{n}$
 wie folgt:
 \begin{align*}
-  b_\su{n} &= \frac{2}{\pi}\int^\pi_0{f(t)\sin{\left(\frac{2\pi n t}{\pi}\right)}\delta t} \\
-  &= \frac{2}{\pi}\left(\int_0^{\frac{\pi}{2}}{\sin{(2nt)}\delta t} -
-  \int_{\frac{pi}{2}}^\pi{\sin{(2nt)}\delta t}\right) \\
+  b_\su{n} &= \frac{2}{\pi}\int^\pi_0{f(t)\sin{\left(\frac{2\pi n t}{\pi}\right)} dt} \\
+  &= \frac{2}{\pi}\left(\int_0^{\frac{\pi}{2}}{\sin{(2nt)} dt} -
+  \int_{\frac{\pi}{2}}^\pi{\sin{(2nt)} dt}\right) \\
   &= \frac{2}{\pi}\left(\left[-\cos{(2nt)}\frac{1}{2n}\right]_0^{\frac{\pi}{2}} +
   \left[\cos{(2nt)}\frac{1}{2n}\right]_{\frac{\pi}{2}}^\pi\right) \\
-  &= \frac{2}{\pi}\left(\frac{1}{2n}+\cos{(2n\pi)}\frac{1}{2n}\right) \\
-  &= \frac{2}{\pi}\left(\frac{1}{n}\right) \\
-  &= \frac{2}{\pi n}.
+  &= \frac{2}{\pi}\left(\frac{1}{2n}+\frac{1}{2n}+\frac{1}{2n}+\frac{1}{2n}\right) \\
+  &= \frac{2}{\pi}\left(\frac{2}{n}\right) \\
+  &= \frac{4}{\pi n}.
 \end{align*}
 Da $\cos{(2\pi)}=0$ ist, ist der Cosinus auch für jedes ganzzahlige Vielfache von
-$2\pi$ 0.
+$2\pi$ gleich 0.
 Zudem muss die Startbedingung $a_0$ berechnet werden. Dies geschieht mit der
 Formel
 \begin{equation*}
-  a_0 = \frac{1}{\pi}\int_{-\pi}^\pi{f(x)\delta x}.
+  a_0 = \frac{1}{\pi}\int_{-\pi}^\pi{f(x) dx}.
 \end{equation*}
 Somit ist
 \begin{align*}
-  a_0 &= \frac{1}{\pi}\int_{-\pi}^\pi{f(x)\delta x} \\
-  &= \frac{2}{\pi}\int_0^{\pi}{f(x)\delta x} \\
-  &= \frac{2}{\pi}\int_0^{\frac{\pi}{2}}{1\delta x} -
-  \int^\pi_{\frac{\pi}{2}}{1\delta x} \\
+  a_0 &= \frac{1}{\pi}\int_{-\pi}^\pi{f(x) dx} \\
+  &= \frac{2}{\pi}\int_0^{\pi}{f(x) dx} \\
+  &= \frac{2}{\pi}\int_0^{\frac{\pi}{2}}{1 dx} -
+  \int^\pi_{\frac{\pi}{2}}{1 dx} \\
   &= \frac{2}{\pi}\left(\biggl[x\biggr]_0^{\frac{\pi}{2}} -
   \biggl[x\biggr]_{\frac{\pi}{2}}^\pi\right) \\
   &= -2
 \end{align*}
 Mit den berechneten Koeffizienten lautet die Fourier-Reihe für die Rechteckspannung
 \begin{equation}
-  f(t) = -1 + \sum_{n=1}^\infty{\frac{2}{n\pi}\sin{\left(n\frac{2\pi}{\su{T}}t\right)}}
+  f(t) = -1 + \sum_{n=1}^\infty{\frac{4}{n\pi}\sin{\left(n\frac{2\pi}{\su{T}}t\right)}}
 \end{equation}
 \subsubsection{Sägezahnspannung}
 
