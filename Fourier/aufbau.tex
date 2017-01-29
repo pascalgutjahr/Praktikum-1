@@ -34,24 +34,55 @@ $2\pi$ gleich 1. Für gerade $n$ folgt $b_\su{k}=0$.
 Zudem muss die Startbedingung $a_0$ berechnet werden. Dies geschieht mit der
 Formel
 \begin{equation*}
-  a_0 = \frac{1}{\pi}\int_{-\pi}^\pi{f(x) dx}.
+  a_0 = \frac{1}{\pi}\int_{-\pi}^\pi{f(t) dt}.
 \end{equation*}
 Somit ist
 \begin{align*}
-  a_0 &= \frac{1}{\pi}\int_{-\pi}^\pi{f(x) dx} \\
-  &= \frac{2}{\pi}\int_0^{\pi}{f(x) dx} \\
-  &= \frac{2}{\pi}\biggl(\int_0^{\frac{\pi}{2}}{1 dx} -
-  \int^\pi_{\frac{\pi}{2}}{1 dx}\biggr) \\
-  &= \frac{2}{\pi}\left(\biggl[x\biggr]_0^{\frac{\pi}{2}} -
-  \biggl[x\biggr]_{\frac{\pi}{2}}^\pi\right) \\
+  a_0 &= \frac{1}{\pi}\int_{-\pi}^\pi{f(t) dt} \\
+  &= \frac{2}{\pi}\int_0^{\pi}{f(t) dt} \\
+  &= \frac{2}{\pi}\biggl(\int_0^{\frac{\pi}{2}}{1 dt} -
+  \int^\pi_{\frac{\pi}{2}}{1 dt}\biggr) \\
+  &= \frac{2}{\pi}\left(\biggl[t\biggr]_0^{\frac{\pi}{2}} -
+  \biggl[t\biggr]_{\frac{\pi}{2}}^\pi\right) \\
   &= 0
 \end{align*}
 Mit den berechneten Koeffizienten lautet die Fourier-Reihe für die Rechteckspannung
 \begin{equation}
   f(t) = 0 + \sum_{n=1}^\infty{\frac{4}{n\pi}\sin{\left(\frac{2\pi n}{\su{T}}t\right)}}
 \end{equation}
+\newpage
 \subsubsection{Sägezahnspannung}
-
+Die Sägezahnspannung wird als
+\begin{equation}
+  f(t) = t
+\end{equation}
+für $-\pi < t < \pi$ als ungerade Funktion definiert. Somit ist $a_\su{n}=0$.
+$b_\su{n}$ wird mit Formel \eqref{eq:analyse} bestimmt. Dabei wird genau so vorgegangen, wie bei
+der Rechteckspannung. Daraus folgt dann:
+\begin{equation}
+  b_\su{n} = -\frac{2}{n}(-1)^n
+\end{equation}
+Für gerade $n$ gilt $b_\su{n} = -\sfrac{2}{n}$ und für ungerade $n$ gilt $b_\su{n} = \sfrac{2}{n}$.
+Der Koeffizient $a_0$ beträgt ebenfalls 0, wodurch sich die Funktion mit der Reihe
+\begin{equation}
+  f(t)= \sum_{k=1}^\infty -\frac{2}{n}(-1)^n \sin{(nt)}
+\end{equation}
+darstellen lässt.
+\subsubsection{Dreieckspannung}
+Die Dreieckspannung wird definiert als
+\begin{equation}
+  f(t)= \pi - |t|
+\end{equation}
+für $-\pi ≤ t < \pi$. Diese Funktion ist gerade, wodurch diesmal $b_\su{n} = 0$ gilt.
+Auch hierbei wird Formel \eqref{eq:analyse} verwendent. Für den Vorfaktor ergibt sich
+\begin{equation}
+  a_\su{n} = \frac{2(1-(-1)^n)}{\pi n^2}.
+\end{equation}
+$a_\su{n} = 0$ gilt für gerade $n$, für ungerade $n$ gilt $a_\su{n} = -\sfrac{4}{\pi n^2}$.
+Der Startfaktor lautet $a_0 = \pi$. Somit ergibt sich für die Reihe
+\begin{equation}
+  f(t) = \pi + \sum_{k=1}^\infty \frac{2(1-(-1)^n)}{\pi n^2} \cos{(nt)}.
+\end{equation}
 \par
 \noindent Für die Rechteckspannung und die Sägezahnspannung ergeben sich damit die Zusammenhänge
 von $\sfrac{1}{n}$, für die Dreieckspannung ergibt sich $\sfrac{1}{n^2}$.
