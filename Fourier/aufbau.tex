@@ -24,12 +24,13 @@ wie folgt:
   \int_{\frac{\pi}{2}}^\pi{\sin{(2nt)} dt}\right) \\
   &= \frac{2}{\pi}\left(\left[-\cos{(2nt)}\frac{1}{2n}\right]_0^{\frac{\pi}{2}} +
   \left[\cos{(2nt)}\frac{1}{2n}\right]_{\frac{\pi}{2}}^\pi\right) \\
-  &= \frac{2}{\pi}\left(\frac{1}{2n}+\frac{1}{2n}+\frac{1}{2n}+\frac{1}{2n}\right) \\
-  &= \frac{2}{\pi}\left(\frac{2}{n}\right) \\
+  &= \frac{2}{\pi}\left(\frac{-\cos{(n\pi)}+\cos{(0)}+\cos{(2n\pi)}-\cos{(n\pi)}}{2n}\right) \\
+  &= \frac{2}{\pi}\left(\frac{-(-1)^n+1+1-(-1)^n}{2n}\right) \\
+  &= \frac{2}{\pi}\left(\frac{2}{n}\right) \qquad \text{|für ungerade n}\\
   &= \frac{4}{\pi n}.
 \end{align*}
-Da $\cos{(2\pi)}=0$ ist, ist der Cosinus auch für jedes ganzzahlige Vielfache von
-$2\pi$ gleich 0.
+Da $\cos{(2\pi)}=1$ ist, ist der Cosinus auch für jedes ganzzahlige Vielfache von
+$2\pi$ gleich 1. Für gerade $n$ folgt $b_\su{k}=0$.
 Zudem muss die Startbedingung $a_0$ berechnet werden. Dies geschieht mit der
 Formel
 \begin{equation*}
@@ -39,15 +40,15 @@ Somit ist
 \begin{align*}
   a_0 &= \frac{1}{\pi}\int_{-\pi}^\pi{f(x) dx} \\
   &= \frac{2}{\pi}\int_0^{\pi}{f(x) dx} \\
-  &= \frac{2}{\pi}\int_0^{\frac{\pi}{2}}{1 dx} -
-  \int^\pi_{\frac{\pi}{2}}{1 dx} \\
+  &= \frac{2}{\pi}\biggl(\int_0^{\frac{\pi}{2}}{1 dx} -
+  \int^\pi_{\frac{\pi}{2}}{1 dx}\biggr) \\
   &= \frac{2}{\pi}\left(\biggl[x\biggr]_0^{\frac{\pi}{2}} -
   \biggl[x\biggr]_{\frac{\pi}{2}}^\pi\right) \\
-  &= -2
+  &= 0
 \end{align*}
 Mit den berechneten Koeffizienten lautet die Fourier-Reihe für die Rechteckspannung
 \begin{equation}
-  f(t) = -1 + \sum_{n=1}^\infty{\frac{4}{n\pi}\sin{\left(n\frac{2\pi}{\su{T}}t\right)}}
+  f(t) = 0 + \sum_{n=1}^\infty{\frac{4}{n\pi}\sin{\left(\frac{2\pi n}{\su{T}}t\right)}}
 \end{equation}
 \subsubsection{Sägezahnspannung}
 
