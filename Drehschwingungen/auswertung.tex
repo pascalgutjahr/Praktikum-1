@@ -1,10 +1,10 @@
 \subsection{Bestimmung des Schubmoduls}
 Tabelle \ref{tab:data1} zeigt die Periodendauern der Schwingungen für den ersten
 Teil des Versuchs.
-\begin{table}[H!]
+\begin{table}
   \begin{tabular}{c}
     \toprule
-    \su{T}\,/\,s \\
+    $\su{T}$\,/\,s \\
     \midrule
     20.008 \\
     20.000 \\
@@ -15,7 +15,7 @@ Teil des Versuchs.
     19.989 \\
     20.004 \\
     20.011 \\
-    20.009
+    20.009 \\
     \bottomrule
   \end{tabular}
   \caption{Messwerte der Periodendauer ohne Helmholtzspulen}
@@ -33,20 +33,23 @@ Der Draht besitzt die Abmessungen:
 \end{align*}
 Die übrigen benötigten Messgrößen sind
 \begin{align*}
-  m_\su{k} &=  \\
-  R_\su{K} &=  \\
-  \Theta   &=  \\
-  N_\su{Spule} &= \\
-  R_\su{Spule} &= \\
-  I_\su{max,Spule} &= 
+  m_\su{k} &= (0.512 \pm 2.1\cdot10^{-4})\kg \\
+  R_\su{K} &= (25.4 \pm 0.002)\cdot10^{-3}\mt\\
+  \Theta   &=  2.25\cdot10^{-6}\,\si{\kilo\gram\square\meter}\\
+  N_\su{Spule} &= 390\\
+  R_\su{Spule} &= 78\cdot10^{-3}\mt\\
+  I_\su{max,Spule} &= 1.4\Amp
 \end{align*}
 Diese lassen sich am Versuchsaufbau ablesen %Formulierung
 Das Schubmodul $G$ lässt sich nun nach Formel \eqref{eq:schub} berechnen. Der
 zugehörige Fehler ergibt sich nach Gauß'scher Fehlerfortpflanzung durch:
 \begin{equation*}
-  \Delta G = \sqrt{\frac{m_\su{k} R_\su{k}^2 L}{T^3 r^4}}
+  \Delta G = \sqrt{\left(\frac{-32\pi m_\su{k} R_\su{k}^2 L}{5T^3 r^4}\right)^2
+  \cdot\sigma_\su{T} + \left(\frac{16\pi R_\su{k}^2L}{5T^2r^4}\right)^2\cdot
+  \sigma_\su{m_k}^2+\left(\frac{32\pi m_\su{k}R_\su{k}L}{5T^2R^4}\right)^2\cdot
+  \sigma_\su{R_k}^2}
 \end{equation*}
 Somit hat das Schubmodul einn Wert von
 \begin{equation*}
-  G = ( \pm )\,\si{\kilo\gram\per\square\second\meter}
+  G = (6.364 \pm 0.005)\cdot10^{10}\,\si{\newton\per\square\meter}
 \end{equation*}
