@@ -95,6 +95,27 @@ aufgetragen.
 \end{figure}
 Die Parameter der linearen Regression werden mit Python berechnet.
 \begin{align*}
-  a &= (0.159   \pm 0.009 )\,\si{\tesla\square\second}
-  b &= (-0.0003 \pm 0.0002)\,\si{\tesla}
+  a &= (0.159   \pm 0.005 )\,\si{\tesla\square\second}
+  b &= (-0.00033 \pm 0.00001)\,\si{\tesla}
 \end{align*}
+Mittels Umstellen der Formel \eqref{eq:magperi} lässt sich nun das magnetische
+Moment m berechnen. $\Theta$ ist hierbei das Trägheitsmoment der Kugel, welches
+sich mit
+\begin{equation*}
+  \Theta = \frac{2}{5}MR
+\end{equation*}
+berechnen lässt. Das Magnetische Moment wird dann mit
+\begin{equation*}
+  m = \frac{8\pi^2m_\su{k}R_\su{k}^2}{5a}
+\end{equation*}
+berechnen. Der zugehörige Fehler wird mittels Gauß'scher Fehlerfortpflanzung
+berechnet:
+\begin{equation*}
+  \Delta m = \sqrt{\left(\frac{8\pi^2R_\su{k}^2}{5a}\right)^2\sigma_\su{m}^2 +
+  \left(\frac{16\pi^2m_\su{k}R_\su{k}}{5a}\right)^2\sigma_\su{R_k}^2 +
+  \left(\frac{-8\pi^2m_\su{k}R_\su{k}^2}{5a^2}\right)^2\sigma_\su{a}^2}
+\end{equation*}
+Somit hat das magnetische Moment einen Wert von
+\begin{equation*}
+  m = (32.8 \pm 1.03)\cdot10^{-3}\,\si{\newton\meter\per\tesla} 
+\end{equation*}
