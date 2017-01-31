@@ -41,25 +41,25 @@ Die übrigen benötigten Messgrößen sind
   R_\su{Spule} &= 78\cdot10^{-3}\mt\\
   I_\su{max,Spule} &= 1.4\Amp
 \end{align*}
-Diese lassen sich am Versuchsaufbau ablesen %Formulierung
+Diese lassen sich am Versuchsaufbau ablesen. %Formulierung
 Das Schubmodul $G$ lässt sich nun nach Formel \eqref{eq:schub} berechnen. Der
 zugehörige Fehler ergibt sich nach Gauß'scher Fehlerfortpflanzung durch:
 \begin{equation*}
   \Delta G = \sqrt{\left(\frac{-32\pi m_\su{k} R_\su{k}^2 L}{5T^3 r^4}\right)^2
   \cdot\sigma_\su{T} + \left(\frac{16\pi R_\su{k}^2L}{5T^2r^4}\right)^2\cdot
-  \sigma_\su{m_k}^2+\left(\frac{32\pi m_\su{k}R_\su{k}L}{5T^2R^4}\right)^2\cdot
+  \sigma_\su{m_k}^2+\left(\frac{32\pi m_\su{k}R_\su{k}L}{5T^2r^4}\right)^2\cdot
   \sigma_\su{R_k}^2}
 \end{equation*}
-Somit hat das Schubmodul einn Wert von
+Somit hat das Schubmodul einen Wert von
 \begin{equation*}
-  G = (6.364 \pm 0.005)\cdot10^{10}\,\si{\newton\per\square\meter}
+  G = (6.364 \pm 0.005)\cdot10^{10}\,\si{\newton\per\square\meter}.
 \end{equation*}
 \subsection{Bestimmung des magnetischen Moments}
 Tabelle \ref{tab:helm} zeigt die Periodendauern in einem homogenen B-Feld. Das
 B-Feld wird durch den anliegenden Strom reguliert.
 \input{data2.tex}
 Auch hier wird mit der gemittelten Periodendauer weiter gerechnet.
-mithilfe der Formel
+Mithilfe der Formel
 \begin{equation*}
   B=\mu_0\frac{8\cdot I\cdot N}{\sqrt{125}R_\su{Spule}}
 \end{equation*}
@@ -96,20 +96,20 @@ aufgetragen.
 \end{figure}
 Die Parameter der linearen Regression werden mit Python berechnet.
 \begin{align*}
-  a &= (0.159   \pm 0.005 )\,\si{\tesla\square\second}
+  a &= (0.159   \pm 0.005 )\,\si{\tesla\square\second} \\
   b &= (-0.00033 \pm 0.00001)\,\si{\tesla}
 \end{align*}
 Mittels Umstellen der Formel \eqref{eq:magperi} lässt sich nun das magnetische
-Moment m berechnen. $\Theta$ ist hierbei das Trägheitsmoment der Kugel, welches
+Moment $m$ berechnen. $\Theta$ ist hierbei das Trägheitsmoment der Kugel, welches
 sich mit
 \begin{equation*}
-  \Theta = \frac{2}{5}MR
+  \Theta = \frac{2}{5}MR^2
 \end{equation*}
 berechnen lässt. Das Magnetische Moment wird dann mit
 \begin{equation*}
   m = \frac{8\pi^2m_\su{k}R_\su{k}^2}{5a}
 \end{equation*}
-berechnen. Der zugehörige Fehler wird mittels Gauß'scher Fehlerfortpflanzung
+berechnet. Der zugehörige Fehler wird mittels Gauß'scher Fehlerfortpflanzung
 berechnet:
 \begin{equation*}
   \Delta m = \sqrt{\left(\frac{8\pi^2R_\su{k}^2}{5a}\right)^2\sigma_\su{m}^2 +
@@ -118,5 +118,5 @@ berechnet:
 \end{equation*}
 Somit hat das magnetische Moment einen Wert von
 \begin{equation*}
-  m = (32.8 \pm 1.03)\cdot10^{-3}\,\si{\newton\meter\per\tesla}
+  m = (32.8 \pm 1.03)\cdot10^{-3}\,\si{\newton\meter\per\tesla}.
 \end{equation*}
