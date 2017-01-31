@@ -1,7 +1,7 @@
 \subsection{Bestimmung des Schubmoduls}
 Tabelle \ref{tab:data1} zeigt die Periodendauern der Schwingungen für den ersten
-Teil des Versuchs
-\begin{table}
+Teil des Versuchs.
+\begin{table}[H!]
   \begin{tabular}{c}
     \toprule
     \su{T}\,/\,s \\
@@ -19,6 +19,24 @@ Teil des Versuchs
     \bottomrule
   \end{tabular}
   \caption{Messwerte der Periodendauer ohne Helmholtzspulen}
-  \label{}
-
+  \label{tab:data1}
 \end{table}
+Aus diesen Werten wird der Mittlwert bestimmt, mit dem die weiteren Rechnungen
+durchgeführt werden. Die gemittelte Periodendauer hat somit einen Wert von
+\begin{equation*}
+  T = (20.004 \pm 0.007)\sek
+\end{equation*}
+Der Draht besitzt die Abmessungen:
+\begin{align*}
+  L = 66.5 \cm
+  r = 0.0965 \mm
+\end{align*}
+Das Schubmodul $G$ lässt sich nun nach Formel \eqref{eq:schub} berechnen. Der
+zugehörige Fehler ergibt sich nach Gauß'scher Fehlerfortpflanzung durch:
+\begin{equation*}
+  \Delta G = \sqrt{\frac{m_\su{k} R_\su{k}^2 L}{T^3 r^4}}
+\end{equation*}
+Somit hat das Schubmodul einn Wert von
+\begin{equation*}
+  G = ( \pm )\,\si{\kilo\gram\per\square\second\meter}
+\end{equation*}
