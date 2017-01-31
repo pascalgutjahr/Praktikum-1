@@ -2,6 +2,7 @@
 Tabelle \ref{tab:data1} zeigt die Periodendauern der Schwingungen für den ersten
 Teil des Versuchs.
 \begin{table}
+  \centering
   \begin{tabular}{c}
     \toprule
     $\su{T}$\,/\,s \\
@@ -53,3 +54,47 @@ Somit hat das Schubmodul einn Wert von
 \begin{equation*}
   G = (6.364 \pm 0.005)\cdot10^{10}\,\si{\newton\per\square\meter}
 \end{equation*}
+\subsection{Bestimmung des magnetischen Moments}
+Tabelle \ref{tab:helm} zeigt die Periodendauern in einem homogenen B-Feld. Das
+B-Feld wird durch den anliegenden Strom reguliert.
+\input{data2.tex}
+Auch hier wird mit der gemittelten Periodendauer weiter gerechnet.
+mithilfe der Formel
+\begin{equation*}
+  B=\mu_0\frac{8\cdot I\cdot N}{\sqrt{125}R_\su{Spule}}
+\end{equation*}
+lässt sich das Magnetfeld zu verschiedenen Strömen berechnen \cite{bfeld}.
+Diese sind in der untenstehenden Tabelle \ref{tab:bfeld} zu sehen.
+\begin{table}
+  \centering
+  \begin{tabular}{c c}
+    \toprule
+    I\,/\,A & B\,/\,$\si{\milli\tesla}$\\
+    \midrule
+    0.1 &  0.5 \\
+    0.2 &  0.9 \\
+    0.3 &  1.4 \\
+    0.4 &  1.8 \\
+    0.5 &  2.3 \\
+    0.6 &  2.7 \\
+    0.7 &  3.2 \\
+    0.8 &  3.6 \\
+    0.9 &  4.1 \\
+    1.0 &  4.5 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Magnetfelder für verschiedene Ströme.}
+  \label{tab:bfeld}
+\end{table}
+Die Magnetfelder werden wie in Abbildung \ref{fig:Bplot} gegen $\frac{1}{T^2}$
+aufgetragen.
+\begin{figure}
+  \includegraphics{'bilder/Bplot.pdf'}
+  \caption{}
+  \label{fig:Bplot}
+\end{figure}
+Die Parameter der linearen Regression werden mit Python berechnet.
+\begin{align*}
+  a &= (0.159   \pm 0.009 )\,\si{\tesla\square\second}
+  b &= (-0.0003 \pm 0.0002)\,\si{\tesla}
+\end{align*}
