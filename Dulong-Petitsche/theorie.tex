@@ -1,77 +1,75 @@
-\subsection{Klassische Methode}
-Der Zusammenhang zwischen der Wärmemenge Q und der Temperatur T wird durch die
-Molwärme C beschrieben. Wenn ein Mol eines Stoffes um eine Temperatur $dT$
-erhöt wird, nimmt er die Wärmemenge $dQ$ auf. Daraus ergibt sich der
-Zusammenhang
+\subsection{Spezifische Wärmekapazität}
+Die Fähigkeit eines Stoffes Wärmeenergie zu speichern wird spezifische
+Wärmekapazität genannt. Sie ist durch
 \begin{equation}
-  C=ßfrac{dQ}{dT}
-  \label{eq:molwarm}
+  \Delta Q = mc\Delta T \Leftrightarrow c = \frac{\Delta Q}{m\Delta T}
 \end{equation}
-Die Gleichheit von Wärmemenge und Energie tritt ein, wenn an dem Stoff keine
-Arbeit verrichtet wird.
-Bei der Erwärmung wird unterschieden, ob diese unter gleichbleibenden
-Druckverhältnissen (isobar) oder bei konstantem Volumen (isochor) stattfindet.
-Um unterscheiden zu können, welche Größe konstant gehalten wird, erhält die
-Gleichung \eqref{eq:molwarm} passende Indizes. Sodass
+gegeben und folgt aus dem ersten Hauptsatz der Thermodynamik mit $\Delta A=0$.
+$\Delta Q$ ist hierbei die zu- bzw. abgeführte Wärmemenge, $\Delta T$ die
+Temperaturdifferenz und $m$ die Masse des Stoffs.
+\subsection{Molwärme}
+Um ein Mol eines Stoffes um $1\Kel$ zu erwärmen, wird eine Wärmemenge benötigt,
+welche auch als Molwärme C bezeichnet wird. Es muss hier zwischen der Molwärme
+bei isobaren Prozessen $C_\su{p}$ und der Molwärme bei isochoren Prozessen
+$C_\su{V}$ unterschieden werden. Letztere lässt sich mit
 \begin{equation}
-\begin{split}
-  C_\su{P}&=\biggl(\frac{dQ}{dT}\biggr)_\su{P} \\
-  C_\su{V}&=\biggl(\frac{dQ}{dT}\biggr)_\su{V}
-  \label{eq:index}
-\end{split}
+  C_\su{V}=\left(\frac{dU}{dt}\right)_\su{V}
+  \label{eq:cv}
 \end{equation}
-Der Unterschied der Molwärme bei einer isobaren Erwärmung und der Molwärme bei
-isochorer Erwärmung lässt sich mit
-\begin{equation}
-\begin{split}
-  c_\su{V}&= C_\su{P}-9\alpha^2\kappa V_0 T \\
-  &= c_\su{K}\,\cdot M - 9\alpha^2\kappa\frac{M}{\rho}T
-  \label{eq:molwarm2}
-\end{split}
-\end{equation}
-einfach berechnen. Hierbei wird betrachtet, dass sich die Molwärme über den
-Zusammenhang zwischen Wärmekapazität $c_\su{K}$ und molare Masse berechnet
-werden kann. Weiter sind $V_0$ das Molvolumen und $\alpha$ und $\kappa$
-Materialkonstanten, hinsichtlich der Volumenänderung.
+berechnen.
 
-Die spezifische Wärmekapazität ist hierbei der Proportionalitätsfaktor der
-angibt, wie sich die Wärmemenge bei einer Temeraturänderung ändert:
+nach dem Dulong-Petitsche-Gesetz beträgt die Molwärme stets $3R$, unabhängig
+vom betrachteten Stoff und der Temperatur. $R$ ist die allgemeine Gaskonstante.
+Die Begründung hierfür liegt in der klassischen Methode. Demnach wird die
+Bewegung von Atomen in einem Festkörper aufgrund der vorhandenen Gitterkräfte
+durch eine harmonische Schwingung beschrieben. Es ist:
 \begin{equation}
-  \Delta Q = mc_\su{K}\cdot\Delta T.
+  \langle u\rangle = \langle E_\su{kin}\rangle+\langle E_\su{pot}\rangle
 \end{equation}
-
-Das Dulong-Petitsche-Gesetz besagt, dass die Molwärme unabhängig von der
-Stoffeigenschaft eines Körpers immer 3 mal größer als allgemeine
-Gaskonstante $R=8,314\,\si{\joule\per\mol\kelvin}$\cite{chemie} ist.
-Nach den Methoden der klassischen Mechanik lässt sich dieser Wert berechnen,
-indem die Energien betrachtet werden, die durch wärmebedingte Bewegung der Atome
-entstehen. Diese Atome führen harmonische Schwingungen aus, da sie feste Plätze
-im Festkörper besitzen. Wird die Energiebetrachtung für harmonische Oszillatoren
-durchgeführt, lässt sich feststellen, dass kinetische und potentielle Energie
-im zeitlichen Mittel gleich groß sind. Die Gesamtenergie eines Atoms ergibt sich
-dann aus
+Mit dem Äquipartitionstheorem und Formel \eqref{eq:cv} folgt
 \begin{equation}
-  E= E_\su{kin}+E_\su{pot} = 2\,\cdot\,E_\su{kin}.
+  C_\su{V}= 3R
+  \label{eq:C3R}
 \end{equation}
-Verglichen mit dem Äquipartitionstheorem, ergibt sich für die Gesamtenergie
-$k_\su{B}T$. Wobei $k_\su{B}$ die Boltzmann-Konstante ist.
-Betrachtet man alle Atome und den Fakt, dass jedes Atom sich in 3 Raumrichtungen
-bewegen kann, ergibt sich nach Gleichung \eqref{eq:molwarm} die Formeln
+In der Quantenmechanik sind die möglichen Energieänderungen des harmonischen
+Oszillators durch
 \begin{equation}
-  E=3RT\quad\text{bzw.}\quad C_\su{V}=3R
+  \Delta U =n\hbar\omega
 \end{equation}
-\subsection{quantenmechanische Methode}
-Es ist auffällig, dass die Molwärme bei niedrigen Temperaturen nicht mehr den
-zuvor hergeleiteten Wert 3R annimmt. Die Erklärung folgt aus der Quantenmechanik
-. Ein Atom, welches mit einer Frequenz $\omega$ oszilliert, kann nur Energien von
-bestimmten Größen
+beschrieben. Über die Boltzmann-Statistik ergibt sich der Zusammenhang
 \begin{equation}
-  \Delta E = n\cdot\hbar\cdot\omega
+  \langle U_\su{qu}\rangle = \frac{3N_\su{L}\hbar\omega}{\exp{\left(\frac{\hbar
+  \omega}{kT}\right)}-1}
+  \label{eq:quant}
 \end{equation}
-aufnehmen oder abgeben. Der Zusammenhang ergibt sich dann durch
+Der angezeigte Wert aus Formel \eqref{eq:C3R} ist ein Grenzfall der
+quantenmechanischen Beschreibung aus \eqref{eq:quant} für hohe Temperaturen.
+Dieser Fall wird schneller erreicht je größer die Atommasse des Stoffes ist.
+\subsection{Messung der spezfischen Wärmekapazität}
+Da die Umsetzung für konstantes Volumen schwierig umzusetzen ist, wird der
+Versuch bei konstantem Druck durchgeführt. Hierbei gilt der Zusammenhang
 \begin{equation}
-  E=\frac{3N_\su{A}\hbar\omega}{\exp[\frac{\hbar\omega}{kT}]-1},
+  C_\su{k} = C_\su{p}-9\alpha^2\kappa V_0T
 \end{equation}
-mit $N_\su{A}$ als Avogadrokonstante. Im Fall $kT\gg\hbar\omega$ strebt die
-Energie erneut gegen $3R$. Für kleine Massen ist dies wegen $\omega\propto
-\frac{1}{\sqrt{m}}$ erst bei hohen Temperaturen erfüllt.
+mit $\alpha$ als linearer Ausdehnungskoeffizient, $\kappa$ das Kompressionsmodul
+, $V_0$ das Molvolumen und $T$ die absolute Temperatur. Die spezifische
+Wärmekapazität $c_\su{g}m_\su{g}$ wird über Mischkalometrie bestimmt.
+Hierfür wird die Wärmemenge vom warmen Wasser
+\begin{equation}
+  Q_\su{w}=c_\su{w}m_\su{y}(T_\su{y}-T)
+\end{equation}
+mit der vom kalten Wasser und der vom Kalorimeter aufgenommenen Wärme
+\begin{equation}
+  Q_\su{k+K}=(c_\su{w}m_\su{x}+c_\su{g}m_\su{g})(T_\su{m}-T_\su{x})
+\end{equation}
+gleichgesetzt und nach $c_\su{g}m_\su{g}$ umgestellt.
+\begin{equation}
+  c_\su{g}m_\su{g}=\frac{c_\su{w}m_\su{y}(T_\su{y}-T_\su{m})-c_\su{w}m_\su{x}
+  (T_\su{m}-T_\su{w})}{(T_\su{m}-T_\su{x})}
+\end{equation}
+Die Wärmekapazität der Proben wird ähnlich bestimmt, jedoch wird die
+Mischtemperatur der Probe und Wasser bestimmt wird. Es gilt:
+\begin{equation}
+  c_\su{k}=\frac{(c_\su{w}m_\su{w}+c_\su{g}m_\su{g})(T_\su{m}-T_\su{w})}
+  {m_\su{k}(T_\su{k}-T_\su{w})}
+\end{equation}
