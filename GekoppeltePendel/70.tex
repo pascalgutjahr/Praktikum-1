@@ -40,12 +40,12 @@ T_\su{rechts}&=(1.63\pm0.01)\sek
 für die Schwingdauer der einzelnen Pendel. Nun werden die Pendel mit einer Feder
 verbunden und in eine gleichsinnige Schwingung versetzt. Die gemessenen Werte
 sind ebenfalls in Tabelle \ref{tab:70cm} zu sehen. Der experimentell bestimmte
-Wert beträgt
+Wert beträgt im Mittel
 \begin{equation*}
   T_\su{+, exp}=(1.61\pm0.02)\sek.
 \end{equation*}
 Dieser wird mit dem theoretischen Wert, welcher sich nach Formel \eqref{eqn:T+}
-berechnen lässt verglichen. Der theoretische Wert für die gleichsinnige Schwinung
+berechnen lässt verglichen. Der theoretische Wert für die gleichsinnige Schwingung
 liegt bei
 \begin{equation*}
   T_\su{+, theo}=1.68\sek.
@@ -57,20 +57,26 @@ berechnen lässt, muss für den experimentellen Wert die Formel
   \su{\omega}=\frac{2\pi}{T_\su{+, exp}}
   \label{eqn:wexp}
 \end{equation}
-angewendet werden. $K$ wird hierbei mit den experimentell ermittelten Werten nach
-Formel \eqref{eqn:K} berechnet. Der Fehler auf die Frequenz berechnet sich nach
+angewendet werden.
+Der Fehler auf die Frequenz berechnet sich nach
 Gauß'scher Fehlerfortpflanzung mit der Formel
 \begin{equation}
   \Delta\omega=\sqrt{\biggl(-\frac{2\pi}{T^2}\biggr)^2\cdot\sigma_\su{T}^2}.
 \end{equation}
-Die Werte die sich dann berechnen lassen liegen bei
+Die Werte die sich dann nach Formel \eqref{eqn:w+} berechnen lassen liegen bei
 \begin{align*}
   \omega_\su{+,exp}  &= (3.90 \pm 0.08)\Hz \\
   \omega_\su{+,theo} &= 3.74\Hz
 \end{align*}
 Als nächstes werden die Pendel gegensinnig ausgelenkt. Die Werte für die
-Schwingungsdauer und -frequenz werden analog berechnet. Somit erhält man für die
-Schwingungsdauer
+Schwingungsdauer und -frequenz werden analog nach Formel \eqref{eqn:T-}
+und Formel \eqref{eqn:w-} berechnet. Die Kopplungskonstante $K$ wird hierbei mit
+den experimentell
+ermittelten Werten nach Formel \eqref{eqn:K} berechnet und hat einen Wert von
+\begin{equation*}
+  K = 0.2\,.
+\end{equation*}
+Somit erhält man für die Schwingungsdauer
 \begin{align*}
   T_\su{-, exp} &= (1.31\pm0.02)\sek \\
   T_\su{-, theo} &= 1.65\sek
@@ -80,12 +86,12 @@ und für die Schwingungsfrequenz
   \omega_\su{-, exp}  &= (4.80 \pm 0.04)\Hz \\
   \omega_\su{-, theo} &= 3.82\Hz.
 \end{align*}
-
 Abschließend wird eine gekoppelte Schwingung erzeugt. Nun wird die
 Schwebungsdauer und die Schwebungsfrequenz ermittelt und verglichen. Um die
 Schwebungsdauer zu ermitteln, wird die Zeit eines Pendels von Ruhelage zu
 Ruhelage gemessen. Auch dieser Wert wird gemittelt, jedoch nicht faktorisiert.
-Der theoretische Wert wird mit Formel \eqref{eqn:Ts} berechnet. Somit ergeben
+Der theoretische Wert wird mit Formel \eqref{eqn:Ts} bzw. \eqref{eqn:ws} berechnet.
+Somit ergeben
 sich die Werte
 \begin{align*}
   T_\su{S, exp} &= (7.9\pm0.3)\sek \\
@@ -99,3 +105,8 @@ für die Schwebungsdauer und
   % negative Frequenz???
 \end{align*}
 für die Schwebungsfrequenz.
+
+Da mehrere Schwingungsdauern experimentell gemessen wurden, wurde hier jeweils
+der Mittelwert der Periodendauer bestimmt. Der gemittelte Wert ist Grundlage für
+die Berechnung der Schwingungsfrequenz, welche nach Formel \eqref{eqn:wexp}
+berechnet wurde.
