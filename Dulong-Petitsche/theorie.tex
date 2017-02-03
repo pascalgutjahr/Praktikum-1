@@ -50,6 +50,7 @@ Da die Umsetzung für konstantes Volumen schwierig umzusetzen ist, wird der
 Versuch bei konstantem Druck durchgeführt. Hierbei gilt der Zusammenhang
 \begin{equation}
   C_\su{k} = C_\su{p}-9\alpha^2\kappa V_0T
+  \label{eq:mol}
 \end{equation}
 mit $\alpha$ als linearer Ausdehnungskoeffizient, $\kappa$ das Kompressionsmodul
 , $V_0$ das Molvolumen und $T$ die absolute Temperatur. Die spezifische
@@ -60,16 +61,18 @@ Hierfür wird die Wärmemenge vom warmen Wasser
 \end{equation}
 mit der vom kalten Wasser und der vom Kalorimeter aufgenommenen Wärme
 \begin{equation}
-  Q_\su{k+K}=(c_\su{w}m_\su{x}+c_\su{g}m_\su{g})(T_\su{m}-T_\su{x})
+  Q_\su{kalt+Kalometrie}=(c_\su{w}m_\su{x}+c_\su{g}m_\su{g})(T_\su{m}-T_\su{x})
 \end{equation}
 gleichgesetzt und nach $c_\su{g}m_\su{g}$ umgestellt.
 \begin{equation}
   c_\su{g}m_\su{g}=\frac{c_\su{w}m_\su{y}(T_\su{y}-T_\su{m})-c_\su{w}m_\su{x}
   (T_\su{m}-T_\su{w})}{(T_\su{m}-T_\su{x})}
+  \label{eq:kalo}
 \end{equation}
 Die Wärmekapazität der Proben wird ähnlich bestimmt, jedoch wird die
 Mischtemperatur der Probe und Wasser bestimmt wird. Es gilt:
 \begin{equation}
   c_\su{k}=\frac{(c_\su{w}m_\su{w}+c_\su{g}m_\su{g})(T_\su{m}-T_\su{w})}
   {m_\su{k}(T_\su{k}-T_\su{w})}
+  \label{eq:probe}
 \end{equation}
