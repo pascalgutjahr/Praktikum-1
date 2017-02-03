@@ -1,0 +1,108 @@
+\subsection{Spezifische Wärmekapazität des Kalorimeters}
+Zunächst soll die spezifische Wärmekapazität des Kalorimeters nach Formel
+\eqref{eq:kalo} bestimmt werden. Hierfür werden die Messwerte der Tabelle
+\ref{tab:kalo} benötigt.
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c c c}
+    \toprule
+    $m_\su{x}\,/\gr$ & $T_\su{x}\,/\Kel$ & $m_\su{y}\,/\gr$ & $T_\su{y}\,/\Kel$
+    & $T_\su{M}$ & $c_\su{Km}\,/\si{\joule\per\gram\kelvin}$ \\
+    \midrule
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte zur Bestimmung der Wärmekapazität}
+  \label{tab:kalo}
+\end{table}
+Der gemittelte Wert für die spezifische Wärmekapazität beträgt dann
+\begin{equation*}
+  c_\su{g}m_\su{g} = (\pm)\,\si{\joule\per\kelvin}
+\end{equation*}
+Der dazugehörige Fehler berechnet sich über die Standardabweichung.
+\subsection{Spezifische Wärmekapazität der Proben}
+Die spezifische Wärmekapazität wird mittels Formel \eqref{eq:probe} berechnet.
+Die gemessenen Werte für Blei sind in der untenstehenden Tabelle \ref{tab:pb}
+zu sehen.
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c c}
+    \toprule
+    $m_\su{Pb}\,/\gr$ & $T_\su{Pb}\,/\Kel$ & $m_\su{K}\,/\gr$ & $T_\su{K}\,/\Kel
+    $ & $T_\su_{M}\,/\Kel$\\
+    \midrule
+    \bottomrule
+  \end{tabular}
+  \caption{Messwerte Blei}
+  \label{tab:pb}
+\end{table}
+Aus diesen Werten ergibt sich eine Mittlere Wärmekapazität von
+\begin{equation*}
+  c_\su{Pb}=(\pm)\,\si{\joule\per\kelvin}
+\end{equation*}
+Der Fehler ergibt sich auch hier aus der Standardabweichung.
+
+Die aufgenommenen Werte für Aluminium und Graphit sind in Tabelle \ref{tab:alug}
+zu finden.
+\begin{table}
+  \begin{tabular}{c c c}
+    \toprule
+    \hbarfill & Aluminium & Graphit \\
+    \midrule
+    $m_\su{Probe}\,/\gr$ &
+    $T_\su{Probe}\,/\Kel$&
+    $m_\su{Kalo}\,/\gr$  &
+    $T_\su{Kalo}\,/\Kel$ &
+    $T_\su{M}\,/\Kel$    &
+  \end{tabular}
+  \caption{Messwerte fpr Aluminium und Graphit}
+  \label{\tab:alug}
+\end{table}
+Daraus ergeben sich die folgenden Wärmekapazitäten:
+\begin{align*}
+  c_\su{alu} &= (\pm)\,\si{\jouler\per\kelvin} \\
+  c_\su{Gr}  &= (\pm)\,\si{\jouler\per\kelvin}
+\end{align*}
+Die Formel für den Fehler ergibt sich mit
+% \begin{equation}
+% \Delta c_\su{k} = \sqrt{\left(\frac{(T_\su{m}-T_\su{w})}{m_\su{k
+% (T_\su{k}-T_\su{w})}}\right)^2*\sigma_\su{Kalorimeter}^2}
+% \end{equation}
+aus der Gauß'schen Fehlerfortpflanzung.
+\subsection{Molwärme der Proben}
+Die Molwärme der Proben wird mit Formel \eqref{eq:mol} und der Umstellung
+\begin{equation}
+  V=\frac{M}{\rho}
+\end{equation}
+berechnet. Werte für $M$, $\alpha$, $\rho$ und $\kappa$ sind aus der Anleitung
+\cite{201} entnommen und in Tabelle \ref{tab:mol} aufgeführt.
+\begin{table}
+  \centering
+  \begin{tabular}{c | c c c c}
+    \toprule
+    Probe & $M\,/\,\si{\gram\per\mol}$&$\alpha\,/\,\si{1\per\kelvin}$
+    &$\kappa\,/\,\si{\newton\per\meter}$&$\rho\,/\,\si{\kilo\gram\per\cubic
+    \meter}$ \\
+    \midrule
+    Blei
+    Aluminium
+    Graphit
+    \bottomrule
+  \end{tabular}
+  \caption{Werte der Proben}
+  \label{tab:mol}
+\end{table}
+Mit der Mischtemperaturen aus den Tabellen \ref{tab:pb} und \ref{tab:alug}
+ergibt sich für Blei eine mittlere Molwärme von
+\begin{equation*}
+  C_\su{Pb}= (\pm)\,si{\joule\per\mol}
+\end{equation*}
+und für Aluminium und Graphit
+\begin{align*}
+  C_\su{Alu} &= (\pm)\,\si{\joule\per\mol}
+  C_\su{Gra} &= (\pm)\,\si{\joule\per\mol}
+\end{align*}
+Für diese beiden Proben wird der Fehler mit 
+\begin{equation*}
+  \Delta C_\su{k}=\sqrt{M^2\sigma_\su{c_k}^2}
+\end{equation*}
+berechnet
