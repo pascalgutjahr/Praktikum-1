@@ -2,18 +2,18 @@
   \centering
   \begin{tabular}{c c c c}
     \toprule
-    Körper & $c_\su{ermittelt}\,/\,\si{\joule\per\gram\per\kelvin}$ &
-    $c_\su{Literatur}\,/\,\si{\joule\per\gram\per\kelvin}$\cite{bleialu} & $\text{Abweichung in}\,\%$ \\
+    Körper & $c_\su{ermittelt}\,/\,\si{\joule\per\kilo\gram\per\kelvin}$ &
+    $c_\su{Literatur}\,/\,\si{\joule\per\kilo\gram\kelvin}$\cite{bleialu} & $\text{Abweichung in}\,\%$ \\
     \midrule
-    Alu & 1.010 & 0.896 & 22.9 \\
-    Blei & 0.242 & 0.129 & 87.6 \\
-    Graphit & 1.349 & 0.715 & 88.7 \\
+    Alu & 1000.12 & 896 & 11.6 \\
+    Blei & 233.2 & 129 & 80.7\\
+    Graphit & 1335.5 & 715 & 86.7 \\
     \bottomrule
   \end{tabular}
   \caption{Abweichung der spezifischen Wärmekapazität}
 \end{table}
 Die Wärmekapazität von Aluminium\cite{bleilu} stimmt ungefähr mit den Literaturwerten überein,
-jedoch weichen Blei\cite{bleialu} und Graphit \cite{graphit} sehr stark ab.
+jedoch weichen Blei \cite{bleialu} und Graphit \cite{graphit} sehr stark ab.
 Dies liegt unter anderem daran,
 dass wir angenommen haben, dass wir das Material auf $100\,\si{\celsius}$ erhitzen,
 wir haben jedoch nicht nachgemessen, ob der Körper diese Temperatur erreicht hat.
@@ -27,15 +27,17 @@ nicht lange genug erhitzt haben.
     Körper & $C_\su{ermittelt}\,/\,\si{\joule\per\mol\per\kelvin}$ &
     $C_\su{3R}\,/\,\si{\joule\per\mol\per\kelvin}$ & $\text{Abweichung in} \,\%$ \\
     \midrule
-    Alu & 27.2 & 24.94 & 9.1 \\
-    Blei & 50.1 & 24.94 & 100.1 \\
-    Graphit & 16.2 & 24.94 & 35.0 \\
+    Alu & 27 & 24.94 & 8.3 \\
+    Blei & 48.31 & 24.94 & 93.7 \\
+    Graphit & 16.0 & 24.94 & 34.6 \\
     \bottomrule
   \end{tabular}
   \caption{Abweichung der Molwärme}
 \end{table}
-Das Dulong-Petitsche-Gesetz besagt, dass die Molwärme $ C = 3 R = 24.94 \,\si{\joule\per\mol\per\kelvin}$
-beträgt\,\cite{chemie}. Bei Aluminium stimmt diese ungefähr mit den experimentell
+Das Dulong-Petitsche-Gesetz besagt, dass die Molwärme unabhängig von Material und
+Volumen immer dreimal die Gaskonstante $R$ \cite{chemie}, also
+$ C = 24.94 \,\si{\joule\per\mol\per\kelvin}$
+beträgt. Bei Aluminium stimmt diese ungefähr mit den experimentell
 ermittelten Werten überein, bei Graphit ist die Abweichung im Rahmen der Messungenauigkeiten
 auch noch in Ordnung, jedoch weicht sie bei Blei deutlich zu stark ab. Auffällig ist hierbei,
 dass die Abweichungen eigentlich genau andersherum verteilt sein müssten, da dass Gesetz
