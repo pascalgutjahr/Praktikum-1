@@ -1,9 +1,9 @@
-all: build/lockin.pdf /
+all: build/roentgen.pdf /
 
-build/lockin.pdf: lockin.tex | build
-	lualatex --output-directory=build lockin.tex
-	biber --output-directory=build lockin.bcf
-	lualatex --output-directory=build lockin.tex
+build/roentgen.pdf: roentgen.tex | build
+	lualatex --output-directory=build roentgen.tex
+	biber --output-directory=build roentgen.bcf
+	lualatex --output-directory=build roentgen.tex
 
 
 build:

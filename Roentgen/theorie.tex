@@ -21,4 +21,69 @@ umgewandelt.
 Beim charakteristischen Spektrum wird das Anodenmaterial ionisiert, sodass
 eine Leerstelle in der inneren Schale entsteht. Ein Elektron aus einer äußeren
 Schale kann nun  unter Aussendung eines Röntgenquants in eine der inneren
-Schalen zurückfallen.  
+Schalen zurückfallen. Die Energie des Quants entspricht dabei der
+Energiedifferenz der beiden Energieniveaus.
+Die Energiedifferenz wird mit Formel \eqref{Equant} berechnet.
+\begin{equation}
+  h\nu = E_\su{m}-E_\su{n}
+  \label{Equant}
+\end{equation}
+In diesem Fall besteht das Spektrum aus scharfen Linien, welche mit $K_\su{\alpha}
+$, $K_\su{\beta}$ etc. bezeichnet werden. Die Buchstaben stehen hierbei für die
+Schale, auf der die Übergänge enden, während die griechischen Buchstaben die
+Herkunft des Elektrons bezeichnen.
+
+In einem Mehrelektronenatom wird die Kernladung von den Hüllenelektronen und
+der Wechselwirkung der Elektronen abgeschirmt was dazu führt, dass die
+Coulomb-Anziehung auf das Elektron verringert wird. Die Bindungsenergie eines
+Elektrons auf der n-ten Schale berechnet sich dann mit
+\begin{equation}
+  E_\su{n}=-R_\su{\infty}z_\su{eff}^2\cdot \frac{1}{n^2}.
+  \label{En}
+\end{equation}
+Der Abschirmeffekt wird durch die effektive Kernladung
+\begin{equation*}
+  z_\su{eff}=z-\sigma
+\end{equation*}
+berücksichichtigt. Die Abschirmkonstante $\sigma$ ist für hedes Elektron
+verschieden, aber empirisch bestimmbar.
+Unter Anwendung von Formel \eqref{En} lässt sich die Energie der $K_\su{\alpha}$-
+Linie mit
+\begin{equation}
+  E_\su{K_\su{\alpha}}=R_\su{\infty}(z-\sigma_1)^2\cdot\frac{1}{1^2}
+  -R_\su{\infty}(z-\sigma_2)^2\cdot\frac{1}{2^2}
+  \label{EKAlpha}
+\end{equation}
+berechnen. Jede charakteristische Linie wird in eine Reihe von eng beieinander
+liegenden Linien aufgelöst, da die äußeren Elektronen unterschiedliche
+Bindungsenergien besitzen.
+\subsection{Absorption von Röntgenstrahlung}
+Bei Röntgenstrahlung unter $1 \,\si{\mega\electronvolt}$ spielen der Comptoneffekt
+und der Photoeffekt eine dominante Rolle.
+Mit zunehmender Energie nimmt der Absobtionskoeffizient ab und nimmt
+sprunghaft zu, wenn die Photonenenergie gerade größer ist als die Bindungsenergie
+eines Elektrons aus der nächsten inneren Schale.
+Der Verlauf der Absorption ist beispielhaft in Abbildung \ref{fig:absorb} zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/absorb.pdf}
+  \caption{Verlauf der Absorption\cite{V602}}
+  \label{fig:absorb}
+\end{figure}
+Die Lage der Absorptionskanten
+\begin{equation*}
+  h\nu_\su{abs} = E_\su{n} - E_\su{\infty}
+\end{equation*}
+ist nahezu identisch mit der Bindungsenergie eines Elektrons. Die zugehörigen
+Energien werden je nach der Schale aus der das Elektron stammt als jeweilige
+Absorptionskante bezeichnet. %verständlich?
+Wegen der Feinstruktur lassen sich 3 L-Kanten, aber nur eine K-Kante beobachten.
+Die Bindungsenergie unter berücksichtigung der Feinstruktur wird mit der
+Sommerfeldschen Feinstrukturformel
+\begin{equation}
+  EW_\su{n, j}=R_\su{\infty}\left(z_\su{eff,1}^2\cdot\frac{1}{n^2}
+  +\alpha^2 z_\su{eff,2}^4\cdot\frac{1}{n^3}\left(\frac{1}{j+\frac{1}{2}}-
+  \frac{3}{4n}\right)\right)
+  \label{sommerfeld}
+\end{equation}
+berechnen.
