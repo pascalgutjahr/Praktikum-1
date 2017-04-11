@@ -28,7 +28,7 @@ Kerndrehimpuls zusammen:
 \begin{equation}
   \vec{J} = \vec{L} + \vec{S}
 \end{equation}
-, mit $\vec{L} = \sum \vec{l_\su{i}}$ und $\vec{S} = \sum \vec{s_\su{i}}$.
+, mit $\vec{L} = \sum \vec{\ell_\su{i}}$ und $\vec{S} = \sum \vec{s_\su{i}}$.
 Der Kerndrehimpuls wird hier nicht weiter betrachtet,
 da er sich nur in sehr starken äußeren Magnetfeldern bemerkbar macht.
 
@@ -81,7 +81,31 @@ zwischen der Richtung des äußeren Magnetfeldes und der Lage von $\vec{\mu_\su{
 möglich sind, bei denen die z-Komponente von $\vec{\mu_\su{J}}$ in Feldrichtung
 ein ganzzahliges Vielfaches von $\mu_\su{B}g_\su{J}$ ist, also
 \begin{equation}
-  \mu_\su{J_\su{z}} = -\mu_\su{B}g_\su{J}\cdot m.
+  \mu_\su{J_\su{z}} = -\mu_\su{B}g_\su{J}\cdot m. \label{eqn:ori}
 \end{equation}
 $m$ ist die ganzzahlige Orientierungsquantezahl. Es gibt genau $2J+1$
-Einstellmöglichkeiten.
+Einstellmöglichkeiten. Zu jeder dieser Einstellmöglichkeit gehört auch eine
+potentielle Energie. Die Aufspaltung eines Energieniveaus in $2J+1$ Unterniveaus
+beim Anlegen eines Feldes wird als Zeeman-Effekt bezeichnet.
+Nun kann die Magnetisierung mit \eqref{eqn:ori} berechnent werden. Dazu werden
+die Häufigkeiten mit denen ein gewisse Orientierung auftritt mit den dazugehörigen
+Beträgen multipliziert und dann aufsummiert. Nach mehreren Umformungen ergibt
+sich für die paramagnetische Suszeptibilität:
+\begin{equation}
+  \chi = \frac{\mu_0 \mu_\su{B}^2 g_\su{J}^2 N J(J+1)}{3kT}
+\end{equation}
+, mit $N$ als Anzahl der Momente pro Volumeneinheit, $k$ der Boltzmann-Konstanten
+ und $T$ der Temperatur. Somit ist $/chi \propto \sfrac{1}{T}$. Dies wird als Curiesches
+ Gesetz des Paramagnetismus bezeichnet.
+
+ Besonders gut lässt sich der Paramagnetismus bei Seltenerdmetallen beobachten,
+ da diese große Drehimpulse besitzen, welche von inneren Elektronen erzeugt werden,
+ hauptsächlich von denen der 4f-Schale. Die Hundschen Regeln legen dabei die
+ Anordnung und den Gesamtdrehimpuls $\vec{J}$ fest.
+ \begin{itemize}
+   \item $\vec{S} = \sum \vec{s_\su{i}}$ unter Berücksichtigung des
+   Pauli-Prinzips \\
+   \item Der maximale Drehimpuls $\vec{L} = \sum \vec{\ell_\su{i}}$ entsteht \\
+   \item $\vec{J} = \vec{L}-\vec{S}$, wenn die Schale weniger als halb,
+   $\vec{J}= \vec{L}+\vec{S}$, wenn die Schale mehr als halb gefüllt ist \\
+ \end{itemize}
