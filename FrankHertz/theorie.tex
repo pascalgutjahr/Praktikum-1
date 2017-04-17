@@ -88,3 +88,77 @@ Der Abstand zweier Maxima $U_1$ ist gleich dem ersten Anregungspotential
   U_1:=\frac{1}{e_0}(E_1-E_0)
 \end{equation*}
 des Quecksilber-Atoms.
+Die tatsächliche Gestalt der Franck-Hertz-Kurve aus Abbildung \ref{fig:kurve}
+wird von verschiedenen Nebeneffekten beeinflusst.
+
+Da das tatsächliche beschleunigungspotential sich von $U_\su{B}$ unterscheidet
+besitzen die Elektroden verschiedene Austrittsarbeiten für Elektronen.
+Um schon bei niedriger Temperatur eine hohe Emissionsrate zu erhalten, mus die
+Austrittsarbeit des Drahts $\Phi_\su{G}$ viel kleiner sein als die
+Austrittsarbeit der Beschleunigungselektrode $\Phi_\su{B}$ sein.
+Abbildung \ref{fig:pot} zeigt die Potentialverhältnisse die sich zwischen beiden
+Elektroden ergeben
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/potential.pdf}
+  \caption{Potentialverhältnisse zwischen Glühkathode und Beschleunigungselektrode
+  \cite{601}}
+  \label{fig:pot}
+\end{figure}
+Nach dieser Abbildung berechnet sich das tatsächliche Beschleunigungspotential
+mittels
+\begin{equation}
+  U_\su{B,eff}=U_\su{B}-\frac{1}{e_0}(\Phi_\su{B}-\Phi_\su{G}).
+\end{equation}
+Das Kontaktpotential
+\begin{equation}
+  K:= \frac{1}{e_0}(\Phi_\su{B}-\Phi_\su{G})
+\end{equation}
+gibt die Verschiebung der Franck-Hertz-Kurve an.
+
+Desweiteren wurde bisher angenommen, dass die Elektronen nach durchlaufen des
+Beschleunigungsraums alle die eine einheitliche Energie besitzen. Da die
+Leitungselektronen bereits ein Potential besitzen, treten sie bei der
+Glühemission mit unterschiedlichen Anfangsgeschwindigkeiten aus. Nach dem
+Durchlaufen des Beschleunigerpotentials $U_\su{B,eff}$ besitzen sie eine
+Energieverteilung die bei $U_\su{B}$ beginnt und sich kontinuierlich zu
+höheren Energien erstreckt. Das führt dazu, dass sich der Ort der elastischen
+Stöße über einen unendlichen Einsatzbereich erstrecken. Die Franck-Hertz-Kurve
+fällt nun nicht mehr auf einen Wert von 0 zurück sondern nähert sich einem
+Stromminimum an. Die elastischen Stöße führen zu einer Abflachung und Verbreiterung
+der Kurve, sofern sie zwischen den beiden Elektroden stattfinden.
+
+Ein weiterer Nebeneffekt, der die Kruve beeinflusst, ist der Dampfdruck.
+Generell notwendig für die Beobachtung einer Franck-Hertz-Kurve sind die
+Zusammenstöße zwischen Elektronen und Hg-Atomen. Damit diese in merklichem Maße
+auftreten, muss die mittlere Weglänge $\bar w$ sehr klein gegen den Abstand $a$
+zwischen Kathode und Beschleunigungselektrode sein. Die Weglänge kann über
+den Sättigungsdruck eingestellt werden. Aus der kinetischen Gastheorie folgt der
+Zusammenhang
+\begin{equation}
+  \bar w = \frac{0.0029}{\su{p_sät}}.
+\end{equation}
+
+\begin{figure}
+  \centering
+  \includegraphics[height=0.8\textwidth]{bilder/dampf.pdf}
+  \caption{Dampfdruckkurve von Quecksilber\cite{601}}
+  \label{fig:dampf}
+\end{figure}
+Die in Abbildung \ref{fig:dampf} gezeigte Dampfdruckkurve von Quecksilber
+wurde mit
+\begin{equation}
+  \su{p_sät(T)=5.5\,\cdot10^{-7}\,\exp^{-6876/T}}
+\end{equation}
+berechnet. Somit lässt sich eine Temperatur bestimmen, bei der der
+Franck-Hertz-Effekt auftritt. Damit eine ausreichende Stoßwahrscheinlichkeit
+gegeben ist, muss $\bar w$ um den Faktor 1000 bis 4000 kleiner sein als $a$
+sein.
+Somit gibt es einen Dampfdruckbereich bei dem die Apparatur optimal arbeitet.
+Wird dieser unterschritten, steigt die Wahrscheinlichkeit, dass die Elektronen
+keine Wechselwirkung erfahren.
+Ist die Elektronenenergie bei ausreichend hoher Spannung größer als $E_1-E_0$,
+können die Hg-Atome in höhere Niveaus angeregt werden.
+ist der Sättigungsdruck zu groß, treten zu viele elastische Stöße auf und die Zahl
+der Elektronen nimmt stark ab.
+\subsection{Aufbau der Hg-Elektronenhülle}
