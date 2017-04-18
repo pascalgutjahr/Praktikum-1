@@ -1,9 +1,12 @@
+In Tabelle \ref{tab:info} sind die Literaturwerte zu den hier verwendeten
+Elementen einzusehen. Die Glanzwinkel $\Theta$ berechnen sich nach Formel
+\eqref{eqn:bragg} mit $E=h\cdot c / \lambda$.
 \begin{table}
   \centering
   \begin{tabular}{c c c c c}
     \toprule
     $\su{Metall}$  & $\su{Ordnungszahl} \,\, \su{Z}$ &
-    $E^\su{Lit}_\su{K} \,/\, \keV$ & $\theta^\su{Lit}_\su{K}\,/\,\si{degree}$ & $\sigma^\su{K}$ \\
+    $E^\su{Lit}_\su{K} \,/\, \keV$ & $\theta^\su{Lit}_\su{K}\,/\,\si{\degree}$ & $\sigma^\su{K}$ \\
     \midrule
      Zn & 30 & 9.65 & 18.6 &  \\
      Ge & 32 & 11.11 & 16.1 &  \\
@@ -17,45 +20,88 @@
   \caption{Literaturwerte der Metalle \cite{Elit},\,\cite{KAu}}
   \label{tab:info}
 \end{table}
+Zu Beginn wird die Bragg-Bedingung überprüft. Der Graph in Abbildung \ref{fig:Bragg3}
+lässt einen Glanzwinkel von ca. $2\Theta = 26.8 \,\si{\degree}$ erkennen. Dies stimmt mit
+dem eingestellten Kristallwinkel von $\Theta = 14\,\si{\degree}$ ungefähr überein,
+wodurch die Bragg-Bedingung bestätigt wird.
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width=0.5\textwidth, angle=270]{bilder/Bragg3.pdf}
+  \caption{Überprüfung der Bragg-Bedingung}
+  \label{fig:Bragg3}
+\end{figure}
+Anschließend wird das Emissionssprektrum der Cu-Röntgenröhre untersucht.
+Dieses Spektrum ist in Abb. \ref{fig:EmissionCu} zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth, angle=270]{bilder/EmissionCu.pdf}
+  \caption{Emissionspektrum der Cu-Röntgenröhre}
+  \label{fig:EmissionCu}
+\end{figure}
+Der vordere Peak steht für die $K_\su{\alpha}$ und der hintere für die $K_\su{\beta}$
+Linie. Die Halbwertsbreite, bei der die Intensität auf die Hälfte abgesunken ist,
+der $\alpha$-Linie läuft von $\Theta = 19.5\,\si{\degree}$ bis $\Theta = 20.1\deg$.
+Die der $\beta$-Linie läuft von $\Theta = 21.9\deg$ bis $\Theta = 22.3\deg$.
+Die Energien ergeben sich damit zu
+\begin{align}
+  E_\su{\Theta_1, \alpha} &= 10.23 \keV \\
+  E_\su{\Theta_2, \alpha} &= 9.93 \keV \\
+  E_\su{\Theta_1, \alpha} &= 9.14 \keV \\
+  E_\su{\Theta_2, \alpha} &= 8.00 \keV. \\
+\end{align}
+Das Auflösungsvermögen berechnet sich durch die Differenz der jeweiligen Energien,
+also
+\begin{equation}
+  \Delta E = E_2 - E_1.
+\end{equation}
+Damit folgt
+\begin{align}
+  \Delta E_\su{\alpha} &= 0.30 \keV  \\
+  \Delta E_\su{\beta} &= 0.15 \keV. \\
+\end{align}
+
+
+
+
 
 \begin{figure}
   \centering
-  \includegraphics[width=10cm]{bilder/AbsorpZn.pdf}
+  \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpZn.pdf}
   \caption{Absorptionsspektrum von Zink}
   \label{fig:Zink}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=10cm]{bilder/AbsorpGe.pdf}
+  \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpGe.pdf}
   \caption{Absorptionsspektrum von Germanium}
   \label{fig:Germanium}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=10cm]{bilder/AbsorpBr.pdf}
+  \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpBr.pdf}
   \caption{Absorptionsspektrum von Brom}
   \label{fig:Brom}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=10cm]{bilder/AbsorpSr.pdf}
+  \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpSr.pdf}
   \caption{Absorptionsspektrum von Strontium}
   \label{fig:Strontium}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=10cm]{bilder/AbsorpZr.pdf}
+  \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpZr.pdf}
   \caption{Absorptionsspektrum von Zirkonium}
   \label{fig:Zirkonium}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=10cm]{bilder/AbsorpAu.pdf}
+  \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpAu.pdf}
   \caption{Absorptionsspektrum von Aurum}
   \label{fig:Aurum}
 \end{figure}
