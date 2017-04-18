@@ -8,11 +8,11 @@ Elementen einzusehen. Die Glanzwinkel $\Theta$ berechnen sich nach Formel
     $\su{Metall}$  & $\su{Ordnungszahl} \,\, \su{Z}$ &
     $E^\su{Lit}_\su{K} \,/\, \keV$ & $\theta^\su{Lit}_\su{K}\,/\,\si{\degree}$ & $\sigma^\su{K}$ \\
     \midrule
-     Zn & 30 & 9.65 & 18.6 &  \\
-     Ge & 32 & 11.11 & 16.1 &  \\
-     Br & 35 & 13.47 & 13.2 &  \\
-     Sr & 38 & 16.10 & 11.0 &  \\
-     Zr & 40 & 17.09 & 9.0 &  \\
+     Zn & 30 & 9.65 & 18.6 & 2.37 \\
+     Ge & 32 & 11.11 & 16.1 & 0.42 \\
+     Br & 35 & 13.47 & 13.2 & -2.46 \\
+     Sr & 38 & 16.10 & 11.0 & -5.40 \\
+     Zr & 40 & 17.09 & 9.0 &  0.45 \\
      Au & 79 & 13.70 & 13.0 (LII) &  \\
      Au & 79 & 11.92 & 15.0 (LIII) &  \\
     \bottomrule
@@ -61,7 +61,37 @@ Damit folgt
   \Delta E_\su{\beta} &= 0.15 \keV. \\
 \end{align}
 
+Die maximale Energie lässt sich auch über \eqref{eqn:bragg} bestimmen. Für $\Theta$
+wählt man dazu den Grenzwinkel, also den Winkel, bei dem das Sprektrum beginnt.
+Somit gilt
+\begin{equation}
+  \Theta = 8.0 \dgr.
+\end{equation}
+Damit ergibt sich eine Energie von
+\begin{equation}
+  E_\su{max} = 24.61 \keV.
+\end{equation}
 
+Nun werden die Aktivierungsenergien und die Abschirmkonstanten
+der verschiedenen Elemente untersucht. Die
+Werte sind in Tabelle \ref{tab:Energie} einzusehen. Die Abschirmkonstanten lassen
+sich mittels \eqref{eqn:abschirmK} berechnen.
+\begin{table}
+  \centering
+  \begin{tabular}{c c c c}
+    \toprule
+    $\su{Element}$ & $\Theta \dgr$ & $E_\su{K_\su{\alpha}}\,/ \keV$ & $\su{Abschirmkonstante}\,\,\sigma$\\
+    \midrule
+    Zn & 19.9 & 10.1 & 2.95\\
+    Ge & 16.0 & 12.4 & 2.04\\
+    Br & 13.2 & 13.5 & 3.84\\
+    Zr & 11.4 & 17.3 & 4.79\\
+    Sr & 12.1 & 16.3 & 3.76\\
+    \bottomrule
+  \end{tabular}
+  \caption{Aktivierungsenergien/ Abschirmkonstanten der einzelnen Elemente}
+  \label{tab:Energie}
+\end{table}
 
 
 
