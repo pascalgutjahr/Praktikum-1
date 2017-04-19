@@ -39,16 +39,16 @@ Dieses Spektrum ist in Abb. \ref{fig:EmissionCu} zu sehen.
   \caption{Emissionspektrum der Cu-Röntgenröhre}
   \label{fig:EmissionCu}
 \end{figure}
-Der vordere Peak steht für die $K_\su{\alpha}$ und der hintere für die $K_\su{\beta}$
+Der vordere Peak steht für die $K_\su{\beta}$ und der hintere für die $K_\su{\alpha}$
 Linie. Die Halbwertsbreite, bei der die Intensität auf die Hälfte abgesunken ist,
-der $\alpha$-Linie läuft von $\Theta = 19.5\,\si{\degree}$ bis $\Theta = 20.1\dgr$.
-Die der $\beta$-Linie läuft von $\Theta = 21.9\dgr$ bis $\Theta = 22.3\dgr$.
+der $\beta$-Linie läuft von $\Theta = 19.5\,\si{\degree}$ bis $\Theta = 20.1\dgr$.
+Die der $\alpha$-Linie läuft von $\Theta = 21.9\dgr$ bis $\Theta = 22.3\dgr$.
 Die Energien ergeben sich damit zu
 \begin{align}
-  E_\su{\Theta_1, \alpha} &= 10.23 \keV \\
-  E_\su{\Theta_2, \alpha} &= 9.93 \keV \\
-  E_\su{\Theta_1, \beta} &= 9.14 \keV \\
-  E_\su{\Theta_2, \beta} &= 8.00 \keV. \\
+  E_\su{\Theta_1, \beta} &= 10.23 \keV \\
+  E_\su{\Theta_2, \beta} &= 9.93 \keV \\
+  E_\su{\Theta_1, \alpha} &= 9.14 \keV \\
+  E_\su{\Theta_2, \alpha} &= 8.00 \keV. \\
 \end{align}
 Das Auflösungsvermögen berechnet sich durch die Differenz der jeweiligen Energien,
 also
@@ -74,30 +74,46 @@ Damit ergibt sich eine Energie von
 
 Nun werden die Aktivierungsenergien und die Abschirmkonstanten
 der verschiedenen Elemente untersucht. Die
-Werte sind in Tabelle \ref{tab:Energie} einzusehen. Die Abschirmkonstanten lassen
-sich mittels \eqref{eqn:abschirmK} berechnen.
+Werte sind in Tabelle \ref{tab:Energie} einzusehen. Die Abschirmkonstanten $\sigma_\su{K}$
+lassen sich mittels \eqref{eqn:abschirmK} berechnen.
 \begin{table}
   \centering
   \begin{tabular}{c c c c}
     \toprule
-    $\su{Element}$ & $\Theta_\su{abgelesen} \,/\dgr$ & $E_\su{K_\su{\alpha}}\,/ \keV$ & $\su{Abschirmkonstante}\,\,\sigma$\\
+    $\su{Element}$ & $\Theta_\su{abgelesen} \,/\dgr$ & $E_\su{K_\su{\alpha}}\,/ \keV$ & $\su{Abschirmkonstante}\,\,\sigma_\su{K}$\\
     \midrule
-    Zn & 19.90 &  9.06 & 4.39\\
-    Ge & 16.00 & 11.18 & 3.56\\
-    Br & 13.15 & 13.56 & 3.74\\
-    Sr & 10.85 & 16.38 & 3.69\\
-    Zr & 10.75 & 16.46 & 5.70\\
+    Zn & 19.90 &  9.06 & 4.39 &  \\
+    Ge & 16.00 & 11.18 & 3.56 &  \\
+    Br & 13.15 & 13.56 & 3.74 &  \\
+    Sr & 10.85 & 16.38 & 3.69 &  \\
+    Zr & 10.75 & 16.46 & 5.70 &  \\
     \bottomrule
   \end{tabular}
   \caption{Aktivierungsenergien/ Abschirmkonstanten der einzelnen Elemente}
   \label{tab:Energie}
 \end{table}
-
+Die Abschirmkonstante $\sigma_\su{L}$
+von Gold lässt sich mittels \eqref{eqn:abschirmL} bestimmen.
+Für die $LII$ Kante wird der Winkel $\Theta_\su{exp} = 12.7 \dgr$ und für die $LIII$ Kante
+wird der Winkel $\Theta_\su{exp} = 14.9 \dgr$ verwendet. Die theoretischen Winkel lauten
+$\Theta_\su{theo} = 13.0 \dgr$ und $\Theta_\su{theo} = 15.0 \dgr$.
+Die Energien ergeben sich wieder mittels \eqref{eqn:bragg}. Daraus wird
+\begin{align*}
+  \Delta E &= E_\su{LII} - E_\su{LIII} \\
+  \Delta E_\su{theo} &= 1.78 \keV \\
+  \Delta E_\su{exp} &= 2.03 \keV \\
+\end{align*}
+bestimmt.
+Damit ergeben sich folgende Abschirmkonstanten:
+\begin{align*}
+  \sigma_\su{L}_\su{theo} &= 3.91  \\
+  \sigma_\su{L}_\su{exp} &= 1.70 \\
+\end{align*}
 
 Nachfolgend sind alle gemessenen Spektren zu sehen. Dabei zeigt Abb. \ref{fig:Zink}
 das Spektrum zu Zink, Abb. \ref{fig:Germanium} zeigt Germanium, Abb. \ref{fig:Brom}
 zeigt Brom, Abb. \ref{fig:Strontium} zeigt Strontium und Abb. \ref{Zirkonium} zeigt
-Zirkonium.
+Zirkonium. Abb. \ref{fig:Aurum} zeigt Gold.
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpZn.pdf}
@@ -133,12 +149,19 @@ Zirkonium.
   \label{fig:Zirkonium}
 \end{figure}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpAu.pdf}
+  \caption{Absorptionsspektrum von Aurum}
+  \label{fig:Aurum}
+\end{figure}
+
 \newpage
 Nun wird Moseley's Gesetzt überprüft. Dazu wird $\sqrt{E_K}$ gegen $Z^2$ aufgetragen.
 Der Graph ist in Abb. \ref{fig:Mose} zu sehen.
 Dabei ergeben sich die Parameter:
 \begin{align*}
-  a &= (22 \pm 4) 1\,/\, \si{\electronvolt}\\
+  a &= (22 \pm 4) \,1\,/\, \si{\electronvolt}\\
   b &= (-1300 \pm 400). \\
 \end{align*}
 \begin{figure}
@@ -146,16 +169,4 @@ Dabei ergeben sich die Parameter:
   \includegraphics[width= 8cm]{bilder/plot.pdf}
   \caption{Moseleysches Gesetz}
   \label{fig:Mose}
-\end{figure}
-
-
-
-
-
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpAu.pdf}
-  \caption{Absorptionsspektrum von Aurum}
-  \label{fig:Aurum}
 \end{figure}
