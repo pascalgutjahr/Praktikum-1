@@ -1,0 +1,8 @@
+Ordnungszahl  Winkel
+Z             Theta
+
+30            19.9
+32            16.0
+35            13.2
+38            12.1
+40            11.4

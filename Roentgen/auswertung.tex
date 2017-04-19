@@ -80,13 +80,13 @@ sich mittels \eqref{eqn:abschirmK} berechnen.
   \centering
   \begin{tabular}{c c c c}
     \toprule
-    $\su{Element}$ & $\Theta \dgr$ & $E_\su{K_\su{\alpha}}\,/ \keV$ & $\su{Abschirmkonstante}\,\,\sigma$\\
+    $\su{Element}$ & $\Theta_\su{abgelesen} \,/\dgr$ & $E_\su{K_\su{\alpha}}\,/ \keV$ & $\su{Abschirmkonstante}\,\,\sigma$\\
     \midrule
-    Zn & 19.9 & 10.1 & 2.95\\
-    Ge & 16.0 & 12.4 & 2.04\\
-    Br & 13.2 & 13.5 & 3.84\\
-    Zr & 11.4 & 17.3 & 4.79\\
-    Sr & 12.1 & 16.3 & 3.76\\
+    Zn & 19.90 &  9.06 & 4.39\\
+    Ge & 16.00 & 11.18 & 3.56\\
+    Br & 13.15 & 13.56 & 3.74\\
+    Sr & 10.85 & 16.38 & 3.69\\
+    Zr & 10.75 & 16.46 & 5.70\\
     \bottomrule
   \end{tabular}
   \caption{Aktivierungsenergien/ Abschirmkonstanten der einzelnen Elemente}
@@ -133,8 +133,20 @@ Zirkonium.
   \label{fig:Zirkonium}
 \end{figure}
 
-
-
+\newpage
+Nun wird Moseley's Gesetzt überprüft. Dazu wird $\sqrt{E_K}$ gegen $Z^2$ aufgetragen.
+Der Graph ist in Abb. \ref{fig:Mose} zu sehen.
+Dabei ergeben sich die Parameter:
+\begin{align*}
+  a &= (22 \pm 4) 1\,/\, \si{\electronvolt}\\
+  b &= (-1300 \pm 400). \\
+\end{align*}
+\begin{figure}
+  \centering
+  \includegraphics[width= 8cm]{bilder/plot.pdf}
+  \caption{Moseleysches Gesetz}
+  \label{fig:Mose}
+\end{figure}
 
 
 
