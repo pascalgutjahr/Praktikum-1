@@ -1,0 +1,66 @@
+\subsection{Messung von Suszeptibilitäten}
+Zur Bestimmund der Suszeptibilität wird die Brückenschaltung aus Abbildung
+\ref{fig:schaltung} benötigt.
+\begin{figure}
+  \centering
+  \includegraphics[width=5cm]{bilder/schaltung.png}
+  \caption{Brückenschaltung zur Suszeptibilitätsbestimmung \cite{606}}
+  \label{fig:schaltung}
+\end{figure}
+Hierbei werden zwei gleiche Spulen verwendet, da die Messung auf einer
+Induktivitätsdifferenz beruht. In die eine wird das zu untersuchende
+Material eingesetzt. Dabei gibt es zwei Messmethoden. Bei der einen wird die
+Brückenspannung $U_\su{Br}$ gemessen, welche entsteht, wenn die Probe in eine
+Spule eingeführt wird. Für Frequenzen $\omega^2L^2 >>R^2$ gilt die Vereinfachung
+\begin{equation}
+ \chi (\omega \to \infty) = 4 \frac{f}{Q}\frac{U_\su{Br}}{U_\su{Sp}}
+\end{equation}
+mit $F$ als Spulenquerschnitt, $Q$ dem Querschnitt der Probe und $U_\su{Sp}$ der
+Speisespannung.
+Bei der anderen Methode werden die Brücken nach dem Einführen der Probe erneut
+abgeglichen. Durch die dabei auftretende Differenz an den Einstellungen
+lässt sich ebenfalls die Suszeptibilität mithilfe
+\begin{equation}
+ \chi = 2\frac{\Delta R}{R_3}\frac{F}{Q}
+\end{equation}
+bestimmen. $R_3$ beschreibt den Widerstand am Potentiometer und $\Delta R$ die
+Differenz der Einstellungen.
+
+\subsection{Durchführung und Umsetzung}
+Bei der Messung der Brückenspannung tritt ein Problem auf, da es zu Störspannungen
+an den Ausgangsklemmen kommt, welche die Brückenspannung überdecken. Da die
+Signalspannung monofrequent ist, kann ein Selektivverstärker genutzt werden,
+um im Idealfall nur die gesuchte Brückenspannung durchzulassen. Dieser bietet
+zusätzlich die Möglichkeit die Brückenspannung zu verstärken. Die Wirksamkeit
+eines solchen Selektivverstärkers lässt sich durch die Güte $Q$ ausdrücken:
+\begin{equation}
+  Q = \frac{\nu_0}{\nu_+ - \nu_-}.
+\end{equation}
+\begin{figure}
+  \centering
+  \includegraphics[width=10cm]{bilder/aufbau.png}
+  \caption{Aufbau der Messapparatur \cite{606}}
+  \label{fig:aufbau}
+\end{figure}
+Ein möglicher Aufbau der Apparatur ist in Abbildung \ref{fig:aufbau} zu sehen.
+Dabei erzeugt ein Sinusgenerator eine Wechselspannung von $1 \si{\volt}$ mit
+einer Frequenz von $20-40 \kHz$. Diese wird an den Eingang der Brückenschaltung
+gelegt. $U_\su{Br}$ wird danach 10x vorverstärkt, bevor sie an den Selektivverstärker
+gelegt wird. Dieser verstärkt sie dann zusätzlich noch 10x mit einem Linearverstärker.
+Die dadurch gefilterte und verstärkte Spannung kann dann an den Buchsen "Resonance"
+oder "Quadrature" abgenommen werden.
+
+Zur Bestimmung der Suszeptibilität wird die Durchlassfrquenz des Selektivverstärkers
+genau auf die Signalfrequenz gelegt. Dabei gilt $Q = 100$. Dazu wird ein Synthesizer
+an den Verstärker angeschlossen. Mit einem Millivoltmeter werden ca. 30 Spannungen
+im Bereich $(30-40) \kHz$ mit den dazugehörigen Frequenzen an der Ausgangsspannung
+$U_\su{A}$ abgelesen. Um das Maximum werden dabei $0.1 \kHz$ Schritte gewählt.
+Daraufhin werden die Elemente $R_3 / R_4$ und $R_\su{p}$ auf eine möglichst niedrige
+Spannungsdifferenz abgestimmt, Null ist aufgrund der übrig gebliebenen Störspannungen
+nicht möglich. Diese Werte werden notiert.
+
+Nun wird die Probe in die Zylinderspule eingeführt und die auftretende Brückenspannung
+wird gemessen und notiert. Dann werden die Widerstände erneut abgestimmt.
+Dieser Vorgang wird drei mal wiederholt. Zusätzlich müssen alle Verstärkungen
+notiert werden. Am Ende werden noch die Massen $m$ der Proben und die Längen $l$ der
+Gefäße gemessen.
