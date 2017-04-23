@@ -75,4 +75,42 @@ Nach dem Integrieren und verschiedenen Umformungen folgt dann:
   B(z,t,\varphi) = A_0 \exp{\Bigg(i \bigg( \omega t - \frac{2\pi z}{\lambda}\bigg)\Bigg)}
   \cdot \exp{\bigg(\frac{\pi i b \sin{(\varphi)}}{\lambda} \bigg)} \cdot
   \frac{\lambda}{\pi \sin{(\varphi)}} \sin{\bigg(\frac{\pi b \sin{(\varphi)}}{\lambda}\bigg)}.
+  \label{eqn:Amplitude}
 \end{equation}
+Die Exponentialfunktionen in \eqref{eqn:Amplitude} stellen Phasenfunktionen dar.
+Die erste beschreibt die Zeit- und Ortsabhängigkeit der Amplitude in Ausbreitungsrichtung
+der Welle und die zweite stellt einen richtungsabhängigen Phasenfaktor dar, der
+die Intensitätsmessung nicht beeinträchtigt.
+Mit der Abkürzung
+\begin{equation}
+  \eta = \frac{\pi b \sin{(\varphi)}}{\lambda}
+\end{equation}
+wird hier nur der Faktor
+\begin{equation}
+  B(\varphi) = A_0 b \frac{\sin{(\eta)}}{\eta} \label{eqn:B}
+\end{equation}
+für die experimentelle Überprüfung benötigt.
+Die Funktion \eqref{eqn:B} ist beispielhaft in Abb. \ref{fig:Amplitude} zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{bilder/Amplitude.png}
+  \caption{Amplitude einer ebenen Welle am Parallelspalt \cite{406}}
+  \label{fig:Amplitude}
+\end{figure}
+Die Nullstellen dieser Funktion liegen bei
+\begin{equation*}
+  \sin{(\varphi_\su{n})} = \pm n \frac{\lambda}{b}
+\end{equation*}
+mit $n = 1, 2, 3,..$.
+
+Zur Bestimmung der Intesität $I(\varphi)$ muss das zeitliche Mittel betrachtet
+werden, da die hohen Lichtfrequenzen von $\omega = 10^14\Hz$ bis $\omega = 10^15\Hz$
+eine direkte Messung unmöglich machen. Für $I(\varphi)$ am Parallelspalt gilt
+\begin{equation}
+  I(\varphi) \propto B(\varphi)^2 = A_0^2b^2 \bigg(\frac{\lambda}{\pi b \sin{(\varphi)}}\bigg)
+  \cdot \sin^2{\bigg(\frac{\pi b \sin{(\varphi)}}{\lambda}\bigg)}.
+  \label{eqn:Intensität}
+\end{equation}
+Die Beugungsfigur aus \eqref{eqn:Intensität} weist Minima auf, wenn die
+Amplitudenfunktion \eqref{eqn:Amplitude} Nullstellen hat. Die Höhe der Maxima
+nimmt näherungsweise mit $\varphi^2$ ab. 
