@@ -114,3 +114,59 @@ eine direkte Messung unmöglich machen. Für $I(\varphi)$ am Parallelspalt gilt
 Die Beugungsfigur aus \eqref{eqn:Intensität} weist Minima auf, wenn die
 Amplitudenfunktion \eqref{eqn:Amplitude} Nullstellen hat. Die Höhe der Maxima
 nimmt näherungsweise mit $\varphi^2$ ab.
+
+\subsection{Beugung am Doppelspalt}
+Die Intensitätsverteilung $I(\varphi)$ lässt sich als Überlagerung zweier
+Einzelspalte der Breite $b$ im Abstand $s$ behandeln. Siehe Abb. \ref{fig:BeugungDoppel}.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.7\textwidth]{bilder/BeugungDoppel.png}
+  \caption{Beugung am Doppelspalt \cite{406}}
+  \label{fig:BeugungDoppel}
+\end{figure}
+Trifft also paralleles Licht auf den Doppelspalt, so kommt eine $\cos^2$ - Verteilung
+hinzu, wodurch sich
+\begin{equation}
+  I(\varphi) \propto B(\varphi)^2= 4\cdot \cos{\bigg(\frac{\pi s \sin{(\varphi)}}{\lambda}\bigg)}
+  \cdot \bigg(\frac{\lambda}{\pi b \sin{(\varphi)}}\bigg)^2 \cdot
+  \sin^2{\bigg(\frac{\pi b \sin{(\varphi)}}{\lambda}\bigg)}
+\end{equation}
+ergibt. Dadurch weist die Intensität zustätzlich Minima an den Stellen
+\begin{equation}
+  \varphi(k) = \arcsin{\bigg(\frac{2k+1}{2s}\bigg)} \cdot \lambda
+\end{equation}
+auf, an denen die $\cos^2$ - Verteilung mit $k = 0, 1, 2, ..$ Nullstellen hat.
+
+\subsection{Fourier-Transformation in der Beugung}
+Die Amplitudenverteilung $B(\varphi)$ der Fraunhoferschen Beugung kann auch mithilfe der
+allgemeinen Fourier-Transformation
+\begin{equation}
+    g(\zeta) = \int_{-\infty}^{+\infty}f(x) e^{ix\zeta} dx
+\end{equation}
+berechnet werden.
+Die Aperturfunktion, die die Gestalt des vorliegenden Objektes beschreibt -
+einem unendlich ausgedehnten Spalt der Breite $b$ - kann durch
+\[f(x)=\begin{cases}
+A_0 & \text{für } 0≤x≤b \\
+0   & \text{sonst} \\
+\end{cases}\]
+beschrieben werden. Für die Fourier-Transfomierte dieser Funktion ergibt sich:
+\begin{equation}
+  g(\zeta) = \frac{A_0}{i\zeta} \bigg(-1+ e^{i\zeta b}\bigg).
+\end{equation}
+Mit der Eulerschen Formel folgt:
+\begin{equation}
+  g(\zeta) = \frac{2A_0}{\zeta} \exp{\bigg(\frac{i\zeta b }{2}\bigg)}\sin{\bigg(\frac{\zeta b}{2}\bigg)}.
+\end{equation}
+Wird nun
+\begin{equation}
+  \zeta = \frac{2 \pi \sin{(\varphi)}}{\lambda}
+\end{equation}
+eingesetzt, so sind Übereinstimmungen zu Gleichung \eqref{eqn:B} zu erkennen.
+Somit lässt sich sagen, dass der Faktor $e^{ix\zeta}$ die Phasendifferenz einer vom
+Punkt $x$ in der Beugungsebene ausgehenden Kugelwelle mit der Amplitude $f(x)$
+relativ zu der vom Punkt $x=0$ mit der Amplitude $f(0)$ bescheibt.
+
+Nützlich ist die Umkehrbarkeit der Fourier-Transformation, da so aus der
+Amplitudenfunktion $B(\varphi)$ die Gestalt $f(x)$ des gebeugten Objektes bestimmt
+werden kann.
