@@ -48,6 +48,7 @@ Die Werte sind in Tablle \ref{tab:werte} zu finden.
   \caption{Messwerte}
   \label{tab:werte}
 \end{table}
+\newpage
 \subsection{Experimentelle Bestimmung der paramagnetischne Suzeptibilität}
 \begin{table}
   \centering
@@ -110,17 +111,22 @@ Der Fehler der Suszeptibilität wird mit der Gaußschen Fehlerfortpflanzung
 berechnet.
 
 \subsection{Theoretische Bestimmung der paramagnetischen Suszeptibilität}
-
+Zur theoretischen Bestimmung der Suszeptibilität wird Formel \eqref{eqn:chitheo}
+verwendet. Die Temperatur wird dabei als Raumtemperatur $T = 293.15 \,\si{\kelvin}$
+angenommen. Der Landé-Faktor wird mit Formel \eqref{eqn:lande} berechnet und ist
+in Tabelle \ref{tab:zustände} zu finden. Das $N$ aus Formel \eqref{eqn:chitheo}
+wird mit Formel \eqref{eqn:momente} bestimmt. Die nötigen Werte befinden sich in
+Tabelle \ref{tab:Daten}.
 \begin{table}
   \centering
-  \begin{tabular}{c c c c c}
+  \begin{tabular}{c c c c c c}
     \toprule
-    Substanz & $L$ & $S$ & $J$ & $g_\su{J}$ \\
+    Substanz & $L$ & $S$ & $J$ & $g_\su{J}$ & $\chi_\su{theo} \cdot 10^{-4} $ \\
     \midrule
-    $Nd_2O_3$  &  & &  &  \\
-    $Gd_2O_3$   &  & & & \\
-    $C_6O_{12}Pr_2$ & & & & \\
-    $Dy_2O_3$ &  & &  & \\
+    \ce{Nd2O3}  & 6  & 1.5 & 4.5  & 0.73 & 15.30 \\
+    \ce{Gd2O3}   & 0  & 3.5  & -3.5  & 2.4 & 99.30 \\
+    \ce{C6O12Pr2} & 6 & 1.5 & 4.5 & 0.73 & 8.81 \\
+    \ce{Dy2O3} & 5 & 2.5 & 2.5  & 0.29 & 0.83 \\
     \bottomrule
   \end{tabular}
   \caption{Zustände der Substanzen}
