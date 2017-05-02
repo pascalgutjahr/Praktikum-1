@@ -57,7 +57,11 @@ Für den Mittelwert folgt:
 \begin{equation*}
   \Delta E = (4.9 \pm 0.4) \eV.
 \end{equation*}
-Daraus lässt sich die Wellenlänge
+Mit
+\begin{equation}
+  \lambda = \frac{hc}{\Delta E} \label{eqn:lambda}
+\end{equation}
+lässt sich die Wellenlänge
 \begin{equation*}
   \lambda = (250 \pm 20)\nm
 \end{equation*}
@@ -66,3 +70,28 @@ mit der Gauß'schen Fehlerfortpflanzung
   \Delta \lambda = \sqrt{\bigg(\frac{hc}{E^2}\bigg)^2\cdot \sigma_\su{\Delta E}^2}
 \end{equation*}
 berechnen.
+
+Das Kontaktpotential $K$ ergibt sich aus der Differenz der Spannungsdifferenz $\Delta U$
+der Anregungsenergien für Quecksilber und der Spannung $U_\su{1.Max}$ bei dem das
+erste Maximum auftritt. Es gilt $U_\su{1.Max} = 12.2\Volt$. Mit $\Delta U = 4.9\Volt$
+folgt:
+\begin{equation}
+  K = 7.3\Volt.
+\end{equation}
+
+Zur Bestimmung der Ionisierungsenergie wird der Graph aus Abb. \ref{fig:ion}
+verwendet.
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{bilder/ion.pdf}
+%   \caption{$I_\su{A}$ gegen $U_\su{B}$ zur Bestimmung der Ionisierungsenergie}
+%   \label{fig:ion}
+% \end{figure}
+Dazu wird versucht, eine Ausgleichsgerade einzuzeichnen, welche im Unendlichen starten
+soll. Im Idealfall wäre dies eine Asymptote, das ist jedoch bei diesem Graphen nicht
+der Fall. Der Schnittpunkt mit der x-Achse liegt bei $U_\su{x} = 38.8 \Volt$.
+Die Ionisierungsenergie ergibt sich dann, indem das Kontaktpotential $K$ von
+dem Schnittpunkt abgezogen wird.
+\begin{equation}
+  E_\su{ion} = (U_\su{x}-K) \cdot e = 31.5\eV
+\end{equation}
