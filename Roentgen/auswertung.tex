@@ -1,7 +1,7 @@
 In Tabelle \ref{tab:info} sind die Literaturwerte zu den hier verwendeten
 Elementen einzusehen. Die Glanzwinkel $\Theta$ berechnen sich nach Formel
 \eqref{eqn:bragg} mit $E=h\cdot c / \lambda$.
-\begin{table}
+\begin{table}[h]
   \centering
   \begin{tabular}{c c c c c}
     \toprule
@@ -33,7 +33,7 @@ wodurch die Bragg-Bedingung bestätigt wird.
 
 Anschließend wird das Emissionssprektrum der Cu-Röntgenröhre untersucht.
 Dieses Spektrum ist in Abb. \ref{fig:EmissionCu} zu sehen.
-\begin{figure}
+\begin{figure}[h]
   \centering
   \includegraphics[width=0.5\textwidth, angle=270]{bilder/EmissionCu.pdf}
   \caption{Emissionspektrum der Cu-Röntgenröhre}
@@ -71,7 +71,11 @@ Damit ergibt sich eine Energie von
 \begin{equation}
   E_\su{max} = 24.61 \keV.
 \end{equation}
-
+Aus der Umstellung
+\begin{equation}
+  E = \frac{hc}{\lambda}
+\end{equation}
+ergibt sich eine Wellenlänge von $\lambda=5.04\,\cdot10^{-8}\nm$
 Nun werden die Aktivierungsenergien und die Abschirmkonstanten
 der verschiedenen Elemente untersucht. Die
 Werte sind in Tabelle \ref{tab:Energie} einzusehen. Die Abschirmkonstanten $\sigma_\su{K}$
@@ -89,7 +93,7 @@ lassen sich mittels \eqref{eqn:abschirmK} berechnen.
     Zr & 10.75 & 16.46 & 5.70   \\
     \bottomrule
   \end{tabular}
-  \caption{Aktivierungsenergien/ Abschirmkonstanten der einzelnen Elemente}
+  \caption{Aktivierungsenergien und Abschirmkonstanten der einzelnen Elemente}
   \label{tab:Energie}
 \end{table}
 Die Abschirmkonstante $\sigma_\su{L}$
@@ -117,37 +121,37 @@ Zirkonium. Abb. \ref{fig:Aurum} zeigt Gold.
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpZn.pdf}
-  \caption{Absorptionsspektrum von Zink}
+  \caption{Absorptionsspektrum von Zink.}
   \label{fig:Zink}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpGe.pdf}
-  \caption{Absorptionsspektrum von Germanium}
+  \caption{Absorptionsspektrum von Germanium.}
   \label{fig:Germanium}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpBr.pdf}
-  \caption{Absorptionsspektrum von Brom}
+  \caption{Absorptionsspektrum von Brom.}
   \label{fig:Brom}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpSr.pdf}
-  \caption{Absorptionsspektrum von Strontium}
+  \caption{Absorptionsspektrum von Strontium.}
   \label{fig:Strontium}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpZr.pdf}
-  \caption{Absorptionsspektrum von Zirkonium}
+  \caption{Absorptionsspektrum von Zirkonium.}
   \label{fig:Zirkonium}
 \end{figure}
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth, angle=270]{bilder/AbsorpAu.pdf}
-  \caption{Absorptionsspektrum von Aurum}
+  \caption{Absorptionsspektrum von Aurum.}
   \label{fig:Aurum}
 \end{figure}
 
