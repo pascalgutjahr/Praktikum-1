@@ -11,25 +11,25 @@ csfont = {'fontname': 'Times New Roman'}
 
 U=np.array([9.6,9.68,9.72,9.76,9.80,9.84,9.88,9.92,10])
 I=np.array([0.4,0.26,0.22,0.18,0.13,0.12,0.09,0.07,0.05])
-# dI=(0.14,0.04,0.04,0.05,0.01,0.03,0.02,0.02,0.05)
+I=np.array(I)*1e-10
+dI=(0.14,0.04,0.04,0.05,0.01,0.03,0.02,0.02,0.05)
 dU=np.array(U)-np.array(I)
-I=np.array(I)*1e-9
-def f(dU, m, n):
-    return m * dU + n
+# def f(dU, m, n):
+    # return m * dU + n
 
-params, covariance = curve_fit(f, dU, U)
+# params, covariance = curve_fit(f, dU, U)
 
-errors = np.sqrt(np.diag(covariance))
+# errors = np.sqrt(np.diag(covariance))
 
-print('m =', params[0], '+-', errors[0])
-print('n =', params[1], '+-', errors[1])
+# print('m =', params[0], '+-', errors[0])
+# print('n =', params[1], '+-', errors[1])
 
-x_plot = np.linspace(min(dU), max(dU))
+# x_plot = np.linspace(min(dU), max(dU))
 
-plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
-plt.plot(dU,U, 'r.', label='Messwerte')
-plt.ylabel(r'$U_k \,/\, \mathrm{V}$')
-plt.xlabel(r'$I \,/\,\mathrm{nA}$')
+# plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
+plt.plot(U,dU/dI, 'r-', label='Messwerte')
+plt.xlabel(r'$U_A \,/\, \mathrm{V}$')
+plt.ylabel(r'$dI_A/dU_A \,/\, \mathrm{nA/V}$')
 # plt.title('Messungen')
 plt.grid()
 plt.legend()
