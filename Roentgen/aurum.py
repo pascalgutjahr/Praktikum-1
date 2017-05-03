@@ -46,7 +46,7 @@ plt.plot(x_plot, f(x_plot, *params), 'r-', label='lineare Regression', linewidth
 plt.plot(W, Z2, 'rx', label='Messwerte')
 plt.plot()
 plt.ylabel(r'$Z^2')
-plt.xlabel(r'$\sqrt{E_K}\,/\,\si{\electronvolt}')
+plt.xlabel(r'$\sqrt{E_K}\,/\,\sqrt{\si{\electronvolt}}')
 plt.xlim(min(W)-2, max(W)+2)
 plt.ylim(850, 1650)
 plt.grid()

@@ -6,15 +6,15 @@ Elementen einzusehen. Die Glanzwinkel $\Theta$ berechnen sich nach Formel
   \begin{tabular}{c c c c c}
     \toprule
     $\su{Metall}$  & $\su{Ordnungszahl} \,\, \su{Z}$ &
-    $E^\su{Lit}_\su{K} \,/\, \keV$ & $\theta^\su{Lit}_\su{K}\,/\,\si{\degree}$ & $\sigma^\su{K}$ \\
+    $E^\su{Lit}_\su{K} \,/\, \keV$ & $\theta^\su{Lit}_\su{K}\,/\,\si{\degree}$ & $\sigma_\su{K}$ \\
     \midrule
      Zn & 30 & 9.65 & 18.6 & 3.56 \\
      Ge & 32 & 11.11 & 16.1 & 3.66 \\
      Br & 35 & 13.47 & 13.2 & 3.85 \\
      Sr & 38 & 16.10 & 11.0 & 4.00 \\
      Zr & 40 & 17.09 & 9.0 &  5.04 \\
-     Au & 79 & 13.70 & 13.0 (LII) &  \\
-     Au & 79 & 11.92 & 15.0 (LIII) &  \\
+     Au & 79 & 13.70 & 13.0 (LII) &  \hrulefill\\
+     Au & 79 & 11.92 & 15.0 (LIII) & \hrulefill \\
     \bottomrule
   \end{tabular}
   \caption{Literaturwerte der Metalle \cite{Elit},\,\cite{KAu}}
@@ -23,12 +23,13 @@ Elementen einzusehen. Die Glanzwinkel $\Theta$ berechnen sich nach Formel
 \begin{figure}
   \centering
   \includegraphics[width=0.5\textwidth, angle=270]{bilder/Bragg3.pdf}
-  \caption{Überprüfung der Bragg-Bedingung}
+  \caption{Überprüfung der Bragg-Bedingung.}
   \label{fig:Bragg3}
 \end{figure}
 Zu Beginn wird die Bragg-Bedingung überprüft. Der Graph in Abbildung \ref{fig:Bragg3}
-lässt einen Glanzwinkel von ca. $2\Theta = 26.8 \,\si{\degree}$ erkennen. Dies stimmt mit
-dem eingestellten Kristallwinkel von $\Theta = 14\,\si{\degree}$ ungefähr überein,
+lässt einen Glanzwinkel von $2\Theta = 26.8 \,\si{\degree}$ erkennen, welcher aus
+den Daten abgelesen wird. Dies stimmt mit
+dem eingestellten Kristallwinkel von $\Theta = 14\,\si{\degree}$ gut überein,
 wodurch die Bragg-Bedingung bestätigt wird.
 
 Anschließend wird das Emissionssprektrum der Cu-Röntgenröhre untersucht.
@@ -36,7 +37,7 @@ Dieses Spektrum ist in Abb. \ref{fig:EmissionCu} zu sehen.
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.5\textwidth, angle=270]{bilder/EmissionCu.pdf}
-  \caption{Emissionspektrum der Cu-Röntgenröhre}
+  \caption{Emissionspektrum der Cu-Röntgenröhre.}
   \label{fig:EmissionCu}
 \end{figure}
 Der vordere Peak steht für die $K_\su{\beta}$ und der hintere für die $K_\su{\alpha}$
@@ -73,7 +74,7 @@ Damit ergibt sich eine Energie von
 \end{equation}
 Aus der Umstellung
 \begin{equation}
-  E = \frac{hc}{\lambda}
+  \lambda = \frac{hc}{E}
 \end{equation}
 ergibt sich eine Wellenlänge von $\lambda=5.04\,\cdot10^{-8}\nm$
 Nun werden die Aktivierungsenergien und die Abschirmkonstanten
@@ -93,14 +94,14 @@ lassen sich mittels \eqref{eqn:abschirmK} berechnen.
     Zr & 10.75 & 16.46 & 5.70   \\
     \bottomrule
   \end{tabular}
-  \caption{Aktivierungsenergien und Abschirmkonstanten der einzelnen Elemente}
+  \caption{Aktivierungsenergien und Abschirmkonstanten der einzelnen Elemente.}
   \label{tab:Energie}
 \end{table}
 Die Abschirmkonstante $\sigma_\su{L}$
 von Gold lässt sich mittels \eqref{eqn:abschirmL} bestimmen.
-Für die $LII$ Kante wird der Winkel $\Theta_\su{exp} = 12.7 \dgr$ und für die $LIII$ Kante
-wird der Winkel $\Theta_\su{exp} = 14.9 \dgr$ verwendet. Die theoretischen Winkel lauten
-$\Theta_\su{theo} = 13.0 \dgr$ und $\Theta_\su{theo} = 15.0 \dgr$.
+Für die $LII$ Kante wird der Winkel $\Theta_\su{exp,1} = 12.7 \dgr$ und für die $LIII$ Kante
+wird der Winkel $\Theta_\su{exp,2} = 14.9 \dgr$ verwendet. Die theoretischen Winkel lauten
+$\Theta_\su{theo,1} = 13.0 \dgr$ und $\Theta_\su{theo,2} = 15.0 \dgr$.
 Die Energien ergeben sich wieder mittels \eqref{eqn:bragg}. Daraus wird
 \begin{align*}
   \Delta E &= E_\su{LII} - E_\su{LIII} \\
@@ -160,12 +161,12 @@ Nun wird Moseley's Gesetzt überprüft. Dazu wird $\sqrt{E_K}$ gegen $Z^2$ aufge
 Der Graph ist in Abb. \ref{fig:Mose} zu sehen.
 Dabei ergeben sich die Parameter:
 \begin{align*}
-  a &= (22 \pm 4) \,1\,/\, \si{\electronvolt}\\
+  a &= (22 \pm 4) \,1\,/\, \sqrt{\si{\electronvolt}}\\
   b &= (-1300 \pm 400). \\
 \end{align*}
 \begin{figure}
   \centering
   \includegraphics[width= 8cm]{bilder/plot.pdf}
-  \caption{Moseleysches Gesetz}
+  \caption{Lineare Ausgleichsrechnung zu Überprüfung des Moseleyschen Gesetzes.}
   \label{fig:Mose}
 \end{figure}
