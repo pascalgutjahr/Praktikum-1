@@ -116,3 +116,59 @@ Durchmesser für die Löcher 1 und 2 bestimmt.
   \caption{Auflösungsvermögen verschiedener Sonden}
   \label{tab:auf}
 \end{table}
+Als nächstes wird das Herzzeitvolumen des Herzmodells mittels TM-Scan bestimmt.
+Das Herzmodell wird im diastolischen Zustand als Kugelsegment \ref{fig:kugel}
+mit dem Segmentradius $a=2.285\cm$ genähert.
+\begin{wrapfigure}{l}{6cm}[H]
+  \includegraphics[width=5cm]{bilder/kugel.png}
+  \caption{Herzmodell als Kugelsegment \cite{kugel}.}
+  \label{fig:kugel}
+\end{wrapfigure}
+Anhand der aufgenommenen Kurve des TM-Scans \ref{fig:tm} lässt sich sowohl die
+Herzfrequenz, als auch das Herzzeitvolumen bestimmen.
+\begin{figure}[H]
+  \includegraphics[width=0.6\textwidth]{bilder/TM-ScanHrz2.jpg}
+  \caption{Kurve des TM-Scans.}
+  \label{fig:tm}
+\end{figure}
+Um die Herzfrequenz zu bestimmen werden die Anzahl der Schläge pro Minute
+gezählt. In Abbildung \ref{fig:tm} werden 14 Schläge über einen Zeitraum von
+$10\sek$ gemessen, woraus sich auf eine Herzfrequenz von $f = 84\su{bpm}$ schließen
+lässt.
+Um Das Herzvolumen zu bestimmen, wird die Laufzeit bei diastolischem, also
+relaxiert Membran, von der systolischen, also der kontrahierten, Laufzeit
+subtrahiert. Die systolische Laufzeit liegt konstant bei $43.5\ms$.
+ Die
+Laufzeiten der Diastole sind in Tabelle \ref{tab:dia} einzusehen.
+\begin{table}
+  \centering
+  \begin{tabular}{ccc}
+    \toprule
+    \multicolumn{1}{c}{Diastole}&\multicolumn{1}{c}{h}&\multicolum{1}{c}{Herzvolumen}\\
+    t/$\ms$ & h/$\cm$ & V/$\ml$ \\
+    \midrule
+    26.7 & 2.3 & 35.6  \\
+    29.2 & 2.0 & 28.8  \\
+    28.5 & 2.0 & 30.6  \\
+    29.2 & 2.0 & 28.8  \\
+    27.9 & 2.1 & 32.2  \\
+    29.2 & 2.0 & 28.8  \\
+    32.0 & 1.6 & 22.1  \\
+    31.5 & 1.6 & 23.2  \\
+    29.6 & 1.9 & 27.8  \\
+    31.2 & 1.7 & 23.9  \\
+    29.0 & 2.0 & 29.3  \\
+    28.4 & 2.1 & 30.9  \\
+    27.4 & 2.2 & 33.6  \\
+    26.3 & 2.3 & 36.7  \\
+    \bottomrule
+  \end{tabular}
+  \caption{Herzvolumen des Herzmodells}
+  \label{tab:dia}
+\end{table}
+Die Höhe wird hierbei analog zu dem Durchmesser der Fehlstellen berechnet und
+für das Volumen des Kugelsegments gilt
+\begin{equation*}
+  V=\frac{pi\cdot h}{6}\lt(3a^2+h^2\rt).
+\end{equation*}
+Anhand der Werte lässt sich für das Volumen ein mittelwert von $\bar V=(29\pm4)\ml$
