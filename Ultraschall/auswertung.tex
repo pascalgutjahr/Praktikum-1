@@ -1,16 +1,16 @@
 Zunächst werden der Acrylblock und die Lage der Fehlstellen mittels Schieblehre
 bestimmt. Der Block hat eine Höhe von $h=8.07\cm$ und eine Länge von $l=15\cm$.
 In Tabelle \ref{tab:oben} sind die Orte der Fehlstellen mit Schieblehre, A-Scan
-und B-Scan aufgeführt. Die erste Messung wurde so durchgeführt, dass die Bohrung
+und B-Scan aufgeführt. Die erste Messung wird so durchgeführt, dass die Bohrung
 11 im unteren Teil des Blocks \ref{fig:block} lokalisiert ist. Der A-Scan wurde
 mit einer $1\MHz$- und der B-Scan mit einer $2\MHz$-Sonde durchgeführt.
 \begin{table}[H]
   \centering
-  \begin{tabular}{cc|cc|cc}
+  \begin{tabular}{c|c|cc|cc}
     \toprule
-    \multicolumn{1}{c}{Loch}& \multicolumn{1}{c|}{Schieblehre} & \multicolumn{2}{c|}{A-Scan}
+    \multicolumn{1}{c|}{Loch}& \multicolumn{1}{c|}{Schieblehre} & \multicolumn{2}{c|}{A-Scan}
     & \multicolumn{2}{c}{B-Scan} \\
-    & $t/\ms$ & $s\cm$ & $t/\ms$ & $s/\cm$ & $s/\cm$ \\
+    & $s/\cm$ & $t\ms$ & $s/\cm$ & $t/\ms$ & $s/\cm$ \\
     \midrule
      1  &  1.8 &  17.7 & 2.4 & 15.3 & 2.1 \\
      2  &  1.7 &  15.3 & 2.1 & 14.2 & 1.9 \\
@@ -28,7 +28,7 @@ mit einer $1\MHz$- und der B-Scan mit einer $2\MHz$-Sonde durchgeführt.
   \caption{Lage der Bohrungen von oben.}
   \label{tab:oben}
 \end{table}
-Danach wurde die Messung erneut durchgeführt, der Block wird jedoch so gedreht,
+Danach wird die Messung erneut durchgeführt, der Block wird jedoch so gedreht,
 dass sich Bohrung 11 im oberen Teil des Blocks \ref{fig:block} befindet.
 Die Werte für diese Messung sind in Tabelle \ref{tab:unten} zu sehen.
 \begin{table}[H]
@@ -37,7 +37,7 @@ Die Werte für diese Messung sind in Tabelle \ref{tab:unten} zu sehen.
     \toprule
     \multicolumn{1}{c}{Loch}& \multicolumn{1}{c|}{Schieblehre} & \multicolumn{2}{c|}{A-Scan}
     & \multicolumn{2}{c}{B-Scan} \\
-    & $t/\ms$ & $s\cm$ & $t/\ms$ & $s/\cm$ & $s/\cm$ \\
+    & $s/\cm$ & $t/\ms$ & $s/\cm$ & $t/\ms$ & $s/\cm$ \\
     \midrule
      1  &   6.0 &  45.0 & 6.1 & 45.2 & 6.2 \\
      2  &   6.2 &  48.0 & 6.6 & 46.2 & 6.3 \\
@@ -60,15 +60,15 @@ Die Aufnahmebilder des B-Scans sind in Abbildung \ref{fig:bscan} zu sehen.
   \centering
   \begin{subfigure}{0.4\textwidth}
     \includegraphics[width=6cm]{bilder/B-ScanUnten.jpg}
-    \caption{B-Scan von Oben}
+    \caption{B-Scan von Oben.}
     \label{sub:oben}
   \end{subfigure}
   \begin{subfigure}{0.4\textwidth}
   \includegraphics[width=6cm]{bilder/B-ScanOben.jpg}
-  \caption{B-Scan von Unten}
+  \caption{B-Scan von Unten.}
   \label{sub:unten}
 \end{subfigure}
-\caption{Aufnahmebilder des B-Scans}
+\caption{Aufnahmebilder des B-Scans.}
 \label{fig:bscan}
 \end{figure}
 Hieraus lassen sich die Durchmesser der einzelnen Bohrungen bestimmen, indem
@@ -96,7 +96,7 @@ Tabelle \ref{tab:durch} aufgeführt.
     11 & 0.96 &  0.72  &   0.78      \\
     \bottomrule
   \end{tabular}
-  \caption{Durchmesser der Fehlstellen}
+  \caption{Durchmesser der Fehlstellen.}
   \label{tab:durch}
 \end{table}
 Nun wird das Auflösungsverfahren einer $1\MHz$-Sonde mittels A-Scan mit dem
@@ -113,22 +113,20 @@ Durchmesser für die Löcher 1 und 2 bestimmt.
     2  &   0.19  &   0.22 \\
     \bottomrule
   \end{tabular}
-  \caption{Auflösungsvermögen verschiedener Sonden}
+  \caption{Auflösungsvermögen verschiedener Sonden.}
   \label{tab:auf}
 \end{table}
 Als nächstes wird das Herzzeitvolumen des Herzmodells mittels TM-Scan bestimmt.
 Das Herzmodell wird im diastolischen Zustand als Kugelsegment \ref{fig:kugel}
 mit dem Segmentradius $a=2.285\cm$ genähert.
-\begin{figure}[H]
-  \centering
-  \includegraphics[height=5cm]{bilder/kugel.png}
+\begin{wrapfigure}{l}{6cm}[H]
+  \includegraphics[width=5cm]{bilder/kugel.png}
   \caption{Herzmodell als Kugelsegment \cite{kugel}.}
   \label{fig:kugel}
-\end{figure}
+\end{wrapfigure}
 Anhand der aufgenommenen Kurve des TM-Scans \ref{fig:tm} lässt sich sowohl die
 Herzfrequenz, als auch das Herzzeitvolumen bestimmen.
 \begin{figure}[H]
-  \centering
   \includegraphics[width=0.6\textwidth]{bilder/TM-ScanHerz2.jpg}
   \caption{Kurve des TM-Scans.}
   \label{fig:tm}
@@ -138,48 +136,48 @@ gezählt. In Abbildung \ref{fig:tm} werden 14 Schläge über einen Zeitraum von
 $10\sek$ gemessen, woraus sich auf eine Herzfrequenz von $f = 84\,\frac{1}{\si{\minute}}$
 schließen lässt.
 Um Das Herzvolumen zu bestimmen, wird die Laufzeit bei diastolischem, also
-relaxiert Membran, von der systolischen, also der kontrahierten, Laufzeit
+relaxierte Membran, von der systolischen, also der kontrahierten, Laufzeit
 subtrahiert. Die systolische Laufzeit liegt konstant bei $43.5\ms$.
-Die Laufzeiten der Diastole sind in Tabelle \ref{tab:dia} einzusehen.
+ Die
+Laufzeiten der Diastole sind in Tabelle \ref{tab:dia} einzusehen.
 \begin{table}[H]
   \centering
   \begin{tabular}{ccc}
     \toprule
     \multicolumn{1}{c}{Diastole}&\multicolumn{1}{c}{h}&\multicolumn{1}{c}{Herzvolumen}\\
-    t/$\ms$ & h/$\cm$ & V/$\ml$ \\
+    $t/\ms$ & $h/\cm$ & $V/\ml$ \\
     \midrule
-    26.7 & 1.2  &  16.7 \\
-    29.2 & 1.0  &  14.0 \\
-    28.5 & 1.1  &  14.7 \\
-    29.2 & 1.0  &  14.0 \\
-    27.9 & 1.1  &  15.3 \\
-    29.2 & 1.0  &  14.0 \\
-    32.0 & 0.8  &  11.1 \\
-    31.5 & 0.9  &  11.6 \\
-    29.6 & 1.0  &  13.5 \\
-    31.2 & 0.9  &  11.9 \\
-    29.0 & 1.1  &  14.2 \\
-    28.4 & 1.1  &  14.8 \\
-    27.4 & 1.2  &  15.9 \\
-    26.3 & 1.3  &  17.1 \\
+    26.7 & 2.3 & 35.6  \\
+    29.2 & 2.0 & 28.8  \\
+    28.5 & 2.0 & 30.6  \\
+    29.2 & 2.0 & 28.8  \\
+    27.9 & 2.1 & 32.2  \\
+    29.2 & 2.0 & 28.8  \\
+    32.0 & 1.6 & 22.1  \\
+    31.5 & 1.6 & 23.2  \\
+    29.6 & 1.9 & 27.8  \\
+    31.2 & 1.7 & 23.9  \\
+    29.0 & 2.0 & 29.3  \\
+    28.4 & 2.1 & 30.9  \\
+    27.4 & 2.2 & 33.6  \\
+    26.3 & 2.3 & 36.7  \\
     \bottomrule
   \end{tabular}
-  \caption{Herzvolumen des Herzmodells}
+  \caption{Herzvolumen des Herzmodells.}
   \label{tab:dia}
 \end{table}
-Die Höhe wird hierbei analog zu dem Durchmesser der Fehlstellen berechnet, jedoch
-mit der Schallgeschwindigkeit von Wasser $c=1464\vel$\cite{olympus} und
-für das Volumen des Kugelsegments gilt:
+Die Höhe wird hierbei analog zu dem Durchmesser der Fehlstellen berechnet und
+für das Volumen des Kugelsegments gilt
 \begin{equation*}
-  V=\frac{\pi\cdot h}{6}\lf(3a^2+h^2\rt).
+  V=\frac{pi\cdot h}{6}\lf(3a^2+h^2\rt).
 \end{equation*}
-Anhand der Werte lässt sich für das Volumen ein Mittelwert von $\bar V=(14\pm2)\ml$
+Anhand der Werte lässt sich für das Volumen ein Mittelwert von $\bar V=(29\pm4)\ml$
 berechnen.
 Das Herzzeitvolumen wird mit Formel \eqref{eqn:hzv} berechnet. Hierbei wird
-$ESV=0$ angenommen, da sich die Membran bei der Systole total kontrahiert.
+$ESV=0$ angenommen.
 Das Herzzeitvolumen beträgt somit
 \begin{equation*}
-  HZV = (1.2 \pm 0.2 )\,\si{\litre\per\minute}.
+  HZV = (2436 \pm 0.3 )\,\si{\litre\per\minute}.
 \end{equation*}
 Der Fehler wird mit der Gaußschen Fehlerfortpflanzung
 \begin{equation*}
