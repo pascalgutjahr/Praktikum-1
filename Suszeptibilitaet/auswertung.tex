@@ -11,11 +11,14 @@ Die untere Grenzfrequenz $\nu_-$ und die obere Grenzfrequenz $\nu_+$ liegen bei:
   \nu_- = 34.85 \kHz \\
   \nu_+ = 35.35 \kHz.
 \end{align}
-Hieraus lässt sich die Güte $Q$ berechnen
+Hieraus lässt sich die Güte $Q$ mit Formel \eqref{eqn:güte} berechnen. Somit ist
+\begin{equation*}
+  Q=70.2
+\end{equation*}
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{bilder/frequenz.pdf}
-  \caption{Durchlasskurve des Selektivvertärkers}
+  \caption{Durchlasskurve des Selektivvertärkers.}
   \label{fig:Durchlass}
 \end{figure}
 \newpage
@@ -53,30 +56,30 @@ Die Werte sind in Tablle \ref{tab:werte} zu finden.
 \subsection{Experimentelle Bestimmung der paramagnetischne Suzeptibilität}
 \begin{table}
   \centering
-  \begin{tabular}{c c c}
+  \begin{tabular}{c c c c}
     \toprule
-    Probe & $\su{R_{ohne}/\mOhm}$ &$\su{R_{Probe}}/\mOhm$ \\
+    Probe & $\su{R_{ohne}/\mOhm}$ &$\su{R_{Probe}}/\mOhm$ & $\Delta R/\mOhm$\\
     \midrule
-    $\su{Nd_2O_3}$   & 420 & 435 \\
-                     & 485 & 510 \\
-                     & 615 & 670 \\
-                     & 690 & 720 \\
-                     & 775 & 875 \\ \hline
-    $\su{Gd_2O_3}$   & 810 & 820 \\
-                     & 790 & 770 \\
-                     & 730 & 860 \\
-                     & 585 & 920 \\
-                     &1030 &1135 \\ \hline
-    $\su{C_6O_{12}Pr_2}$  & 205 & 150 \\
-                          & 295 & 325 \\
-                          & 330 & 350 \\
-                          & 315 & 250 \\
-                          & 375 & 370 \\ \hline
-    $\su{Dy_2O_3}$   & 370 & 500 \\
-                     & 520 & 510 \\
-                     & 305 & 200 \\
-                     & 490 & 420 \\
-                     & 450 & 400 \\
+    \multirow{5}{*}{\ce{Gd2O3}}   & 810 & 820 &  10\\
+                                  & 790 & 770 &  20\\
+                                  & 730 & 860 & 130\\
+                                  & 585 & 920 & 335\\
+                                  &1030 &1135 & 105\\ \hline
+    \multirow{5}{*}{\ce{Nd2O3}}   & 420 & 435 &  15\\
+                                  & 485 & 510 &  25\\
+                                  & 615 & 670 &  55\\
+                                  & 690 & 720 &  30\\
+                                  & 775 & 875 & 100\\ \hline
+    \multirow{5}{*}{\ce{Dy2O3}}   & 370 & 500 & 130 \\
+                                  & 520 & 510 &  10 \\
+                                  & 305 & 200 & 105 \\
+                                  & 490 & 420 &  70 \\
+                                  & 450 & 400 &  50 \\ \hline
+    \multirow{5}{*}{\ce{C6O12Pr2}}& 205 & 150 & 55 \\
+                                  & 295 & 325 & 30 \\
+                                  & 330 & 350 & 20 \\
+                                  & 315 & 250 & 65 \\
+                                  & 375 & 370 &  5 \\ \hline
     \bottomrule
   \end{tabular}
   \caption{Widerstandsmessungen verschiedener Proben.}
@@ -84,11 +87,12 @@ Die Werte sind in Tablle \ref{tab:werte} zu finden.
 \end{table}
 Mit den obigen Werten lässt sich die mittlere Differenz des Widerstands
 $\Delta R$ bestimmen, mit denen hinterher die Suszeptibilität berechnet wird.
+Ausreißer werden hierbei aussortiert, damit die Fehler nicht zu groß werden.
 \begin{align*}
-  \Delta R_\su{Nd_3O_3}    &= ( 45 \pm  31) \mOhm \\
-  \Delta R_\su{Gd_2O_3}    &= (120 \pm 117) \mOhm \\
-  \Delta R_\su{C_6O_{12}Pr_2} &= ( 35 \pm  22) \mOhm \\
-  \Delta R_\su{Dy_2O_3}    &= ( 73 \pm  42) \mOhm
+  \Delta R_\su{Gd_2O_3}    &= (125\pm5) \mOhm \\
+  \Delta R_\su{Nd_3O_3}    &= (31\pm15) \mOhm \\
+  \Delta R_\su{Dy_2O_3}    &= (89\pm31) \mOhm
+  \Delta R_\su{C_6O_{12}Pr_2} &= (45\pm18) \mOhm \\
 \end{align*}
 In Tabelle \ref{tab:Daten} sind die allgemeinen Daten zu den verwendeten Substanzen
 zu finden. Die Dichte für $C_6O_{12}Pr_2$ wurde dabei seperat berechnet. Dabei wurde
@@ -99,17 +103,18 @@ Masse der Probe.
 Nach Formel \eqref{eqn:suszep} lassen sich die folgenden Werte für die Suszeptibilität
 berechnen:
 \begin{align*}
-  \chi_\su{Nd_2O_3}       &= 1.68 \pm 1.13 \\
-  \chi_\su{Gd_2O_3}       &= 2.22 \pm 2.16 \\
-  \chi_\su{C_6O_{12}Pr_2} &= 0.25 \pm 0.16 \\
-  \chi_\su{Dy_2O_3}       &= 0.79 \pm 0.94 %Gemessen mit Glas
+  \chi_\su{Gd_2O_3}       &= (18.0 \pm 0.7)\,\cdot10^{-4} \\
+  \chi_\su{Nd_2O_3}       &= ( 6.8 \pm 3.3)\,\cdot10^{-4} \\
+  \chi_\su{Dy_2O_3}       &= ( 8.1 \pm 2.8)\,\cdot10^{-4} \\ %Gemessen mit Glas
+  \chi_\su{C_6O_{12}Pr_2} &= ( 0.9 \pm 0.4)\,\cdot10^{-4} \\
 \end{align*}
 Der Fehler der Suszeptibilität wird mit der Gaußschen Fehlerfortpflanzung
 \begin{equation*}
   \Delta\chi = \sqrt{\left(\frac{2FL\rho}{R_3M}\right)^2\cdot\sigma_\su{\Delta R}^2
   + \left(\frac{2\Delta R FL\rho}{R_3^2M}\right)^2\cdot\sigma_\su{R_3}}
 \end{equation*}
-berechnet.
+berechnet. Zudem wird die Suszeptibilität von $C_6O_{12}Pr_2$ inklusive
+Glasrohr gemessen, da die Dichte der Probe nicht angegeben ist.
 
 \subsection{Theoretische Bestimmung der paramagnetischen Suszeptibilität}
 Zur theoretischen Bestimmung der Suszeptibilität wird Formel \eqref{eqn:chitheo}
@@ -124,10 +129,10 @@ Tabelle \ref{tab:Daten}.
     \toprule
     Substanz & $L$ & $S$ & $J$ & $g_\su{J}$ & $\chi_\su{theo} \cdot 10^{-4} $ \\
     \midrule
-    \ce{Nd2O3}  & 6  & 1.5 & 4.5  & 0.73 & 15.30 \\
     \ce{Gd2O3}   & 0  & 3.5  & -3.5  & 2.4 & 99.30 \\
-    \ce{C6O12Pr2} & 6 & 1.5 & 4.5 & 0.73 & 8.81 \\
+    \ce{Nd2O3}  & 6  & 1.5 & 4.5  & 0.73 & 15.30 \\
     \ce{Dy2O3} & 5 & 2.5 & 2.5  & 0.29 & 0.83 \\
+    \ce{C6O12Pr2} & 6 & 1.5 & 4.5 & 0.73 & 8.81 \\
     \bottomrule
   \end{tabular}
   \caption{Zustände der Substanzen.}
