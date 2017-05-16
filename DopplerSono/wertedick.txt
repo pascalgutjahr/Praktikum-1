@@ -1,0 +1,7 @@
+Delta_nu	Strömungsgeschwindigkeit	Delta_nu	v	Delta_nu	v
+Hz | 15 grad		meterpersecond		Hz | 30 grad	m/s	Hz | 60 grad	m/s
+73		0.19				85		0.11 	143		0.11
+85		0.22				122		0.16	195		0.15
+98		0.26				134		0.18	232		0.18
+122		0.32				171		0.23	281		0.22
+171		0.45				256		0.35	452		0.35
