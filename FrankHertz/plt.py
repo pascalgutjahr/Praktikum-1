@@ -27,7 +27,7 @@ dU=np.array(U)-np.array(I)
 # x_plot = np.linspace(min(dU), max(dU))
 
 # plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
-plt.plot(U,dU/dI, 'r-', label='Messwerte')
+plt.plot(U,dU/dI, 'r.', label='Messwerte')
 plt.xlabel(r'$U_A \,/\, \mathrm{V}$')
 plt.ylabel(r'$dI_A/dU_A \,/\, \mathrm{nA/V}$')
 # plt.title('Messungen')
