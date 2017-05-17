@@ -7,7 +7,7 @@ Tabelle \ref{tab:alpha} wieder.
   \centering
   \begin{tabular}{c|c}
     \toprule
-    $\alpha$ & $\theta$ \\
+    $\theta$ & $\alpha$ \\
     \midrule
     $ 0\dgr$ & $90.00\dgr$ \\
     $15\dgr$ & $80.06\dgr$ \\
@@ -19,7 +19,23 @@ Tabelle \ref{tab:alpha} wieder.
   \label{tab:alpha}
 \end{table}
 \subsection{Bestimmung der Fließgeschwindigkeit}
-Text zur Bestimmung der Fließgeschwindigkeit.
+Die Fließgeschwindigkeiten werden in drei Rohren mit den Innendurchmessern von
+$d_1 = 7\mm$, $d_2 = 10\mm$ und $d_3=16\mm$ mit dem Impuls-Echo-Verfahren bestimmt.
+Dabei werden die Frequenzverschiebungen zu jeweils fünf verschiedenen
+Fließgeschwindigkeiten bestimmt, welche über die Leistung der Ölpumpe reguliert werden.
+Um die Doppler-Winkel $\theta$ einzuhalten wird der Doppler-Prisma aus Abb. \ref{fig:prisma} verwendet.
+\begin{wrapfigure}{r}{6cm}
+  \centering
+  \includegraphics[width=]{bilder/winkel.png}
+  \caption{Doppler-Prisma mit den Winkeln $15\dgr$, $30\dgr$ und $60\dgr$.}
+  \label{fig:prisma}
+\end{wrapfigure}
+\noindent Die entsprechenden Frequenzverschiebungen zu den verschiedenen Pumpleistungen in den verschiedenen Rohren sind in \ref{tab:helga} zu finden.
+Die Geschwindigkeiten werden mit
+\begin{equation}
+  v = \frac{\Delta \nu c}{2 \nu_0 \cos{\alpha}}
+\end{equation}
+ausgerechnet. Die benötigten Winkel $\alpha$ sind in Tabelle \ref{tab:alpha} aufgelistet.
 \begin{table}[H]
   \centering
   \begin{tabular}{|c|c|ccc|}
@@ -79,9 +95,36 @@ Text zur Bestimmung der Fließgeschwindigkeit.
   drei Rohren.}
   \label{tab:helga}
 \end{table}
-\newpage
+Anschließend werden für die drei Rohre die drei Plots \ref{fig:dünn}, \ref{fig:mittel}
+und \ref{fig:dick} erstellt. In jedem Plot befinden sich jeweils drei Graphen für die drei verwendeten Einstrahlwinkel. Dabei wird
+$\frac{\Delta \nu}{\cos{\alpha}}$ gegen die Strömungsgeschinwigkeit aufgetragen.
+Dabei ist für alle drei Rohre auffällig, dass die Frequenzverschiebung proportional
+zur Geschwindigkeit ist.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{bilder/winkelduenn.pdf}
+  \caption{Dopplerwinkel in Abhängigkeit der Strömungsgeschwindigkeit beim dünnen
+  Rohr.}
+  \label{fig:dünn}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{bilder/winkelmittel.pdf}
+  \caption{Dopplerwinkel in Abhängigkeit der Strömungsgeschwindigkeit beim mittleren
+  Rohr.}
+  \label{fig:mittel}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=0.6\textwidth]{bilder/winkeldick.pdf}
+  \caption{Dopplerwinkel in Abhängigkeit der Strömungsgeschwindigkeit beim dicken
+  Rohr.}
+  \label{fig:dick}
+\end{figure}
 \subsection{Bestimmung des Geschwindigkeitsprofils}
-
+Um das Strömungsprofil zu bestimmen wird das mittlere Rohr verwendet mit
+$d_2 = 10\mm$, welches dem $\sfrac{3}{8}$ Zoll Rohr entspricht. Dabei wird
+ein Eintsrahlwinkel von $\theta = 15\dgr$ verwendet.
 \begin{table}[H]
   \centering
   \begin{tabular}{cccc}
@@ -131,27 +174,7 @@ Text zur Bestimmung der Fließgeschwindigkeit.
   $70\,\%$ Pumpleistung.}
   \label{tab:hilde}
 \end{table}
-\begin{figure}
-  \centering
-  \includegraphics[width=0.6\textwidth]{bilder/winkelduenn.pdf}
-  \caption{Dopplerwinkel in Abhängigkeit der Strömungsgeschwindigkeit beim dünnen
-  Rohr.}
-  \label{fig:dünn}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[width=0.6\textwidth]{bilder/winkelmittel.pdf}
-  \caption{Dopplerwinkel in Abhängigkeit der Strömungsgeschwindigkeit beim mittleren
-  Rohr.}
-  \label{fig:mittel}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[width=0.6\textwidth]{bilder/winkeldick.pdf}
-  \caption{Dopplerwinkel in Abhängigkeit der Strömungsgeschwindigkeit beim dicken
-  Rohr.}
-  \label{fig:dick}
-\end{figure}
+
 
 \begin{figure}
   \centering
