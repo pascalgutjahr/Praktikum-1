@@ -28,10 +28,10 @@ Dabei wird $U_\su{B}$ gegen $I_\su{A}$ geplottet.
 \end{figure}
 Die Temperatur wird auf $T=170\,\si{\degree}$ geregelt. Um die Anregungsenergien
 $\Delta E$
-des ersten Zustands von Hg zu bestimmen werden die Abstände der Minima $\zeta$ in
-$\cm$ gemessen. Der Abstand zwischen zwei schwarzen Punkten entspricht
-$1.8\cm = 5\Volt$. Mittels Dreisatz lassen sich so die jeweiligen $\Delta U$
-Werte bestimmen. Mit
+des ersten Zustands von Hg zu bestimmen werden die Abstände der Maxima $\zeta$ in
+$\cm$ gemessen. Anhand der Abbildung \ref{fig:kurve} lässt sich ermitteln,
+dass $5\Volt = (1.8\pm0.2)\cm$ entsprechen. Die jeweiligen Werte für $\Delta U$
+lassen sich dann bestimmen. Mit
 \begin{equation}
   \Delta E = e\cdot \Delta U
 \end{equation}
@@ -53,6 +53,10 @@ ergeben sich die entsprechenden Energien. Alle benötigten Werte sind in Tabelle
   \caption{Abstände $\zeta$ und Anregungsenergien $\Delta E$ des ersten Anregungszustands.}
   \label{tab:werte}
 \end{table}
+Für $\zeta$ ergibt sich dann ein Mittelwert von
+\begin{equation*}
+  \zeta = (1.8\pm0.2)\cm
+\end{equation*}
 Für den Mittelwert folgt:
 \begin{equation*}
   \Delta E = (4.9 \pm 0.4) \eV.
@@ -67,7 +71,7 @@ lässt sich die Wellenlänge
 \end{equation*}
 mit der Gauß'schen Fehlerfortpflanzung
 \begin{equation*}
-  \Delta \lambda = \sqrt{\bigg(\frac{hc}{\DeltaE^2}\bigg)^2\cdot \sigma_\su{\Delta E}^2}
+  \Delta \lambda = \sqrt{\left(\frac{hc}{\DeltaE^2}\right)^2\cdot\sigma_\su{\Delta E^2}}
 \end{equation*}
 berechnen.
 
@@ -76,7 +80,11 @@ der Anregungsenergien für Quecksilber und der Spannung $U_\su{1.Max}$ bei dem d
 erste Maximum auftritt. Es gilt $U_\su{1.Max} = 12.2\Volt$. Mit $\Delta U = 4.9\Volt$
 folgt:
 \begin{equation}
-  K_1 = 7.3\Volt.
+  K_1 = (7.3\pm0.2)\Volt.
+\end{equation}
+Der Fehler ergibt sich aus der Fehlerfortpflanzung
+\begin{equation}
+  \Delta k = \sqrt{\sigma_\su{U_B}}.
 \end{equation}
 
 Eine Weitere Möglichkeit zur Bestimmung des Kontaktpotentials ist mithilfe
@@ -90,7 +98,7 @@ des Plots \ref{fig:plot} gegeben.
 Das Kontaktpotential $K$ ergibt sich dann aus der Beschleunigungsspannung minus
 des Maximus des Graphen:
 \begin{equation}
-  K_2 = U_\su{B} - U_\su{max} = 13\Volt - 9.8\Volt = 3.2\Volt.
+  K_2 = U_\su{B} - U_\su{max} = 13\Volt - 9.8\Volt = (3.2\pm0.2)\Volt.
 \end{equation}
 Damit ergibt sich für den Mittelwert des Kontaktpotentials
 \begin{equation}
