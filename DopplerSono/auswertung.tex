@@ -19,23 +19,24 @@ Tabelle \ref{tab:alpha} wieder.
   \label{tab:alpha}
 \end{table}
 \subsection{Bestimmung der Fließgeschwindigkeit}
+\begin{wrapfigure}{r}{5cm}
+  \centering
+  \includegraphics[width=3.5cm]{bilder/winkel.png}
+  \caption{Doppler-Prisma mit den Winkeln $15\dgr$, $30\dgr$ und $60\dgr$ \cite{us3}.}
+  \label{fig:prisma}
+\end{wrapfigure}
 Die Fließgeschwindigkeiten werden in drei Rohren mit den Innendurchmessern von
 $d_1 = 7\mm$, $d_2 = 10\mm$ und $d_3=16\mm$ mit dem Impuls-Echo-Verfahren bestimmt.
 Dabei werden die Frequenzverschiebungen zu jeweils fünf verschiedenen
 Fließgeschwindigkeiten bestimmt, welche über die Leistung der Ölpumpe reguliert werden.
 Um die Doppler-Winkel $\theta$ einzuhalten wird der Doppler-Prisma aus Abb. \ref{fig:prisma} verwendet.
-\begin{figure}
-  \centering
-  \includegraphics[width=4cm]{bilder/winkel.png}
-  \caption{Doppler-Prisma mit den Winkeln $15\dgr$, $30\dgr$ und $60\dgr$.}
-  \label{fig:prisma}
-\end{figure}
-\noindent Die entsprechenden Frequenzverschiebungen zu den verschiedenen Pumpleistungen in den verschiedenen Rohren sind in \ref{tab:helga} zu finden.
+Die entsprechenden Frequenzverschiebungen zu den verschiedenen Pumpleistungen in den verschiedenen Rohren sind in \ref{tab:helga} zu finden.
 Die Geschwindigkeiten werden mit
 \begin{equation}
-  v = \frac{\Delta \nu c}{2 \nu_0 \cos{\alpha}}
+  v = \frac{\Delta \nu c}{2 \nu_0 \cos{\alpha}} \label{eqn:v}
 \end{equation}
-ausgerechnet. Die benötigten Winkel $\alpha$ sind in Tabelle \ref{tab:alpha} aufgelistet.
+ausgerechnet. Für die Geschwindigkeit im Prisma gilt $c_\su{P}= 2700\vel$, in der
+Dopplerflüssigkeit gilt $c_\su{Fl}=1800\vel$. Die benötigten Winkel $\alpha$ sind in Tabelle \ref{tab:alpha} aufgelistet.
 \begin{table}[H]
   \centering
   \begin{tabular}{|c|c|ccc|}
@@ -95,36 +96,70 @@ ausgerechnet. Die benötigten Winkel $\alpha$ sind in Tabelle \ref{tab:alpha} au
   drei Rohren.}
   \label{tab:helga}
 \end{table}
+\newpage
+\noindent In Tabelle \ref{tab:mittelwerte} sind die gemittelten Geschwindigkeiten
+der drei verwendeten Rohrdurchmesser für die jeweiligen Pumpleistungen
+zu finden.
+\begin{table}[H]
+\centering
+\begin{tabular}{ccc}
+  \toprule
+  Rohrdurchmesser$/\mm$ & Pumpleistung $/\,\%$ & Geschwindigkeit$/\vel$ \\
+  \midrule
+      \mr{5}{*}{7}        &   35.2    & 0.42 \pm \, 0.03      \\
+                          &   45.2    & 0.69 \pm \, 0.06      \\
+                          &   50.0    & 0.84 \pm \, 0.07      \\
+                          &   55.2    & 1.08 \pm \, 0.10      \\
+                          &   70.0    & 1.68 \pm \, 0.13      \\ \midrule
+     \mr{5}{*}{10}        &   35.2    & 0.24 \pm \, 0.03      \\
+                          &   45.2    & 0.37 \pm \, 0.03      \\
+                          &   50.0    & 0.47 \pm \, 0.05      \\
+                          &   55.2    & 0.54 \pm \, 0.04      \\
+                          &   70.0    & 0.83 \pm \, 0.02      \\ \midrule
+     \mr{5}{*}{16}        &   35.2    & 0.14 \pm \, 0.04      \\
+                          &   45.2    & 0.18 \pm \, 0.03      \\
+                          &   50.0    & 0.21 \pm \, 0.04      \\
+                          &   55.2    & 0.26 \pm \, 0.04      \\
+                          &   70.0    & 0.38 \pm \, 0.05      \\
+  \bottomrule
+\end{tabular}
+\caption{Die gemittelten Geschwindigkeiten für die verschiedenen Rohrdurchmesser.}
+\label{tab:mittelwerte}
+\end{table}
 Anschließend werden für die drei Rohre die drei Plots \ref{fig:dünn}, \ref{fig:mittel}
-und \ref{fig:dick} erstellt. In jedem Plot befinden sich jeweils drei Graphen für die drei verwendeten Einstrahlwinkel. Dabei wird
+und \ref{fig:dick} erstellt. In jedem Plot befinden sich jeweils drei Graphen für die drei verwendeten Einstrahlwinkel $\theta$. Dabei wird
 $\frac{\Delta \nu}{\cos{\alpha}}$ gegen die Strömungsgeschinwigkeit aufgetragen.
-Dabei ist für alle drei Rohre auffällig, dass die Frequenzverschiebung proportional
-zur Geschwindigkeit ist.
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{bilder/winkelduenn.pdf}
+  \includegraphics[width=0.8\textwidth]{bilder/winkelduenn.pdf}
   \caption{Dopplerwinkel in Abhängigkeit der Strömungsgeschwindigkeit beim dünnen
   Rohr.}
   \label{fig:dünn}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{bilder/winkelmittel.pdf}
+  \includegraphics[width=0.8\textwidth]{bilder/winkelmittel.pdf}
   \caption{Dopplerwinkel in Abhängigkeit der Strömungsgeschwindigkeit beim mittleren
   Rohr.}
   \label{fig:mittel}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.6\textwidth]{bilder/winkeldick.pdf}
+  \includegraphics[width=0.8\textwidth]{bilder/winkeldick.pdf}
   \caption{Dopplerwinkel in Abhängigkeit der Strömungsgeschwindigkeit beim dicken
   Rohr.}
   \label{fig:dick}
 \end{figure}
+\newpage
 \subsection{Bestimmung des Geschwindigkeitsprofils}
 Um das Strömungsprofil zu bestimmen wird das mittlere Rohr verwendet mit
 $d_2 = 10\mm$, welches dem $\sfrac{3}{8}$ Zoll Rohr entspricht. Dabei wird
-ein Eintsrahlwinkel von $\theta = 15\dgr$ verwendet.
+ein Eintsrahlwinkel von $\theta = 15\dgr$ verwendet. In Tabelle \ref{tab:rita} befinden
+sich die Werte bei $45\,\%$ Pumpleistung und in Tabelle \ref{tab:hilde} die Werte
+bei $70\,\%$ Leistung. Hierbei wird zuvor die Tiefe eingestellt, da nur die Frequenzverschiebung im Rohr gemessen werden soll. Dazu wird aus der Anleitung
+entnommen, dass die Vorlaufstrecke im Prisma $l=30.7\mm$ entspricht. Für diese Strecke gilt $10\mm = 4\ms$. Daraus ergibt sich ein Startwert von $t=13.28\ms$. Deswegen beginnt
+die Messung bei $t=13.0\ms$. Jedoch befindet sich erst der Wert $t=13.5\ms$ in der
+Dopplerflüssigkeit. In der Dopplerflüssigkeit gilt $6\mm = 4\ms$.
 \begin{table}[H]
   \centering
   \begin{tabular}{cccc}
@@ -174,17 +209,21 @@ ein Eintsrahlwinkel von $\theta = 15\dgr$ verwendet.
   $70\,\%$ Pumpleistung.}
   \label{tab:hilde}
 \end{table}
-
-
+In Graph \ref{fig:profil} befinden sich die Geschwindigkeitsprofile bei jeweils
+$45\,\%$ und $70\,\%$ Pumpleistung. Dabei wird die Strömungsgeschwindigkeit gegen
+die Eindringtiefe in $\ms$ geplottet.
 \begin{figure}
   \centering
-  \includegraphics[width=0.6\textwidth]{bilder/profilV.pdf}
+  \includegraphics[width=0.8\textwidth]{bilder/profilV.pdf}
   \caption{Geschwindigkeitsprofile für $45\,\%$ und $70\,\%$ Pumpleistung.}
   \label{fig:profil}
 \end{figure}
+In Abb. \ref{fig:streu} sind die Graphen zu den Streuintensitäten zu beiden
+Pumpleistungen wiederzufinden. Dabei wird die Streuintensität gegen die Eindringtiefe
+geplottet.
 \begin{figure}
   \centering
-  \includegraphics[width=0.6\textwidth]{bilder/streuintensitaet.pdf}
+  \includegraphics[width=0.8\textwidth]{bilder/streuintensitaet.pdf}
   \caption{Streuintensitäten für $45\,\%$ und $70\,\%$ Pumpleistung.}
   \label{fig:streu}
 \end{figure}
