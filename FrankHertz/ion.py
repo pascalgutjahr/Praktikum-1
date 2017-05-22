@@ -1,13 +1,17 @@
-import numpy as np
-import uncertainties.unumpy as unp
-from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
-import matplotlib.pyplot as plt
 import matplotlib as mpl
 from scipy.optimize import curve_fit
-plt.rcParams['figure.figsize'] = (12, 8)
-plt.rcParams['font.size'] = 13
+mpl.use('pgf')
+import matplotlib.pyplot as plt
 plt.rcParams['lines.linewidth'] = 1
-csfont = {'fontname': 'Times New Roman'}
+import numpy as np
+
+mpl.rcParams.update({
+   'font.family': 'serif',
+   'text.usetex': True,
+   'pgf.rcfonts': False,
+   'pgf.texsystem': 'lualatex',
+   'pgf.preamble': r'\usepackage{unicode-math}\usepackage{siunitx}'
+})
 
 U=np.array([0,2.7,5.4,8.1,10.8,13.5,16.2,18.9,21.6,24.3,27,29.7,32.4,35.1,37.8,39.2])
 U=U+18
@@ -36,8 +40,8 @@ x=np.linspace(min(U), max(U))
 y = 1.3939e-10*x-5.01837e-9
 plt.plot(x,y, 'b-', label='Ausgleichsgerade')
 plt.plot(U,I, 'r.', label='Messwerte')
-plt.xlabel(r'$U_A \,/\, \mathrm{V}$')
-plt.ylabel(r'$dI_A/dU_A \,/\, \mathrm{nA/V}$')
+plt.xlabel(r'$U_\symup{B}\,/\,\si{\volt}$')
+plt.ylabel(r'$I_\symup{A}\,/\,\si{\nano\ampere}$')
 plt.ylim(0,3e-9)
 # plt.title('Messungen')
 plt.grid()
