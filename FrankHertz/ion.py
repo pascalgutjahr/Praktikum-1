@@ -17,22 +17,28 @@ AU=np.array([27,29.7,32.4,35.1,37.8,39.2])
 AU=AU+18
 AI=np.array([1.31,1.61,1.97,2.32,2.78,3])
 AI*=1e-9
-def f(AU, m, n):
-    return m * AU + n
+#def f(AU, m, n):
+ #   return m * AU + n
 
-params, covariance = curve_fit(f, AU, AI)
+#params, covariance = curve_fit(f, AU, AI)
 
-errors = np.sqrt(np.diag(covariance))
+#errors = np.sqrt(np.diag(covariance))
 
-print('m =', params[0], '+-', errors[0])
-print('n =', params[1], '+-', errors[1])
+#print('m =', params[0], '+-', errors[0])
+#print('n =', params[1], '+-', errors[1])
 
-x_plot = np.linspace(min(AU), max(AU))
+#x_plot = np.linspace(min(AU), max(AU))
 
-plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
+#plt.plot(x_plot, f(x_plot, *params), 'b-', label='linearer Fit')
+#m = 1.39392760981e-10 +- 5.04887352252e-12
+#n = -5.01837361587e-09 +- 2.61093484622e-10
+x=np.linspace(min(U), max(U))
+y = 1.3939e-10*x-5.01837e-9
+plt.plot(x,y, 'b-', label='Ausgleichsgerade')
 plt.plot(U,I, 'r.', label='Messwerte')
 plt.xlabel(r'$U_A \,/\, \mathrm{V}$')
 plt.ylabel(r'$dI_A/dU_A \,/\, \mathrm{nA/V}$')
+plt.ylim(0,3e-9)
 # plt.title('Messungen')
 plt.grid()
 # plt.legend('loc.best')
