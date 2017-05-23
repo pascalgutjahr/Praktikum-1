@@ -1,13 +1,13 @@
-\subsection{Impulsmessung}
+\subsection{Charakteristik de Zählrohrs}
 Um die Charakteristik des Geiger-Müller-Zählrohrs aufzunehmen wird die
 $\beta$-Strahlungsquelle vor das Zählrohr gespannt.
 \begin{table}[H]
   \centering
-  \caption{Impulsraten für verschiedene Spannungen.}
   \begin{tabular}{ccc||ccc}
     \toprule
     \mc{1}{c}{Spannung}&\mc{1}{c}{Impulsrate}&\mc{1}{c||}{Strom}&\mc{1}{c}{Spannung}&\mc{1}{c}{Impulsrate}&\mc{1}{c}{Strom} \\
-    $\su{U}\,/\Volt$&$\su{N}\,/\sek$&$\su{I}\,/\mcA$&$\su{U}\,/\Volt$&$\su{N}\,/\sek$&$\su{I}\,/\mcA$ \\
+    $\su{U}\,/\Volt$&$\su{N}\,/\si[per-mode=fraction]{\per\second}
+    $&$\su{I}\,/\mcA$&$\su{U}\,/\Volt$&$\su{N}\,/\si[per-mode=fraction]{\per\second}$&$\su{I}\,/\mcA$ \\
     \midrule
     300 & \hrulefill & \hrulefill & 510 & 323.8 \pm 18.0 & 0.8 \\
     310 & 298.6 \pm 17.3 & 0.1 & 520 & 323.3 \pm 18.0 & 1.0 \\
@@ -32,17 +32,18 @@ $\beta$-Strahlungsquelle vor das Zählrohr gespannt.
     500 & 326.0 \pm 18.1 & 0.8 & \hrulefill&\hrulefill&\hrulefill \\
     \bottomrule
   \end{tabular}
-  \label{.}
+  \caption{Impulsraten für verschiedene Spannungen.}
+  \label{tab:data}
 \end{table}
 Mit diesen Werten lässt sich die Charakteristik des Zählrohrs wie in Abbildung
 \ref{fig:char} darstellen, indem die Impulsrate gegen die Spannung aufgetragen
 wird.
 \begin{figure}[H]
   \includegraphics[width=0.8\textwidth]{bilder/charakteristik.pdf}
-  \caption{Charakteristik des Zählrohrs}
+  \caption{Charakteristik des Zählrohrs.}
   \label{fig:char}
 \end{figure}
-Die Steigung des Plateus lässt sich mit der linearen Regression mit den Parametern
+Die Steigung des Plateaus lässt sich mit der linearen Regression mit den Parametern
 \begin{align*}
   m &= 0.0123 \pm 0.009 \\
   n &= 318.8 \pm 4.1
@@ -51,14 +52,19 @@ darstellen. Hierbei gibt $m$ die Steigung des Plateaus an. Da die Steigung
 üblicherweise in $\%$ pro $100\Volt$ angegeben wird, erhält man für die
 Plateau-Steigung
 \begin{equation*}
-  m= (12.3\pm0.9)\%
+  m= (1.23\pm0.09)\%.
 \end{equation*}
-auf $100\Volt$
+Das Plateau beginnt bei $380\Volt$ und endet bei $560\Volt$. Für die Breite
+$b_\su{Plateau}$ ergibt sich somit ein Wert von
+\begin{equation*}
+  b_\su{Plateau} = 180\Volt.
+\end{equation*}
 
-\subsection{Primär- und Nachladeimpuls}
+\subsection{Primär- und Nachentladeimpuls}
+Die Nachentladungsimpulse und die Erholzeit werden auf dem Oszilloskop abgelesen
+und in Tabelle \ref{tab:nach} aufgeführt.
 \begin{table}[H]
   \centering
-  \caption{}
   \begin{tabular}{ccc}
     \toprule
     \mc{1}{c}{Spannung}&\mc{1}{c}{Erholzeit}&\mc{1}{c}{Nachentladungsimpuls}\\
@@ -74,13 +80,21 @@ auf $100\Volt$
     700 & 160 & 65 \\
     \bottomrule
   \end{tabular}
-  \label{}
+  \caption{Erholzeit und Nachentladungsimpuls für ausgewählte Spannungen.}
+  \label{tab:nach}
 \end{table}
+Für die Nachentladung wird die Laufzeit vom Beginn des Sekundärpeaks bis zum Ende
+des Sekundärpeaks gemessen.
+Bei der Erholzeit wird das Ende des Primär-Peaks bis zum Ende des Sekundär-Peaks
+gemessen.
 \subsection{Messung der Totzeit}
+Um die Totzeit zu bestimmen, stehen 2 Methoden zur Verfügung. Zum einen die
+Bestimmung mittels Oszilloskop und zum anderen mit der Zwei-Quellen-Methode.
 \subsubsection{Bestimmung durch Oszilloskop}
+Bei der Bestimmung mit dem Oszilloskop wird die Breite des Primär-Peaks abgelesen.
+Die jeweiligen Werte für die Totzeit finden sich in Tabelle \ref{tab:tot} wieder.
 \begin{table}[H]
   \centering
-  \caption{Werte zur Bestimmung der Totzeit.}
   \begin{tabular}{cc}
     \toprule
     \mc{1}{c}{Spannung}&\mc{1}{c}{Totzeit}\\
@@ -97,38 +111,44 @@ auf $100\Volt$
     700 & 150 \\
     \bottomrule
   \end{tabular}
+  \caption{Werte zur Bestimmung der Totzeit.}
   \label{tab:tot}
-
 \end{table}
 \subsubsection{Zwei-Quellen-Methode}
+Bei der Messung mit der Zwei-Quellen-Methode wird die Strahlintensität von
+Quelle 1, Quelle 2 und beiden Quellen zusammen gemessen. Hieraus ergibt sich eine
+Strahlungsintensität von
 \begin{align*}
   N_\text{1} &= (621.32\pm\,24.93)\,\si[per-mode=fraction]{\per\second} \\
   N_\text{2} &= (15.58\pm\,3.95)\,\si[per-mode=fraction]{\per\second} \\
   N_\text{1+2} &= (634\pm\,25.18)\,\si[per-mode=fraction]{\per\second}
 \end{align*}
-Die Totzeit errechnet sich nach Gleichung \eqref{eqn:tot} mit einem
+Die Totzeit errechnet dann sich nach Gleichung \eqref{eqn:tot} mit einem
 Fehler von
 \begin{equation}
-  \Delta T = \sqrt{\left(\frac{N_\text{1+2} - N_\text{2}}{2\,N_\text{1}^2
-N_\text{2}}\right)^2\cdot \sigma_\symup{N_1}^2 +
-\left(\frac{N_\text{1+2} -
+  \Delta T = \sqrt{\left(\frac{N_\text{1+2} - N_\text{2}}{2\,N_\text{1}^2 N_\text{2}}\right)^2\cdot \sigma_\symup{N_1}^2 +
+  \left(\frac{N_\text{1+2} -
    N_\text{1}}{2\,N_\text{1} N_\text{2}^2}\right)^2\cdot
-\sigma_\symup{N_2}^2 +
-\left(-\frac{1}{2\,N_\text{1}N_\text{2}}\right)^2\cdot
-\sigma_\symup{N_\text{1+2}}^2}
+  \sigma_\symup{N_2}^2 +
+  \left(-\frac{1}{2\,N_\text{1}N_\text{2}}\right)^2\cdot
+  \sigma_\symup{N_\text{1+2}}^2}
 \end{equation}
 zu
 \begin{equation*}
-  T \approx (0.14 \pm\,1.83)\,\si{\milli\second}.
+  T \approx (0.15 \pm\,1.83)\,\si{\milli\second}.
 \end{equation*}
-
+\subsection{Bestimmung der freigesetzten Ladung}
+Abschließend wird die freigesetzte Ladung $Q$ mit Formel \eqref{eqn:lad}
+für ausgewählte Spannungen $U$ bestimmt.Diese befinden sich in Tabelle \ref{tab:lad}.
+Die Werte für den Strom $I$ und
+die Impulsrate $N$ finden sich in Tabelle \ref{tab:data}. Die Teilchenzahl $Z$
+entspricht hier der Impulsrate, da für die gesamte Messung $\Delta t=60\sek$ gilt.
 \begin{table}[H]
   \centering
-  \caption{}
   \begin{tabular}{cccc}
     \toprule
-    \mc{1}{c}{Spannung}&\mc{1}{c}{Strom}&\mc{1}{c}{Impulsrate}&\mc{1}{c}{Ladung} \\
-    $U\,/\Volt$&$I\,/\mcA$&$N\,/60\sek$&$Q\,/e\cdot10^{16}\si{\coulomb}\cdot10^{16}$\\
+    \mc{1}{c}{Spannung}&\mc{1}{c}{Strom}&\mc{1}{c}{Teilchenzahl}&\mc{1}{c}{Ladung} \\
+    $U\,/\Volt$&$I\,/\mcA$&Z&$Q\,/e\cdot10^{16}\si{\coulomb}$\\
     \midrule
     350 & 0.2 & 19079 & 0.39 \\
     400 & 0.4 & 19245 & 0.78 \\
@@ -140,5 +160,11 @@ zu
     700 & 1.8 & 21140 & 3.19 \\
     \bottomrule
   \end{tabular}
-  \label{}
+  \caption{Ladungen für verschiedene Spannungen.}
+  \label{tab:lad}
 \end{table}
+Der Fehler Der Ladung $Q$ ergibt sich mit derGauß'schen Fehlerfortpflanzung
+\begin{equation*}
+  \Delta Q = \sqrt{\left(\frac{\su{It}}{\su{Z}^2})^2\cdot\sigma_\su{Z}^2},
+\end{equation*}'
+ist jedoch vernachlässigbar klein.
