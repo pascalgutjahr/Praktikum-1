@@ -17,3 +17,62 @@ Intensität in Abhängigkeit der Dicke:
   N(D) = N_0 \cdot \exp^{-n\sigma D}.
 \end{equation}
 Hierbei ist $N_0$ die Ausgangsaktivität und $n$ die Anzahl der Teilchen im Absorber.
+Der Absorptionskoeffizient $\mu$ wird durch $n\cdot\sigma$ definiert. Um die
+Teilchenanzahl im Absorber zu berechnen wird die Formel
+\begin{equation}
+  n = \frac{z\su{N_A}}{\su{V_{mol}}} = \frac{z\su{N_A}\rho}{M}
+\end{equation}
+verwendet. Hierbei ist $\su{N_A}$ die Avogadro-Konstante, $z$ die Ordnungszahl
+und $M$ das Molekulargewicht.
+
+\subsection{\texorpdfstring{Eigenschaften von ($\gamma$)}{(Eigenschaften von gamma)}-Strahlung}
+Werden angeregte Atomkerne um ein oder mehrere Energieniveaus erniedrigt, wird
+$\gamma$-Strahlung freigesetzt. Da es sich bei diesen Energieniveaus um diskrete
+Zustände handelt, erhält man ein diskretes Linienspektrum für $\gamma$-Strahler.
+$\gamma$-Strahlung breitet sich mit Lichtgeschwindigkeit aus, da sie aus Photonen
+besteht. Zudem weist sie Eigenschaften auf, die für elektromagnetische Wellen
+typisch sind.
+Bei der Wechselwirkung von $\gamma$-Strahlung treten je nach Partner
+unterschiedliche Effekte auf, wie in Abbildung \ref{fig:ww} gezeigt
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\textwidth]{bilder/wechselgamma.jpg}
+  \caption{Mögliche Effekte von Wechselwirkung zwischen $\gamma$-Strahlung
+  und Wechselwirkungspartner \cite{704}.}
+  \label{fig:ww}
+\end{figure}
+Der Photo-Effekt, der Compton-Effekt und die Paarbildung treten mit am häufigsten
+auf.
+Beim Photo-Effekt wird ein Elektron aus der Absorberschale durch ein einfallendes
+Photon gelöst. Das Photon gibt bei diesem Prozess seine gesamte Energie an das
+Elektron ab und wird daraufhin vernichtet. Die Energieabgabe erfolgt jedoch nur,
+wenn die Bindungsenergie $\su{E_B}$ überwunden wurde. Das hat zur Folge, dass
+Photonen eine Grenzenergie besitzen müssen, damit es zum Photoeffekt kommen kann.
+
+\begin{wrapfigure}{r}{7cm}
+  \includegraphics[width=7cm]{bilder/compton.jpg}
+  \caption{Darstellung des Compton-Effekts \cite{704}.}
+  \label{fig:com}
+\end{wrapfigure}
+Anders als beim Photo-Effekt, wird das Photon beim Compton-Effekt nicht vernichtet,
+da beim stoßen mit dem Elektron nur ein Teil der Photonen-Energie abgegeben wird.
+Bei diesem Prozess werden beide Teilchen wie in Abbildung \ref{fig:com} gezeigt,
+von ihrer Bahn abgelenkt.
+Für diesen Prozess wurde der Wirkungsquerschnitt $\sigma_\su{com}$ von Klein und
+Nishina in Abhängigkeit von der Quantenenergie aufgestellt, sodass
+\begin{equation}
+  \sigma_\su{com}= 2\pi r^2_\su{e}\lf(\frac{1+\epsilon}{\epsilon^2}\lf[\frac{2(1+
+  \epsilon)}{1+2\epsilon}-\frac{\ln(1+2\epsilon)}{\epsilon}\rt]+\frac{\ln(1+2\epsilon)}
+  {2\epsilon}-\frac{1+3\epsilon}{(1+2\epsilon)^2}\rt)
+\end{equation}
+gilt. Hierbei ist $r_\su{e}$ der Elektronenradius mit $r_\su{e}=2.818\,\cdot10^
+{-15}\mt$ \cite{rad} und $\epsilon$ das Verhältnis von Quantenenergie und Ruheenergie
+des Elektrons.
+
+Bei der Paarbildung wird das Photon annihiliert, wenn die Energie des $\gamma$-Quants
+mindestens doppelt so groß ist, wie die Ruhemasse eines Elektrons. Bei der
+Annihilation entstehen ein Eletron und ein Positron.
+Während der Photo-Effekt ausschließlich bei niederen Energien für die Bildung des
+Absorptionskoeffizienten beteiligt ist, ist die Paarbildung bei hohen Energien
+ausschlaggebend. Die Angleichung im mittleren Bereich erfolgt durch den Compton-
+Effekt.
