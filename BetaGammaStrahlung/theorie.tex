@@ -25,7 +25,7 @@ Teilchenanzahl im Absorber zu berechnen wird die Formel
 verwendet. Hierbei ist $\su{N_A}$ die Avogadro-Konstante, $z$ die Ordnungszahl
 und $M$ das Molekulargewicht.
 
-\subsection{\texorpdfstring{Eigenschaften von ($\gamma$)}{(Eigenschaften von gamma)}-Strahlung}
+\subsection{\texorpdfstring{Eigenschaften von $\gamma$}{(Eigenschaften von gamma)}-Strahlung}
 Werden angeregte Atomkerne um ein oder mehrere Energieniveaus erniedrigt, wird
 $\gamma$-Strahlung freigesetzt. Da es sich bei diesen Energieniveaus um diskrete
 Zustände handelt, erhält man ein diskretes Linienspektrum für $\gamma$-Strahler.
@@ -74,5 +74,58 @@ mindestens doppelt so groß ist, wie die Ruhemasse eines Elektrons. Bei der
 Annihilation entstehen ein Eletron und ein Positron.
 Während der Photo-Effekt ausschließlich bei niederen Energien für die Bildung des
 Absorptionskoeffizienten beteiligt ist, ist die Paarbildung bei hohen Energien
-ausschlaggebend. Die Angleichung im mittleren Bereich erfolgt durch den Compton-
-Effekt.
+ausschlaggebend. Die Angleichung im mittleren Bereich erfolgt durch den
+Compton-Effekt.
+\subsection{Eigenschaften von \texorpdfstring{$\beta$}{beta}-Strahlung}
+$\beta$-Strahlung entsteht bei dem Zerfall des Atomkerns und bestehen aus
+Elektronen mit hoher Geschwindigkeit.
+\begin{wrapfigure}{l}{7cm}
+  \includegraphics[width=7cm]{bilder/emissionbeta.jpg}
+  \caption{Kontinuierliches Emissionsspektrum von $\beta^-$-Strahlung}
+  \label{fig:emib}
+\end{wrapfigure}
+Während des Kernzerfalls, zerfällt ein Neutron zu einem Proton, einem Elektron
+und einem Antineutrino $\bar\nu_\su{e}$.
+\begin{equation*}
+  n \rightarrow \su{p + \beta^- + \bar\nu_\su{e}}
+\end{equation*}
+Hierbei verteilt sich die Energie kontinuierlich auf das Antineutrino und das
+Elektron. Abbildung \ref{fig:emib} zeigt das so entstehende kontinuierliche Spektrum.
+Das Elektron kann eine Maximalenergie von $E_\su{max}$ erreichen, welche beim
+gesamten Zerfallsprozess freigesetzt wird.
+Wenn beim Durchlaufen des Absorbermaterials Streuungsprozesse auftreten, werden
+häufig genug dieser Prozesse durchgeführt, sodass das Elektron nicht vollständig
+Absorbiert wird oder austritt.
+Bei der elastischen Streuung am Atomkern treten nur geringe Energieverluste auf.
+Durch das Coulombfeld des Kerns werden die Elektronen jedoch teilweise sehr stark
+abgelenkt. Das hat eine Intensitätsabnahme durch Auffächerung des Strahls zur Folge.
+Weiter wird die Wechselwirkungs-Wahrscheinlichkeit durch das Verlängern der
+Elektronenbahnen im Absorbermaterial stark verlängert.
+Werden die $\beta$-Strahlen im Coulombfeld beschleunigt, besteht die Möglichkeit,
+dass sie am Atomkern inelastisch gestreut werden. Dabei wird Energie in Form
+von elektromagnetischer Strahlung abgegeben, die $\beta$-Teilchen bremst. Diese
+Strahlung wird auch als Bremsstrahlung bezeichnet.
+
+Für natürliche $\beta$-Strahler gilt ebenfalls ein exponentieller Abfall der
+Intensität, bis die Schichtdicke nah an der maximalen Reichweite der Teilchen liegt.
+Nach der maximalen Reichweite $\su{R_{max}}$ tritt nur noch Untergrundstrahlung auf.
+Diese setzt sich aus Brems- und Hintergrundstrahlung zusammen. Logarithmiert man
+beide Strahlungsintensitäten und stellt sie wie in Abbildung \ref{fig:reich}
+\newpage
+\begin{wrapfigure}{r}{7cm}
+  \includegraphics[width=7cm]{bilder/betaabsorp.jpg}
+  \caption{Bestimmung der maximalen Reichweite von $\beta$-Strahlung.\cite{704}}
+  \label{fig:reich}
+\end{wrapfigure}
+graphisch dar, kann auf die maximale Reichweite geschlossen werden. Die verwendete
+Massenbelegung $R$ wird durch
+\begin{equation}
+  R=\rho D
+\end{equation}
+berechnet. Da hauptsächlich Teilchen mit der größten Energie die maximale Reichweite
+bestimmen, lässt sich die maximale Energie $\su{E_max}$ mit Formel
+\begin{equation}
+  \su{E_{max}} = 1.92 \cdot\sqrt{\su{R_{max}}^2+0.22\,\cdot\su{R_{max}}}
+  \label{eqn:emax}
+\end{equation}
+berechnen.
