@@ -2,23 +2,39 @@
 % gamma-Strahler 131,62 100s
 \subsection{\texorpdfstring{Absorption von $\gamma$}{(Absorption von gamma)}-Strahlung}
 Zunächst wird mit den Formeln \eqref{eqn:sigma} und \eqref{eqn:mu} der
+\begin{wraptable}{r}{6cm}
+  \centering
+  \caption{Daten zu Eisen und Blei.}
+  \begin{tabular}{cccc}
+    \toprule
+    & $M\,/10^{-25}\kg$ & $\rho\,/\Dichte$ & z \\
+    \midrule
+    Blei  & 3,44 \cite{Mpb} & 11340 \cite{dichte} & 82
+    Eisen & 0,93 \cite{Mfe }&  7860 \cite{dichte} & 26
+  \end{tabular}
+  \label{tab:werte}
+\end{wraptable}
 Wirkungsquerschnitt, beziehungsweise der Absorptionskoeffizient von den
 verwendeten Absorbern berechnet. Als Absorber werden Eisen und Blei verwendet.
+Zudem werden die molekulare Masse $M$, die Ordnungszahl $z$ und die Dichte $\rho$
+der Absorber benötigt.
+Diese Werte befinden sich in Tabelle \ref{tab:werte}.
 Somit ergeben sich die Parameter
 \begin{equation*}
   \sigma = 2,77\,\cdot10^{-29}\qm
 \end{equation*}
-und daraus folgend
+mit $\epsilon=1,295$ und daraus folgend
 \begin{align*}
-  \mu_\su{Pb} &= 2,01\,\cdot 10^{27} \\
+  \mu_\su{Pb} &= 2,01\,\cdot 10^{27}, \\
   \mu_\su{Fe} &= 1,64\,\cdot 10^{27}.
 \end{align*}
-
 Der Fehler auf den Absorptionskoeffizienten berechnet sich mit
 \begin{equation*}
   \Delta\mu = \sqrt{\lf(\frac{z\su{N_L}\rho}{M^2}\rt)^2\cdot\sigma_\su{M}^2},
 \end{equation*}
 ist jedoch vernachlässigbar klein.
+Anschließend werden diese Werte im Experiment überprüft. Tabelle \ref{tab:pb}
+zeigt die verschiedenen Zählraten für die beiden Absorber bei verschiedenen Dicken.
 \begin{table}[H]
   \centering
   \caption{Zählrate von Blei- und Eisen-Absorbern bei verschiedenen Dicken.}
@@ -41,9 +57,47 @@ ist jedoch vernachlässigbar klein.
   \end{tabular}
   \label{tab:pb}
 \end{table}
-Bei steigender Dicke wird die Messzeit $t=(60-1000)\sek$ erhöht.
-
-\subsection{Absorptionskurve des \texorpdfstring{$\beta$}{beta} - Strahlers}
+Bei steigender Dicke wird die Messzeit $t=(60-1000)\sek$ erhöht. Die gemessenen
+Counts sind bereits auf eine Sekunde normiert.
+Um den Absorptionskoeffizient graphisch darzustellen, wird der Nulleffekt $N_0=1,01\,\si{\per\second}$
+von den gemessenen Zählraten subtrahiert und durch $N_\su{ohne}=131,62\,\si{\per\second}$
+dividiert. Hierbei entspricht $N_\su{ohne}$ der Messung ohne Absorber.
+Diese Daten werden dann logarithmisch gegen die Absorberdicke aufgetragen.
+Dies ist in den Abbildungen \ref{fig:pb} und \ref{fig:fe} dargestellt.
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=5cm]{bilder/gammaPB.pdf}
+    \caption{Absorptionskurve von Blei.}
+    \label{}
+  \end{subfigure}
+  \begin{subfigure}{0.48\textwidth}
+    \centering
+    \includegraphics[width=5cm]{bilder/gammaFE.pdf}
+    \caption{Absorptionskurve von Eisen}
+    \label{fig:fe}
+  \end{subfigure}
+  \caption{Absorptionskurven der beiden Absorbermaterialien}
+  \label{fig:abs}
+\end{figure}
+Die Parameter der Regression betragen
+\begin{align*}
+  a &= (-0,89\,\pm\,0,04)\,\si{\per\centi\meter}, \\
+  b &= (-0,2\,\pm\,0,1)
+\end{align*}
+für Blei und für Eisen
+\begin{align*}
+  a &= (-0,492\,\pm\,0,006)\,\si{\per\centi\meter}, \\
+  b &= (-0,06\,\pm\,0,02).
+\end{align*}
+Der Absorptionskoeffizient ergibt sich aus der Steigung $a$ nach Formel \eqref{eqn:steig}
+und beträgt
+\begin{align*}
+  \mu_\su{Pb} &= (89\,\pm\,4)\,\si{\per\meter}, \\
+  \mu_\su{Fe} &= (49,2\,\pm\,0,6)\,\si{\per\meter}.
+\end{align*}
+\subsection{Absorption \texorpdfstring{$\beta$}{beta}-Strahlung}
 
 Die zur Auswertung verwendeten Daten sind in Tabelle \ref{tab:mess}
 aufgeführt.
