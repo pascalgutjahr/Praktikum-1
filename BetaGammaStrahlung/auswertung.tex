@@ -1,0 +1,43 @@
+% Nulleffekt 1.01 1100s
+% gamma-Strahler 131,62 100s
+\subsection{\texorpdfstring{Absorption von $\gamma$}{(Absorption von gamma)}-Strahlung}
+Zunächst wird mit den Formeln \eqref{eqn:sigma} und \eqref{eqn:mu} der
+Wirkungsquerschnitt, beziehungsweise der Absorptionskoeffizient von den
+verwendeten Absorbern berechnet. Als Absorber werden Eisen und Blei verwendet.
+Somit ergeben sich die Parameter
+\begin{equation*}
+  \sigma = 2,77\,\cdot10^{-29}\qm
+\end{equation*}
+und daraus folgend
+\begin{align*}
+  \mu_\su{Pb} &= 2,01\,\cdot 10^{27} \\
+  \mu_\su{Fe} &= 1,64\,\cdot 10^{27}.
+\end{align*}
+
+Der Fehler auf den Absorptionskoeffizienten berechnet sich mit
+\begin{equation*}
+  \Delta\mu = \sqrt{\lf(\frac{z\su{N_L}\rho}{M^2}\rt)^2\cdot\sigma_\su{M}^2},
+\end{equation*}
+ist jedoch vernachlässigbar klein.
+\begin{table}[H]
+  \centering
+  \caption{Zählrate von Blei- und Eisen-Absorbern bei verschiedenen Dicken.}
+  \begin{tabular}{cccc}
+    \toprule
+    \mc{2}{c}{Blei}&\mc{2}{c}{Eisen} \\
+    $\su{D}\,/\cm$ & $\su{N}\,/\sek$ & $\su{D}\,/\cm$ & $\su{N}\,/\sek$ \\
+    \midrule
+    0,10 & 113,38 & 0,5 & 101,80 \\
+    0,40 &  92,90 & 1,0 &  75,34 \\
+    1,03 &  43,87 & 1,5 &  59,16 \\
+    1,30 &  34,30 & 2,0 &  44,76 \\
+    2,01 &  15,10 & 2,5 &  35,29 \\
+    3,06 &   5,61 & 3,0 &  28,24 \\
+    3,45 &   4,62 & 3,5 &  21,56 \\
+    4,06 &   2,58 & 4,0 &  17,93 \\
+    4,56 &   2,12 & 4,5 &  13,71 \\
+    5,10 &   1,68 & 5,0 &  10,68 \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:pb}
+\end{table}
