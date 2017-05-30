@@ -27,17 +27,108 @@ ist jedoch vernachlässigbar klein.
     \mc{2}{c}{Blei}&\mc{2}{c}{Eisen} \\
     $\su{D}\,/\cm$ & $\su{N}\,/\sek$ & $\su{D}\,/\cm$ & $\su{N}\,/\sek$ \\
     \midrule
-    0,10 & 113,38 & 0,5 & 101,80 \\
-    0,40 &  92,90 & 1,0 &  75,34 \\
-    1,03 &  43,87 & 1,5 &  59,16 \\
-    1,30 &  34,30 & 2,0 &  44,76 \\
-    2,01 &  15,10 & 2,5 &  35,29 \\
-    3,06 &   5,61 & 3,0 &  28,24 \\
-    3,45 &   4,62 & 3,5 &  21,56 \\
-    4,06 &   2,58 & 4,0 &  17,93 \\
-    4,56 &   2,12 & 4,5 &  13,71 \\
-    5,10 &   1,68 & 5,0 &  10,68 \\
+    0,10 & 113,38\,\pm\,0,200 & 0,5 & 101,80\,\pm\,0,200 \\
+    0,40 &  92,90\,\pm\,0,090 & 1,0 &  75,34\,\pm\,0,100 \\
+    1,03 &  43,87\,\pm\,0,040 & 1,5 &  59,16\,\pm\,0,060 \\
+    1,30 &  34,30\,\pm\,0,030 & 2,0 &  44,76\,\pm\,0,040 \\
+    2,01 &  15,10\,\pm\,0,010 & 2,5 &  35,29\,\pm\,0,020 \\
+    3,06 &   5,61\,\pm\,0,004 & 3,0 &  28,24\,\pm\,0,020 \\
+    3,45 &   4,62\,\pm\,0,003 & 3,5 &  21,56\,\pm\,0,010 \\
+    4,06 &   2,58\,\pm\,0,002 & 4,0 &  17,93\,\pm\,0,010 \\
+    4,56 &   2,12\,\pm\,0,002 & 4,5 &  13,71\,\pm\,0,008 \\
+    5,10 &   1,68\,\pm\,0,001 & 5,0 &  10,68\,\pm\,0,006 \\
     \bottomrule
   \end{tabular}
   \label{tab:pb}
 \end{table}
+Bei steigender Dicke wird die Messzeit $t=(60-1000)\sek$ erhöht.
+
+\subsection{Absorptionskurve des \texorpdfstring{$\beta$}{beta} - Strahlers}
+
+Die zur Auswertung verwendeten Daten sind in Tabelle \ref{tab:mess}
+aufgeführt.
+
+\begin{table}[H]
+ \centering
+ \begin{tabular}{cccc}
+   \toprule
+   \multicolumn{1}{c}{Laufzeit} & \multicolumn{1}{c}{Absorberdicke} &
+\multicolumn{1}{c}{Impulse} & \multicolumn{1}{c}{Impulsrate} \\
+   {$t\,/\,\si{\second}$} & {$d\,/\,\si{\micro\meter}$} & {$N$} &
+{$\frac{N}{t}\,/\,\si[per-mode=fraction]{\per\second}$} \\
+   \midrule
+     100  & 102\,\pm\,1   & 4286 & 42,86\,\pm\,0,07 \\
+     200  & 126\,\pm\,1   & 4505 & 22,53\,\pm\,0,02 \\
+     300  & 153\,\pm\,0.5 & 3003 & 10,01\,\pm\,0,01 \\
+     400  & 160\,\pm\,1   & 2195 & 5,49\,\pm\,0,01 \\
+     500  & 200\,\pm\,1   & 1017 & 2,03\,\pm\,0,001 \\
+     600  & 253\,\pm\,1   & 478  & 0,79\,\pm\,0,001 \\
+     700  & 302\,\pm\,1   & 395  & 0,56\,\pm\,0,001 \\
+     800  & 338\,\pm\,5   & 484  & 0,61\,\pm\,0,001 \\
+     900  & 400\,\pm\,1   & 494  & 0,55\,\pm\,0,001 \\
+     1000 & 444\,\pm\,2   & 533  & 0,53\,\pm\,0,001 \\
+ \bottomrule
+ \end{tabular}
+ \caption{Messdaten zur Auswertung.}
+ \label{tab:mess}
+\end{table}
+
+Zur Auswertung der Absorptionskurve wird die Dicke des Absorbers gegen die
+logarithmische Zählrate dargestellt. Dazu wird von den Zählraten aus
+Tabelle \ref{tab:mess} die Nullmessung subtrahiert und durch die Messung
+ohne Absorber dividiert. Zur Bestimmung der maximalen Reichweite
+$R_\text{max}$ wird der Bereich oberhalb und unterhalb des Graphen linear
+nach
+
+\begin{equation}
+ y_\text{1, 2} = m_\text{1, 2} \cdot d + b_\text{1, 2}
+\end{equation}
+dargestellt.
+
+Die Koeffizienten ergeben mit Python 3.5.2
+\begin{align*}
+ m_\text{1} &=
+(-0,03\,\pm\,0,001)\,\si[per-mode=fraction]{\per\micro\meter}\\
+ m_\text{2} &=
+(-0,01\,\pm\,0,005)\,\si[per-mode=fraction]{\per\micro\meter} \\
+ b_\text{1} &= 0,94\,\pm\,0,23\\
+ b_\text{2} &= -5,86\,\pm\,1,86.
+\end{align*}
+
+Danach lässt sich nach $R_\text{max} = \frac{b_\text{2} -
+b_\text{1}}{m_\text{1} - m_\text{2}}$ die Reichweite zu
+\begin{equation}
+ R_\text{max} = (287,87\,\pm\,100.96)\,\si{\micro\meter}
+\end{equation}
+
+berechnen. Mit der maximalen Reichweite folgt nach Gleichung
+\eqref{eqn:emax} für die maximale Energie mit einem Fehler nach
+
+\begin{equation}
+ \Delta E_\text{max} = \sqrt{\left(\frac{\partial E_\text{max}}{\partial
+R_\text{max}}\right)^2 \cdot \sigma_\symup{R_\symup{max}}^2} =
+\frac{1,92 R_\text{max} + 0,2112}{\sqrt{R_\text{max}^2 + 0,22
+R_\text{max}}}
+\end{equation}
+
+der Wert zu
+
+\begin{equation}
+ E_\text{max} = (0.015\,\pm\,0.003)\,\si{\mega\electronvolt}.
+\end{equation}
+\par\bigskip
+
+Die Nullmessung zu Beginn mit $t_\text{0} = 1100\,\si{\second}$ beträgt
+auf $1\,\si{\second}$ normiert $N_\text{0} =
+0.52\,\si[per-mode=fraction]{\per\second}$. Die Impulsrate ohne Absorber
+beträgt $N_\text{o. Absorp} =
+554.29\,\si[per-mode=fraction]{\per\second}$.
+
+Der Graph ist in Abbildung \ref{fig:absorp} dargestellt.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width = 0.8\textwidth]{bilder/betaAl.pdf}
+ \caption{Absorptionskurve des $\beta$ - Strahlers \ce{^{99}Tc}.}
+ \label{fig:absorp}
+\end{figure}

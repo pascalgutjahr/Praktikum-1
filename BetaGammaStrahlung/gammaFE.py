@@ -24,6 +24,9 @@ t = np.array([60, 90, 120, 180, 240, 300, 360, 400, 450, 500])
 N = (N-N_0) / t  # auf t = 1s normiert und Nulleffekt abgezogen
 N_log = np.log(N/N_gamma)
 
+F = np.sqrt(N) / t
+print('Fehler Eisen:', np.vstack(F))
+
 def f(d, a, b):
     return a * d + b
 

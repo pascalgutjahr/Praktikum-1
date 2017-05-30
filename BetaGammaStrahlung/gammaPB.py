@@ -24,6 +24,9 @@ t = np.array([60, 110, 180, 230, 400, 600, 700, 800, 900, 1000])
 N = (N-N_0) / t  # auf t = 1s normiert und Nulleffekt abgezogen
 N_log = np.log(N/N_gamma)
 
+F = np.sqrt(N) / t
+print('Fehler Wurzel N durch t:', np.vstack(F))
+
 def f(d, a, b):
     return a * d + b
 
