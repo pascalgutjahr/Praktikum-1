@@ -15,10 +15,12 @@ mpl.rcParams.update({
 
 t, v70, v45, streu70, streu45 = np.genfromtxt('werte.txt', unpack=True, skip_header=2)
 
-plt.plot(t, v45, 'bx', label='$45\,\%$ Pumpleistung')
-plt.plot(t, v70, 'rx', label='$70\,\%$ Pumpleistung')
+d = [-0.42, 1.08, 1.83, 2.53, 3.33, 4.08, 4.83, 5.58, 6.33, 7.08]
+
+plt.plot(d, v45, 'bx', label='$45\,\%$ Pumpleistung')
+plt.plot(d, v70, 'rx', label='$70\,\%$ Pumpleistung')
 plt.grid()
-plt.xlabel(r'$t \,/\, \si{\micro\second}$')
+plt.xlabel(r'$d \,/\, \si{\milli\meter}$')
 plt.ylabel(r'$v \,/\,\si[per-mode=fraction]{\meter\per\second}$')
 plt.legend(loc='best')
 
