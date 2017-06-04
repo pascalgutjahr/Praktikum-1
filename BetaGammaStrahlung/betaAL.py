@@ -69,7 +69,7 @@ color = "black")
 plt.errorbar(d,Nt2, yerr = DeltaN, fmt='|', color = "darkslategrey")
 
 plt.xlabel(r'$d\,/\,\si{\micro\meter}$')
-plt.ylabel(r'$\log{\left(\frac{N - N_\text{0}}{N_\text{o. Absorb.}}\right)}$')
+plt.ylabel(r'$\log{\left(\frac{N - N_\text{0}}{N_\text{ohne}}\right)}$')
 plt.xticks([100, 150, 200, 250, 287.87, 350, 400, 450],
           [r'$100$', r'$150$', r'$200$', r'$250$', r'$R_\text{max}$',
 r'$350$', r'$400$', r'$450$'])
