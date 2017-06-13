@@ -14,27 +14,36 @@ mpl.rcParams.update({
 })
 
 z_1, I_1, z_2, I_2, z_3, I_3 = np.genfromtxt('werte.txt', unpack=True, skip_header=2)
-z_1 = z_1 * 1e-2
-z_0 = 28.35e-2
+z_1 = z_1 * 1e-3
+z_0 = 28.35e-3
 z = z_1 - z_0
-I_1 = I_1 * 1e-9
+I_1 = I_1 * 1e-9 - 0.3e-9
+L = 1
+A_0 = 860e-9
+lmbd = 532e-9
+b = 0.15e-3
 
-# def f(d, a, b):
-#     return a * d + b
-#
-# params, covariance = curve_fit(f, d, N_log)
-#
-# errors = np.sqrt(np.diag(covariance))
-#
-# print('a =', params[0], '±', errors[0])
-# print('b =', params[1], '±', errors[1])
-# plt.plot(d, f(d,*params), '-',color='deeppink', label='Lineare Ausgleichsrechnung')
+def f(z_1,A_0,b,lmbd):
+    return b*b*A_0*A_0*((lmbd/(np.pi*A_0*np.sin((z_1-28.35e-3)/1)))*(lmbd/(np.pi*A_0*np.sin((z_1-28.35e-3)/1))))*((np.sin((np.pi*A_0*np.sin((z_1-28.35e-3)/1))/lmbd))*(np.sin((np.pi*A_0*np.sin((z_1-28.35e-3)/1))/lmbd)))
+params, covariance= curve_fit(f, z, I_1)
+errors = np.sqrt(np.diag(covariance))
 
-plt.plot(z/1e-2, I_1/1e-9, 'bx', label='gemessene Intensität')
+print('A_0 =', params[0], '±', errors[0])
+print('b =', params[1], '±', errors[1])
+print('lmbd =', params[2], '±', errors[2])
+plt.plot(z, f(z,*params), 'k-', label='Ausgleichskurve')
 
+# B = A_0**2 * b**2 * (lmbd / (np.pi * b * np.sin(z)))**2 * np.sin(np.pi * b * np.sin(z)/lmbd)**2
+
+j = A_0 * ((np.sin((np.pi * b * np.sin(z))/lmbd)) / ((np.pi * b *
+np.sin(z)) / (lmbd)))**2
+
+plt.plot(z, j, 'r-', label='Theoriekurve')
+
+plt.plot(z, I_1, 'bx', label='gemessene Intensität')
 plt.grid()
 plt.xlabel(r'$\zeta - \zeta_0\,/\,\si{\milli\meter}$')
-plt.ylabel(r'$I\,/\,\si[per-mode=fraction]{\nano\ampere}$')
+plt.ylabel(r'$I\,/\,\si{\nano\ampere}$')
 plt.legend(loc='best')
 
 plt.tight_layout
