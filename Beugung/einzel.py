@@ -14,9 +14,10 @@ mpl.rcParams.update({
 })
 
 z_1, I_1, z_2, I_2, z_3, I_3 = np.genfromtxt('werte.txt', unpack=True, skip_header=2)
-z_1 = z_1e-2
+z_1 = z_1 * 1e-2
 z_0 = 28.35e-2
 z = z_1 - z_0
+I_1 = I_1 * 1e-9
 
 # def f(d, a, b):
 #     return a * d + b
@@ -29,10 +30,10 @@ z = z_1 - z_0
 # print('b =', params[1], '±', errors[1])
 # plt.plot(d, f(d,*params), '-',color='deeppink', label='Lineare Ausgleichsrechnung')
 
-plt.plot(z, I_1, 'bx', label='gemessene Intensität')
+plt.plot(z/1e-2, I_1/1e-9, 'bx', label='gemessene Intensität')
 
 plt.grid()
-plt.xlabel(r'$\zeta\,/\,\si{\milli\meter}$')
+plt.xlabel(r'$\zeta - \zeta_0\,/\,\si{\milli\meter}$')
 plt.ylabel(r'$I\,/\,\si[per-mode=fraction]{\nano\ampere}$')
 plt.legend(loc='best')
 
