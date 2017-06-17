@@ -24,8 +24,9 @@ lmbd = 532e-9
 b = 0.15e-3
 
 def f(z_1,A_0,b,lmbd):
-    return b*b*A_0*A_0*((lmbd/(np.pi*A_0*np.sin((z_1-28.35e-3)/1)))*(lmbd/(np.pi*A_0*np.sin((z_1-28.35e-3)/1))))*((np.sin((np.pi*A_0*np.sin((z_1-28.35e-3)/1))/lmbd))*(np.sin((np.pi*A_0*np.sin((z_1-28.35e-3)/1))/lmbd)))
-params, covariance= curve_fit(f, z, I_1)
+    b*b*A_0*A_0*((lmbd/(np.pi*A_0*np.sin((z_1-28.35e-3)/1)))*(lmbd/(np.pi*A_0*np.sin(
+    (z_1-28.35e-3)/1))))*((np.sin((np.pi*A_0*np.sin((z_1-28.35e-3)/1))/lmbd))*(np.sin((np.pi*A_0*np.sin((z_1-28.35e-3)/1))/lmbd)))
+    params, covariance= curve_fit(f, z, I_1)
 errors = np.sqrt(np.diag(covariance))
 
 print('A_0 =', params[0], '±', errors[0])
@@ -38,9 +39,9 @@ plt.plot(z, f(z,*params), 'k-', label='Ausgleichskurve')
 j = A_0 * ((np.sin((np.pi * b * np.sin(z))/lmbd)) / ((np.pi * b *
 np.sin(z)) / (lmbd)))**2
 
-plt.plot(z, j, 'r-', label='Theoriekurve')
+# plt.plot(z, j, 'r-', label='Theoriekurve')
 
-plt.plot(z, I_1, 'bx', label='gemessene Intensität')
+# plt.plot(z, I_1, 'bx', label='gemessene Intensität')
 plt.grid()
 plt.xlabel(r'$\zeta - \zeta_0\,/\,\si{\milli\meter}$')
 plt.ylabel(r'$I\,/\,\si{\nano\ampere}$')
