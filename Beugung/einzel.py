@@ -6,47 +6,51 @@ plt.rcParams['lines.linewidth'] = 1
 import numpy as np
 
 mpl.rcParams.update({
-   'font.family': 'serif',
-   'text.usetex': True,
-   'pgf.rcfonts': False,
-   'pgf.texsystem': 'lualatex',
-   'pgf.preamble': r'\usepackage{unicode-math}\usepackage{siunitx}'
+'font.family': 'serif',
+'text.usetex': True,
+'pgf.rcfonts': False,
+'pgf.texsystem': 'lualatex',
+'pgf.preamble': r'\usepackage{unicode-math}\usepackage{siunitx}'
 })
 
-z_1, I_1, z_2, I_2, z_3, I_3 = np.genfromtxt('werte.txt', unpack=True, skip_header=2)
-z_1 = z_1 * 1e-3
-z_0 = 28.35e-3
-z = z_1 - z_0
-I_1 = I_1 * 1e-9 - 0.3e-9
-L = 1
-A_0 = 860e-9
-lmbd = 532e-9
-b = 0.15e-3
+d = np.array([16.85,17.35,17.85,18.35,18.85,19.35,19.85,20.35,20.85,21.35,21.85,22.35,22.85,23.35,23.85,
+24.35,24.85,25.35,25.85,26.35,26.85,27.35,27.60,27.85,28.10,28.35,28.60,28.85,29.10,29.35,29.85,30.35,30.85,31.35,31.85,
+32.35,32.85,33.35,33.85,34.35,34.85,35.35,35.85,36.35,36.85,37.35,37.85,38.35,38.85,39.35,39.85])
 
-def f(z_1,A_0,b,lmbd):
-    b*b*A_0*A_0*((lmbd/(np.pi*A_0*np.sin((z_1-28.35e-3)/1)))*(lmbd/(np.pi*A_0*np.sin(
-    (z_1-28.35e-3)/1))))*((np.sin((np.pi*A_0*np.sin((z_1-28.35e-3)/1))/lmbd))*(np.sin((np.pi*A_0*np.sin((z_1-28.35e-3)/1))/lmbd)))
-    params, covariance= curve_fit(f, z, I_1)
+I = np.array([3,2,1,2,4,7,8,7,4,2,6,14,24,28,21,8,6,42,120,280,490,
+680,780,840,850,860,840,800,740,640,440,240,100,10,5,10,20,42,32,16,8,10,16,22,22,
+16,8,4,5,8,12])
+
+I = (I-0.3)*10**(-6)
+d = d*1e-3
+a = 860e-6
+b = 0.15e-3
+l = 1
+lam = 532e-9
+phi = (d - 0.02835) / l
+
+j = a * ((np.sin((np.pi * b * np.sin(phi))/lam)) / ((np.pi * b * np.sin(phi)) / (lam)))**2
+
+
+def f(d,a,b,l):
+    return b*b*a*a*((l/(np.pi*a*np.sin((d-0.02835)/1))
+    )*(l/(np.pi*a*np.sin((d-0.02835)/1))))*((np.sin(
+    (np.pi*a*np.sin((d-0.02835)/1))/l))*(np.sin((np.pi*a*np.sin((d-0.02385)/1))/l)))
+
+params, covariance= curve_fit(f, d, I)
 errors = np.sqrt(np.diag(covariance))
 
-print('A_0 =', params[0], '±', errors[0])
+print('a =', params[0], '±', errors[0])
 print('b =', params[1], '±', errors[1])
-print('lmbd =', params[2], '±', errors[2])
-plt.plot(z, f(z,*params), 'k-', label='Ausgleichskurve')
+print('l =', params[2], '±', errors[2])
 
-# B = A_0**2 * b**2 * (lmbd / (np.pi * b * np.sin(z)))**2 * np.sin(np.pi * b * np.sin(z)/lmbd)**2
+# plt.plot((d-0.02835),f(d,*params), '-', color = 'blueviolet', label='Ausgleichsgerade', linewidth=1)
+plt.plot((d-0.02835), j*10**6, '-', color = "dodgerblue", label = "Theoriekurve", linewidth = 1)
+plt.plot((d-0.02835), I*10**6, 'rx', color = "indianred", label = "Messwerte", linewidth = 1)
 
-j = A_0 * ((np.sin((np.pi * b * np.sin(z))/lmbd)) / ((np.pi * b *
-np.sin(z)) / (lmbd)))**2
-
-# plt.plot(z, j, 'r-', label='Theoriekurve')
-
-# plt.plot(z, I_1, 'bx', label='gemessene Intensität')
+plt.xlabel(r'$\zeta - \zeta_0 \,/\,\si{\meter}$')
+plt.ylabel(r'$I\,/\,\si{\micro\ampere}$')
 plt.grid()
-plt.xlabel(r'$\zeta - \zeta_0\,/\,\si{\milli\meter}$')
-plt.ylabel(r'$I\,/\,\si{\nano\ampere}$')
-plt.legend(loc='best')
-
-plt.tight_layout
-plt.savefig('bilder/einzel.pdf')
-plt.show()
+plt.legend()
+plt.tight_layout()
+plt.savefig("bilder/Einzelspalt.pdf")
