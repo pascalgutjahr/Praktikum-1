@@ -45,8 +45,8 @@ print('b =', params[1], '±', errors[1])
 print('l =', params[2], '±', errors[2])
 
 # plt.plot((d-0.02835),f(d,*params), '-', color = 'blueviolet', label='Ausgleichsgerade', linewidth=1)
-plt.plot((d-0.02835), j*10**6, '-', color = "dodgerblue", label = "Theoriekurve", linewidth = 1)
-plt.plot((d-0.02835), I*10**6, 'rx', color = "indianred", label = "Messwerte", linewidth = 1)
+plt.plot((d-0.02835), j*10**6, '-', color = "mediumturquoise", label = "Ausgleichskurve", linewidth = 1)
+plt.plot((d-0.02835), I*10**6, 'x', color = "forestgreen", label = "Messwerte", linewidth = 1)
 
 plt.xlabel(r'$\zeta - \zeta_0 \,/\,\si{\meter}$')
 plt.ylabel(r'$I\,/\,\si{\micro\ampere}$')
