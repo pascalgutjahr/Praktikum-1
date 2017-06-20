@@ -46,8 +46,8 @@ plt.plot(x2, i, '-', color='darksalmon')
 plt.plot(x2, j, '-', color='darksalmon')
 plt.plot(x2, k, '-', color='darksalmon')
 
-plt.plot([4.9,4.9],[0,5.8], '--', color='olive')
-plt.plot([0,5.8],[5.8,5.8], '--', color= 'olive')
+plt.plot([4.2,4.2],[0,5.75], '--', color='olive')
+plt.plot([0,4.2],[5.75,5.75], '--', color= 'olive')
 plt.plot(5.5,5.5, '.', color='black', linewidth=5, label='berechneter Punkt')
 plt.tight_layout()
 plt.legend
