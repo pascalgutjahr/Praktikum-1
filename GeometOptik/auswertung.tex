@@ -33,7 +33,7 @@ der Linse berechnen. Die berechnete Brennweite hat dann einen Wert von
 \begin{equation*}
 f = (5,6 \pm 0,1)\cm.
 \end{equation*}
-Der Fehler wird mittels Standardabweichung berechnet.
+Der Fehler wird hier mittels Standardabweichung berechnet.
 Desweiteren lässt sich die Brennweite der Linse graphisch darstellen. Hierfür
 wird die Bildweite $b$ gegen die Gegenstandsweite aufgetragen und die jeweiligen
 Punkte miteinander Verbunden. Mit dem an dem sich alle Geraden schneiden lässt
@@ -66,7 +66,9 @@ Die so festgestellte Brennweite beträgt dann
   f = 7\cm.
 \end{equation*}
 \subsection{Brennweitenbestimmung mit der Bessel-Methode}
-
+Um die Brennweite mit der Bessel-Methode zu bestimmen, werden die Bild- und
+Gegenstandsweiten $b$ und $g$ aufgenommen. Diese sind in Tabelle \ref{tab:bessel}
+zu sehen.
 \begin{table}[H]
   \centering
   \caption{Daten zur Bestimmung der Brennweite mit der Bessel-Methode}
@@ -88,10 +90,15 @@ Die so festgestellte Brennweite beträgt dann
     \bottomrule
   \end{tabular}
 \end{table}
-
+Mit Formel \eqref{eqn:linse} lässt sich dann eine Brennweite von
+\begin{equation*}
+  f = (10,6 \pm 1,2)\cm
+\end{equation*}
+berechnen. Anschließend wird die gleiche Linse mit rotem und blauem Licht bestrahlt.
+Die gemessenen Werte sind in der untenstehenden Tabelle \ref{tab:rb} zu sehen.
 \begin{table}[H]
   \centering
-  \caption{Bessel blau rot}
+  \caption{Bestimmung der Brennweite für rotes und blaues Licht.}
   \label{tab:rb}
   \begin{tabular}{cccccc}
     \toprule
@@ -106,7 +113,11 @@ Die so festgestellte Brennweite beträgt dann
     \bottomrule
   \end{tabular}
 \end{table}
-
+Wird nun die Brennweite mit Formel \eqref{eqn:linse} berechnet, erhält man die Werte
+\begin{align*}
+  f_\su{rot} &= (9,9 \pm 0,06)\cm \\
+  f_\su{blau}&= (9,7 \pm 0,06)\cm. 
+\end{align*}
 \subsection{Brennweitenbestimmung mit der Abbe-Methode}
 \begin{table}
   \centering
