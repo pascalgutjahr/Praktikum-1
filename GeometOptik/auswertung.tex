@@ -71,7 +71,7 @@ Gegenstandsweiten $b$ und $g$ aufgenommen. Diese sind in Tabelle \ref{tab:bessel
 zu sehen.
 \begin{table}[H]
   \centering
-  \caption{Daten zur Bestimmung der Brennweite mit der Bessel-Methode}
+  \caption{Daten zur Bestimmung der Brennweite mit der Bessel-Methode.}
   \label{tab:bessel}
   \begin{tabular}{ccc}
     \toprule
@@ -116,12 +116,14 @@ Die gemessenen Werte sind in der untenstehenden Tabelle \ref{tab:rb} zu sehen.
 Wird nun die Brennweite mit Formel \eqref{eqn:linse} berechnet, erhält man die Werte
 \begin{align*}
   f_\su{rot} &= (9,9 \pm 0,06)\cm \\
-  f_\su{blau}&= (9,7 \pm 0,06)\cm. 
+  f_\su{blau}&= (9,7 \pm 0,06)\cm.
 \end{align*}
 \subsection{Brennweitenbestimmung mit der Abbe-Methode}
-\begin{table}
+In Tabelle \ref{tab:abbe} befinden sich die Werte $g$, $b_1$ und $b_2$ der letzten
+Messung, zur Bestimmung der Brennweite mit Abbe.
+\begin{table}[H]
   \centering
-  \caption{abbe}
+  \caption{Daten zur Bestimmung der Brennweite mit der Abbe-Methode.}
   \label{tab:abbe}
   \begin{tabular}{ccc}
     \toprule
@@ -137,5 +139,34 @@ Wird nun die Brennweite mit Formel \eqref{eqn:linse} berechnet, erhält man die 
     21,0 & 66,5 & 39,3 \\
     21,2 & 63,8 & 40,0 \\
     25,1 & 54,9 & 42,9 \\
+    \bottomrule
   \end{tabular}
 \end{table}
+In Grafik \ref{fig:abbeG} wird $g' = g + h$ gegen $1+ \sfrac{1}{V}$ aufgetragen,
+um die Brennweite zu bestimmen.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=8cm]{bilder/abbeG.pdf}
+  \caption{Brennweitenbestimmung über $g+h$.}
+  \label{fig:abbeG}
+\end{figure}
+Dabei ergeben sich die Parameter
+\begin{align}
+  m &= 0,1\,\si{\meter} \\
+  n &= -0,3\,\si{\meter}.
+\end{align}
+Sowohl in dieser Grafik, als auch in der nachfolgenden Grafik \ref{fig:AbbeB}
+entspricht die Steigung $m$ der Brennweite $f$.
+
+In Abbildung \ref{fig:abbeB} wird $b' = b+h'$ gegen $1+V$ aufgetragen.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=8cm]{bilder/abbeB.pdf}
+  \caption{Brennweitenbestimmung über $b+h'$.}
+  \label{fig:abbeB}
+\end{figure}
+Hierbei ergeben sich die Parameter
+\begin{align}
+  m &= 0,1\,\si{\meter} \\
+  n &= -0,3\,\si{\meter}.
+\end{align}
