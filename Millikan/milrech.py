@@ -169,10 +169,13 @@ g = 9.81
 rho_L = 1.1644 # im Internet nachschlagen
 n_L = np.array([1.877, 1.875, 1.872, 1.872, 1.874, 1.874, 1.866, 1.866, 1.878, 1.877])*10**(-5) # aus dem Plot abgelesen
 B = 6.17e-5 * 101325 / 760
-p = 10130
+p = 101300
 v_auf = np.array([v_1auf, v_11auf, v_2auf, v_22auf, v_3auf, v_33auf, v_4auf, v_44auf, v_5auf, v_55auf])
+print('aufsteigende Geschwindigkeiten:', np.round(v_auf,8))
 v_ab = np.array([v_1ab, v_11ab, v_2ab, v_22ab, v_3ab, v_33ab, v_4ab, v_44ab, v_5ab, v_55ab])
+print('absteigende Geschwindigkeiten:', np.round(v_ab, 8))
 v = np.array([v_1, v_11, v_2, v_22, v_3, v_33, v_4, v_44, v_5, v_55])
+print('fallende Geschwindigkeiten:', np.round(v,8))
 d = 7.6250e-3
 U = np.array([261, 261, 271, 271, 280, 280, 290, 290, 301, 301])
 
@@ -188,7 +191,7 @@ r_korr = np.sqrt((B/(2*p)**2) + (9*n_eff*v)/(2*g*rho_oel)) - (B / (2*p))
 
 q_0 = 3 * np.pi * n_L * np.sqrt((9*n_L*(v_ab-v_auf))/(4*g*(rho_oel-rho_L))) * (v_ab + v_auf)/U *d
 
-q = q_0 * (1 + (B/(p*r)))**(3/2)
+q = q_0 * (1 + (B/(p*r_korr)))**(3/2)
 
 print('radius r:', r)
 print('n_eff:', n_eff)
@@ -207,6 +210,12 @@ t_ab_std = np.array([t_1ab_std, t_11ab_std, t_2ab_std, t_22ab_std, t_3ab_std, t_
 delta_v_ab = x * t_ab_std / t_ab
 print('Fehler auf die absteigende Geschwindigkeit:', delta_v_ab)
 
+# Abweichungen auf die Sinkgeschwindigkeit
+t_v = np.array([t_1_mean, t_11_mean, t_2_mean, t_22_mean, t_3_mean, t_33_mean, t_4_mean, t_44_mean, t_5_mean, t_55_mean])
+t_v_std = np.array([t_1_std, t_11_std, t_2_std, t_22_std, t_3_std, t_33_std, t_4_std, t_44_std, t_5_std, t_55_std])
+delta_v = x * t_v_std / t_v
+print('Fehler auf die Sinkgeschwindigkeit:', delta_v)
+
 # Abweichung auf den Radius r
 delta_r = np.sqrt((3*n_L / (np.sqrt((n_L*(v_ab-v_auf))/(g*(rho_oel-rho_L)))*(rho_oel-rho_L)*g*2**(3/2)))**2 * (delta_v_ab**2 +delta_v_auf**2))
 print('Fehler auf den Radius:', delta_r)
@@ -214,3 +223,30 @@ print('Fehler auf den Radius:', delta_r)
 # Abweichung auf n_eff
 delta_n_eff = n_L*B*p /((p*r + B)**2) * delta_r
 print('Fehler auf n_eff:', delta_n_eff)
+
+# Abweichung auf korrigierten Radius
+delta_r_korr = p /(4*g*rho_oel*np.sqrt(p*v*n_eff/(2*g*rho_oel)+B**2/(4*p**2))) * np.sqrt((v*delta_v)**2 + (n_eff*delta_n_eff)**2)
+print('Fehler auf r_korr:', delta_r_korr)
+
+# Abweichung auf q_0
+delta_d = 0.0051e-3
+#Wurzelterm
+wurzel = np.sqrt(9*n_L*(v_ab-v_auf)/4*g*(rho_oel-rho_L))
+delta_q_0 = (9*np.pi*d*n_L**2 * (3*v_ab-v_auf)/(4*g*(rho_oel-rho_L)*U*np.sqrt(n_L*(v_ab-v_auf)/(g*(rho_oel-rho_L)))))**2 * (delta_v_ab**2 + delta_v_auf**2) + (3*np.pi*n_L *wurzel*(v_ab+v_auf)/U)**2 * delta_d**2
+delta_q_0 = np.sqrt(delta_q_0)
+print('Fehler auf q_0:', delta_q_0)
+q_0e = q_0 / 1.6e-19
+delta_q_0e = delta_q_0 / 1.6e-19
+print('q_0 auf e normiert:', q_0e, '±', delta_q_0e)
+
+# Abweichung auf q
+delta_q = np.sqrt((1+(B/(p*r_korr)))**3 * delta_q_0**2 + (3*q_0*B/(2*p*r_korr**2))**2 * (1+(B/(p*r_korr)))*delta_r_korr**2)
+qe = q / 1.6e-19
+delta_qe = delta_q / 1.6e-19
+print('Fehler auf q:', delta_q)
+print('q auf e normiert:', qe, '±', delta_qe)
+
+elementar = np.array([1.61,1.50,1.48,1.53,1.61,1.31,1.36,1.51,1.55])
+el = np.mean(elementar)
+els = np.std(elementar)
+print('elementarladung:', el,'±', els)

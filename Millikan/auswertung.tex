@@ -1,0 +1,223 @@
+In Tablle \ref{tab:basics} sind die aufgenommenen Zeiten zu den steigenden und fallenden
+Öltröpfchen wiederzufinden. Die Zeiten $t_\su{auf}$ und $t_\su{ab}$ werden dabei
+über eine Strecke von 5 Kästchen, $t_0$ über eine Strecke von einem
+Kästchen aufgenommen. Ein Kästchen entspricht $\SI{0,1}{\milli\meter}$.
+Die Geschwindigkeit ergibt sich dann mittels
+\begin{equation}
+  v = s / t,
+\end{equation}
+wobei $s= \SI{0,1}{\milli\meter}$ gilt. Dazu werden $t_\su{auf}$ und $t_\su{ab}$
+jeweils durch 5 dividiert. Die Geschwindigkeiten sind in Tabelle \ref{tab:v} einzusehen. Die Werte für $\eta_\su{L}$ ergeben sich mittels Tablle
+\ref{tab:tabelle} und Grafik \ref{fig:grafik}.
+\begin{table}[H]
+  \centering
+  \caption{Die gemittelten Geschwindigkeite zu den verschiedenen Spannungen.}
+  \begin{tabular}{cccc}
+    \toprule
+    $\su{Spannung}\,/\,\si{\volt}$ & $v_\su{auf}\,/\,10^{-5}\si[per-mode=fraction]{\meter\per\second}$ & $v_\su{ab}\,/\,10^{-5}\si[per-mode=fraction]{\meter\per\second}$
+    & $v_\su{0}\,/\,10^{-5}\si[per-mode=fraction]{\meter\per\second}$ \\
+    \midrule
+    261 & 13,4\pm0,3 & 29,3\pm1,0 & 4,6\pm1,5  \\
+    261 & 16,0\pm0,4 & 17,7\pm2,3 & 2,5\pm2,3  \\
+    271 &  7,7\pm0,5 & 12,6\pm0,3 & 2,6\pm0,6  \\
+    271 & 12,1\pm2,9 & 16,1\pm1,3 & 1,4\pm2,3  \\
+    280 & 10,9\pm0,2 & 16,2\pm1,1 & 2,3\pm1,1  \\
+    280 & 20,7\pm5,0 & 19,1\pm0,5 & 0,9\pm2,0  \\
+    290 &  4,8\pm0,6 &  7,6\pm0,4 & 1,2\pm1,1  \\
+    290 &  4,6\pm0,4 &  7,7\pm0,5 & 1,5\pm2,4  \\
+    301 &  7,1\pm0,4 & 13,3\pm0,2 & 2,7\pm2,0  \\
+    301 &  6,1\pm0,1 & 15,5\pm10,0 & 3,5\pm1,3  \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:v}
+\end{table}
+\begin{table}[H]
+  \small
+  \centering
+  \caption{Die gemessenen Fall- und Steigzeiten der Öltröpfchen zu den verschiedenen Spannungen.}
+  \begin{tabular}{ccccccc}
+    \toprule
+    $\su{Spannung}\,/\,\si{\volt}$ & $t_\su{auf}\,/\,\si{\second}$ & $t_\su{ab}\,/\,\si{\second}$ & $t_0\,/\,\si{\second}$ & $R\,/\,\si{\mega\ohm}$ & $T\,/\,\si{\celsius}$ & $\eta_\su{L}\,/\,10^{-5}\si[per-mode=fraction]{\newton\second\per\square\meter}$\\
+    \midrule
+        & 3,854 & 1,790 & 1,706 & & & \\
+    261 & 3,769 & 1,472 & 2,324 & 1,74 & 31,2 & 1,877 \\
+        & 3,566 & 1,865 & 2,446 & & & \\
+        & 2,987 & 2,239 & 3,244 & & & \\
+    261 & 3,094 & 2,523 & 3,485 & 1,73 & 31,0 & 1,875 \\
+        & 3,301 & 3,745 & 5,292 & & & \\
+    \midrule
+        & 6,242 & 3,949 & 3,880 & & & \\
+    271 & 6,909 & 3,840 & 3,633 & 1,77 & 30,0 & 1,872 \\
+        & 6,275 & 4,113 & 4,206 & & & \\
+        & 2,529 & 2,929 & 7,751 & & & \\
+    271 & 5,376 & 2,734 & 5,010 & 1,77 & 30,0 & 1,872 \\
+        & 4,454 & 3,650 & 8,960 & & & \\
+    \midrule
+        & 4,594 & 3,268 & 4,800 & & & \\
+    280 & 4,679 & 3,371 & 4,540 & 1,76 & 30,8 & 1,874 \\
+        & 4,486 & 2,604 & 3,658 & & & \\
+        & 2,576 & 2,954 & 11,390 & & & \\
+    280 & 2,386 & 2,791 & 8,549 & 1,76 & 30,8 & 1,874 \\
+        & 2,287 & 2,611 & 14,209 & & & \\
+    \midrule
+        & 10,917 & 6,567 & 6,899 & & & \\
+    290 & 10,739 & 6,332 & 8,372 & 1,80 & 29,0 & 1,866 \\
+        &  9,600 & 6,900 & 8,964 & & & \\
+        & 10,420 & 6,564 & 6,098 & & & \\
+    290 & 11,383 & 6,098 & 9,041 & 1,80 & 29,0 & 1,866 \\
+        & 10,956 & 6,869 & 5,195 & & & \\
+    \midrule
+        & 7,467 & 3,711 & 4,784 & & & \\
+    301 & 7,032 & 3,711 & 2,987 & 1,75 & 31,5 & 1,878 \\
+        & 6,702 & 3,858 & 3,547 & & & \\
+        & 8,078 & 3,216 & 3,308 & & & \\
+    301 & 8,360 & 3,204 & 2,723 & 1,74 & 31,2 & 1,877 \\
+        & 8,220 & 3,250 & 2,444 & & & \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:basics}
+\end{table}
+\newpage
+\subsection{Bestimmung der Radien der Öltröpfchen}
+In Tabelle \ref{tab:r} sind $r_\su{korr}$ und $\eta_\su{eff}$ wiederzufinden.
+Zur Bestimmung der Viskosität wird Formel \eqref{eqn:n} verwendet.
+\begin{table}[H]
+  \centering
+  \caption{Die korrigierten Radien $r_\su{korr}$ und $\eta_\su{eff}$.}
+  \begin{tabular}{ccc}
+    \toprule
+    $\su{Spannung}\,/\,\si{\volt}$ & $\eta_\su{eff}\,/\,10^{-5}\si[per-mode=fraction]{\newton\second\per\square\meter}$ & $r_\su{korr}\,/\,\si{\micro\meter}$ \\
+    \midrule
+     261 & 1,76\pm0,01 & 0,749\pm29,4 \\
+     261 & 1,56\pm0,29 & 0,593\pm34,9 \\
+     271 & 1,67\pm0,03 & 0,609\pm9,0 \\
+     271 & 1,66\pm0,18 & 0,524\pm25,2 \\
+     280 & 1,68\pm0,05 & 0,593\pm15,9 \\
+     280 &  -     &  -      \\
+     290 & 1,61\pm0,05 & 0,511\pm11,4 \\
+     290 & 1,63\pm0,04 & 0,529\pm27,9 \\
+     301 & 1,70\pm0,02 & 0,618\pm30,0 \\
+     301 & 1,73\pm0,25 & 0,679\pm22,0 \\
+     \bottomrule
+  \end{tabular}
+  \label{tab:r}
+\end{table}
+Der zweite Wert für $U=\SI{280}{\volt}$ fällt weg, da die aufsteigende Geschwindigkeit größer ist, als die absteigende Geschwindigkeit, wodurch sich ein negatives Vorzeichen unter der Wurzel ergibt.
+Der Fehler auf $r$ ergibt sich durch
+\begin{equation}
+ \Delta r = \sqrt{ \left(
+\frac{9\,\eta_\text{L}}{\sqrt{\frac{9\,\eta_\text{L} (v_\text{ab} -
+v_\text{auf})}{2\,g(\rho_\text{Öl} - \rho_\text{L})}\cdot 4\,g
+(\rho_\text{Öl} - \rho_\text{L})}}
+ \right)^2  \cdot \left((\Delta v_\text{ab})^2 + (\Delta
+v_\text{auf})^2\right)}.
+ \label{eqn:rad}
+\end{equation}
+Dieser wird benötigt, um den Fehler auf $\eta_{eff}$ mittels
+\begin{equation}
+ \Delta \eta_\text{eff} = \sqrt{ \left( \eta_\text{L}\cdot \frac{B\,p}{(B
++ p\,r)^2} \right)^2 \cdot (\Delta r)^2 }
+\end{equation}
+zu berechnen.
+Die Viskosität $\eta_\su{eff}$ wird benötigt, um den korrigierten Radius
+\begin{equation}
+ r_\text{korr} = \sqrt{\left(\frac{B}{2\,p}\right)^2 +
+\frac{9\,\eta_\text{eff}\,v_\text{0}}{2\,g\,\rho_\text{Öl}}} -
+\frac{B}{2\,p}
+\end{equation}
+zu bestimmen.
+Die jeweilige Abweichung wird mit
+\begin{equation}
+ \Delta r_\text{korr} = \sqrt{\left(
+\frac{9}{4\,g\,\rho_\text{Öl}\cdot\sqrt{\frac{B^2}{4\,p^2} +
+\frac{9\,\eta_\text{eff}\,v_0}{2\,g\,\rho_\text{Öl}}}}
+ \right)^2 \cdot \left((\eta_\text{eff}\cdot\Delta v_0)^2 +
+(v_\text{0}\cdot\Delta \eta_\text{eff})^2\right)}
+\end{equation}
+berechnet.
+\subsection{Bestimmung der Elementarladung}
+In Tabelle \ref{tab:q} befinden sich die Werte der Ladung $q_0$ und der
+korrigierten Ladung $q$. Dabei werden $q_0$ mit Gleichung \eqref{eqn:q0}
+und $q$ mit Gleichung \eqref{eqn:q} berechnet.
+\begin{table}[H]
+  \centering
+  \caption{Die Ladungen $q_0$ und korrigierten Ladungen $q$.}
+  \begin{tabular}{ccccc}
+    \toprule
+    $\su{Spannung}\,/\,\si{\volt}$ & $q_0\,/\,e$ & $q\,/\,e$  &n& $q_\su{elementar}\,/\,10^{-19}\si{\coulomb}$\\
+    \midrule
+      261 & 12,1\pm70,0 & 14,1\pm115,5 & 14 & 1,61 \\
+      261 & 3,1\pm18,1  & 3,7\pm45,4   & 4  & 1,50 \\
+      271 & 3,1\pm17,8  & 3,7\pm23,5   & 4  & 1,48 \\
+      271 & 3,8\pm22,4  & 4,8\pm53,9   & 5  & 1,53 \\
+      280 & 4,1\pm24,1  & 5,0\pm38,1   & 5  & 1,61 \\
+      280 &  -          &  -           &    & \\
+      290 & 1,3\pm7,6   & 1,6\pm12,1   & 2  & 1,31 \\
+      290 & 1,4\pm8,0   & 1,7\pm20,4   & 2  & 1,36 \\
+      301 & 3,1\pm18,2  & 3,8\pm38,8   & 4  & 1,51 \\
+      301 & 4,1\pm24,1  & 4,9\pm38,1   & 5  & 1,55 \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:q}
+\end{table}
+Die ganzzahligen Vielfachen Ladungen ergeben sich mittels
+\begin{equation}
+  n = \frac{q}{e}.
+\end{equation}
+Die Elementarladung $q_\su{elementar}$ ergibt sich, indem die korrigierte Ladung $q$ durch die Anzahl $n$ geteilt wird.
+Im Mittel folgt somit die Elementarladung
+\begin{equation}
+  q_\su{elementar} = (1,51\pm0,01)\,\cdot\,10^{-19}\si{\coulomb}.
+\end{equation}
+Der Fehler auf $q_0$ berechnet sich mit
+\begin{align}
+ \Delta q_\text{0} = &\sqrt{\left(
+\frac{27\,\eta_\text{eff}\,\pi\cdot(v_\text{ab} -
+v_\text{auf})^2}{4\,g\,(\rho_\text{Öl} - \rho_\text{Luft}) \cdot \sqrt{
+\frac{(v_\text{ab} -
+v_\text{auf})\,\eta_\text{eff}}{g\cdot(\rho_\text{Öl} -
+\rho_\text{Luft})}} \cdot E} \right)^2 \cdot
+(\Delta\eta_\text{eff})^2}\notag \\
+ &\overline{+ \left( \frac{27\,\pi\,\eta_\text{eff}^2\cdot(v_\text{ab} -
+v_\text{auf})}{4\,g\,(\rho_\text{Luft} - \rho_\text{Öl}) \cdot \sqrt{
+\frac{(v_\text{ab} -
+v_\text{auf})\,\eta_\text{eff}}{g\cdot(\rho_\text{Öl} -
+\rho_\text{Luft})}} \cdot E} \right)^2 \cdot (\Delta
+v_\text{ab})^2}\notag \\
+ &\overline{+ \left( \frac{27\,\pi\,\eta_\text{eff}^2\cdot(v_\text{auf} -
+v_\text{ab})}{4\,g\,(\rho_\text{Luft} - \rho_\text{Öl}) \cdot \sqrt{
+\frac{(v_\text{ab} -
+v_\text{auf})\,\eta_\text{eff}}{g\cdot(\rho_\text{Öl} -
+\rho_\text{Luft})}} \cdot E}  \right)^2 \cdot (\Delta
+v_\text{auf})^2}\notag \\
+ &\overline{+ \left( \frac{9\,\pi\,\eta_\text{eff}\cdot(v_\text{ab} -
+v_\text{auf})\cdot\sqrt{\frac{(v_\text{ab} -
+v_\text{auf})\cdot\eta_\text{eff}}{g\,(\rho_\text{Öl} -
+\rho_\text{Luft})}}}{2\cdot U}\right)^2 \cdot (\Delta d)^2}.
+\end{align}
+Mit diesem Fehler lässt sich dann die Abweichung auf $q$ mittels
+\begin{equation}
+ \Delta q_\text{korr} = \sqrt{\left(1 + \frac{B}{p\cdot
+r_\text{korr}}\right)^3 \cdot (\Delta q_\text{0})^2 +
+\left(\frac{3\,B\,q_\text{0} \cdot \sqrt{\frac{B}{p\,r_\text{korr}} +
+1}}{2\,p\,r_\text{korr}^2}\right)^2\cdot (\Delta r_\text{korr})^2}
+\end{equation}
+bestimmen.
+In Abbildung \ref{fig:ladung} wird die korrigierte Ladung $q\,/\,e$ gegen
+den korrigierten Radius $r_\su{korr}$ aufgetragen.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=8cm]{bilder/ladung.pdf}
+  \caption{Ladungen der Öltröpfchen.}
+  \label{fig:ladung}
+\end{figure}
+\subsection{Bestimmung der Avogadro-Konstante}
+Die Avogadro-Konstante wird mittels
+\begin{equation}
+  N_\su{A} = \frac{F}{e_\su{elementat}}
+\end{equation}
+berechnet. Die Faraday-Konstante hat den Wert $F=96485,33289\,\si{\coulomb\per\mol}$.
+Damit folgt
+\begin{equation}
+  N_\su{A} = (6,390\pm0,04)\cdot\,10^{23}\si[per-mode=fraction]{\per\mol}.
+\end{equation}

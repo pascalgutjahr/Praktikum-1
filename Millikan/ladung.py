@@ -13,10 +13,10 @@ mpl.rcParams.update({
 'pgf.preamble': r'\usepackage{unicode-math}\usepackage{siunitx}'
 })
 
-r = np.array([ 4.1009,4.0796,4.0833,4.0771,4.0823,4.0758,4.0770,4.0847 ,4.0913])
-q = np.array([ 4.1182,2.5909,1.5803,2.1580,2.0613,0.86241,0.85877,1.4684,1.6463])
-# r = r*10**(-6) umrechnung in SI
-q = q * 10**(-18)
+r = np.array([0.74867,0.59342,0.6092,0.524,0.5931,0.51057,0.5290,0.6180,0.6787])
+q = np.array([22.597,5.989,5.9240,7.6378,8.0430,2.6169,2.7198,6.0503,7.7653])
+# r = r*10**(-7) umrechnung in SI
+q = q * 10**(-19)
 e = 1.602*10**(-19)
 plt.plot(r, q/e, 'x', color='red')
 plt.xlabel(r'$r\,/\,\si{\micro\meter}$')
