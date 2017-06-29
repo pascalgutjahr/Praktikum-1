@@ -8,7 +8,9 @@ Die Geschwindigkeit ergibt sich dann mittels
 \end{equation}
 wobei $s= \SI{0,1}{\milli\meter}$ gilt. Dazu werden $t_\su{auf}$ und $t_\su{ab}$
 jeweils durch 5 dividiert. Die Geschwindigkeiten sind in Tabelle \ref{tab:v} einzusehen. Die Werte für $\eta_\su{L}$ ergeben sich mittels Tablle
-\ref{tab:tabelle} und Grafik \ref{fig:grafik}.
+\ref{tab:tabelle} und Grafik \ref{fig:grafik}. Für die Dichte des Öls und der Luft gilt $\rho_\text{Öl} = \SI{886}{\kilo\gram\per\cubic\meter}$\,\cite{503} und $\rho_\su{Luft}=\SI{1,164}{\kilo\gram\per\cubic\meter}$\,
+\cite{luft}. Der Luftdruck wird als $p=\SI{101300}{\pascal}$ angenommen, $g=\SI{9,81}{\meter\per\second}$ ist
+die Erdbeschleunigung und der Abstand der Kondensatorplatten beträgt $d= (7,6250\pm0,0051)\,\si{\milli\meter}$\,\cite{503}.
 \begin{table}[H]
   \centering
   \caption{Die gemittelten Geschwindigkeite zu den verschiedenen Spannungen.}
@@ -144,7 +146,7 @@ und $q$ mit Gleichung \eqref{eqn:q} berechnet.
   \caption{Die Ladungen $q_0$ und korrigierten Ladungen $q$.}
   \begin{tabular}{ccccc}
     \toprule
-    $\su{Spannung}\,/\,\si{\volt}$ & $q_0\,/\,e$ & $q\,/\,e$  &n& $q_\su{elementar}\,/\,10^{-19}\si{\coulomb}$\\
+    $\su{Spannung}\,/\,\si{\volt}$ & $q_0\,/\,e_0$ & $q\,/\,e_0$  &n& $q_\su{elementar}\,/\,10^{-19}\si{\coulomb}$\\
     \midrule
       261 & 12,1\pm70,0 & 14,1\pm115,5 & 14 & 1,61 \\
       261 & 3,1\pm18,1  & 3,7\pm45,4   & 4  & 1,50 \\
@@ -162,9 +164,9 @@ und $q$ mit Gleichung \eqref{eqn:q} berechnet.
 \end{table}
 Die ganzzahligen Vielfachen Ladungen ergeben sich mittels
 \begin{equation}
-  n = \frac{q}{e}.
+  n = \frac{q}{e_0}.
 \end{equation}
-Die ermittelte Elementarladung $q_\su{elementar}$ ergibt sich, indem die korrigierte Ladung $q$ durch die Anzahl $n$ geteilt wird. Für die Elementarladung gilt $e=1,602\,\cdot 10^{-19}\si{\coulomb}$\,\cite{el}.
+Die ermittelte Elementarladung $q_\su{elementar}$ ergibt sich, indem die korrigierte Ladung $q$ durch die Anzahl $n$ geteilt wird. Für die Elementarladung gilt $e_0=1,602\,\cdot 10^{-19}\si{\coulomb}$\,\cite{el}.
 Im Mittel folgt somit die Elementarladung
 \begin{equation}
   q_\su{elementar} = (1,51\pm0,01)\,\cdot\,10^{-19}\si{\coulomb}.
@@ -203,7 +205,7 @@ r_\text{korr}}\right)^3 \cdot (\Delta q_\text{0})^2 +
 1}}{2\,p\,r_\text{korr}^2}\right)^2\cdot (\Delta r_\text{korr})^2}
 \end{equation}
 bestimmen.
-In Abbildung \ref{fig:ladung} wird die korrigierte Ladung $q\,/\,e$ gegen
+In Abbildung \ref{fig:ladung} wird die korrigierte Ladung $q\,/\,e_0$ gegen
 den korrigierten Radius $r_\su{korr}$ aufgetragen.
 \begin{figure}[H]
   \centering
