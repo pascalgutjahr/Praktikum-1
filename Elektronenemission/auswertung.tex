@@ -44,8 +44,8 @@ Aus diesen Werten wird die Temperatur $T$ mittels
   T = -\frac{e_0}{ka}
 \end{equation}
 aus Gleichung \eqref{eqn:T} berechnet.
-Dazu wird $\log{\left(\frac{I_\su{G}}{I_0}\right)}$ gegen $U_\su{G}$ in Abbildung \ref{fig:g} aufgetragen.
-Hierbei gilt $I_0 = \SI{69}{\nano\ampere}$ - der maximale Strom, ohne Gegenspannung.
+Dazu wird $\log{\left(\frac{I_\su{G}}{I_\su{max}}\right)}$ gegen $U_\su{G}$ in Abbildung \ref{fig:g} aufgetragen.
+Hierbei gilt $I_\su{max} = \SI{69}{\nano\ampere}$ - der maximale Strom, ohne Gegenspannung.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{bilder/Kathodentemperatur.pdf}
@@ -133,3 +133,17 @@ Aus Abbildung \ref{fig:kenn} lassen sich die Sättigungsströme
   I_\su{s,5} &= \SI{1370}{\nano\ampere}  \\
 \end{align*}
 mithilfe der Werte aus Tabelle \ref{tab:anode} ablesen.
+
+Nun wird $\log{\left(\frac{I}{I_\su{s}}\right)}$ gegen $U_\su{A}$ in Grafik \ref{fig:langmuir}
+aufgetragen.
+\begin{figure}
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/langmuir.pdf}
+  \caption{Bestimmung des Exponenten der Strom-Spannungs-Beziehung.}
+  \label{fig:langmuir}
+\end{figure}
+Hieraus ergeben sich die Parameter
+\begin{align*}
+  m &= \SI[per-mode=fraction]{0,07\pm0,01}{\per\volt} \\
+  n &= -3,6\pm0,4. \\
+\end{align*}
