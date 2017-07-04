@@ -1,4 +1,7 @@
-\begin{table}
+Zu Beginn wird eine Gegenspannung $U_\su{G}$ bei maximalem Heizstrom $I_\su{f} = \SI{2,5}{\ampere}$
+angelegt. Die Spannung wird dabei von $U_\su{G} = (0-1)\,\si{\volt}$ hochgeregelt. Die entsprechenden
+Werte bedfinden sich in Tabelle \ref{tab:gegen}.
+\begin{table}[H]
   \centering
   \caption{Gemessener Strom $I_\su{s}$ in Abhängigkeit der Gegenspannung $U_\su{G}$.}
   \begin{tabular}{cc}
@@ -6,6 +9,7 @@
     \mc{1}{c}{Gegenspannung} & \mc{1}{c}{Strom} \\
     $U_\su{G}\,/\,\si{\volt}$ & $I_\su{s}\,/\,\si{\nano\ampere}$ \\
     \midrule
+    0.00  & 69.0  \\
     0.04  & 59.0  \\
     0.08  & 53.0  \\
     0.12  & 46.0  \\
@@ -35,13 +39,38 @@
   \end{tabular}
   \label{tab:gegen}
 \end{table}
-
+Aus diesen Werten wird die Temperatur $T$ mittels
+\begin{equation}
+  T = -\frac{e_0}{ka}
+\end{equation}
+aus Gleichung \eqref{eqn:T} berechnet.
+Dazu wird $\log{\left(\frac{I}{I_0}\right)}$ gegen $U_\su{G}$ in Abbildung \ref{fig:g} aufgetragen.
+Hierbei gilt $I_0 = \SI{69}{\nano\ampere}$ - der maximale Strom, ohne Gegenspannung.
+% \begin{figure}
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{bilder/Kathodentemperatur.pdf}
+%   \caption{Strom in Abhängigkeit der Gegenspannung zur Bestimmung der Temperatur.}
+%   \label{fig:g}
+% \end{figure}
+Daraus ergeben sich die Parameter
+\begin{align}
+  a &= \SI[per-mode=fraction]{-4,1\pm0,2}{\per\volt}\\ \notag
+  b &= 0,03\pm0,09.\\ \notag
+\end{align}
+Somit folgt für die Temperatur
+\begin{equation}
+  T = \SI{2810\pm140}{\kelvin}. \notag
+\end{equation}
+Anschließend wird die Spannung am Kondensator umgepolt. Es werden zu fünf verschiedenen
+Heizströmen $I_\su{f}$ mit der jeweiligen Heizspannung $U_\su{f}$ die Ströme $I$
+in Abhängigkeit der angelegten Anodenspannung $U_\su{A}$ aufgenommen.
+Die Werte zu dieser Messung befinden sich in Tabelle \ref{tab:anode}.
 \begin{table}
   \centering
   \caption{Gemessener Strom $I$ in Abhängigkeit der Anodenspannung $U_\su{A}$.}
-  \begin{tabular}{cccccc}
+  \begin{tabular}{c|ccccc}
     \toprule
-    \mc{1}{c}{Anodenspannung} & \mc{5}{c}{Strom} \\
+    \mc{1}{c|}{Anodenspannung} & \mc{5}{c}{Strom} \\
     $U_\su{A}\,/\,\si{\volt}$ & $I_1\,/\,\si{\nano\ampere}$ & $I_2\,/\,\si{\nano\ampere}$ & $I_3\,/\,\si{\nano\ampere}$ & $I_4\,/\,\si{\nano\ampere}$ & $I_5\,/\,\si{\nano\ampere}$ \\
     \midrule
      0 & 0 &  0 &  0 &   0 &    0 \\
@@ -75,6 +104,9 @@
    230 & 9 & 27 & 69 & 282 & 1364 \\
    240 & 9 & 27 & 69 & 282 & 1368 \\
    250 & 9 & 27 & 69 & 283 & 1372 \\
+   \midrule
+   $I_\su{f}$ & 1,8 & 1,9 & 2,0 & 2,2 & 2,4 \\
+   $U_\su{f}$ & 3,9 & 4,0 & 4,2 & 5,0 & 6,0 \\
    \bottomrule
   \end{tabular}
   \label{tab:anode}
