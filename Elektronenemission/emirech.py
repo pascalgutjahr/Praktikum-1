@@ -22,3 +22,8 @@ eps_0 = 8.85418e-12
 Phi = - np.log((I_s*h**3)/(4*np.pi*e_0*m_0*k**2*T**2))*(k*T)/(e_0) / e_0
 W = Phi * e_0
 print(W)
+
+W_mean = np.mean(W)
+W_std = np.std(W)
+
+print('W_A = ', W_mean, '+-', W_std)
