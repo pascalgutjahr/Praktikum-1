@@ -35,7 +35,7 @@ plt.plot(U, f(U, *params), '-', color = 'blue', label="linearer Ausgleich")
 
 plt.plot(U,I,'x', color = 'red', label = "Messwerte")
 plt.xlabel(r"$U\,/\,\si{\volt}$")
-plt.ylabel(r"$log(I/I_\symup{max})$")
+plt.ylabel(r"$log(I/I_\symup{s})$")
 
 plt.grid()
 plt.legend()
