@@ -33,8 +33,8 @@ print("n", params[1],"+-", errors[1])
 
 plt.plot(U, f(U, *params), '-', color = 'blue', label="linearer Ausgleich")
 
-plt.plot(U,I,'x', color = 'red', label 0 "Messwerte")
-plt.xlabel(r"${U\,/\,\si{\volt}$")
+plt.plot(U,I,'x', color = 'red', label = "Messwerte")
+plt.xlabel(r"$U\,/\,\si{\volt}$")
 plt.ylabel(r"$log(I/I_\symup{max})$")
 
 plt.grid()
