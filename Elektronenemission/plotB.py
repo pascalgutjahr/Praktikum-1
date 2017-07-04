@@ -30,7 +30,7 @@ errors = np.sqrt(np.diag(covariance))
 print("m", params[0],"+-", errors[0])
 print("n", params[1],"+-", errors[1])
 
-plt.plot(U, f(U, *params), '-', color = 'blue')
+plt.plot(U, f(U, *params), '-', color = 'blue', label='lineare Auslgeichsrechnung')
 # U = np.log(U2 / Uf)
 # def f(a, b, U):
 #     return a * U + b
@@ -43,7 +43,7 @@ plt.plot(U, f(U, *params), '-', color = 'blue')
 # # U = np.log(U1)
 # plt.plot(U, f(U, *params), '-', color='blue', label='linearer Ausgleichs')
 plt.plot(U,I, 'x', color = 'red', label="Messwerte")
-# plt.xlabel(r"${U\,/\,\si{\volt}$")
+plt.xlabel(r"$U_\symup{korr}\,/\,\si{\volt}$")
 plt.ylabel(r"$log(I/I_\symup{max})$")
 plt.grid()
 plt.legend()

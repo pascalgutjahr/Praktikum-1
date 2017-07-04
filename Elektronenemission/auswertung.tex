@@ -3,11 +3,11 @@ angelegt. Die Spannung wird dabei von $U_\su{G} = (0-1)\,\si{\volt}$ hochgeregel
 Werte bedfinden sich in Tabelle \ref{tab:gegen}.
 \begin{table}[H]
   \centering
-  \caption{Gemessener Strom $I_\su{s}$ in Abhängigkeit der Gegenspannung $U_\su{G}$.}
+  \caption{Gemessener Strom $I_\su{G}$ in Abhängigkeit der Gegenspannung $U_\su{G}$.}
   \begin{tabular}{cc}
     \toprule
     \mc{1}{c}{Gegenspannung} & \mc{1}{c}{Strom} \\
-    $U_\su{G}\,/\,\si{\volt}$ & $I_\su{s}\,/\,\si{\nano\ampere}$ \\
+    $U_\su{G}\,/\,\si{\volt}$ & $I_\su{G}\,/\,\si{\nano\ampere}$ \\
     \midrule
     0.00  & 69.0  \\
     0.04  & 59.0  \\
@@ -44,14 +44,14 @@ Aus diesen Werten wird die Temperatur $T$ mittels
   T = -\frac{e_0}{ka}
 \end{equation}
 aus Gleichung \eqref{eqn:T} berechnet.
-Dazu wird $\log{\left(\frac{I}{I_0}\right)}$ gegen $U_\su{G}$ in Abbildung \ref{fig:g} aufgetragen.
+Dazu wird $\log{\left(\frac{I_\su{G}}{I_0}\right)}$ gegen $U_\su{G}$ in Abbildung \ref{fig:g} aufgetragen.
 Hierbei gilt $I_0 = \SI{69}{\nano\ampere}$ - der maximale Strom, ohne Gegenspannung.
-% \begin{figure}
-%   \centering
-%   \includegraphics[width=0.8\textwidth]{bilder/Kathodentemperatur.pdf}
-%   \caption{Strom in Abhängigkeit der Gegenspannung zur Bestimmung der Temperatur.}
-%   \label{fig:g}
-% \end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/Kathodentemperatur.pdf}
+  \caption{Strom in Abhängigkeit der Gegenspannung zur Bestimmung der Temperatur.}
+  \label{fig:g}
+\end{figure}
 Daraus ergeben sich die Parameter
 \begin{align}
   a &= \SI[per-mode=fraction]{-4,1\pm0,2}{\per\volt}\\ \notag
@@ -65,7 +65,7 @@ Anschließend wird die Spannung am Kondensator umgepolt. Es werden zu fünf vers
 Heizströmen $I_\su{f}$ mit der jeweiligen Heizspannung $U_\su{f}$ die Ströme $I$
 in Abhängigkeit der angelegten Anodenspannung $U_\su{A}$ aufgenommen.
 Die Werte zu dieser Messung befinden sich in Tabelle \ref{tab:anode}.
-\begin{table}
+\begin{table}[H]
   \centering
   \caption{Gemessener Strom $I$ in Abhängigkeit der Anodenspannung $U_\su{A}$.}
   \begin{tabular}{c|ccccc}
@@ -111,3 +111,25 @@ Die Werte zu dieser Messung befinden sich in Tabelle \ref{tab:anode}.
   \end{tabular}
   \label{tab:anode}
 \end{table}
+In Abbildung \ref{fig:kenn} wird dann der Strom $I$ gegen die korrigierte Spannung $U_\su{korr}$
+dargestellt. Die Spannung $U_\su{A}$ wird korrigiert, da der Innenwiederstand
+$R_\su{i} = \SI{1}{\mega\ohm}$ des Nanoamperemeters die Spannung zwischen
+Anode und Kathode verändert. Die Korrektur erfolgt über
+\begin{equation}
+  U_\su{korr} = U_\su{A}-R_\su{i}\,\cdot\, I. \\
+\end{equation}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/kennlinie.pdf}
+  \caption{Die Kennlinien des Wolframdrahtes zu fünf verschiedenen Heizleistungen.}
+  \label{fig:kenn}
+\end{figure}
+Aus Abbildung \ref{fig:kenn} lassen sich die Sättigungsströme
+\begin{align*}
+  I_\su{s,1} &= \SI{10}{\nano\ampere}  \\
+  I_\su{s,2} &= \SI{30}{\nano\ampere} \\
+  I_\su{s,3} &= \SI{70}{\nano\ampere}  \\
+  I_\su{s,4} &= \SI{280}{\nano\ampere}  \\
+  I_\su{s,5} &= \SI{1370}{\nano\ampere}  \\
+\end{align*}
+mithilfe der Werte aus Tabelle \ref{tab:anode} ablesen.
