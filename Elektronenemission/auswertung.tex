@@ -136,7 +136,7 @@ mithilfe der Werte aus Tabelle \ref{tab:anode} ablesen.
 
 Nun wird $\log{\left(\frac{I}{I_\su{s}}\right)}$ gegen $U_\su{A}$ in Grafik \ref{fig:langmuir}
 aufgetragen.
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{bilder/langmuir.pdf}
   \caption{Bestimmung des Exponenten der Strom-Spannungs-Beziehung.}
@@ -147,3 +147,38 @@ Hieraus ergeben sich die Parameter
   m &= \SI[per-mode=fraction]{0,07\pm0,01}{\per\volt} \\
   n &= -3,6\pm0,4. \\
 \end{align*}
+
+Die Temperaturen $T$, zu den fünf verschiedenen
+Heizleistungen, lassen sich mittels
+\begin{equation}
+  T = \sqrt[4]{\frac{I_\su{f}U_\su{f}-N_\su{WL}}{f\sigma\eta}}
+\end{equation}
+berechnen und sind in Tabelle \ref{tab:temp} wiederzufinden.
+Hierbei beschreibt $N_\su{WL} = \SI{1}{\watt}$ die abgegebene Leistung
+über den Wärmetransport, $\sigma = \SI[per-mode=fraction]{5,7e-8}{\watt\per\square\meter\per\kelvin\tothe{4}}$
+die Stefan-Boltzmann-Konstante, $f=\SI{0,35}{\square\centi\meter}$ die emittierende
+Kathodenoberfläche und $\eta= 0,28$ den Emissionsgrad der Oberfläche. Diese Beziehung ergibt sich aus
+$N_\su{zu} = N_\su{W} + N_\su{WL}$ mit $N_\su{zu} = I_\su{f}U_\su{f}$ als zugeführte Leistung
+und $N_\su{W}=f\sigma\eta T^4$ als Strahlungsleistung.
+\begin{table}[H]
+  \centering
+  \caption{Temperaturen zu den verschiedenen Heizleistungen und die Austrittsarbeit $W_\su{A}$.}
+  \begin{tabular}{cccc}
+    \toprule
+    \mc{2}{c}{Heizleistung} & \mc{1}{c}{Temperatur} & \mc{1}{c}{Austrittsarbeit} \\
+    $I_\su{f}\,/\,\si{\nano\ampere}$ & $U_\su{f}\,/\,\si{\volt}$ & $T\,/\,\si{\kelvin}$ & $W_\su{A}\,/\,\si{\electronvolt}$\\
+    \midrule
+    1,8 & 3,9 & 1811,9 & 7,4 \\
+    1,9 & 4,0 & 1854,0 & 7,4 \\
+    2,0 & 4,2 & 1907,8 & 7,5 \\
+    2,2 & 5,0 & 2056,9 & 7,9 \\
+    2,4 & 6,0 & 2213,1 & 8,2 \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:temp}
+\end{table}
+Für die Austrittsarbeit $N_\su{A} = e_0\phi$, welche mittels \eqref{eqn:richard} bestimmt wird,
+ergibt sich ein Mittelwerte von
+\begin{equation*}
+  N_\su{A} = \SI{7,7\pm0,3}{\electronvolt}.
+\end{equation*}
