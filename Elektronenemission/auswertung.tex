@@ -45,14 +45,15 @@ Aus diesen Werten wird die Temperatur $T$ mittels
 \end{equation}
 aus Gleichung \eqref{eqn:T} berechnet.
 Dazu wird $\log{\left(\frac{I_\su{G}}{I_\su{max}}\right)}$ gegen $U_\su{G}$ in Abbildung \ref{fig:g} aufgetragen.
-Hierbei gilt $I_\su{max} = \SI{69}{\nano\ampere}$ - der maximale Strom, ohne Gegenspannung.
+Hierbei gilt $I_\su{max} = \SI{69}{\nano\ampere}$ - der maximale Strom, ohne Gegenspannung. Dabei beschreibt
+$a$ die Steigung aus Grafik \ref{fig:g}.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{bilder/Kathodentemperatur.pdf}
   \caption{Strom in Abhängigkeit der Gegenspannung zur Bestimmung der Temperatur.}
   \label{fig:g}
 \end{figure}
-Daraus ergeben sich die Parameter
+Aus Grafik \ref{fig:g} ergeben sich die Parameter
 \begin{align}
   a &= \SI[per-mode=fraction]{-4,1\pm0,2}{\per\volt}\\ \notag
   b &= 0,03\pm0,09.\\ \notag
@@ -61,7 +62,7 @@ Somit folgt für die Temperatur
 \begin{equation}
   T = \SI{2810\pm140}{\kelvin}. \notag
 \end{equation}
-Anschließend wird die Spannung am Kondensator umgepolt. Es werden zu fünf verschiedenen
+Anschließend wird die Spannung an der Anode umgepolt. Es werden zu fünf verschiedenen
 Heizströmen $I_\su{f}$ mit der jeweiligen Heizspannung $U_\su{f}$ die Ströme $I$
 in Abhängigkeit der angelegten Anodenspannung $U_\su{A}$ aufgenommen.
 Die Werte zu dieser Messung befinden sich in Tabelle \ref{tab:anode}.
@@ -111,7 +112,7 @@ Die Werte zu dieser Messung befinden sich in Tabelle \ref{tab:anode}.
   \end{tabular}
   \label{tab:anode}
 \end{table}
-In Abbildung \ref{fig:kenn} wird dann der Strom $I$ gegen die korrigierte Spannung $U_\su{korr}$
+In den Abbildungen \ref{fig:kenn} und \ref{fig:kenn1} wird dann der Strom $I$ gegen die korrigierte Spannung $U_\su{korr}$
 dargestellt. Die Spannung $U_\su{A}$ wird korrigiert, da der Innenwiederstand
 $R_\su{i} = \SI{1}{\mega\ohm}$ des Nanoamperemeters die Spannung zwischen
 Anode und Kathode verändert. Die Korrektur erfolgt über
@@ -121,18 +122,24 @@ Anode und Kathode verändert. Die Korrektur erfolgt über
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{bilder/kennlinie.pdf}
-  \caption{Die Kennlinien des Wolframdrahtes zu fünf verschiedenen Heizleistungen.}
+  \caption{Die Kennlinien des Wolframdrahtes zu den ersten drei Heizleistungen.}
   \label{fig:kenn}
 \end{figure}
-Aus Abbildung \ref{fig:kenn} lassen sich die Sättigungsströme
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{bilder/kennlinie2.pdf}
+  \caption{Die Kennlinien des Wolframdrahtes zu den letzten beiden Heizleistungen.}
+  \label{fig:kenn1}
+\end{figure}
+Aus den Abbildungen \ref{fig:kenn} und \ref{fig:kenn1} lassen sich die Sättigungsströme
 \begin{align*}
-  I_\su{s,1} &= \SI{10}{\nano\ampere}  \\
-  I_\su{s,2} &= \SI{30}{\nano\ampere} \\
-  I_\su{s,3} &= \SI{70}{\nano\ampere}  \\
-  I_\su{s,4} &= \SI{280}{\nano\ampere}  \\
-  I_\su{s,5} &= \SI{1370}{\nano\ampere}  \\
+  I_\su{s,1} &= \SI{9}{\nano\ampere}  \\
+  I_\su{s,2} &= \SI{28}{\nano\ampere} \\
+  I_\su{s,3} &= \SI{69}{\nano\ampere}  \\
+  I_\su{s,4} &= \SI{290}{\nano\ampere}  \\
+  I_\su{s,5} &= \SI{1380}{\nano\ampere}  \\
 \end{align*}
-mithilfe der Werte aus Tabelle \ref{tab:anode} ablesen.
+ablesen.
 
 Nun wird $\log{\left(\frac{I}{I_\su{s}}\right)}$ gegen $U_\su{A}$ in Grafik \ref{fig:langmuir}
 aufgetragen.
@@ -166,7 +173,7 @@ und $N_\su{W}=f\sigma\eta T^4$ als Strahlungsleistung.
   \begin{tabular}{cccc}
     \toprule
     \mc{2}{c}{Heizleistung} & \mc{1}{c}{Temperatur} & \mc{1}{c}{Austrittsarbeit} \\
-    $I_\su{f}\,/\,\si{\nano\ampere}$ & $U_\su{f}\,/\,\si{\volt}$ & $T\,/\,\si{\kelvin}$ & $W_\su{A}\,/\,\si{\electronvolt}$\\
+    $I_\su{f}\,/\,\si{\ampere}$ & $U_\su{f}\,/\,\si{\volt}$ & $T\,/\,\si{\kelvin}$ & $W_\su{A}\,/\,\si{\electronvolt}$\\
     \midrule
     1,8 & 3,9 & 1811,9 & 7,4 \\
     1,9 & 4,0 & 1854,0 & 7,4 \\
@@ -177,8 +184,8 @@ und $N_\su{W}=f\sigma\eta T^4$ als Strahlungsleistung.
   \end{tabular}
   \label{tab:temp}
 \end{table}
-Für die Austrittsarbeit $N_\su{A} = e_0\phi$, welche mittels \eqref{eqn:richard} bestimmt wird,
+Für die Austrittsarbeit $W_\su{A} = e_0\phi$, welche mittels \eqref{eqn:richard} bestimmt wird,
 ergibt sich ein Mittelwerte von
 \begin{equation*}
-  N_\su{A} = \SI{7,7\pm0,3}{\electronvolt}.
+  W_\su{A} = \SI{7,7\pm0,3}{\electronvolt}.
 \end{equation*}
