@@ -1,19 +1,18 @@
 Metalle lassen sich als kristalline Festkörper sehen und besitzen eine ausgezeichnete
 Leitfähigkeit. Die auf dem Kristallgitter sitzenden Atome sind praktisch
 ohne Ausnahme ionisiert. Elektronen die freigesetzt werden gehören deshalb nicht
-mehr zu einem Atom, sondern umhüllen die Ionen. Dies hat zur Folge, dass innerhalb
-des Metalls ein konstant positives Potenzial herrscht, welches um $\su{\Phi}$
+mehr zu einem Atom, sondern umhüllen die Ionen. Innerhalb von Metallen
+herrscht ein Potential, welches um $\su{\Phi}$
 vom Außenraum abweicht. Es entsteht ein Potentialtopf, wie in Abbildung \ref{topf}
 dargestellt.
-Tritt ein Elektron aus dem Metall aus, muss es die Potentialbarriere überwinden.
+Tritt ein Elektron aus dem Metall aus, muss es die Potentialbarriere $e_0\xi$ überwinden.
 
 \begin{wrapfigure}{l}{4cm}
   \includegraphics[width=4.3cm]{bilder/topf.jpg}
   \caption{Potentialtopfmodell im Metall \cite{504}}
   \label{topf}
 \end{wrapfigure}
-Zudem muss es die Austrittsarbeit $e_0\xi$ verrichten. Dies ist jedoch ausgeschlossen,
-da Elektronen nur diskrete Energiewerte annehmen können. Spontanes verlassen ist
+Hierfür muss eine die Austrittsarbeit $W_\su{A}=e_0\Phi$ verrichtet werden. Spontanes Verlassen ist
 nur bei einer bestimmten Temperatur möglich.
 
 Am Nullpunkt besitzen die Elektronen wegen des Pauli-Verbots eine endliche
@@ -27,6 +26,12 @@ Mit der Fermi-Dirac-Verteilung
 \end{equation}
 lässt sich die Wahrscheinlichkeit angeben, mit der ein Energieniveau im thermischen
 Gleichgewicht besetzt ist. Der Verlauf ist in Abbildung \ref{dirac} zu sehen.
+\begin{figure}
+  \centering
+  \includegraphics[width = 8cm]{bilder/dirac.jpg}
+  \caption{Verlauf der Fermi-Dirac-Verteilung.\cite{504}}
+  \label{dirac}
+\end{figure}
 Hier wird deutlich, dass ein einzelnes Elektron eine Energie
 \begin{equation*}
   E = \xi + e_0\su{\Phi}
@@ -40,15 +45,10 @@ der Näherung
 \end{equation}
 gerechnet werden.
 
-Mit der Sättigungsstromdichte $j_\su{s(T)}$ wird die Zahl der Elektonen angegeben,
+Mit der Sättigungsstromdichte $j_\su{s}(T)$ wird die Zahl der Elektonen angegeben,
 die pro Zeit- und Flächeneinheit aus dem Metall austreten. Sie lässt sich mittels
 Gleichung \eqref{eqn:fermi2} in Abhängigkeit der Temperatur bestimmen.
 
-\begin{wrapfigure}{r}{4cm}
-  \includegraphics[width = 4cm]{bilder/dirac.jpg}
-  \caption{Verlauf der Fermi-Dirac-Verteilung.\cite{504}}
-  \label{dirac}
-\end{wrapfigure}
 Die sogenannte Richardson-Gleichung
 \begin{equation*}
   j_\su{S}(T) = 4\pi\frac{e_0 m_0 k^2}{h^3}T\exp\left[-\frac{e_0\Phi}{kT}\right]
@@ -59,7 +59,7 @@ gemessen, hängt dieser bei der gegebenen Apperatur nur von der Anodenspannung a
 
 Ist die Spannung zu niedrig, erreichen nicht alle Elektronen die Anode. Somit ist
 eine hohe Anodenspannung nötig, damit ein unabhängiger Strom erhalten wird.
-Das Ohmsche Gesetz ist aufgrund der unförmigen Bewegung der Elektronen nicht
+Das Ohmsche Gesetz ist aufgrund der willkürlichen Bewegung der Elektronen nicht
 gültig. Daher ist die Raumladungsdichte vom Ort abhängig und wird aufgrund der
 steigenden Elektronengeschwindigkeit zur Anode hin kleiner. So wird das elektrische
 Feld von der Kathode abgeschirmt.
@@ -75,14 +75,14 @@ Anodenstrom. Dieser resultiert aus der Eigengeschwindigkeit der Elektronen. Dies
 Strom wird als Anlaufstrom bezeichnet.
 Mit
 \begin{equation}
-  j(V) = j_0\exp\left[\frac{e_0\Phi_\su{A}+e_0 V}{kT}\right] = const. \exp\left[-\frac
-  {e0_v}{kT}\right]
+  j(V) = j_0\exp\left[\frac{e_0\Phi_\su{A}+e_0 V}{kT}\right] = \su{const.} \exp\left[-\frac
+  {e_0V}{kT}\right]
   \label{eqn:T}
 \end{equation}
 ist ein Zusammenhang zwischen Anlaufstrom und äußerem Potential gegeben.
 
-\begin{wrapfigure}{r}{4cm}
-  \includegraphics[width=4cm]{bilder/kennlinie.jpg}
+\begin{wrapfigure}{r}{6cm}
+  \includegraphics[width=6cm]{bilder/kennlinie.jpg}
   \caption{Kennline einer Hochvakuumdiode.\cite{504}}
   \label{kenn}
 \end{wrapfigure}
