@@ -21,7 +21,7 @@ plt.plot(U, I3, 'x', color = 'green', label = r'$I_\symup{f,3}=2,0\si{\ampere}$'
 # plt.plot(U, I4, 'x', color = 'purple', label= r'$I_\symup{f,4}=2,2\si{\ampere}$')
 # plt.plot(U, I5, 'x', color = 'black', label= r'$I_\symup{f,5}=2,4\si{\ampere}$')
 plt.xlabel(r'$U\,/\,\si{\volt}$')
-plt.ylabel(r'$I\,/\,\si{\nano\ampere}$')
+plt.ylabel(r'$I\,/\,\si{\micro\ampere}$')
 plt.grid()
 plt.legend(loc='best')
 plt.savefig('bilder/kennlinie.pdf')

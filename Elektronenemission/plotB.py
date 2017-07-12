@@ -43,7 +43,7 @@ plt.plot(U, f(U, *params), '-', color = 'blue', label='lineare Auslgeichsrechnun
 # # U = np.log(U1)
 # plt.plot(U, f(U, *params), '-', color='blue', label='linearer Ausgleichs')
 plt.plot(U,I, 'x', color = 'red', label="Messwerte")
-plt.xlabel(r"$U_\symup{korr}\,/\,\si{\volt}$")
+plt.xlabel(r"$U_\symup{G,korr}\,/\,\si{\volt}$")
 plt.ylabel(r"$log(I/I_\symup{max})$")
 plt.grid()
 plt.legend()
